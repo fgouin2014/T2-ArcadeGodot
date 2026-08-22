@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cmsl4f1av8878"]
+
+[ext_resource type="PackedScene" uid="uid://di5iyogeq545w" path="res://maps/backdrops/level1/t2_xroad.tmj" id="1_tl6ux"]
+
+[node name="t2_xroad" unique_id=714779455 instance=ExtResource("1_tl6ux")]
+
+[node name="Spawners" type="Node2D" parent="." index="0" unique_id=1103234114]

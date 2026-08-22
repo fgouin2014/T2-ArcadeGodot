@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xl1ghk_bras_d_damaged.png",
+  "imageheight": 44,
+  "imagewidth": 48,
+  "margin": 0,
+  "name": "xl1ghk_bras_d_damaged",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 44,
+  "tilewidth": 48,
+  "type": "tileset",
+  "version": "1.10"
+}

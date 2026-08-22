@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xbigend2.png",
+  "imageheight": 88,
+  "imagewidth": 71,
+  "margin": 0,
+  "name": "xbigend2",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 88,
+  "tilewidth": 71,
+  "type": "tileset",
+  "version": "1.10"
+}

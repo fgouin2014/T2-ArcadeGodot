@@ -1,0 +1,30 @@
+{
+  "columns": 45,
+  "image": "xswatshoot_stand.png",
+  "imageheight": 80,
+  "imagewidth": 2880,
+  "margin": 0,
+  "name": "xswatshoot_stand",
+  "spacing": 0,
+  "tilecount": 45,
+  "tiledversion": "1.10.2",
+  "tileheight": 80,
+  "tilewidth": 64,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

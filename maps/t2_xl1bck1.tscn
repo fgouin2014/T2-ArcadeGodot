@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cm6uvtf5h3x4k"]
+
+[ext_resource type="PackedScene" uid="uid://uaqwj23rl6yn" path="res://maps/backdrops/level1/t2_xl1bck1.tmj" id="1_1p3gf"]
+
+[node name="t2_xl1bck1" unique_id=936620757 instance=ExtResource("1_1p3gf")]
+
+[node name="sol_0 (PL)" parent="." index="1" unique_id=581239224]
+motion_scale = Vector2(1, 0)
+
+[node name="sol_1 (PL)" parent="." index="2" unique_id=442073876]
+motion_scale = Vector2(0.8, 0)
+
+[node name="breakable_walls (PL)" parent="." index="7" unique_id=1179943918]
+position = Vector2(-15, 0)
+motion_scale = Vector2(0.8, 0)
+
+[node name="barricade_walls (PL)" parent="." index="8" unique_id=2058116347]
+position = Vector2(-15, 0)
+motion_scale = Vector2(0.8, 0)

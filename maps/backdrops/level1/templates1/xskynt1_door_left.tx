@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<template>
+  <tileset firstgid="1" source="../../tilesets/objets/xskydoor/xskydoor_00.tsj" />
+  <object name="xskynt1_door_left" type="enemy" gid="1" width="93.0" height="104.0">
+    <properties>
+      <property name="hp" type="int" value="999999" />
+      <property name="pattern" type="string" value="walk" propertytype="PatternType" />
+      <property name="scale" type="float" value="1.0" />
+      <property name="vitesse_zoom" type="float" value="0.0" />
+      <property name="passes" type="int" value="1" />
+      <property name="speed" type="float" value="0.0" />
+      <property name="selfheal" type="bool" value="false" />
+      <property name="destructible" type="bool" value="false" />
+      <property name="stop" type="string" value="" />
+      <property name="enabled" type="bool" value="true" />
+      <property name="slide_direction" type="string" value="left" />
+    </properties>
+  </object>
+</template>

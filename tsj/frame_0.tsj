@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "frame_0.png",
+  "imageheight": 50,
+  "imagewidth": 48,
+  "margin": 0,
+  "name": "frame_0",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 50,
+  "tilewidth": 48,
+  "type": "tileset",
+  "version": "1.10"
+}

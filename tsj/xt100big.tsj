@@ -1,0 +1,15 @@
+{
+  "columns": 4,
+  "image": "xt100big.png",
+  "imageheight": 346,
+  "imagewidth": 368,
+  "margin": 0,
+  "name": "xt100big",
+  "spacing": 0,
+  "tilecount": 8,
+  "tiledversion": "1.10.2",
+  "tileheight": 121,
+  "tilewidth": 92,
+  "type": "tileset",
+  "version": "1.10"
+}

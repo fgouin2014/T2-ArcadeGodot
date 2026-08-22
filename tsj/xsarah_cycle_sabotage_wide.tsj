@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xsarah_cycle_sabotage_wide.png",
+  "imageheight": 80,
+  "imagewidth": 19968,
+  "margin": 0,
+  "name": "xsarah_cycle_sabotage_wide",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 80,
+  "tilewidth": 19968,
+  "type": "tileset",
+  "version": "1.10"
+}

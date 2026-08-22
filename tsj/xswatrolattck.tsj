@@ -1,0 +1,78 @@
+{
+  "columns": 14,
+  "image": "xswatrolattck_centered.png",
+  "imageheight": 80,
+  "imagewidth": 658,
+  "margin": 0,
+  "name": "xswatrolattck",
+  "spacing": 0,
+  "tilecount": 14,
+  "tiledversion": "1.10.2",
+  "tileheight": 80,
+  "tilewidth": 47,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        },
+        {
+          "duration": 100,
+          "tileid": 8
+        },
+        {
+          "duration": 100,
+          "tileid": 9
+        },
+        {
+          "duration": 100,
+          "tileid": 10
+        },
+        {
+          "duration": 100,
+          "tileid": 11
+        },
+        {
+          "duration": 100,
+          "tileid": 12
+        },
+        {
+          "duration": 100,
+          "tileid": 13
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

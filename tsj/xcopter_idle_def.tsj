@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xcopter_idle_def.png",
+  "imageheight": 69,
+  "imagewidth": 573,
+  "margin": 0,
+  "name": "xcopter_idle_def",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 69,
+  "tilewidth": 573,
+  "type": "tileset",
+  "version": "1.10"
+}

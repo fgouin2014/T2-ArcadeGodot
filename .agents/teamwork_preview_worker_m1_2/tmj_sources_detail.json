@@ -1,0 +1,177 @@
+[
+  {
+    "tmj": "maps/backdrops/level1/t2_hideout.tmj",
+    "index": 1,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_stage3.tmj",
+    "index": 1,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_starter_blank.tmj",
+    "index": 0,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_starter_canvas.tmj",
+    "index": 0,
+    "source": "../../../tsj/level1_decor.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/level1_decor.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_starter_canvas.tmj",
+    "index": 2,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_testchamber.tmj",
+    "index": 1,
+    "source": "../../../tsj/xenfwrd.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xenfwrd.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_testchamber.tmj",
+    "index": 2,
+    "source": "../../../tsj/xgigend.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xgigend.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_testchamber.tmj",
+    "index": 5,
+    "source": "../../../tsj/xmedend_walk.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xmedend_walk.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_testchamber.tmj",
+    "index": 6,
+    "source": "../../../tsj/xmedend_walk_wide.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xmedend_walk_wide.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_testchamber.tmj",
+    "index": 7,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xfback2.tmj",
+    "index": 1,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck.tmj",
+    "index": 1,
+    "source": "../../../tsj/xtinhk_00.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xtinhk_00.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck.tmj",
+    "index": 2,
+    "source": "../../../tsj/xmidhk_00.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xmidhk_00.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck.tmj",
+    "index": 3,
+    "source": "../../../tsj/xbighk.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xbighk.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck.tmj",
+    "index": 4,
+    "source": "../../../tsj/xfrdfhk_composite_demo.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xfrdfhk_composite_demo.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck.tmj",
+    "index": 5,
+    "source": "../../../tsj/xl1ghk_assembled_preview.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xl1ghk_assembled_preview.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck.tmj",
+    "index": 6,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck1.tmj",
+    "index": 1,
+    "source": "../../../tsj/xtinhk_00.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xtinhk_00.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck1.tmj",
+    "index": 2,
+    "source": "../../../tsj/xmidhk_00.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xmidhk_00.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck1.tmj",
+    "index": 3,
+    "source": "../../../tsj/xbighk.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xbighk.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck1.tmj",
+    "index": 4,
+    "source": "../../../tsj/xfrdfhk_composite_demo.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xfrdfhk_composite_demo.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck1.tmj",
+    "index": 5,
+    "source": "../../../tsj/xl1ghk_assembled_preview.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xl1ghk_assembled_preview.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl1bck1.tmj",
+    "index": 6,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xl4skynt1.tmj",
+    "index": 2,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  },
+  {
+    "tmj": "maps/backdrops/level1/t2_xroad.tmj",
+    "index": 1,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "exists": true,
+    "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj"
+  }
+]

@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://8lxcqg6m4ur"]
+
+[ext_resource type="Script" uid="uid://e4rp1ou81gp3" path="res://Script/projectile_actor.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://b7eg20ooxa0dd" path="res://aseprite/xflask.png" id="2_texture"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1"]
+atlas = ExtResource("2_texture")
+region = Rect2(0, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2"]
+atlas = ExtResource("2_texture")
+region = Rect2(59, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3"]
+atlas = ExtResource("2_texture")
+region = Rect2(118, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4"]
+atlas = ExtResource("2_texture")
+region = Rect2(177, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5"]
+atlas = ExtResource("2_texture")
+region = Rect2(236, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6"]
+atlas = ExtResource("2_texture")
+region = Rect2(295, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7"]
+atlas = ExtResource("2_texture")
+region = Rect2(354, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8"]
+atlas = ExtResource("2_texture")
+region = Rect2(413, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_9"]
+atlas = ExtResource("2_texture")
+region = Rect2(472, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10"]
+atlas = ExtResource("2_texture")
+region = Rect2(531, 0, 59, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11"]
+atlas = ExtResource("2_texture")
+region = Rect2(590, 0, 59, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tp5ot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_9")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11")
+}],
+"loop": 0,
+"name": &"projectile_flask",
+"speed": 8.0
+}]
+
+[node name="xflask" type="Node2D" unique_id=1929430308]
+z_index = 5
+script = ExtResource("1_script")
+temps_de_vie = 3.0
+hauteur_lancer_arc = 100.0
+direction_tir = Vector2(0, 10)
+est_sticky_glissant = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=750923244]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tp5ot")
+animation = &"projectile_flask"

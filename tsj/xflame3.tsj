@@ -1,0 +1,46 @@
+{
+  "columns": 6,
+  "image": "xflame3.png",
+  "imageheight": 32,
+  "imagewidth": 330,
+  "margin": 0,
+  "name": "xflame3",
+  "spacing": 0,
+  "tilecount": 6,
+  "tiledversion": "1.10.2",
+  "tileheight": 32,
+  "tilewidth": 55,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

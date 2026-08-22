@@ -1,0 +1,30 @@
+{
+  "columns": 2,
+  "image": "xbigend3_shoot_front.png",
+  "imageheight": 88,
+  "imagewidth": 68,
+  "margin": 0,
+  "name": "xbigend3_shoot_front",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 88,
+  "tilewidth": 34,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

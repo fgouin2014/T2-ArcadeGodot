@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bkjf73bjc2mnn"]
+
+[ext_resource type="PackedScene" uid="uid://byf40iifvfds6" path="res://maps/t2_hideout.tscn" id="1_backdrop"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="2_camera"]
+[ext_resource type="Script" uid="uid://bcjoirytocg68" path="res://Script/spawner_2d.gd" id="3_6q4t8"]
+[ext_resource type="PackedScene" uid="uid://c61g3a4enfwrd" path="res://aseprite/xenfwrd.tscn" id="4_8tcn8"]
+[ext_resource type="PackedScene" uid="uid://bxefcghj2lfeo" path="res://aseprite/xmedfwrd.tscn" id="5_r6vdu"]
+
+[node name="level2" type="Node2D" unique_id=1456994331]
+
+[node name="t2_hideout" parent="." unique_id=1935887596 instance=ExtResource("1_backdrop")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1473833454]
+position = Vector2(0, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 1536
+limit_bottom = 175
+script = ExtResource("2_camera")
+
+[node name="EnnemisPlaces" type="Node2D" parent="." unique_id=95973996]
+
+[node name="Spawner2D3" type="Node2D" parent="EnnemisPlaces" unique_id=1693078608]
+position = Vector2(240, 111)
+script = ExtResource("3_6q4t8")
+type_ennemi = "xbigend"
+direction_deplacement = "gauche_vers_droite"
+inverser_visuel = true
+metadata/_custom_type_script = "uid://bcjoirytocg68"
+
+[node name="Spawner2D2" type="Node2D" parent="EnnemisPlaces" unique_id=912209735]
+position = Vector2(156, 111)
+script = ExtResource("3_6q4t8")
+type_ennemi = "xbigend"
+direction_deplacement = "gauche_vers_droite"
+inverser_visuel = true
+metadata/_custom_type_script = "uid://bcjoirytocg68"
+
+[node name="Spawner2D" type="Node2D" parent="EnnemisPlaces" unique_id=1313127001]
+position = Vector2(71, 111)
+script = ExtResource("3_6q4t8")
+type_ennemi = "xbigend"
+direction_deplacement = "gauche_vers_droite"
+inverser_visuel = true
+metadata/_custom_type_script = "uid://bcjoirytocg68"
+
+[node name="xenfwrd" parent="EnnemisPlaces" unique_id=1421257983 instance=ExtResource("4_8tcn8")]
+position = Vector2(801, 110)
+direction_deplacement = "gauche_vers_droite"
+
+[node name="xenfwrd2" parent="EnnemisPlaces" unique_id=176817080 instance=ExtResource("4_8tcn8")]
+position = Vector2(856, 110)
+comportement_enfwrd = "marche_idle_tir_face"
+direction_deplacement = "gauche_vers_droite"
+
+[node name="xenfwrd3" parent="EnnemisPlaces" unique_id=2075394847 instance=ExtResource("4_8tcn8")]
+position = Vector2(906, 110)
+comportement_enfwrd = "marche_et_tir_profil"
+direction_deplacement = "gauche_vers_droite"
+
+[node name="xmedfwrd" parent="EnnemisPlaces" unique_id=784169159 instance=ExtResource("5_r6vdu")]
+position = Vector2(995, 100)
+comportement_medend = "lancer_grenade_1x_puis_marche"
+
+[editable path="t2_hideout"]

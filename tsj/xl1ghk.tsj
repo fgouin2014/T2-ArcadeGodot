@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xl1ghk.png",
+  "imageheight": 123,
+  "imagewidth": 204,
+  "margin": 0,
+  "name": "xl1ghk",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 123,
+  "tilewidth": 204,
+  "type": "tileset",
+  "version": "1.10"
+}

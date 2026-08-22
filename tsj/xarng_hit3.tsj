@@ -1,0 +1,30 @@
+{
+  "columns": 2,
+  "image": "xarng_hit3.png",
+  "imageheight": 124,
+  "imagewidth": 182,
+  "margin": 0,
+  "name": "xarng_hit3",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 124,
+  "tilewidth": 91,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

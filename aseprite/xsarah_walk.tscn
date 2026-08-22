@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://cpw1gut0potpd"]
+
+[ext_resource type="Script" uid="uid://dexttwypatbr4" path="res://Script/walking_civilian.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://da51dhhir3gcw" path="res://aseprite/xsarah.png" id="2_texture"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10"]
+atlas = ExtResource("2_texture")
+region = Rect2(666, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11"]
+atlas = ExtResource("2_texture")
+region = Rect2(740, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12"]
+atlas = ExtResource("2_texture")
+region = Rect2(814, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13"]
+atlas = ExtResource("2_texture")
+region = Rect2(888, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14"]
+atlas = ExtResource("2_texture")
+region = Rect2(962, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15"]
+atlas = ExtResource("2_texture")
+region = Rect2(1036, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_9"]
+atlas = ExtResource("2_texture")
+region = Rect2(592, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1"]
+atlas = ExtResource("2_texture")
+region = Rect2(0, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2"]
+atlas = ExtResource("2_texture")
+region = Rect2(74, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3"]
+atlas = ExtResource("2_texture")
+region = Rect2(148, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4"]
+atlas = ExtResource("2_texture")
+region = Rect2(222, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5"]
+atlas = ExtResource("2_texture")
+region = Rect2(296, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6"]
+atlas = ExtResource("2_texture")
+region = Rect2(370, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7"]
+atlas = ExtResource("2_texture")
+region = Rect2(444, 0, 74, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8"]
+atlas = ExtResource("2_texture")
+region = Rect2(518, 0, 74, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tp5ot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12")
+}],
+"loop": 0,
+"name": &"crouch",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15")
+}],
+"loop": 0,
+"name": &"die",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_9")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_box"]
+size = Vector2(74, 80)
+
+[node name="xsarah" type="CharacterBody2D" unique_id=1490079865]
+z_index = 5
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1490622076]
+texture_filter = 1
+position = Vector2(0.024997592, 0)
+scale = Vector2(0.9993243, 1)
+sprite_frames = SubResource("SpriteFrames_tp5ot")
+animation = &"walk"
+frame_progress = 0.9212911
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=472150374]
+shape = SubResource("RectangleShape2D_box")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=464502718]
+rect = Rect2(-37, -40, 74, 80)

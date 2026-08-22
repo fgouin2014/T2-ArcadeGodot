@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xskydoor_00.png",
+  "imageheight": 104,
+  "imagewidth": 93,
+  "margin": 0,
+  "name": "xskydoor_00",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 104,
+  "tilewidth": 93,
+  "type": "tileset",
+  "version": "1.10"
+}

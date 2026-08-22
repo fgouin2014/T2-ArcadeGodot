@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://byf40iifvfds6"]
+
+[ext_resource type="PackedScene" uid="uid://ccduvos20i2m2" path="res://maps/backdrops/level1/t2_hideout.tmj" id="1_u7uvo"]
+
+[node name="t2_hideout" unique_id=1935883330 instance=ExtResource("1_u7uvo")]
+
+[node name="EnnemisPlaces" type="Node2D" parent="." index="0" unique_id=1605715933]

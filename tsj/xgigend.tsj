@@ -1,0 +1,54 @@
+{
+  "columns": 5,
+  "image": "xgigend.png",
+  "imageheight": 128,
+  "imagewidth": 735,
+  "margin": 0,
+  "name": "xgigend",
+  "spacing": 0,
+  "tilecount": 5,
+  "tiledversion": "1.12.2",
+  "tileheight": 128,
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 150,
+          "tileid": 0
+        },
+        {
+          "duration": 150,
+          "tileid": 1
+        },
+        {
+          "duration": 150,
+          "tileid": 2
+        },
+        {
+          "duration": 150,
+          "tileid": 3
+        },
+        {
+          "duration": 150,
+          "tileid": 4
+        },
+        {
+          "duration": 150,
+          "tileid": 3
+        },
+        {
+          "duration": 150,
+          "tileid": 2
+        },
+        {
+          "duration": 150,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ],
+  "tilewidth": 147,
+  "type": "tileset",
+  "version": "1.10"
+}

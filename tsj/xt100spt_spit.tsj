@@ -1,0 +1,46 @@
+{
+  "columns": 6,
+  "image": "xt100spt_split.png",
+  "imageheight": 67,
+  "imagewidth": 282,
+  "margin": 0,
+  "name": "xt100spt_split",
+  "spacing": 0,
+  "tilecount": 6,
+  "tiledversion": "1.10.2",
+  "tileheight": 67,
+  "tilewidth": 47,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

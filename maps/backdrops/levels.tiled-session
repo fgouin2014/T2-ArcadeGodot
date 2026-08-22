@@ -1,0 +1,413 @@
+{
+    "activeFile": "level1/t2_testchamber.tmj",
+    "expandedProjectPaths": [
+        "level7",
+        ".",
+        "level4",
+        "level1",
+        "leveldev"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/androidProject/lastchance/T2-ArcadeGodot/maps/t2_xl1bck1.tmj": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 709.9999999999999,
+                "y": 95.33333333333331
+            }
+        },
+        "C:/androidProject/lastchance/T2-ArcadeGodot/maps/t2_xl1bck1.tmj#level1_decor": {
+            "scaleInDock": 1
+        },
+        "level1/level1_decor.tsj": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "level1/t2_hideout.tmj": {
+            "expandedObjectLayers": [
+                20
+            ],
+            "scale": 0.73291015625,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 767.4883411059294,
+                "y": 254.46502331778817
+            }
+        },
+        "level1/t2_hideout.tmj#level2_decor": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "level1/t2_stage3.tmj": {
+            "expandedObjectLayers": [
+                8,
+                10
+            ],
+            "scale": 1.954427083333333,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 192.1279147235177,
+                "y": 86.72618254497006
+            }
+        },
+        "level1/t2_stage3.tmj#level3_decor": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "level1/t2_starter_blank.tmj": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 1.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 2816.333333333333,
+                "y": 86.66666666666669
+            }
+        },
+        "level1/t2_starter_blank.tmj#level4_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_starter_canvas.tmj": {
+            "scale": 0.33,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 2046.969696969697,
+                "y": 89.39393939393949
+            }
+        },
+        "level1/t2_starter_canvas.tmj#level4_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_testchamber.tmj": {
+            "expandedObjectLayers": [
+                8,
+                9,
+                20
+            ],
+            "scale": 3,
+            "selectedLayer": 10,
+            "viewCenter": {
+                "x": 184.83333333333331,
+                "y": 88.16666666666666
+            }
+        },
+        "level1/t2_testchamber.tmj#level1_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_testchamber.tmj#level4_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_testchamber.tmj#testchamber_decor": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "level1/t2_xfback2.tmj": {
+            "expandedObjectLayers": [
+                7,
+                3
+            ],
+            "scale": 0.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 391,
+                "y": -151
+            }
+        },
+        "level1/t2_xfback2.tmj#level7_decor": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck.tmj": {
+            "expandedObjectLayers": [
+                6,
+                12,
+                2,
+                11,
+                3
+            ],
+            "scale": 2,
+            "selectedLayer": 10,
+            "viewCenter": {
+                "x": 4844.25,
+                "y": 30.25
+            }
+        },
+        "level1/t2_xl1bck.tmj#level1_decor": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck1.tmj": {
+            "expandedObjectLayers": [
+                8,
+                5,
+                9,
+                2,
+                13,
+                11,
+                12
+            ],
+            "scale": 1,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 261.5,
+                "y": -121.5
+            }
+        },
+        "level1/t2_xl1bck1.tmj#hud": {
+            "dynamicWrapping": false
+        },
+        "level1/t2_xl1bck1.tmj#level1_decor": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "level1/t2_xl4skynt1.tmj": {
+            "expandedGroupLayers": [
+                17
+            ],
+            "expandedObjectLayers": [
+                13,
+                16,
+                5
+            ],
+            "scale": 0.75,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 412.66666666666674,
+                "y": 31.333333333333314
+            }
+        },
+        "level1/t2_xl4skynt1.tmj#level1_decor": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "level1/t2_xl4skynt1.tmj#level4_decor": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "level1/t2_xroad.tmj": {
+            "expandedObjectLayers": [
+                10,
+                9
+            ],
+            "scale": 0.24430338541666663,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 2253.3457694870094,
+                "y": 88.00532978014644
+            }
+        },
+        "level1/t2_xroad.tmj#xroad_decor": {
+            "scaleInDock": 1
+        },
+        "level1/test_enemies_collection.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "level1/xarng_idle.tsj": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "level1/xarng_popup.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xarng_retract.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xbighk.tsj": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "level1/xendrop.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xenfwrd.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xenfwrd_walk.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xenjump.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xethrow.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xfrdfhk_composite_demo.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xgigend.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xgigend_popup.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xjug_idle_def.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "level1/xl1ghk_assembled_preview.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xmedend_walk.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xmedend_walk_wide.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xmidhk_00.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xt100big_popup.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xt100big_retract.tsj": {
+            "scaleInDock": 1
+        },
+        "level1/xtinhk_00.tsj": {
+            "scaleInDock": 1
+        },
+        "level1_decor.tsj": {
+            "scaleInDock": 1
+        },
+        "level2/t2_hideout.tmj": {
+            "scale": 0.73291015625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 511.6588940706196,
+                "y": 87.3231179213858
+            }
+        },
+        "level2/t2_hideout.tmj#level2_decor": {
+            "scaleInDock": 1
+        },
+        "level3/t2_stage3.tmj": {
+            "scale": 1.954427083333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 191.87208527648238,
+                "y": 86.98201199200534
+            }
+        },
+        "level3/t2_stage3.tmj#level3_decor": {
+            "scaleInDock": 1
+        },
+        "level4/t2_xl4skynt1.tmj": {
+            "scale": 0.19544270833333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1918.7208527648233,
+                "y": 86.98201199200503
+            }
+        },
+        "level4/t2_xl4skynt1.tmj#level4_decor": {
+            "scaleInDock": 1
+        },
+        "level6/t2_xroad.tmj": {
+            "expandedObjectLayers": [
+                9
+            ],
+            "scale": 0.24430338541666663,
+            "selectedLayer": 9,
+            "viewCenter": {
+                "x": 3012.647568287809,
+                "y": 90.05196535642904
+            }
+        },
+        "level6/t2_xroad.tmj#xroad_decor": {
+            "scaleInDock": 1
+        },
+        "level7/t2_xfback2.tmj": {
+            "scale": 0.41880580357142855,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 895.4030646235844,
+                "y": 88.34643570952699
+            }
+        },
+        "level7/t2_xfback2.tmj#level7_decor": {
+            "scaleInDock": 1
+        },
+        "leveldev/t2_testchamber.tmj": {
+            "expandedObjectLayers": [
+                20,
+                9
+            ],
+            "scale": 1.5,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 258,
+                "y": 184.66666666666669
+            }
+        },
+        "leveldev/t2_testchamber.tmj#level1_decor": {
+            "scaleInDock": 1
+        },
+        "leveldev/t2_testchamber.tmj#level4_decor": {
+            "scaleInDock": 1
+        },
+        "leveldev/t2_testchamber.tmj#testchamber_decor": {
+            "scaleInDock": 1
+        },
+        "xbighk.tsj": {
+            "scaleInDock": 1
+        },
+        "xenfwrd.tsj": {
+            "scaleInDock": 1
+        },
+        "xfrdfhk_composite_demo.tsj": {
+            "scaleInDock": 1
+        },
+        "xl1ghk_assembled_preview.tsj": {
+            "scaleInDock": 1
+        },
+        "xmedend_walk.tsj": {
+            "scaleInDock": 1
+        },
+        "xmidhk_00.tsj": {
+            "scaleInDock": 1
+        },
+        "xtinhk_00.tsj": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "C:/androidProject/lastchance/T2-ArcadeGodot/maps",
+    "last.externalTilesetPath": "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1",
+    "last.imagePath": "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1",
+    "last.workingDirectory": "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops",
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "json",
+    "openFiles": [
+        "level1/t2_testchamber.tmj",
+        "level1/t2_xl1bck1.tmj"
+    ],
+    "project": "levels.tiled-project",
+    "property.type": "ClearCondition",
+    "recentFiles": [
+        "level1/t2_xl1bck1.tmj",
+        "level1/t2_testchamber.tmj",
+        "C:/androidProject/lastchance/T2-ArcadeGodot/maps/t2_xl1bck1.tmj",
+        "level1/t2_hideout.tmj",
+        "level1/t2_xl1bck.tmj",
+        "level1/test_enemies_collection.tsj",
+        "level1/t2_xl4skynt1.tmj",
+        "level1/t2_xfback2.tmj",
+        "level1/t2_stage3.tmj",
+        "level1/t2_xroad.tmj",
+        "level1/level1_decor.tsj",
+        "level1/t2_starter_canvas.tmj"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFilter": "JSON tileset files (*.tsj *.json)",
+    "tileset.tileSize": {
+        "height": 200,
+        "width": 320
+    }
+}

@@ -1,0 +1,62 @@
+{
+  "columns": 8,
+  "image": "xsmalend_skyline.png",
+  "imageheight": 27,
+  "imagewidth": 152,
+  "margin": 0,
+  "name": "xsmalend_skyline",
+  "spacing": 0,
+  "tilecount": 8,
+  "tiledversion": "1.10.2",
+  "tileheight": 27,
+  "tilewidth": 19,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        },
+        {
+          "duration": 100,
+          "tileid": 8
+        },
+        {
+          "duration": 100,
+          "tileid": 9
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

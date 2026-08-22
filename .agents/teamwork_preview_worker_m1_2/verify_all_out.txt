@@ -1,0 +1,50 @@
+STDOUT:
+=== VERIFICATION TEST 1: Explorer 1 Path Resolution Test ===
+PASS: Calculated relative path matches expected: '../../../tsj/test_enemies_collection.tsj'
+Godot res:// canonical path: 'res://tsj/test_enemies_collection.tsj'
+PASS: Godot YATI canonicalization correct
+
+=== VERIFICATION TEST 2: TMJ Map References ===
+Total .tmj map files found: 11
+  [maps\backdrops\level1\t2_hideout.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+  [maps\backdrops\level1\t2_stage3.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+  [maps\backdrops\level1\t2_starter_blank.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+  [maps\backdrops\level1\t2_starter_canvas.tmj] '../../../tsj/level1_decor.tsj' -> EXISTS in res://tsj/ (level1_decor.tsj)
+  [maps\backdrops\level1\t2_starter_canvas.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+  [maps\backdrops\level1\t2_testchamber.tmj] '../../../tsj/xenfwrd.tsj' -> EXISTS in res://tsj/ (xenfwrd.tsj)
+  [maps\backdrops\level1\t2_testchamber.tmj] '../../../tsj/xgigend.tsj' -> EXISTS in res://tsj/ (xgigend.tsj)
+  [maps\backdrops\level1\t2_testchamber.tmj] '../../../tsj/xmedend_walk.tsj' -> EXISTS in res://tsj/ (xmedend_walk.tsj)
+  [maps\backdrops\level1\t2_testchamber.tmj] '../../../tsj/xmedend_walk_wide.tsj' -> EXISTS in res://tsj/ (xmedend_walk_wide.tsj)
+  [maps\backdrops\level1\t2_testchamber.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+  [maps\backdrops\level1\t2_xfback2.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+  [maps\backdrops\level1\t2_xl1bck.tmj] '../../../tsj/xtinhk_00.tsj' -> EXISTS in res://tsj/ (xtinhk_00.tsj)
+  [maps\backdrops\level1\t2_xl1bck.tmj] '../../../tsj/xmidhk_00.tsj' -> EXISTS in res://tsj/ (xmidhk_00.tsj)
+  [maps\backdrops\level1\t2_xl1bck.tmj] '../../../tsj/xbighk.tsj' -> EXISTS in res://tsj/ (xbighk.tsj)
+  [maps\backdrops\level1\t2_xl1bck.tmj] '../../../tsj/xfrdfhk_composite_demo.tsj' -> EXISTS in res://tsj/ (xfrdfhk_composite_demo.tsj)
+  [maps\backdrops\level1\t2_xl1bck.tmj] '../../../tsj/xl1ghk_assembled_preview.tsj' -> EXISTS in res://tsj/ (xl1ghk_assembled_preview.tsj)
+  [maps\backdrops\level1\t2_xl1bck.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+  [maps\backdrops\level1\t2_xl1bck1.tmj] '../../../tsj/xtinhk_00.tsj' -> EXISTS in res://tsj/ (xtinhk_00.tsj)
+  [maps\backdrops\level1\t2_xl1bck1.tmj] '../../../tsj/xmidhk_00.tsj' -> EXISTS in res://tsj/ (xmidhk_00.tsj)
+  [maps\backdrops\level1\t2_xl1bck1.tmj] '../../../tsj/xbighk.tsj' -> EXISTS in res://tsj/ (xbighk.tsj)
+  [maps\backdrops\level1\t2_xl1bck1.tmj] '../../../tsj/xfrdfhk_composite_demo.tsj' -> EXISTS in res://tsj/ (xfrdfhk_composite_demo.tsj)
+  [maps\backdrops\level1\t2_xl1bck1.tmj] '../../../tsj/xl1ghk_assembled_preview.tsj' -> EXISTS in res://tsj/ (xl1ghk_assembled_preview.tsj)
+  [maps\backdrops\level1\t2_xl1bck1.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+  [maps\backdrops\level1\t2_xl4skynt1.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+  [maps\backdrops\level1\t2_xroad.tmj] '../../../tsj/test_enemies_collection.tsj' -> EXISTS in res://tsj/ (test_enemies_collection.tsj)
+Total external TSJ sources across all TMJs: 25
+
+=== VERIFICATION TEST 3: TSJ Files & Image Path Resolution ===
+Total TSJ files in res://tsj/: 244
+PASS: ALL TSJ image references resolve to existing files in res://tsj/
+
+=== VERIFICATION TEST 4: No Scattered TSJ Files ===
+PASS: Zero .tsj files found outside res://tsj/
+
+=== VERIFICATION TEST 5: Tiled Project Configuration ===
+levels.godot.tiled-project folders: ['.', '../../tsj']
+PASS: Tiled project folders correctly configured
+
+=== VERIFICATION SUMMARY ===
+SUCCESS: ALL 5 VERIFICATION TESTS PASSED PERFECTLY (0 ERRORS)
+
+STDERR:

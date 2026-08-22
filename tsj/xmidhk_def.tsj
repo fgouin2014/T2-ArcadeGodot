@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xmidhk_def.png",
+  "imageheight": 37,
+  "imagewidth": 875,
+  "margin": 0,
+  "name": "xmidhk_def",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 37,
+  "tilewidth": 875,
+  "type": "tileset",
+  "version": "1.10"
+}

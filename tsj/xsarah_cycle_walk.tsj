@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xsarah_cycle_walk.png",
+  "imageheight": 80,
+  "imagewidth": 640,
+  "margin": 0,
+  "name": "xsarah_cycle_walk",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 80,
+  "tilewidth": 640,
+  "type": "tileset",
+  "version": "1.10"
+}

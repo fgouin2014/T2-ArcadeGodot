@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xl1ghk_torse_idle.png",
+  "imageheight": 40,
+  "imagewidth": 146,
+  "margin": 0,
+  "name": "xl1ghk_torse_idle",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 40,
+  "tilewidth": 146,
+  "type": "tileset",
+  "version": "1.10"
+}

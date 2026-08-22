@@ -1,0 +1,149 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Texture2D" path="res://aseprite/effect/xexpl2.png" id="2_texture"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1"]
+atlas = ExtResource("2_texture")
+region = Rect2(0, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2"]
+atlas = ExtResource("2_texture")
+region = Rect2(32, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3"]
+atlas = ExtResource("2_texture")
+region = Rect2(64, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4"]
+atlas = ExtResource("2_texture")
+region = Rect2(96, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5"]
+atlas = ExtResource("2_texture")
+region = Rect2(128, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6"]
+atlas = ExtResource("2_texture")
+region = Rect2(160, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7"]
+atlas = ExtResource("2_texture")
+region = Rect2(192, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8"]
+atlas = ExtResource("2_texture")
+region = Rect2(224, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_9"]
+atlas = ExtResource("2_texture")
+region = Rect2(256, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10"]
+atlas = ExtResource("2_texture")
+region = Rect2(288, 0, 32, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tp5ot"]
+animations = [
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_9")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10")
+}
+],
+"loop": false,
+"name": &"explose",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_9")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10")
+}
+],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}
+]
+
+[node name="xexpl2" type="Node2D"]
+z_index = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tp5ot")
+animation = &"explose"

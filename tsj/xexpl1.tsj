@@ -1,0 +1,62 @@
+{
+  "columns": 10,
+  "image": "xexpl1.png",
+  "imageheight": 14,
+  "imagewidth": 170,
+  "margin": 0,
+  "name": "xexpl1",
+  "spacing": 0,
+  "tilecount": 10,
+  "tiledversion": "1.10.2",
+  "tileheight": 14,
+  "tilewidth": 17,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        },
+        {
+          "duration": 100,
+          "tileid": 8
+        },
+        {
+          "duration": 100,
+          "tileid": 9
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

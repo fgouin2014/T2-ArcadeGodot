@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xsvan_destroyed_def.png",
+  "imageheight": 120,
+  "imagewidth": 382,
+  "margin": 0,
+  "name": "xsvan_destroyed_def",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 120,
+  "tilewidth": 382,
+  "type": "tileset",
+  "version": "1.10"
+}

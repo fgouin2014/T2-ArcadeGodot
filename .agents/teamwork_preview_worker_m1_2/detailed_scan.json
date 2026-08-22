@@ -1,0 +1,1056 @@
+{
+  "tmj_source_issues": [
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 1,
+      "source": "xgigend.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xgigend.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 2,
+      "source": "xarng_idle.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xarng_idle.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 3,
+      "source": "xenjump.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xenjump.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 4,
+      "source": "xethrow.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xethrow.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 5,
+      "source": "xl1ghk_assembled_preview.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xl1ghk_assembled_preview.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 6,
+      "source": "xenfwrd_walk.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xenfwrd_walk.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 7,
+      "source": "xfrdfhk_composite_demo.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xfrdfhk_composite_demo.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 8,
+      "source": "xbighk.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xbighk.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 9,
+      "source": "xmidhk_00.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xmidhk_00.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 10,
+      "source": "xtinhk_00.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xtinhk_00.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 11,
+      "source": "xarng_popup.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xarng_popup.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 12,
+      "source": "xarng_retract.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xarng_retract.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 13,
+      "source": "xt100big_popup.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xt100big_popup.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 14,
+      "source": "xt100big_retract.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xt100big_retract.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 15,
+      "source": "xendrop.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/xendrop.tsj"
+    },
+    {
+      "file": "T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "index": 16,
+      "source": "test_enemies_collection.tsj",
+      "resolved": "C:/androidProject/lastchance/T2-ArcadeGodot/maps/backdrops/level1/test_enemies_collection.tsj"
+    },
+    {
+      "file": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/t2_starter_blank_embeded.tmj",
+      "index": 0,
+      "source": "../../../../../../../T2-ArcadeGodot/maps/backdrops/level1/xtech_cycle.tsj",
+      "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/xtech_cycle.tsj"
+    },
+    {
+      "file": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/t2_starter_blank_embeded.tmj",
+      "index": 1,
+      "source": "../../../../../../../T2-ArcadeGodot/maps/backdrops/level1/xsarah_cycle.tsj",
+      "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/xsarah_cycle.tsj"
+    },
+    {
+      "file": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/t2_starter_blank_embeded.tmj",
+      "index": 2,
+      "source": "../../../../../../../T2-ArcadeGodot/maps/backdrops/level1/xyjc_cycle.tsj",
+      "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/xyjc_cycle.tsj"
+    },
+    {
+      "file": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/t2_starter_blank_embeded.tmj",
+      "index": 3,
+      "source": "../../../../../../../T2-ArcadeGodot/maps/backdrops/level1/xswat_cycle.tsj",
+      "resolved": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/xswat_cycle.tsj"
+    }
+  ],
+  "tsj_dim_issues": [
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xarng.tsj",
+      "image": "xarng.png",
+      "specified": [
+        91,
+        124
+      ],
+      "actual": [
+        455,
+        558
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xbigend.tsj",
+      "image": "xbigend.png",
+      "specified": [
+        92,
+        88
+      ],
+      "actual": [
+        460,
+        308
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xendie_skyline.tsj",
+      "image": "xendie_skyline.png",
+      "specified": [
+        115,
+        27
+      ],
+      "actual": [
+        115,
+        26
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xendie_sol_1.tsj",
+      "image": "xendie_sol_1.png",
+      "specified": [
+        405,
+        84
+      ],
+      "actual": [
+        405,
+        72
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xendie_sol_2.tsj",
+      "image": "xendie_sol_2.png",
+      "specified": [
+        290,
+        56
+      ],
+      "actual": [
+        290,
+        50
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xendrop.tsj",
+      "image": "xendrop.png",
+      "specified": [
+        180,
+        144
+      ],
+      "actual": [
+        35,
+        78
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xenfwrd_walk.tsj",
+      "image": "xenfwrd_walk.png",
+      "specified": [
+        442,
+        88
+      ],
+      "actual": [
+        476,
+        88
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xengren.tsj",
+      "image": "xengren.png",
+      "specified": [
+        138,
+        24
+      ],
+      "actual": [
+        62,
+        37
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xenjump_placeholder.tsj",
+      "image": "xenjump_placeholder.png",
+      "specified": [
+        180,
+        137
+      ],
+      "actual": [
+        36,
+        78
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xflask.tsj",
+      "image": "xflask.png",
+      "specified": [
+        649,
+        64
+      ],
+      "actual": [
+        177,
+        100
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xmedend.tsj",
+      "image": "xmedend.png",
+      "specified": [
+        55,
+        61
+      ],
+      "actual": [
+        280,
+        242
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xmedend_walk_wide.tsj",
+      "image": "xmedend_walk_wide.png",
+      "specified": [
+        2048,
+        68
+      ],
+      "actual": [
+        928,
+        68
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xsarah.tsj",
+      "image": "xsarah.png",
+      "specified": [
+        80,
+        80
+      ],
+      "actual": [
+        222,
+        178
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xskynt3_00.tsj",
+      "image": "xskynt3_00.png",
+      "specified": [
+        176,
+        104
+      ],
+      "actual": [
+        88,
+        104
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xsmalend_skyline.tsj",
+      "image": "xsmalend_skyline.png",
+      "specified": [
+        190,
+        27
+      ],
+      "actual": [
+        152,
+        27
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xswat.tsj",
+      "image": "xswat.png",
+      "specified": [
+        1792,
+        80
+      ],
+      "actual": [
+        320,
+        260
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xswatdie.tsj",
+      "image": "xswatdie.png",
+      "specified": [
+        384,
+        77
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xswathit.tsj",
+      "image": "xswathit.png",
+      "specified": [
+        30,
+        72
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xswatrol.tsj",
+      "image": "xswatrol.png",
+      "specified": [
+        470,
+        80
+      ],
+      "actual": [
+        611,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xswatrol_rol.tsj",
+      "image": "xswatrol_rol.png",
+      "specified": [
+        376,
+        67
+      ],
+      "actual": [
+        376,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xswatrun.tsj",
+      "image": "xswatrun.png",
+      "specified": [
+        448,
+        77
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xswatrun_walk.tsj",
+      "image": "xswatrun.png",
+      "specified": [
+        448,
+        77
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xswatshoot.tsj",
+      "image": "xswatshoot_stand.png",
+      "specified": [
+        128,
+        80
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xswatshoot_stand.tsj",
+      "image": "xswatshoot_stand.png",
+      "specified": [
+        128,
+        80
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xt100big.tsj",
+      "image": "xt100big.png",
+      "specified": [
+        92,
+        121
+      ],
+      "actual": [
+        368,
+        346
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xt100sms_smash.tsj",
+      "image": "xt100sms_smash.png",
+      "specified": [
+        148,
+        85
+      ],
+      "actual": [
+        276,
+        126
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xtechdie.tsj",
+      "image": "xtechdie.png",
+      "specified": [
+        260,
+        62
+      ],
+      "actual": [
+        936,
+        72
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xtechthrow.tsj",
+      "image": "xtechthrow.png",
+      "specified": [
+        220,
+        59
+      ],
+      "actual": [
+        936,
+        72
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xtechwalk.tsj",
+      "image": "xtechwalk.png",
+      "specified": [
+        368,
+        72
+      ],
+      "actual": [
+        936,
+        72
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xyjcdie.tsj",
+      "image": "xyjcdie.png",
+      "specified": [
+        240,
+        59
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xyjcdrop.tsj",
+      "image": "xyjcdrop.png",
+      "specified": [
+        60,
+        46
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xyjcscan.tsj",
+      "image": "xyjcscan.png",
+      "specified": [
+        62,
+        64
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xyjctake.tsj",
+      "image": "xyjctake.png",
+      "specified": [
+        128,
+        83
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/T2-ArcadeGodot/tsj/xyjcwalk.tsj",
+      "image": "xyjcwalk.png",
+      "specified": [
+        248,
+        64
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/xenjump_placeholder.tsj",
+      "image": "xenjump_placeholder.png",
+      "specified": [
+        180,
+        137
+      ],
+      "actual": [
+        36,
+        78
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/tilesets/personages/xmedend/xmedend_walk_wide.tsj",
+      "image": "xmedend_walk_wide.png",
+      "specified": [
+        928,
+        68
+      ],
+      "actual": [
+        2048,
+        68
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xenfwrd_walk.tsj",
+      "image": "xenfwrd_walk.png",
+      "specified": [
+        442,
+        88
+      ],
+      "actual": [
+        476,
+        88
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xexpl4.tsj",
+      "image": "../../animations/xexpl4/xexpl4.png",
+      "specified": [
+        372,
+        64
+      ],
+      "actual": [
+        186,
+        64
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xsmalend_skyline.tsj",
+      "image": "../../../../../../../../t2_extracted/T2_sprites_truePalette/enemis_temp_build/animations/xsmalend/xsmalend_skyline.png",
+      "specified": [
+        190,
+        27
+      ],
+      "actual": [
+        152,
+        27
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xswat.tsj",
+      "image": "../../animations/xswat/xswat.png",
+      "specified": [
+        1792,
+        80
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xswathit.tsj",
+      "image": "../../animations/xswat/xswathit.png",
+      "specified": [
+        30,
+        72
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xswatrol.tsj",
+      "image": "xswatrol.png",
+      "specified": [
+        470,
+        80
+      ],
+      "actual": [
+        611,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xswatrol_rol.tsj",
+      "image": "xswatrol_rol.png",
+      "specified": [
+        376,
+        67
+      ],
+      "actual": [
+        376,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xswatrun_walk.tsj",
+      "image": "../../../animations/xswat/xswatrun.png",
+      "specified": [
+        448,
+        77
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xyjcdie.tsj",
+      "image": "../../animations/xyjc/xyjcdie.png",
+      "specified": [
+        240,
+        59
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xyjcdrop.tsj",
+      "image": "../../animations/xyjc/xyjcdrop.png",
+      "specified": [
+        60,
+        46
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xyjcscan.tsj",
+      "image": "../../animations/xyjc/xyjcscan.png",
+      "specified": [
+        62,
+        64
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xyjctake.tsj",
+      "image": "../../animations/xyjc/xyjctake.png",
+      "specified": [
+        128,
+        83
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xyjcwalk.tsj",
+      "image": "../../animations/xyjc/xyjcwalk.png",
+      "specified": [
+        248,
+        64
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/xenjump.tsj",
+      "image": "xenjump.png",
+      "specified": [
+        180,
+        137
+      ],
+      "actual": [
+        36,
+        78
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/tilesets/personages/xmedend/xmedend_walk_wide.tsj",
+      "image": "xmedend_walk_wide.png",
+      "specified": [
+        928,
+        68
+      ],
+      "actual": [
+        2048,
+        68
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xenfwrd.tsj",
+      "image": "../xenfwrd.png",
+      "specified": [
+        476,
+        88
+      ],
+      "actual": [
+        34,
+        88
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xenfwrd_walk.tsj",
+      "image": "xenfwrd_walk.png",
+      "specified": [
+        442,
+        88
+      ],
+      "actual": [
+        476,
+        88
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xenjump.tsj",
+      "image": "../xenjump.png",
+      "specified": [
+        180,
+        137
+      ],
+      "actual": [
+        36,
+        78
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xethrow.tsj",
+      "image": "../xethrow.png",
+      "specified": [
+        375,
+        61
+      ],
+      "actual": [
+        75,
+        61
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xexpl4.tsj",
+      "image": "../../animations/xexpl4/xexpl4.png",
+      "specified": [
+        372,
+        64
+      ],
+      "actual": [
+        186,
+        64
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xswat.tsj",
+      "image": "../../animations/xswat/xswat.png",
+      "specified": [
+        1792,
+        80
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xswathit.tsj",
+      "image": "../../animations/xswat/xswathit.png",
+      "specified": [
+        30,
+        72
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xswatrol.tsj",
+      "image": "xswatrol.png",
+      "specified": [
+        470,
+        80
+      ],
+      "actual": [
+        611,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xswatrol_rol.tsj",
+      "image": "xswatrol_rol.png",
+      "specified": [
+        376,
+        67
+      ],
+      "actual": [
+        376,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xswatshoot_crouch.tsj",
+      "image": "../../animations/xswat/xswatshoot_crouch.png",
+      "specified": [
+        60,
+        53
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xswatshoot_stand.tsj",
+      "image": "../../animations/xswat/xswatshoot_stand.png",
+      "specified": [
+        60,
+        75
+      ],
+      "actual": [
+        2880,
+        80
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xtechdie.tsj",
+      "image": "../../animations/xtech/xtechdie.png",
+      "specified": [
+        260,
+        62
+      ],
+      "actual": [
+        936,
+        72
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xtechthrow.tsj",
+      "image": "../../animations/xtech/xtechthrow.png",
+      "specified": [
+        220,
+        59
+      ],
+      "actual": [
+        936,
+        72
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xtechwalk.tsj",
+      "image": "../../animations/xtech/xtechwalk.png",
+      "specified": [
+        368,
+        72
+      ],
+      "actual": [
+        936,
+        72
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xyjcdie.tsj",
+      "image": "../../animations/xyjc/xyjcdie.png",
+      "specified": [
+        240,
+        59
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xyjcdrop.tsj",
+      "image": "../../animations/xyjc/xyjcdrop.png",
+      "specified": [
+        60,
+        46
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xyjcscan.tsj",
+      "image": "../../animations/xyjc/xyjcscan.png",
+      "specified": [
+        62,
+        64
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xyjctake.tsj",
+      "image": "../../animations/xyjc/xyjctake.png",
+      "specified": [
+        128,
+        83
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    },
+    {
+      "tsj": "DukeSoundboard/app/build/intermediates/assets/debug/maps/backdrops/level1/xyjcwalk.tsj",
+      "image": "../../animations/xyjc/xyjcwalk.png",
+      "specified": [
+        248,
+        64
+      ],
+      "actual": [
+        1260,
+        83
+      ]
+    }
+  ],
+  "path_escape_occurrences": [
+    {
+      "file": "DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/t2_hideout.tmj",
+      "sample_lines": [
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xhidbt_00.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xhidbt_01.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xhidbt_02.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xhidbt_03.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xhidebit_04.png\","
+      ],
+      "total_lines": 29
+    },
+    {
+      "file": "DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/t2_stage3.tmj",
+      "sample_lines": [
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xl1bck1_00.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xl1bck1_000.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xl1bck1_01.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xl1bck1_02.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xl1bck1_03.png\","
+      ],
+      "total_lines": 12
+    },
+    {
+      "file": "DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/t2_testchamber.tmj",
+      "sample_lines": [
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/xgigend.tx\",",
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/xfrdfhk_stop0.tx\",",
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/xgigend.tx\",",
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/xmedend.tx\",",
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/xenfwrd_xmedend.tx\","
+      ],
+      "total_lines": 109
+    },
+    {
+      "file": "DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/t2_xfback2.tmj",
+      "sample_lines": [
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/foundry_placeholder.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xfback_00.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xfback_01.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xfgird_00.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xfgird_01.png\","
+      ],
+      "total_lines": 12
+    },
+    {
+      "file": "DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck.tmj",
+      "sample_lines": [
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/t800.tx\",",
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/popup.tx\",",
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/t800_walk_stop0.tx\",",
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/t800.tx\",",
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/xfrdfhk_stop0.tx\","
+      ],
+      "total_lines": 75
+    },
+    {
+      "file": "DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/t2_xl1bck1.tmj",
+      "sample_lines": [
+        "\"template\": \"../../../../app/src/main/assets/maps/backdrops/level1/templates/popup.tx\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/frame_0000.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xtinhk_00.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/t800_popup_idle.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xbighk_placeholder.png\","
+      ],
+      "total_lines": 54
+    },
+    {
+      "file": "DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/t2_xl4skynt1.tmj",
+      "sample_lines": [
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/rect10.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xl4back2_00.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xl4back2_01.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xl4back2_02.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xl4back_00.png\","
+      ],
+      "total_lines": 92
+    },
+    {
+      "file": "DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1/t2_xroad.tmj",
+      "sample_lines": [
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xsroad_00.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xsroad_01.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xsroad_02.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xsroad_03.png\",",
+        "\"image\": \"../../../../app/src/main/assets/maps/backdrops/level1/xsroad_04.png\","
+      ],
+      "total_lines": 7
+    }
+  ]
+}

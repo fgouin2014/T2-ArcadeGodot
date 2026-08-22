@@ -1,0 +1,38 @@
+{
+  "columns": 21,
+  "image": "xyjcdie.png",
+  "imageheight": 83,
+  "imagewidth": 1260,
+  "margin": 0,
+  "name": "xyjcdie",
+  "spacing": 0,
+  "tilecount": 21,
+  "tiledversion": "1.10.2",
+  "tileheight": 59,
+  "tilewidth": 60,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

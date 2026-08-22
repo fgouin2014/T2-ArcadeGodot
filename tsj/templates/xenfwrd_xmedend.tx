@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../xenfwrd_walk.tsj"/>
+ <object name="xenfwrd_xmedend" type="xenfwrd" gid="1" width="34" height="88">
+  <properties>
+   <property name="destructible" type="bool" value="true"/>
+   <property name="enabled" type="bool" value="true"/>
+   <property name="hp" type="int" value="3"/>
+   <property name="initial_delay" type="float" value="0"/>
+   <property name="passes" type="int" value="1"/>
+   <property name="pattern" value="walk"/>
+   <property name="scale" type="float" value="1"/>
+   <property name="selfheal" type="bool" value="false"/>
+   <property name="shots" type="int" value="8"/>
+   <property name="spawn_type" value="xmedend"/>
+   <property name="speed" type="float" value="0"/>
+   <property name="start_direction" value="right"/>
+   <property name="stop" value=""/>
+   <property name="vitesse_zoom" type="float" value="0.006"/>
+  </properties>
+ </object>
+</template>

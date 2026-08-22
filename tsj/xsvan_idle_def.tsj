@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xsvan_idle_def.png",
+  "imageheight": 132,
+  "imagewidth": 384,
+  "margin": 0,
+  "name": "xsvan_idle_def",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 132,
+  "tilewidth": 384,
+  "type": "tileset",
+  "version": "1.10"
+}

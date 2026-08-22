@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xendie_die_scale1.png",
+  "imageheight": 27,
+  "imagewidth": 115,
+  "margin": 0,
+  "name": "xendie_die_scale1",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 27,
+  "tilewidth": 115,
+  "type": "tileset",
+  "version": "1.10"
+}

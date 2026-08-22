@@ -1,0 +1,38 @@
+{
+  "columns": 4,
+  "image": "xgigend_shoot.png",
+  "imageheight": 128,
+  "imagewidth": 588,
+  "margin": 0,
+  "name": "xgigend_shoot",
+  "spacing": 0,
+  "tilecount": 4,
+  "tiledversion": "1.10.2",
+  "tileheight": 128,
+  "tilewidth": 147,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

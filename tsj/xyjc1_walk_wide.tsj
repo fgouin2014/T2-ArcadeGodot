@@ -1,0 +1,54 @@
+{
+  "columns": 8,
+  "image": "xyjc1_walk_wide.png",
+  "imageheight": 64,
+  "imagewidth": 2048,
+  "margin": 0,
+  "name": "xyjc1_walk_wide",
+  "spacing": 0,
+  "tilecount": 8,
+  "tiledversion": "1.10.2",
+  "tileheight": 64,
+  "tilewidth": 256,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "id": 0,
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        }
+      ]
+    }
+  ]
+}

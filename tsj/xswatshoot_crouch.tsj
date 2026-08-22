@@ -1,0 +1,30 @@
+{
+  "columns": 2,
+  "image": "xswatshoot_crouch_centered.png",
+  "imageheight": 53,
+  "imagewidth": 60,
+  "margin": 0,
+  "name": "xswatshoot_crouch",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 53,
+  "tilewidth": 30,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

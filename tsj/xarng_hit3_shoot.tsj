@@ -1,0 +1,38 @@
+{
+  "columns": 4,
+  "image": "xarng_hit3_shoot.png",
+  "imageheight": 124,
+  "imagewidth": 364,
+  "margin": 0,
+  "name": "xarng_hit3_shoot",
+  "spacing": 0,
+  "tilecount": 4,
+  "tiledversion": "1.10.2",
+  "tileheight": 124,
+  "tilewidth": 91,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

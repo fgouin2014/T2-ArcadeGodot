@@ -1,0 +1,46 @@
+{
+  "columns": 6,
+  "image": "xexpl4.png",
+  "imageheight": 64,
+  "imagewidth": 372,
+  "margin": 0,
+  "name": "xexpl4",
+  "spacing": 0,
+  "tilecount": 6,
+  "tiledversion": "1.10.2",
+  "tileheight": 64,
+  "tilewidth": 62,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

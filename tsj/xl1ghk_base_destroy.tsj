@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xl1ghk_base_destroy.png",
+  "imageheight": 62,
+  "imagewidth": 204,
+  "margin": 0,
+  "name": "xl1ghk_base_destroy",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 62,
+  "tilewidth": 204,
+  "type": "tileset",
+  "version": "1.10"
+}

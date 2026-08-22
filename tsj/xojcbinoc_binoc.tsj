@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xojcbinoc_binoc.png",
+  "imageheight": 91,
+  "imagewidth": 768,
+  "margin": 0,
+  "name": "xojcbinoc_binoc",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 91,
+  "tilewidth": 768,
+  "type": "tileset",
+  "version": "1.10"
+}

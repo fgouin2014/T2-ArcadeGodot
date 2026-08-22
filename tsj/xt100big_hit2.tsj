@@ -1,0 +1,30 @@
+{
+  "columns": 2,
+  "image": "xt100big_hit2.png",
+  "imageheight": 121,
+  "imagewidth": 184,
+  "margin": 0,
+  "name": "xt100big_hit2",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 121,
+  "tilewidth": 92,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

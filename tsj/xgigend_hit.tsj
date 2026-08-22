@@ -1,0 +1,30 @@
+{
+  "columns": 2,
+  "image": "xgigend_hit.png",
+  "imageheight": 128,
+  "imagewidth": 294,
+  "margin": 0,
+  "name": "xgigend_hit",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 128,
+  "tilewidth": 147,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

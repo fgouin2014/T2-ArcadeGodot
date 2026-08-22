@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<template>
+  <tileset firstgid="1" source="../xjug_idle_def.tsj" />
+  <object name="xjug" type="xjug" gid="1" width="972.0" height="155.0">
+    <properties>
+      <property name="hp" type="int" value="1500" />
+      <property name="pattern" type="string" value="flyby" propertytype="PatternType" />
+      <property name="scale" type="float" value="1.0" />
+      <property name="vitesse_zoom" type="float" value="0.0" />
+      <property name="passes" type="int" value="1" />
+      <property name="start_direction" type="string" value="right" propertytype="StartDirection" />
+      <property name="speed" type="float" value="0.0" />
+      <property name="selfheal" type="bool" value="false" />
+      <property name="destructible" type="bool" value="true" />
+      <property name="stop" type="string" value="" />
+      <property name="enabled" type="bool" value="true" />
+      <property name="shots" type="int" value="8" />
+    </properties>
+  </object>
+</template>

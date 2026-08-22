@@ -1,0 +1,51 @@
+[
+  {
+    "index": 0,
+    "firstgid": 1,
+    "name": "level1_decor",
+    "source": null,
+    "tilecount": 53
+  },
+  {
+    "index": 1,
+    "firstgid": 54,
+    "name": null,
+    "source": "../../../tsj/xtinhk_00.tsj",
+    "tilecount": null
+  },
+  {
+    "index": 2,
+    "firstgid": 57,
+    "name": null,
+    "source": "../../../tsj/xmidhk_00.tsj",
+    "tilecount": null
+  },
+  {
+    "index": 3,
+    "firstgid": 64,
+    "name": null,
+    "source": "../../../tsj/xbighk.tsj",
+    "tilecount": null
+  },
+  {
+    "index": 4,
+    "firstgid": 73,
+    "name": null,
+    "source": "../../../tsj/xfrdfhk_composite_demo.tsj",
+    "tilecount": null
+  },
+  {
+    "index": 5,
+    "firstgid": 91,
+    "name": null,
+    "source": "../../../tsj/xl1ghk_assembled_preview.tsj",
+    "tilecount": null
+  },
+  {
+    "index": 6,
+    "firstgid": 92,
+    "name": null,
+    "source": "../../../tsj/test_enemies_collection.tsj",
+    "tilecount": null
+  }
+]

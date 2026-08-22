@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<template>
+  <tileset firstgid="1" source="../xmedend_idle_front.tsj" />
+  <object name="xmedend_idle_front" type="xmedend" gid="1" width="26.0" height="67.0">
+    <properties>
+      <property name="hp" type="int" value="3" />
+      <property name="pattern" type="string" value="walk" propertytype="PatternType" />
+      <property name="scale" type="float" value="1.0" />
+      <property name="interval" type="float" value="5.0" />
+      <property name="vitesse_zoom" type="float" value="0.006" />
+      <property name="passes" type="int" value="1" />
+      <property name="start_direction" type="string" value="left" propertytype="StartDirection" />
+      <property name="speed" type="float" value="0.0" />
+      <property name="popup_duration" type="float" value="5.0" />
+      <property name="popup_speed" type="float" value="0.08" />
+      <property name="selfheal" type="bool" value="false" />
+      <property name="destructible" type="bool" value="true" />
+      <property name="stop" type="string" value="" />
+      <property name="enabled" type="bool" value="true" />
+      <property name="shots" type="string" value="" />
+      <property name="target_spawn" type="string" value="" />
+      <property name="initial_delay" type="float" value="0.0" />
+      <property name="spawn_interval" type="float" value="4.0" />
+      <property name="spawn_count" type="int" value="0" />
+      <property name="spawn_type" type="string" value="xmedend" propertytype="SpawnType" />
+    </properties>
+  </object>
+</template>

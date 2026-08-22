@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<template>
+ <object name="enemy" type="enemy" width="96" height="130">
+  <properties>
+   <property name="hp" type="int" value="3" />
+   <property name="pattern" value="walk" type="string" propertytype="PatternType" />
+   <property name="scale" type="float" value="1" />
+   <property name="timer" type="float" value="5" />
+   <property name="vitesse_zoom" type="float" value="0.006" />
+  </properties>
+  <polygon points="0,0 96,0 96,130 0,130" />
+ </object>
+</template>

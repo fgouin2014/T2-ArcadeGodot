@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xendie.png",
+  "imageheight": 27,
+  "imagewidth": 23,
+  "margin": 0,
+  "name": "xendie",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 27,
+  "tilewidth": 23,
+  "type": "tileset",
+  "version": "1.10"
+}

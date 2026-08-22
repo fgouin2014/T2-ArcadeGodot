@@ -1,0 +1,30 @@
+{
+  "columns": 2,
+  "image": "xmedend_shoot_front.png",
+  "imageheight": 67,
+  "imagewidth": 52,
+  "margin": 0,
+  "name": "xmedend_shoot_front",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 67,
+  "tilewidth": 26,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

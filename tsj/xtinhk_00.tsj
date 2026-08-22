@@ -1,0 +1,34 @@
+{
+  "columns": 3,
+  "image": "xtinhk_def.png",
+  "imageheight": 20,
+  "imagewidth": 192,
+  "margin": 0,
+  "name": "xtinhk_00",
+  "spacing": 0,
+  "tilecount": 3,
+  "tiledversion": "1.12.2",
+  "tileheight": 20,
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 150,
+          "tileid": 0
+        },
+        {
+          "duration": 150,
+          "tileid": 1
+        },
+        {
+          "duration": 150,
+          "tileid": 2
+        }
+      ],
+      "id": 0
+    }
+  ],
+  "tilewidth": 64,
+  "type": "tileset",
+  "version": "1.10"
+}

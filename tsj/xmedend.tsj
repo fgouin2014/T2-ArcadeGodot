@@ -1,0 +1,15 @@
+{
+  "columns": 5,
+  "image": "xmedend.png",
+  "imageheight": 242,
+  "imagewidth": 280,
+  "margin": 0,
+  "name": "xmedend",
+  "spacing": 0,
+  "tilecount": 15,
+  "tiledversion": "1.10.2",
+  "tileheight": 61,
+  "tilewidth": 55,
+  "type": "tileset",
+  "version": "1.10"
+}

@@ -1,0 +1,285 @@
+[gd_scene load_steps=35 format=3]
+
+[ext_resource type="Script" path="res://Script/endrop_enemy.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://aseprite/xendrop.png" id="2_texture"]
+[ext_resource type="Texture2D" path="res://aseprite/xenfwrd.png" id="3_texture"]
+[ext_resource type="Texture2D" path="res://aseprite/xbigend.png" id="4_texture"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drop_1"]
+atlas = ExtResource("2_texture")
+region = Rect2(0, 0, 36, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drop_2"]
+atlas = ExtResource("2_texture")
+region = Rect2(36, 0, 36, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drop_3"]
+atlas = ExtResource("2_texture")
+region = Rect2(72, 0, 36, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drop_4"]
+atlas = ExtResource("2_texture")
+region = Rect2(108, 0, 36, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drop_5"]
+atlas = ExtResource("2_texture")
+region = Rect2(144, 0, 36, 144)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwrd_1"]
+atlas = ExtResource("3_texture")
+region = Rect2(0, 0, 75, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prof_1"]
+atlas = ExtResource("4_texture")
+region = Rect2(1748, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prof_2"]
+atlas = ExtResource("4_texture")
+region = Rect2(1840, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prof_3"]
+atlas = ExtResource("4_texture")
+region = Rect2(1932, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prof_4"]
+atlas = ExtResource("4_texture")
+region = Rect2(2024, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prof_5"]
+atlas = ExtResource("4_texture")
+region = Rect2(2116, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prof_6"]
+atlas = ExtResource("4_texture")
+region = Rect2(2208, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prof_7"]
+atlas = ExtResource("4_texture")
+region = Rect2(2300, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prof_8"]
+atlas = ExtResource("4_texture")
+region = Rect2(2392, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_die_1"]
+atlas = ExtResource("4_texture")
+region = Rect2(3220, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_die_2"]
+atlas = ExtResource("4_texture")
+region = Rect2(3312, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_die_3"]
+atlas = ExtResource("4_texture")
+region = Rect2(3404, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_die_4"]
+atlas = ExtResource("4_texture")
+region = Rect2(3496, 0, 92, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_die_5"]
+atlas = ExtResource("4_texture")
+region = Rect2(3588, 0, 92, 88)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tp5ot"]
+animations = [{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_5")
+}
+],
+"loop": false,
+"name": &"xendrop",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drop_5")
+}
+],
+"loop": false,
+"name": &"drop",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_8")
+}
+],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_6")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prof_8")
+}
+],
+"loop": true,
+"name": &"walk_shoot",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwrd_1")
+}
+],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwrd_1")
+}
+],
+"loop": true,
+"name": &"shoot",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_die_1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_die_2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_die_3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_die_4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_die_5")
+}
+],
+"loop": false,
+"name": &"die",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_box"]
+size = Vector2(36, 144)
+
+[node name="xendrop" type="CharacterBody2D"]
+z_index = 5
+script = ExtResource("1_script")
+comportement_xendrop = "marche_et_tir_profil"
+inverser_visuel = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tp5ot")
+animation = &"xendrop"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_box")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-18, -72, 36, 144)

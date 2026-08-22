@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xl1ghk_tete_damaged.png",
+  "imageheight": 28,
+  "imagewidth": 78,
+  "margin": 0,
+  "name": "xl1ghk_tete_damaged",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 28,
+  "tilewidth": 78,
+  "type": "tileset",
+  "version": "1.10"
+}

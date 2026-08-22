@@ -1,0 +1,349 @@
+{
+  "maps/backdrops/level1/t2_hideout.tmj": [
+    {
+      "name": "level2_decor",
+      "source": null,
+      "firstgid": 1
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 30
+    }
+  ],
+  "maps/backdrops/level1/t2_stage3.tmj": [
+    {
+      "name": "level3_decor",
+      "source": null,
+      "firstgid": 1
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 13
+    }
+  ],
+  "maps/backdrops/level1/t2_starter_blank.tmj": [
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 1
+    }
+  ],
+  "maps/backdrops/level1/t2_starter_canvas.tmj": [
+    {
+      "name": null,
+      "source": "../../../tsj/level1_decor.tsj",
+      "firstgid": 1
+    },
+    {
+      "name": "level4_decor",
+      "source": null,
+      "firstgid": 34
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 73
+    }
+  ],
+  "maps/backdrops/level1/t2_testchamber.tmj": [
+    {
+      "name": "testchamber_decor",
+      "source": null,
+      "firstgid": 1
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xenfwrd.tsj",
+      "firstgid": 13
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xgigend.tsj",
+      "firstgid": 14
+    },
+    {
+      "name": "level4_decor",
+      "source": null,
+      "firstgid": 19
+    },
+    {
+      "name": "level1_decor",
+      "source": null,
+      "firstgid": 58
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xmedend_walk.tsj",
+      "firstgid": 111
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xmedend_walk_wide.tsj",
+      "firstgid": 119
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 127
+    }
+  ],
+  "maps/backdrops/level1/t2_xfback2.tmj": [
+    {
+      "name": "level7_decor",
+      "source": null,
+      "firstgid": 1
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 13
+    }
+  ],
+  "maps/backdrops/level1/t2_xl1bck.tmj": [
+    {
+      "name": "level1_decor",
+      "source": null,
+      "firstgid": 1
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xtinhk_00.tsj",
+      "firstgid": 54
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xmidhk_00.tsj",
+      "firstgid": 57
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xbighk.tsj",
+      "firstgid": 64
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xfrdfhk_composite_demo.tsj",
+      "firstgid": 73
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xl1ghk_assembled_preview.tsj",
+      "firstgid": 91
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 92
+    }
+  ],
+  "maps/backdrops/level1/t2_xl1bck1.tmj": [
+    {
+      "name": "level1_decor",
+      "source": null,
+      "firstgid": 1
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xtinhk_00.tsj",
+      "firstgid": 54
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xmidhk_00.tsj",
+      "firstgid": 57
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xbighk.tsj",
+      "firstgid": 64
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xfrdfhk_composite_demo.tsj",
+      "firstgid": 73
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/xl1ghk_assembled_preview.tsj",
+      "firstgid": 91
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 92
+    }
+  ],
+  "maps/backdrops/level1/t2_xl4skynt1.tmj": [
+    {
+      "name": "level4_decor",
+      "source": null,
+      "firstgid": 1
+    },
+    {
+      "name": "level1_decor",
+      "source": null,
+      "firstgid": 40
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 93
+    }
+  ],
+  "maps/backdrops/level1/t2_xroad.tmj": [
+    {
+      "name": "xroad_decor",
+      "source": null,
+      "firstgid": 1
+    },
+    {
+      "name": null,
+      "source": "../../../tsj/test_enemies_collection.tsj",
+      "firstgid": 8
+    }
+  ],
+  "maps/backdrops/level1/exported/t2_starter_blank_embeded.tmj": [
+    {
+      "name": "xtech_cycle",
+      "source": null,
+      "firstgid": 1
+    },
+    {
+      "name": "xsarah_cycle",
+      "source": null,
+      "firstgid": 19
+    },
+    {
+      "name": "xyjc_cycle",
+      "source": null,
+      "firstgid": 34
+    },
+    {
+      "name": "xswat_cycle",
+      "source": null,
+      "firstgid": 54
+    },
+    {
+      "name": "xtechthrow",
+      "source": null,
+      "firstgid": 83
+    },
+    {
+      "name": "xtech1_walk",
+      "source": null,
+      "firstgid": 88
+    },
+    {
+      "name": "xtechdie",
+      "source": null,
+      "firstgid": 96
+    },
+    {
+      "name": "xswatrol",
+      "source": null,
+      "firstgid": 101
+    },
+    {
+      "name": "xswatrun_walk_wide",
+      "source": null,
+      "firstgid": 114
+    },
+    {
+      "name": "xswatshoot_crouch",
+      "source": null,
+      "firstgid": 122
+    },
+    {
+      "name": "xswatrol_rol_wide",
+      "source": null,
+      "firstgid": 124
+    },
+    {
+      "name": "xswatrun",
+      "source": null,
+      "firstgid": 132
+    },
+    {
+      "name": "xswat_full_attack",
+      "source": null,
+      "firstgid": 140
+    },
+    {
+      "name": "xswatdie",
+      "source": null,
+      "firstgid": 146
+    },
+    {
+      "name": "xswatrol_crouch",
+      "source": null,
+      "firstgid": 152
+    },
+    {
+      "name": "xswatshoot",
+      "source": null,
+      "firstgid": 158
+    },
+    {
+      "name": "xt100spt_split",
+      "source": null,
+      "firstgid": 160
+    },
+    {
+      "name": "xt100sms_effect",
+      "source": null,
+      "firstgid": 166
+    },
+    {
+      "name": "xt100swp_sweep",
+      "source": null,
+      "firstgid": 168
+    },
+    {
+      "name": "xt100sms_smash",
+      "source": null,
+      "firstgid": 174
+    },
+    {
+      "name": "xt100wlk_walk",
+      "source": null,
+      "firstgid": 178
+    },
+    {
+      "name": "xt100rol_rol_wide",
+      "source": null,
+      "firstgid": 186
+    },
+    {
+      "name": "xt100die_death",
+      "source": null,
+      "firstgid": 194
+    },
+    {
+      "name": "xt100wlk_walk_wide",
+      "source": null,
+      "firstgid": 200
+    },
+    {
+      "name": "xt100frm_form",
+      "source": null,
+      "firstgid": 208
+    },
+    {
+      "name": "xt100crk_crack",
+      "source": null,
+      "firstgid": 214
+    },
+    {
+      "name": "xtech1_walk_wide",
+      "source": null,
+      "firstgid": 220
+    },
+    {
+      "name": "xt100wlk_front_idle",
+      "source": null,
+      "firstgid": 228
+    }
+  ]
+}

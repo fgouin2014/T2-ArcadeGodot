@@ -1,0 +1,15 @@
+{
+  "columns": 2,
+  "image": "xl1ghk_profile_grid_816x62_combined.png",
+  "imageheight": 62,
+  "imagewidth": 1632,
+  "margin": 0,
+  "name": "xl1ghk_profile_grid_816x62",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 62,
+  "tilewidth": 816,
+  "type": "tileset",
+  "version": "1.10"
+}

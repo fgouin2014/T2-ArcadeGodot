@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xskynt2_05.png",
+  "imageheight": 32,
+  "imagewidth": 32,
+  "margin": 0,
+  "name": "xskynt2_05",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 32,
+  "tilewidth": 32,
+  "type": "tileset",
+  "version": "1.10"
+}

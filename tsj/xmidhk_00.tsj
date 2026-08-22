@@ -1,0 +1,50 @@
+{
+  "columns": 7,
+  "image": "xmidhk_def.png",
+  "imageheight": 37,
+  "imagewidth": 875,
+  "margin": 0,
+  "name": "xmidhk_00",
+  "spacing": 0,
+  "tilecount": 7,
+  "tiledversion": "1.12.2",
+  "tileheight": 37,
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 150,
+          "tileid": 0
+        },
+        {
+          "duration": 150,
+          "tileid": 1
+        },
+        {
+          "duration": 150,
+          "tileid": 2
+        },
+        {
+          "duration": 150,
+          "tileid": 3
+        },
+        {
+          "duration": 150,
+          "tileid": 4
+        },
+        {
+          "duration": 150,
+          "tileid": 5
+        },
+        {
+          "duration": 150,
+          "tileid": 6
+        }
+      ],
+      "id": 0
+    }
+  ],
+  "tilewidth": 125,
+  "type": "tileset",
+  "version": "1.10"
+}

@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xbighk_spritesheet.png",
+  "imageheight": 49,
+  "imagewidth": 1656,
+  "margin": 0,
+  "name": "xbighk_spritesheet",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 49,
+  "tilewidth": 1656,
+  "type": "tileset",
+  "version": "1.10"
+}

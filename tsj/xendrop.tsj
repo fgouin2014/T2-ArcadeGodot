@@ -1,0 +1,42 @@
+{
+  "columns": 0,
+  "image": "xendrop.png",
+  "imageheight": 78,
+  "imagewidth": 35,
+  "margin": 0,
+  "name": "xendrop",
+  "spacing": 0,
+  "tilecount": 0,
+  "tiledversion": "1.10.2",
+  "tileheight": 144,
+  "tilewidth": 36,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xtruck_destroyed_def.png",
+  "imageheight": 120,
+  "imagewidth": 484,
+  "margin": 0,
+  "name": "xtruck_destroyed_def",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 120,
+  "tilewidth": 484,
+  "type": "tileset",
+  "version": "1.10"
+}
