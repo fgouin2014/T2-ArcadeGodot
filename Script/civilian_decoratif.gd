@@ -20,13 +20,13 @@ func _jouer_sequence_decorative() -> void:
 	# Idle initial
 	if possede_animation("idle") and duree_idle_initial > 0.0:
 		jouer_animation("idle")
-		await get_tree().create_timer(duree_idle_initial).timeout
-	if est_elimine or not deja_active:
+		await attendre(duree_idle_initial)
+	if not est_actif():
 		return
 
 	# Séquence de tags
 	for tag in tags_sequence:
-		if est_elimine or not deja_active:
+		if not est_actif():
 			return
 		if possede_animation(tag):
 			jouer_animation(tag)
@@ -35,9 +35,9 @@ func _jouer_sequence_decorative() -> void:
 				if anim_sprite.sprite_frames.has_animation(tag) and not anim_sprite.sprite_frames.get_animation_loop(tag):
 					await anim_sprite.animation_finished
 				else:
-					await get_tree().create_timer(duree_par_tag).timeout
+					await attendre(duree_par_tag)
 			else:
-				await get_tree().create_timer(duree_par_tag).timeout
+				await attendre(duree_par_tag)
 
 	# Walk perpétuel jusqu'à sortie du cadre
 	if possede_animation("walk") and not est_elimine:

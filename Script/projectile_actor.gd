@@ -13,6 +13,11 @@ extends Node2D
 @export var est_sticky_glissant: bool = false # Activer l impact collant et la glissade sur l ecran
 @export var vitesse_glissade_ecran: float = 35.0 # Vitesse de glissade le long de l ecran (px/s)
 
+# --- DEGATS INFLIGES AU JOUEUR ---
+@export var peut_blesser_joueur: bool = true # L'impact retire de la vie au joueur s'il atteint la lucarne
+@export var degats_joueur: int = 10
+@export var points_score_interception: int = 25 # Score accordé si le joueur détruit le projectile en vol
+
 @onready var anim_sprite: AnimatedSprite2D = get_node_or_null("AnimatedSprite2D") as AnimatedSprite2D
 
 var direction: Vector2 = Vector2.DOWN
@@ -20,6 +25,7 @@ var temps_vol: float = 0.0
 var position_origine: Vector2 = Vector2.ZERO
 var est_initialise: bool = false
 var en_glissade: bool = false
+var est_neutralise: bool = false # Abattu par le joueur : n'infligera aucun dégât
 
 func _ready() -> void:
 	z_index = 500 # Au-dessus des popups (z=100) et sous la vitre (z=900)
@@ -36,7 +42,7 @@ func _ready() -> void:
 				anim_sprite.play("default")
 	
 	_creer_zone_collision_tir()
-	get_tree().create_timer(temps_de_vie).timeout.connect(queue_free)
+	get_tree().create_timer(temps_de_vie, false).timeout.connect(queue_free)
 
 func _creer_zone_collision_tir() -> void:
 	var area = Area2D.new()
@@ -49,7 +55,10 @@ func _creer_zone_collision_tir() -> void:
 	add_child(area)
 
 func subir_degats(_degats: int = 1) -> void:
-	print("[PROJECTILE ACTOR] Projectile ennemi détruit en plein vol par le joueur !")
+	if est_neutralise:
+		return
+	est_neutralise = true
+	GlobalSettings.ajouter_score(points_score_interception)
 	_declencher_explosion_impact()
 
 func initialiser_lancer(pos_depart: Vector2, dir_forcee: Vector2 = Vector2.ZERO) -> void:
@@ -140,9 +149,23 @@ func _emettre_fumee_propulsion() -> void:
 	p.color = Color(0.8, 0.8, 0.8, 0.7)
 	get_parent().add_child(p)
 	p.emitting = true
-	get_tree().create_timer(0.4).timeout.connect(p.queue_free)
+	get_tree().create_timer(0.4, false).timeout.connect(p.queue_free)
+
+## Vrai si l'impact se produit dans la lucarne de jeu (donc sur le joueur).
+func _impact_atteint_le_joueur() -> bool:
+	if est_neutralise or not peut_blesser_joueur or not is_inside_tree():
+		return false
+	var camera = get_viewport().get_camera_2d() if get_viewport() else null
+	if camera == null:
+		return false
+	var taille_lucarne = Vector2(get_viewport().get_visible_rect().size)
+	var rect_lucarne = Rect2(camera.get_screen_center_position() - taille_lucarne / 2.0, taille_lucarne)
+	return rect_lucarne.has_point(global_position)
 
 func _declencher_explosion_impact() -> void:
+	if _impact_atteint_le_joueur():
+		GlobalSettings.infliger_degats_joueur(degats_joueur)
+
 	if is_inside_tree():
 		var particles = CPUParticles2D.new()
 		particles.global_position = global_position
@@ -160,5 +183,5 @@ func _declencher_explosion_impact() -> void:
 		particles.color = Color(1.0, 0.45, 0.1, 1.0)
 		get_parent().add_child(particles)
 		particles.emitting = true
-		get_tree().create_timer(0.7).timeout.connect(particles.queue_free)
+		get_tree().create_timer(0.7, false).timeout.connect(particles.queue_free)
 	queue_free()

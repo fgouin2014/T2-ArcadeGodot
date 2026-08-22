@@ -58,7 +58,7 @@ func _ready() -> void:
 		configurer_parallax_looping()
 
 	if delai_intro_secondes > 0.0:
-		get_tree().create_timer(delai_intro_secondes).timeout.connect(func():
+		get_tree().create_timer(delai_intro_secondes, false).timeout.connect(func():
 			if not boss_vaincu and not en_pause_sur_stop:
 				verrouillee = false
 				print("[CAMÉRA] Intro terminée ! Début du scroll auto.")
@@ -191,11 +191,18 @@ func stopper_scroll_boss_defait() -> void:
 	verrouillee = true
 
 
+func peut_tirer() -> bool:
+	return scene_projectile != null and cooldown_tir_restant <= 0.0 and not en_surchauffe and not GlobalSettings.partie_perdue
+
 func tirer_projectile(cible_monde: Vector2, mode_missile: bool = false) -> void:
-	if scene_projectile == null or cooldown_tir_restant > 0.0:
+	if not peut_tirer():
 		return
 		
 	cooldown_tir_restant = cadencement_tir_cooldown
+	var cout = cout_gunpower_missile if mode_missile else cout_gunpower_par_tir
+	gun_power_actuel = max(0.0, gun_power_actuel - cout)
+	if gun_power_actuel <= 0.0:
+		en_surchauffe = true
 	var centre_ecran = get_screen_center_position()
 	var depart_canon_bas_gauche = centre_ecran + Vector2(-largeur_lucarne / 2.0, hauteur_lucarne / 2.0)
 	
@@ -242,8 +249,12 @@ func _unhandled_input(event: InputEvent) -> void:
 
 @export var gun_power_max: float = 100.0
 @export var gun_power_actuel: float = 100.0
-@export var vitesse_drain_gunpower: float = 5.0 
+@export var cout_gunpower_par_tir: float = 2.5 # Consommation d'un tir standard
+@export var cout_gunpower_missile: float = 12.0 # Consommation d'un tir missile
 @export var vitesse_recharge_gunpower: float = 15.0 
+@export var seuil_fin_surchauffe: float = 0.35 # Ratio de GunPower requis pour re-tirer après surchauffe
+
+var en_surchauffe: bool = false
 
 
 func _physics_process(delta: float) -> void:
@@ -254,12 +265,12 @@ func _physics_process(delta: float) -> void:
 		cooldown_tir_restant -= delta
 
 	# --- GESTION DE LA SURCHAUFFE DU CANON (GUNPOWER) ---
-	if tir_maintenu:
-		gun_power_actuel = max(0.0, gun_power_actuel - vitesse_drain_gunpower * delta)
-	else:
-		gun_power_actuel = min(gun_power_max, gun_power_actuel + vitesse_recharge_gunpower * delta)
+	# Le GunPower se consomme à chaque tir (voir tirer_projectile) et se recharge en continu.
+	gun_power_actuel = min(gun_power_max, gun_power_actuel + vitesse_recharge_gunpower * delta)
 
 	var ratio_power = clamp(gun_power_actuel / gun_power_max, 0.0, 1.0)
+	if en_surchauffe and ratio_power >= seuil_fin_surchauffe:
+		en_surchauffe = false
 	var ratio_lisse = pow(ratio_power, 0.5)
 	cadencement_tir_cooldown = lerp(1.0, 0.10, ratio_lisse)
 
@@ -289,7 +300,7 @@ func _physics_process(delta: float) -> void:
 				en_pause_sur_stop = true
 				liste_stops_data.pop_front()
 				print("[CAMÉRA] Pause Stop (", align_mode, ") à X = ", prochain_stop_x, " (pos cam = ", position_stop_camera, ", durée ", pause_duree, "s)")
-				get_tree().create_timer(pause_duree).timeout.connect(func():
+				get_tree().create_timer(pause_duree, false).timeout.connect(func():
 					en_pause_sur_stop = false
 					print("[CAMÉRA] Fin de la pause Stop ! Reprise du scroll.")
 				)
@@ -328,10 +339,10 @@ func _physics_process(delta: float) -> void:
 	
 	if tir_gamepad:
 		tir_maintenu = true
-	elif missile_gamepad and cooldown_tir_restant <= 0.0:
+	elif missile_gamepad:
 		tirer_projectile(position_visee_monde, true)
 
-	if tir_maintenu and cooldown_tir_restant <= 0.0:
+	if tir_maintenu:
 		tirer_projectile(position_visee_monde)
 	
 	# --- LIMITES GLOBALE DE LA CARTE ---

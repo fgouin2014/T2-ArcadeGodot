@@ -64,4 +64,4 @@ func _tirer_salve_missiles() -> void:
 				m.initialiser_lancer(global_position + Vector2(offset_x, 10.0), Vector2(0.0, 1.0))
 			else:
 				m.global_position = global_position + Vector2(offset_x, 10.0)
-			await get_tree().create_timer(0.3).timeout
+			await attendre(0.3)

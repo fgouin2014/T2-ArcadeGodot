@@ -25,6 +25,8 @@ const COULEUR_VERT: Color = Color(0.0, 0.9, 0.2, 1.0)
 const COULEUR_JAUNE: Color = Color(1.0, 0.85, 0.0, 1.0)
 const COULEUR_ROUGE: Color = Color(0.95, 0.1, 0.1, 1.0)
 
+const INTERVALLE_VAGUE_SEC: float = 2.0 # Cadence de déclenchement des spawners de la carte
+
 # --- DOCKING D'ENNEMIS ---
 const CHEMINS_ENNEMIS: Dictionary = {
 	"xgigend": "res://aseprite/xgigend.tscn",
@@ -47,6 +49,14 @@ var carte_actuelle: Node = null
 var btn_toggle_mode_controle: Button = null
 var ui_joystick_container: Control = null
 var mode_joystick_actif: bool = false
+
+var label_score: Label = null
+var label_credits: Label = null
+var overlay_game_over: Control = null
+var camera_jeu: Camera2D = null
+
+# Géométrie des jauges de vie verticales (lues sur la scène au démarrage)
+var _geometrie_gauges_vie: Dictionary = {}
 
 
 # ==============================================================================
@@ -73,7 +83,10 @@ func _ready() -> void:
 	RenderingServer.set_default_clear_color(Color.BLACK)
 	get_tree().set_quit_on_go_back(false)
 	
+	GlobalSettings.reinitialiser_partie()
+
 	_initialiser_viseur_pause_ui()
+	_initialiser_hud_partie()
 	_connecter_signaux_ui()
 	_initialiser_bouton_mode_controle()
 	_creer_ui_joystick_et_boutons()
@@ -89,7 +102,9 @@ func _ready() -> void:
 	if scene_carte:
 		carte_actuelle = scene_carte.instantiate()
 		vue_jeu.add_child(carte_actuelle)
+		camera_jeu = carte_actuelle.get_node_or_null("Camera2D") as Camera2D
 		configurer_le_spawn_automatique()
+		_connecter_boss_places_dans_la_carte()
 
 
 func _initialiser_viseur_pause_ui() -> void:
@@ -105,6 +120,115 @@ func _initialiser_viseur_pause_ui() -> void:
 	sprite_viseur_pause.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	sprite_viseur_pause.centered = true
 	canvas_viseur_pause.add_child(sprite_viseur_pause)
+
+
+func _initialiser_hud_partie() -> void:
+	for gauge in [gauge_vie_p1, gauge_vie_p2]:
+		if gauge:
+			_geometrie_gauges_vie[gauge] = {"haut": gauge.offset_top, "bas": gauge.offset_bottom}
+
+	label_score = Label.new()
+	label_score.name = "LabelScore"
+	label_score.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	label_score.position = Vector2(48.0, 12.0)
+	add_child(label_score)
+
+	label_credits = Label.new()
+	label_credits.name = "LabelCredits"
+	label_credits.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	label_credits.position = Vector2(720.0, 12.0)
+	add_child(label_credits)
+
+	if not GlobalSettings.score_modifie.is_connected(_on_score_modifie):
+		GlobalSettings.score_modifie.connect(_on_score_modifie)
+	if not GlobalSettings.vie_modifiee.is_connected(_on_vie_modifiee):
+		GlobalSettings.vie_modifiee.connect(_on_vie_modifiee)
+	if not GlobalSettings.credits_modifies.is_connected(_on_credits_modifies):
+		GlobalSettings.credits_modifies.connect(_on_credits_modifies)
+	if not GlobalSettings.partie_terminee.is_connected(_on_partie_terminee):
+		GlobalSettings.partie_terminee.connect(_on_partie_terminee)
+
+	_on_score_modifie(GlobalSettings.score)
+	_on_credits_modifies(GlobalSettings.credits_restants)
+	_on_vie_modifiee(GlobalSettings.vie_actuelle, GlobalSettings.vie_max)
+
+
+func _on_score_modifie(score: int) -> void:
+	if label_score:
+		label_score.text = "SCORE %08d" % score
+
+
+func _on_credits_modifies(credits_restants: int) -> void:
+	if label_credits:
+		label_credits.text = "CREDITS %d" % credits_restants
+
+
+func _on_vie_modifiee(vie_actuelle: int, vie_max: int) -> void:
+	var ratio = clamp(float(vie_actuelle) / float(max(vie_max, 1)), 0.0, 1.0)
+	for gauge in [gauge_vie_p1, gauge_vie_p2]:
+		if gauge == null or not _geometrie_gauges_vie.has(gauge):
+			continue
+		var geo = _geometrie_gauges_vie[gauge]
+		var hauteur_totale = float(geo["bas"]) - float(geo["haut"])
+		# Jauge verticale : elle se vide par le haut
+		gauge.offset_top = float(geo["bas"]) - (hauteur_totale * ratio)
+		gauge.offset_bottom = float(geo["bas"])
+
+
+func _on_partie_terminee(score_final: int) -> void:
+	_afficher_game_over(score_final)
+
+
+func _afficher_game_over(score_final: int) -> void:
+	if overlay_game_over and is_instance_valid(overlay_game_over):
+		overlay_game_over.show()
+		return
+
+	overlay_game_over = Control.new()
+	overlay_game_over.name = "OverlayGameOver"
+	overlay_game_over.process_mode = Node.PROCESS_MODE_ALWAYS
+	overlay_game_over.set_anchors_preset(Control.PRESET_FULL_RECT)
+	add_child(overlay_game_over)
+
+	var fond = ColorRect.new()
+	fond.color = Color(0.0, 0.0, 0.0, 0.72)
+	fond.set_anchors_preset(Control.PRESET_FULL_RECT)
+	overlay_game_over.add_child(fond)
+
+	var centre = CenterContainer.new()
+	centre.set_anchors_preset(Control.PRESET_FULL_RECT)
+	overlay_game_over.add_child(centre)
+
+	var boite = VBoxContainer.new()
+	boite.alignment = BoxContainer.ALIGNMENT_CENTER
+	centre.add_child(boite)
+
+	var titre = Label.new()
+	titre.text = "GAME OVER"
+	titre.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	boite.add_child(titre)
+
+	var label_final = Label.new()
+	label_final.text = "SCORE FINAL : %08d" % score_final
+	label_final.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	boite.add_child(label_final)
+
+	var btn_rejouer = Button.new()
+	btn_rejouer.text = "REJOUER"
+	btn_rejouer.custom_minimum_size = Vector2(220, 40)
+	btn_rejouer.pressed.connect(recommencer_niveau)
+	boite.add_child(btn_rejouer)
+
+	var btn_menu = Button.new()
+	btn_menu.text = "MENU PRINCIPAL"
+	btn_menu.custom_minimum_size = Vector2(220, 40)
+	btn_menu.pressed.connect(revenir_au_menu)
+	boite.add_child(btn_menu)
+
+	definir_pause(true)
+	if menu_pause_overlay:
+		menu_pause_overlay.hide()
+	overlay_game_over.move_to_front()
 
 
 func _connecter_signaux_ui() -> void:
@@ -154,7 +278,7 @@ func _mettre_a_jour_jauges_gunpower() -> void:
 	if not (vue_jeu and carte_actuelle):
 		return
 		
-	var camera = vue_jeu.get_camera_2d()
+	var camera = camera_jeu if (camera_jeu and is_instance_valid(camera_jeu)) else vue_jeu.get_camera_2d()
 	if camera and "gun_power_actuel" in camera and "gun_power_max" in camera:
 		var max_p = camera.gun_power_max if camera.gun_power_max > 0 else 100.0
 		var ratio = clamp(camera.gun_power_actuel / max_p, 0.0, 1.0)
@@ -186,11 +310,26 @@ func configurer_le_spawn_automatique() -> void:
 	if conteneur_spawners == null:
 		return
 		
+	if conteneur_spawners.get_child_count() == 0:
+		return
+
 	timer_spawn = Timer.new()
-	timer_spawn.wait_time = 2.0
-	timer_spawn.autostart = false
+	timer_spawn.wait_time = INTERVALLE_VAGUE_SEC
 	timer_spawn.timeout.connect(spawn_ennemi_specifique)
 	add_child(timer_spawn)
+	timer_spawn.start()
+
+
+## Relie les boss déjà placés dans la carte à l'arrêt du défilement de la caméra.
+func _connecter_boss_places_dans_la_carte() -> void:
+	if carte_actuelle == null or camera_jeu == null:
+		return
+	if not camera_jeu.has_method("stopper_scroll_boss_defait"):
+		return
+
+	for noeud in carte_actuelle.find_children("*", "Node2D", true, false):
+		if noeud.has_signal("boss_defeated") and not noeud.boss_defeated.is_connected(camera_jeu.stopper_scroll_boss_defait):
+			noeud.boss_defeated.connect(camera_jeu.stopper_scroll_boss_defait)
 
 
 func obtenir_scene_ennemi(type_key: String) -> PackedScene:
@@ -233,9 +372,12 @@ func spawn_ennemi_specifique() -> void:
 		
 	var spawners_disponibles = liste_spawners.filter(func(sp): return not sp.has_meta("deja_spawne"))
 	if spawners_disponibles.is_empty():
+		# Tous les points de spawn de la carte ont été consommés : plus rien à cadencer
+		if timer_spawn and is_instance_valid(timer_spawn):
+			timer_spawn.stop()
 		return
 		
-	var spawner_choisi = spawners_disponibles[randi() % spawners_disponibles.size()]
+	var spawner_choisi = spawners_disponibles.pick_random()
 	spawner_choisi.set_meta("deja_spawne", true)
 	
 	var type_ennemi = obtenir_type_ennemi_du_spawner(spawner_choisi)
@@ -255,7 +397,7 @@ func spawn_ennemi_specifique() -> void:
 	carte_actuelle.add_child(nouvel_ennemi)
 	
 	if nouvel_ennemi.has_signal("boss_defeated"):
-		var camera = carte_actuelle.get_node_or_null("Camera2D")
+		var camera = camera_jeu if (camera_jeu and is_instance_valid(camera_jeu)) else carte_actuelle.get_node_or_null("Camera2D")
 		if camera and camera.has_method("stopper_scroll_boss_defait"):
 			if not nouvel_ennemi.boss_defeated.is_connected(camera.stopper_scroll_boss_defait):
 				nouvel_ennemi.boss_defeated.connect(camera.stopper_scroll_boss_defait)
@@ -338,6 +480,8 @@ func _actionner_tir_ui(est_presse: bool, est_missile: bool) -> void:
 # MENU PAUSE & NAVIGATION
 # ==============================================================================
 func basculer_pause() -> void:
+	if GlobalSettings.partie_perdue:
+		return
 	definir_pause(not get_tree().paused)
 
 
@@ -356,6 +500,7 @@ func reprendre_jeu() -> void:
 
 func recommencer_niveau() -> void:
 	definir_pause(false)
+	GlobalSettings.reinitialiser_partie()
 	get_tree().reload_current_scene()
 
 func quitter_jeu() -> void:
@@ -364,6 +509,7 @@ func quitter_jeu() -> void:
 
 func revenir_au_menu() -> void:
 	definir_pause(false)
+	GlobalSettings.reinitialiser_partie()
 	if timer_spawn and is_instance_valid(timer_spawn):
 		timer_spawn.stop()
 		timer_spawn.queue_free()
@@ -378,10 +524,13 @@ func revenir_au_menu() -> void:
 # GESTION DES ENTRÉES (SOURIS, CLAVIER, BOUTON RETOUR ANDROID)
 # ==============================================================================
 func _notification(what: int) -> void:
-	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST and not GlobalSettings.partie_perdue:
 		basculer_pause()
 
 func _input(event: InputEvent) -> void:
+	# Aucune mise en pause manuelle lorsque la partie est terminée (overlay Game Over actif)
+	if GlobalSettings.partie_perdue:
+		return
 	if event is InputEventKey and event.pressed:
 		if event.keycode in [KEY_BACK, KEY_ESCAPE, KEY_P]:
 			basculer_pause()

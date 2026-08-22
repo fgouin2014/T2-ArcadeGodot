@@ -314,7 +314,7 @@ func _tirer_salve(marker: Marker2D, fallback: Vector2, cible: Vector2, salvo: in
 		if i == 0:
 			_spawner_missile(marker, fallback, cible)
 		else:
-			get_tree().create_timer(delai * i).timeout.connect(
+			get_tree().create_timer(delai * i, false).timeout.connect(
 				func(): _spawner_missile(marker, fallback, cible)
 			)
 

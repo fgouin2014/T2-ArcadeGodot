@@ -368,9 +368,9 @@ func _lancer_attaque_missiles() -> void:
 
 	if not upper_body_detruit:
 		_jouer_anim_base("missile_open")
-		await get_tree().create_timer(0.2).timeout
+		await attendre(0.2)
 		trappe_ouverte = true # Trappe ouverte pendant les tirs !
-		await get_tree().create_timer(0.2).timeout
+		await attendre(0.2)
 		if est_elimine or not is_inside_tree(): return
 
 	trappe_ouverte = true
@@ -397,13 +397,13 @@ func _lancer_attaque_missiles() -> void:
 				m.initialiser_lancer(spawn_pos + offset_spawn, dir_vers_camera)
 			else:
 				m.global_position = spawn_pos + offset_spawn
-		await get_tree().create_timer(0.25).timeout
+		await attendre(0.25)
 
 	if est_elimine or not is_inside_tree(): return
 
 	if not upper_body_detruit:
 		_jouer_anim_base("missile_close")
-		await get_tree().create_timer(0.4).timeout
+		await attendre(0.4)
 		trappe_ouverte = false # Refermeture de la trappe
 		if not est_elimine:
 			_jouer_anim_base("base_idle")
@@ -436,7 +436,7 @@ func _jouer_impact_balle_xexpl2(pos: Vector2) -> void:
 		anim.play(anim_name)
 		anim.animation_finished.connect(exp2.queue_free)
 	else:
-		get_tree().create_timer(0.6).timeout.connect(exp2.queue_free)
+		get_tree().create_timer(0.6, false).timeout.connect(exp2.queue_free)
 
 # --- EXPLOSION DE DESTRUCTION PIÈCE ANIMÉE ARCADE (XEXPL3) ---
 func _jouer_explosion_destruction_xexpl3(pos: Vector2) -> void:
@@ -451,7 +451,7 @@ func _jouer_explosion_destruction_xexpl3(pos: Vector2) -> void:
 		anim.play(anim_name)
 		anim.animation_finished.connect(exp3.queue_free)
 	else:
-		get_tree().create_timer(0.7).timeout.connect(exp3.queue_free)
+		get_tree().create_timer(0.7, false).timeout.connect(exp3.queue_free)
 
 func subir_degats(quantite: int) -> void:
 	var trappe_vulnerable = trappe_ouverte or upper_body_detruit
@@ -473,6 +473,6 @@ func subir_elimination() -> void:
 	for i in range(5):
 		var offset = Vector2(randf_range(-60, 60), randf_range(-40, 20))
 		_jouer_explosion_destruction_xexpl3(global_position + offset)
-		await get_tree().create_timer(0.15).timeout
+		await attendre(0.15)
 		
 	super.subir_elimination()

@@ -22,7 +22,7 @@ func _sequence_drop_puis_walk() -> void:
 		jouer_animation("throw")
 		await _attendre_fin_animation_ou_timer(0.8)
 	
-	if est_elimine or not deja_active: return
+	if not est_actif(): return
 
 	# 2. Tag 'recovery' (phase de récupération après le lancer)
 	var anim_recov = "recovery" if possede_animation("recovery") else "xtechdrop"
@@ -30,7 +30,7 @@ func _sequence_drop_puis_walk() -> void:
 		jouer_animation(anim_recov)
 		await _attendre_fin_animation_ou_timer(0.8)
 
-	if est_elimine or not deja_active: return
+	if not est_actif(): return
 
 	# 3. Enchaîne avec 'walk' et continue la marche
 	var anim_marche = "walk" if possede_animation("walk") else "walk"

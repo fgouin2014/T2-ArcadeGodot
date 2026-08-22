@@ -65,8 +65,8 @@ func _physics_process(delta: float) -> void:
 
 func _boucle_comportement_civil() -> void:
 	while deja_active and not est_elimine:
-		await get_tree().create_timer(temps_entre_cycles).timeout
-		if est_elimine or not deja_active or _en_sequence_action:
+		await attendre(temps_entre_cycles)
+		if not est_actif() or _en_sequence_action:
 			continue
 
 		# Drop aléatoire pendant la marche (Young John Connor)
@@ -84,7 +84,7 @@ func _jouer_sequence_take() -> void:
 		await _attendre_fin_animation(1.2)
 	elif possede_animation("crouch"):
 		jouer_animation("crouch")
-		await get_tree().create_timer(1.0).timeout
+		await attendre(1.0)
 
 	# Déposer l'objet au pied du civil si configuré
 	if objet_a_dropper != "aucun":
@@ -161,4 +161,4 @@ func _attendre_fin_animation(duree_fallback: float) -> void:
 			if not anim_sprite.sprite_frames.get_animation_loop(current_anim):
 				await anim_sprite.animation_finished
 				return
-	await get_tree().create_timer(duree_fallback).timeout
+	await attendre(duree_fallback)

@@ -54,12 +54,12 @@ func _on_animated_sprite_finished() -> void:
 				jouer_animation("idle")
 	elif anim_sprite and anim_sprite.animation == &"popup":
 		if delai_avant_tir > 0.0:
-			await get_tree().create_timer(delai_avant_tir).timeout
+			await attendre(delai_avant_tir)
 		demarrer_phase_attaque()
 	elif anim_sprite and anim_sprite.animation == &"retract":
 		if boucler_apparition_test:
 			_masquer_visuel()
-			await get_tree().create_timer(delai_reapparition_secondes).timeout
+			await attendre(delai_reapparition_secondes)
 			deja_active = false
 			activer_acteur()
 		else:
@@ -72,7 +72,7 @@ func demarrer_phase_attaque() -> void:
 	elif possede_animation("idle"):
 		jouer_animation("idle")
 	
-	await get_tree().create_timer(duree_attaque_secondes).timeout
+	await attendre(duree_attaque_secondes)
 	if not est_elimine and en_cours_dattaque:
 		en_cours_dattaque = false
 		if possede_animation("retract"):

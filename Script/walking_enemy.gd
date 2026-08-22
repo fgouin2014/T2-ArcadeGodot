@@ -111,7 +111,7 @@ func activer_acteur() -> void:
 
 # --- BOUCLE XSWAT ---
 func _boucle_xswat_attaques() -> void:
-	while not est_elimine and deja_active:
+	while est_actif():
 		var mode = option_comportement
 		if mode == "swat_aleatoire":
 			mode = ["swat_debout", "swat_roulade"].pick_random()
@@ -119,14 +119,14 @@ func _boucle_xswat_attaques() -> void:
 		if mode == "swat_roulade":
 			if possede_animation("roll"):
 				_demarrer_deplacement("roll")
-			await get_tree().create_timer(temps_entre_tirs).timeout
-			if est_elimine or not deja_active: break
+			await attendre(temps_entre_tirs)
+			if not est_actif(): break
 			
 			_arreter_deplacement()
 			if possede_animation("idle_crouch"):
 				jouer_animation("idle_crouch")
-				await get_tree().create_timer(0.4).timeout
-			if est_elimine or not deja_active: break
+				await attendre(0.4)
+			if not est_actif(): break
 			
 			if possede_animation("roll_attack"):
 				a_lance_projectile_ce_cycle = false
@@ -136,14 +136,14 @@ func _boucle_xswat_attaques() -> void:
 		else:
 			if possede_animation("walk"):
 				_demarrer_deplacement("walk")
-			await get_tree().create_timer(temps_entre_tirs).timeout
-			if est_elimine or not deja_active: break
+			await attendre(temps_entre_tirs)
+			if not est_actif(): break
 			
 			_arreter_deplacement()
 			if possede_animation("idle_stand"):
 				jouer_animation("idle_stand")
-				await get_tree().create_timer(0.4).timeout
-			if est_elimine or not deja_active: break
+				await attendre(0.4)
+			if not est_actif(): break
 			
 			if possede_animation("stand_attack"):
 				a_lance_projectile_ce_cycle = false
@@ -153,29 +153,29 @@ func _boucle_xswat_attaques() -> void:
 
 # --- BOUCLE ARNOLD ---
 func _boucle_arnold_marche_pause_tir8x() -> void:
-	while not est_elimine and deja_active:
+	while est_actif():
 		# 1. Marche
 		_demarrer_deplacement("walk")
-		await get_tree().create_timer(temps_entre_tirs).timeout
-		if est_elimine or not deja_active: break
+		await attendre(temps_entre_tirs)
+		if not est_actif(): break
 		
 		# 2. Pause Idle
 		_arreter_deplacement()
 		if possede_animation("idle"):
 			jouer_animation("idle")
-			await get_tree().create_timer(delai_avant_tir).timeout
-		if est_elimine or not deja_active: break
+			await attendre(delai_avant_tir)
+		if not est_actif(): break
 		
 		# 3. Salve de tirs (8x)
 		var anim_tir = "shoot" if possede_animation("shoot") else ("throw" if possede_animation("throw") else "walk_shoot")
 		if possede_animation(anim_tir):
 			jouer_animation(anim_tir)
 			for i in range(nombre_de_tirs):
-				if est_elimine or not deja_active: break
+				if not est_actif(): break
 				_lancer_ou_dropper_objet()
-				await get_tree().create_timer(0.18).timeout
+				await attendre(0.18)
 		
-		if est_elimine or not deja_active: break
+		if not est_actif(): break
 
 func _sequence_drop_puis_walk() -> void:
 	_arreter_deplacement()
@@ -188,7 +188,7 @@ func _sequence_drop_puis_walk() -> void:
 		"marche_stop_idle_shoot", "marche_idle_tir_face":
 			if possede_animation("idle"):
 				jouer_animation("idle")
-			await get_tree().create_timer(1.0).timeout
+			await attendre(1.0)
 			var anim_marche = "walk_fwrd" if possede_animation("walk_fwrd") else "walk"
 			_boucle_alternance_tir(anim_marche, "shoot")
 		_:
@@ -200,24 +200,24 @@ func _sequence_drop_puis_walk() -> void:
 func _sequence_allie_cinematique() -> void:
 	if possede_animation("walk"):
 		_demarrer_deplacement("walk")
-		await get_tree().create_timer(temps_entre_tirs).timeout
-	if est_elimine or not deja_active: return
+		await attendre(temps_entre_tirs)
+	if not est_actif(): return
 
 	_arreter_deplacement()
 	if possede_animation("scan"):
 		jouer_animation("scan")
 		await _attendre_fin_animation_ou_timer(0.8)
-	if est_elimine or not deja_active: return
+	if not est_actif(): return
 
 	if possede_animation("take"):
 		jouer_animation("take")
 		await _attendre_fin_animation_ou_timer(1.0)
-	if est_elimine or not deja_active: return
+	if not est_actif(): return
 
 	if possede_animation("walk"):
 		_demarrer_deplacement("walk")
-		await get_tree().create_timer(1.5).timeout
-	if est_elimine or not deja_active: return
+		await attendre(1.5)
+	if not est_actif(): return
 
 	_arreter_deplacement()
 	if possede_animation("drop") and objet_a_dropper != "aucun":
@@ -275,7 +275,7 @@ func _sequence_jump() -> void:
 		"marche_stop_idle_shoot", "marche_idle_tir_face":
 			if possede_animation("idle"):
 				jouer_animation("idle")
-			await get_tree().create_timer(1.0).timeout
+			await attendre(1.0)
 			var anim_marche = "walk_fwrd" if possede_animation("walk_fwrd") else "walk"
 			_boucle_alternance_tir(anim_marche, "shoot")
 		_:
@@ -333,26 +333,26 @@ func _sequence_fwrd_face() -> void:
 			_boucle_tir_stationnaire()
 
 		"marche_tir_face", "marche_idle_tir_face":
-			while not est_elimine and deja_active:
+			while est_actif():
 				var anim_pas_face = "walk_fwrd" if possede_animation("walk_fwrd") else "walk_front"
 				jouer_animation(anim_pas_face)
 				await _attendre_fin_passation_animation(anim_pas_face, 2.0)
-				if est_elimine or not deja_active: break
+				if not est_actif(): break
 				
 				_arreter_deplacement()
 				if possede_animation("idle"):
 					jouer_animation("idle")
-					await get_tree().create_timer(0.3).timeout
-				if est_elimine or not deja_active: break
+					await attendre(0.3)
+				if not est_actif(): break
 				
 				if possede_animation("shoot"):
 					jouer_animation("shoot")
 					for i in range(nombre_de_tirs):
-						if est_elimine or not deja_active: break
+						if not est_actif(): break
 						_lancer_ou_dropper_objet()
-						await get_tree().create_timer(0.18).timeout
-				if est_elimine or not deja_active: break
-				await get_tree().create_timer(temps_entre_tirs).timeout
+						await attendre(0.18)
+				if not est_actif(): break
+				await attendre(temps_entre_tirs)
 				
 		"saut_obstacle":
 			if possede_animation("jump") or possede_animation("xenjump"):
@@ -371,9 +371,9 @@ func _sequence_fwrd_face() -> void:
 func _boucle_tir_stationnaire() -> void:
 	_arreter_deplacement()
 	var anim_tir = "shoot" if possede_animation("shoot") else ("throw" if possede_animation("throw") else "xethrow")
-	while not est_elimine and deja_active:
-		await get_tree().create_timer(temps_entre_tirs).timeout
-		if est_elimine or not deja_active: break
+	while est_actif():
+		await attendre(temps_entre_tirs)
+		if not est_actif(): break
 		a_lance_projectile_ce_cycle = false
 		jouer_animation(anim_tir)
 		await _attendre_fin_animation_ou_timer(1.2)
@@ -434,11 +434,11 @@ func _boucle_alternance_tir(anim_walk: String, anim_attack: String) -> void:
 	var anim_active = anim_attack if (est_tir_continu and possede_animation(anim_attack)) else anim_walk
 	print("[%s] Démarrage boucle alternance -> Walk: '%s', Attack: '%s', Continu: %s" % [name, anim_walk, anim_attack, est_tir_continu])
 	
-	while not est_elimine and deja_active:
+	while est_actif():
 		_demarrer_deplacement(anim_active)
 		print("[%s] Phase MARCHE -> Anim: '%s' (Durée: %.2fs)" % [name, anim_active, temps_entre_tirs])
-		await get_tree().create_timer(temps_entre_tirs).timeout
-		if est_elimine or not deja_active: break
+		await attendre(temps_entre_tirs)
+		if not est_actif(): break
 		
 		if possede_animation(anim_attack):
 			var garde_marche = est_tir_continu or ("walk_shoot" in anim_attack) or ("walk_shoot_profile" in anim_attack)
@@ -450,15 +450,15 @@ func _boucle_alternance_tir(anim_walk: String, anim_attack: String) -> void:
 			jouer_animation(anim_attack)
 			
 			for i in range(nombre_de_tirs):
-				if est_elimine or not deja_active: break
+				if not est_actif(): break
 				_lancer_ou_dropper_objet()
-				await get_tree().create_timer(0.18).timeout
+				await attendre(0.18)
 			
-			if est_elimine or not deja_active: break
+			if not est_actif(): break
 			if not garde_marche:
 				await _attendre_fin_animation_ou_timer(0.5)
 			
-			if est_elimine or not deja_active: break
+			if not est_actif(): break
 			_demarrer_deplacement(anim_active)
 
 func _attendre_fin_passation_animation(nom_anim: String, duree_fallback: float = 1.0) -> void:
@@ -467,9 +467,9 @@ func _attendre_fin_passation_animation(nom_anim: String, duree_fallback: float =
 		var speed = anim_sprite.sprite_frames.get_animation_speed(nom_anim)
 		if count > 0 and speed > 0.0:
 			var duree_passe = float(count) / speed
-			await get_tree().create_timer(duree_passe).timeout
+			await attendre(duree_passe)
 			return
-	await get_tree().create_timer(duree_fallback).timeout
+	await attendre(duree_fallback)
 
 func _attendre_fin_animation_ou_timer(duree_fallback: float) -> void:
 	if anim_sprite and anim_sprite.sprite_frames:
@@ -478,46 +478,46 @@ func _attendre_fin_animation_ou_timer(duree_fallback: float) -> void:
 			if not anim_sprite.sprite_frames.get_animation_loop(current_anim):
 				await anim_sprite.animation_finished
 				return
-	await get_tree().create_timer(duree_fallback).timeout
+	await attendre(duree_fallback)
 
 func _sequence_marche_stop_idle_shoot() -> void:
 	# 1. Tir initial immédiat lors de l'arrivée sur le sol (Idle -> Tir)
 	_arreter_deplacement()
 	if possede_animation("idle"):
 		jouer_animation("idle")
-		await get_tree().create_timer(delai_avant_tir).timeout
-	if not est_elimine and deja_active:
+		await attendre(delai_avant_tir)
+	if est_actif():
 		var anim_tir_init = "shoot" if possede_animation("shoot") else ("shoot_profile" if possede_animation("shoot_profile") else "walk_shoot")
 		if possede_animation(anim_tir_init):
 			a_lance_projectile_ce_cycle = false
 			jouer_animation(anim_tir_init)
 			for i in range(nombre_de_tirs):
-				if est_elimine or not deja_active: break
+				if not est_actif(): break
 				_lancer_ou_dropper_objet()
-				await get_tree().create_timer(0.18).timeout
+				await attendre(0.18)
 			await _attendre_fin_animation_ou_timer(0.4)
 
 	# 2. Boucle continue : Marche -> Stop -> Idle -> Tir
-	while not est_elimine and deja_active:
+	while est_actif():
 		_demarrer_deplacement("walk")
-		await get_tree().create_timer(temps_entre_tirs).timeout
-		if est_elimine or not deja_active: break
+		await attendre(temps_entre_tirs)
+		if not est_actif(): break
 		
 		_arreter_deplacement()
 		if possede_animation("idle"):
 			jouer_animation("idle")
-			await get_tree().create_timer(delai_avant_tir).timeout
-		if est_elimine or not deja_active: break
+			await attendre(delai_avant_tir)
+		if not est_actif(): break
 		
 		var anim_tir = "shoot" if possede_animation("shoot") else ("shoot_profile" if possede_animation("shoot_profile") else "walk_shoot")
 		if possede_animation(anim_tir):
 			a_lance_projectile_ce_cycle = false
 			jouer_animation(anim_tir)
 			for i in range(nombre_de_tirs):
-				if est_elimine or not deja_active: break
+				if not est_actif(): break
 				_lancer_ou_dropper_objet()
-				await get_tree().create_timer(0.18).timeout
+				await attendre(0.18)
 			await _attendre_fin_animation_ou_timer(0.4)
 		
-		if est_elimine or not deja_active: break
-		await get_tree().create_timer(0.2).timeout
+		if not est_actif(): break
+		await attendre(0.2)

@@ -54,7 +54,7 @@ func _demarrer_spawn_chrono() -> void:
 	if delai_spawn > 0.0:
 		var tree = get_tree()
 		if tree:
-			await tree.create_timer(delai_spawn).timeout
+			await tree.create_timer(delai_spawn, false).timeout
 	generer_ennemi()
 
 # --- APERÇU VISUEL DANS L'ÉDITEUR GODOT ---
@@ -166,7 +166,7 @@ func generer_ennemi() -> void:
 		if intervalle_repetition > 0.0:
 			var tree = get_tree()
 			if tree:
-				await tree.create_timer(intervalle_repetition).timeout
+				await tree.create_timer(intervalle_repetition, false).timeout
 				if is_inside_tree():
 					generer_ennemi()
 		else:
