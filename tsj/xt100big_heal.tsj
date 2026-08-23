@@ -1,0 +1,42 @@
+{
+  "columns": 5,
+  "image": "xt100big_heal.png",
+  "imageheight": 121,
+  "imagewidth": 460,
+  "margin": 0,
+  "name": "xt100big_heal",
+  "spacing": 0,
+  "tilecount": 5,
+  "tiledversion": "1.10.2",
+  "tileheight": 121,
+  "tilewidth": 92,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

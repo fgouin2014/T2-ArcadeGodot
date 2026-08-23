@@ -1,0 +1,29 @@
+{
+  "columns": 0,
+  "grid": {
+    "height": 1,
+    "orientation": "orthogonal",
+    "width": 1
+  },
+  "margin": 0,
+  "name": "xhumwall",
+  "spacing": 0,
+  "tilecount": 10,
+  "tiledversion": "1.10.2",
+  "tilewidth": 128,
+  "tileheight": 40,
+  "tiles": [
+    { "id": 0, "image": "xhumwall_06.png", "imageheight": 24, "imagewidth": 32 },
+    { "id": 1, "image": "xhumwall_07.png", "imageheight": 24, "imagewidth": 128 },
+    { "id": 2, "image": "xhumwall_08.png", "imageheight": 40, "imagewidth": 80 },
+    { "id": 3, "image": "xhumwall_09.png", "imageheight": 40, "imagewidth": 65 },
+    { "id": 4, "image": "xhumwall_10.png", "imageheight": 40, "imagewidth": 52 },
+    { "id": 5, "image": "xhumwall_11.png", "imageheight": 40, "imagewidth": 89 },
+    { "id": 6, "image": "xhumwall_12.png", "imageheight": 28, "imagewidth": 80 },
+    { "id": 7, "image": "xhumwall_13.png", "imageheight": 16, "imagewidth": 65 },
+    { "id": 8, "image": "xhumwall_14.png", "imageheight": 32, "imagewidth": 49 },
+    { "id": 9, "image": "xhumwall_15.png", "imageheight": 28, "imagewidth": 95 }
+  ],
+  "type": "tileset",
+  "version": "1.10"
+}

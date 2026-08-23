@@ -1,0 +1,30 @@
+{
+  "columns": 2,
+  "image": "xt100sms_effect.png",
+  "imageheight": 126,
+  "imagewidth": 184,
+  "margin": 0,
+  "name": "xt100sms_effect",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 126,
+  "tilewidth": 92,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

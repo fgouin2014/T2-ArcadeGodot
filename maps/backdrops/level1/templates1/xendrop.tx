@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<template>
+  <tileset firstgid="1" source="../xendrop.tsj" />
+  <object name="xendrop" type="xendrop" gid="1" width="116.0" height="68.0">
+    <properties>
+      <property name="hp" type="int" value="3" />
+      <property name="pattern" type="string" value="popup" propertytype="PatternType" />
+      <property name="scale" type="float" value="1.0" />
+      <property name="vitesse_zoom" type="float" value="0.0" />
+      <property name="passes" type="int" value="1" />
+      <property name="popup_duration" type="float" value="5.0" />
+      <property name="popup_speed" type="float" value="0.08" />
+      <property name="selfheal" type="bool" value="false" />
+      <property name="destructible" type="bool" value="true" />
+      <property name="stop" type="string" value="" />
+      <property name="enabled" type="bool" value="true" />
+      <property name="shots" type="int" value="8" />
+      <property name="initial_delay" type="float" value="0.0" />
+    </properties>
+  </object>
+</template>

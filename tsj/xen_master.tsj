@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xen_master.png",
+  "imageheight": 137,
+  "imagewidth": 6719,
+  "margin": 0,
+  "name": "xen_master",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 137,
+  "tilewidth": 6719,
+  "type": "tileset",
+  "version": "1.10"
+}

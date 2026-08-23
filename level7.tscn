@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://be6tc6ch7ahdu"]
+
+[ext_resource type="PackedScene" uid="uid://kmq3iisxcbjg" path="res://maps/t2_xfback2.tscn" id="1_backdrop"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="2_camera"]
+
+[node name="level7" type="Node2D" unique_id=1204636722]
+position = Vector2(120, 105)
+
+[node name="t2_xfback2" parent="." unique_id=167531171 instance=ExtResource("1_backdrop")]
+
+[node name="sol_0 (PL)" parent="t2_xfback2" index="2" unique_id=205894163]
+motion_scale = Vector2(1, 0)
+
+[node name="floor (PL)" parent="t2_xfback2" index="3" unique_id=990939085]
+motion_scale = Vector2(1, 0)
+
+[node name="xjug (PL)" parent="t2_xfback2" index="4" unique_id=1468010109]
+motion_scale = Vector2(1, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=425149390]
+limit_left = 0
+limit_top = 0
+limit_right = 2350
+limit_bottom = 175
+script = ExtResource("2_camera")
+
+[node name="EnnemisPlaces" type="Node2D" parent="." unique_id=479458358]
+position = Vector2(-41, -128)
+
+[editable path="t2_xfback2"]

@@ -1,0 +1,276 @@
+{
+  "compressionlevel": -1,
+  "height": 1,
+  "infinite": false,
+  "layers": [
+    {
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "height": 1,
+      "id": 1,
+      "name": "Corridor",
+      "opacity": 1,
+      "type": "tilelayer",
+      "visible": true,
+      "width": 44,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 2,
+      "name": "skyblack_",
+      "objects": [],
+      "opacity": 1,
+      "parallaxx": 0.05,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 3,
+      "name": "sol_0",
+      "objects": [],
+      "opacity": 1,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 4,
+      "name": "sol_1",
+      "objects": [],
+      "opacity": 1,
+      "parallaxx": 0.8,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 5,
+      "name": "sol_2",
+      "objects": [],
+      "opacity": 1,
+      "parallaxx": 0.6,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 6,
+      "name": "sol_3",
+      "objects": [],
+      "opacity": 1,
+      "parallaxx": 0.4,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 7,
+      "name": "skyline_0",
+      "objects": [],
+      "opacity": 1,
+      "parallaxx": 0.2,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 8,
+      "name": "sky_0",
+      "objects": [],
+      "opacity": 1,
+      "parallaxx": 0.1,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 9,
+      "name": "breakable_walls",
+      "objects": [],
+      "opacity": 1,
+      "parallaxy": 0,
+      "properties": [
+        {
+          "name": "shouldWrap",
+          "type": "string",
+          "value": "false"
+        }
+      ],
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 10,
+      "name": "barricade_walls",
+      "objects": [],
+      "opacity": 1,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 11,
+      "name": "Gameplay_Triggers",
+      "objects": [
+        {
+          "id": 1,
+          "name": "Main_Rail",
+          "type": "rail",
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "scroll_speed",
+              "type": "float",
+              "value": 1.0
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "stop_0",
+          "type": "camera_stop",
+          "x": 0,
+          "y": 0,
+          "width": 128,
+          "height": 174,
+          "visible": true,
+          "properties": [
+            {
+              "name": "clear_condition",
+              "type": "string",
+              "value": "kill_all_enemies",
+              "propertytype": "ClearCondition"
+            },
+            {
+              "name": "stop_duration",
+              "type": "float",
+              "value": 10.0
+            },
+            {
+              "name": "wave_id",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "opacity": 1,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 12,
+      "name": "Entities",
+      "objects": [],
+      "opacity": 1,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "nextlayerid": 13,
+  "nextobjectid": 110003,
+  "orientation": "orthogonal",
+  "properties": [
+    {
+      "name": "horizonTiled",
+      "type": "float",
+      "value": 150.0
+    },
+    {
+      "name": "uniformScale",
+      "type": "bool",
+      "value": true
+    }
+  ],
+  "renderorder": "right-down",
+  "tiledversion": "1.10.2",
+  "tileheight": 174,
+  "tilesets": [],
+  "tilewidth": 128,
+  "type": "map",
+  "version": "1.10",
+  "width": 44
+}

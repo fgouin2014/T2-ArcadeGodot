@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xgigend_idle.png",
+  "imageheight": 128,
+  "imagewidth": 147,
+  "margin": 0,
+  "name": "xgigend_idle",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 128,
+  "tilewidth": 147,
+  "type": "tileset",
+  "version": "1.10"
+}

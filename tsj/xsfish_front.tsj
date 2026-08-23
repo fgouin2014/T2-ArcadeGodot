@@ -1,0 +1,50 @@
+{
+  "columns": 7,
+  "image": "xsfish_front.png",
+  "imageheight": 29,
+  "imagewidth": 434,
+  "margin": 0,
+  "name": "xsfish_front",
+  "spacing": 0,
+  "tilecount": 7,
+  "tiledversion": "1.10.2",
+  "tileheight": 29,
+  "tilewidth": 62,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

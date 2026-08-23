@@ -1,0 +1,15 @@
+{
+  "columns": 6,
+  "image": "xswatrun.png",
+  "imageheight": 80,
+  "imagewidth": 2880,
+  "margin": 0,
+  "name": "xswatrun_walk",
+  "spacing": 0,
+  "tilecount": 6,
+  "tiledversion": "1.10.2",
+  "tileheight": 77,
+  "tilewidth": 448,
+  "type": "tileset",
+  "version": "1.10"
+}

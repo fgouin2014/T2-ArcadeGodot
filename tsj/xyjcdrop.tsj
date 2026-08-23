@@ -1,0 +1,30 @@
+{
+  "columns": 42,
+  "image": "xyjcdrop.png",
+  "imageheight": 83,
+  "imagewidth": 1260,
+  "margin": 0,
+  "name": "xyjcdrop",
+  "spacing": 0,
+  "tilecount": 42,
+  "tiledversion": "1.10.2",
+  "tileheight": 46,
+  "tilewidth": 30,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../xmedend_walk.tsj"/>
+ <object name="xmedend" type="xmedend" gid="1" width="116" height="68">
+  <properties>
+   <property name="destructible" type="bool" value="true"/>
+   <property name="enabled" type="bool" value="true"/>
+   <property name="hp" type="int" value="10"/>
+   <property name="initial_delay" type="float" value="0"/>
+   <property name="passes" type="int" value="1"/>
+   <property name="pattern" value="walk"/>
+   <property name="scale" type="float" value="1"/>
+   <property name="selfheal" type="bool" value="false"/>
+   <property name="shots" type="int" value="8"/>
+   <property name="speed" type="float" value="0"/>
+   <property name="start_direction" value="right"/>
+   <property name="stop" value=""/>
+   <property name="vitesse_zoom" type="float" value="0.006"/>
+  </properties>
+ </object>
+</template>

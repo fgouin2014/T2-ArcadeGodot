@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<template>
+  <tileset firstgid="1" source="../xbigend_walk.tsj" />
+  <object name="xbigend" type="xbigend" gid="1" width="34.0" height="88.0">
+    <properties>
+      <property name="hp" type="int" value="10" />
+      <property name="pattern" type="string" value="walk" propertytype="PatternType" />
+      <property name="scale" type="float" value="1.0" />
+      <property name="vitesse_zoom" type="float" value="0.006" />
+      <property name="passes" type="int" value="1" />
+      <property name="start_direction" type="string" value="right" propertytype="StartDirection" />
+      <property name="speed" type="float" value="0.0" />
+      <property name="selfheal" type="bool" value="false" />
+      <property name="destructible" type="bool" value="true" />
+      <property name="stop" type="string" value="" />
+      <property name="enabled" type="bool" value="true" />
+      <property name="shots" type="int" value="8" />
+      <property name="initial_delay" type="float" value="0.0" />
+    </properties>
+  </object>
+</template>

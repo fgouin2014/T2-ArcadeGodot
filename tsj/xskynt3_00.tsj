@@ -1,0 +1,15 @@
+{
+  "columns": 0,
+  "image": "xskynt3_00.png",
+  "imageheight": 104,
+  "imagewidth": 88,
+  "margin": 0,
+  "name": "xskynt3_00",
+  "spacing": 0,
+  "tilecount": 0,
+  "tiledversion": "1.10.2",
+  "tileheight": 104,
+  "tilewidth": 176,
+  "type": "tileset",
+  "version": "1.10"
+}

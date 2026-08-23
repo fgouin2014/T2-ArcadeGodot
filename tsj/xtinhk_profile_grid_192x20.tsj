@@ -1,0 +1,15 @@
+{
+  "columns": 2,
+  "image": "xtinhk_profile_grid_192x20_combined.png",
+  "imageheight": 20,
+  "imagewidth": 384,
+  "margin": 0,
+  "name": "xtinhk_profile_grid_192x20",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 20,
+  "tilewidth": 192,
+  "type": "tileset",
+  "version": "1.10"
+}

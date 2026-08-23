@@ -1,0 +1,54 @@
+{
+  "columns": 51,
+  "image": "xswatrun.png",
+  "imageheight": 80,
+  "imagewidth": 2880,
+  "margin": 0,
+  "name": "xswatrun",
+  "spacing": 0,
+  "tilecount": 51,
+  "tiledversion": "1.10.2",
+  "tileheight": 77,
+  "tilewidth": 56,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "columns": 2,
+  "image": "xt100wlk_profile_aim.png",
+  "imageheight": 88,
+  "imagewidth": 100,
+  "margin": 0,
+  "name": "xt100wlk_profile_aim",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 88,
+  "tilewidth": 50,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bjrp2et0102dm"]
+
+[ext_resource type="PackedScene" uid="uid://b1vxqyb77plba" path="res://maps/t2_xl4skynt1.tscn" id="1_backdrop"]
+[ext_resource type="PackedScene" uid="uid://cfu4tlpr0gtg" path="res://maps/t2_xl4door.tscn" id="2_boss"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="3_camera"]
+
+[node name="level4" type="Node2D" unique_id=323303196]
+
+[node name="t2_xl4skynt1" parent="." unique_id=572954950 instance=ExtResource("1_backdrop")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1777971178]
+limit_left = 0
+limit_top = 0
+limit_right = 4097
+limit_bottom = 175
+script = ExtResource("3_camera")
+
+[node name="EnnemisPlaces" type="Node2D" parent="." unique_id=2029236327]
+
+[node name="lobby (PL)" parent="EnnemisPlaces" unique_id=1998772086 instance=ExtResource("2_boss")]
+position = Vector2(3776, 0)

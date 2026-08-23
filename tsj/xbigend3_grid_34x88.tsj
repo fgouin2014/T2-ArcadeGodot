@@ -1,0 +1,30 @@
+{
+  "columns": 3,
+  "image": "xbigend3_grid_34x88_combined.png",
+  "imageheight": 88,
+  "imagewidth": 102,
+  "margin": 0,
+  "name": "xbigend3_grid_34x88",
+  "spacing": 0,
+  "tilecount": 3,
+  "tiledversion": "1.10.2",
+  "tileheight": 88,
+  "tilewidth": 34,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        }
+      ],
+      "id": 1
+    }
+  ]
+}

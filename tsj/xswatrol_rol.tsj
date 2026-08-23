@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xswatrol_rol.png",
+  "imageheight": 80,
+  "imagewidth": 376,
+  "margin": 0,
+  "name": "xswatrol_rol",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 67,
+  "tilewidth": 376,
+  "type": "tileset",
+  "version": "1.10"
+}

@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xt100rol_rol.png",
+  "imageheight": 72,
+  "imagewidth": 2608,
+  "margin": 0,
+  "name": "xt100rol_rol",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 72,
+  "tilewidth": 2608,
+  "type": "tileset",
+  "version": "1.10"
+}

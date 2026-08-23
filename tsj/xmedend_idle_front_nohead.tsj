@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xmedend_idle_front_nohead.png",
+  "imageheight": 67,
+  "imagewidth": 26,
+  "margin": 0,
+  "name": "xmedend_idle_front_nohead",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 67,
+  "tilewidth": 26,
+  "type": "tileset",
+  "version": "1.10"
+}

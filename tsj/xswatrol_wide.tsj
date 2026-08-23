@@ -1,0 +1,74 @@
+{
+  "columns": 13,
+  "image": "xswatrol_wide.png",
+  "imageheight": 80,
+  "imagewidth": 3328,
+  "margin": 0,
+  "name": "xswatrol_wide",
+  "spacing": 0,
+  "tilecount": 13,
+  "tiledversion": "1.10",
+  "tileheight": 80,
+  "tilewidth": 256,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "id": 0,
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        },
+        {
+          "duration": 100,
+          "tileid": 8
+        },
+        {
+          "duration": 100,
+          "tileid": 9
+        },
+        {
+          "duration": 100,
+          "tileid": 10
+        },
+        {
+          "duration": 100,
+          "tileid": 11
+        },
+        {
+          "duration": 100,
+          "tileid": 12
+        }
+      ]
+    }
+  ]
+}

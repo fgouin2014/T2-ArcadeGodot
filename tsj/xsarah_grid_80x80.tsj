@@ -1,0 +1,108 @@
+{
+  "columns": 8,
+  "image": "xsarah_grid_80x80_combined.png",
+  "imageheight": 240,
+  "imagewidth": 640,
+  "margin": 0,
+  "name": "xsarah_grid_80x80",
+  "spacing": 0,
+  "tilecount": 20,
+  "tiledversion": "1.10.2",
+  "tileheight": 80,
+  "tilewidth": 80,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        }
+      ],
+      "id": 0
+    },
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        },
+        {
+          "duration": 100,
+          "tileid": 8
+        },
+        {
+          "duration": 100,
+          "tileid": 9
+        },
+        {
+          "duration": 100,
+          "tileid": 10
+        }
+      ],
+      "id": 4
+    },
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 12
+        },
+        {
+          "duration": 100,
+          "tileid": 13
+        },
+        {
+          "duration": 100,
+          "tileid": 14
+        },
+        {
+          "duration": 100,
+          "tileid": 15
+        },
+        {
+          "duration": 100,
+          "tileid": 16
+        },
+        {
+          "duration": 100,
+          "tileid": 17
+        },
+        {
+          "duration": 100,
+          "tileid": 18
+        },
+        {
+          "duration": 100,
+          "tileid": 19
+        }
+      ],
+      "id": 12
+    }
+  ]
+}

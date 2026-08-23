@@ -1,0 +1,15 @@
+{
+  "columns": 2,
+  "image": "xsarah.png",
+  "imageheight": 178,
+  "imagewidth": 222,
+  "margin": 0,
+  "name": "xsarah",
+  "spacing": 0,
+  "tilecount": 4,
+  "tiledversion": "1.10.2",
+  "tileheight": 80,
+  "tilewidth": 80,
+  "type": "tileset",
+  "version": "1.10"
+}

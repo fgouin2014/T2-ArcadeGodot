@@ -1,0 +1,43 @@
+{
+  "columns": 6,
+  "image": "xmedend_front_grid_26x67_combined.png",
+  "imageheight": 67,
+  "imagewidth": 156,
+  "margin": 0,
+  "name": "xmedend_front_grid_26x67",
+  "spacing": 0,
+  "tilecount": 6,
+  "tiledversion": "1.10.2",
+  "tileheight": 67,
+  "tilewidth": 26,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        }
+      ],
+      "id": 2
+    },
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        }
+      ],
+      "id": 4
+    }
+  ]
+}

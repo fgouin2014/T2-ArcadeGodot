@@ -1,0 +1,323 @@
+{
+    "activeFile": "level1/t2_xl4skynt1.tmj",
+    "expandedProjectPaths": [
+        "level1",
+        "level1/exported",
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj",
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/level1_decor.tsj": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/objects.tsj": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/test_enemies_collection.tsj": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xbighk.tsj": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xenfwrd.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xfrdfhk_composite_demo.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xgigend.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xl1ghk_assembled_preview.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xmedend_walk.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xmedend_walk_wide.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xmidhk_00.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/xtinhk_00.tsj": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/test_enemies_collection.tsj": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xbighk.tsj": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xfrdfhk_composite_demo.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xgigend.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xgigend_grid_147x128.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xgigend_retract.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xgigend_shoot.tsj": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xl1ghk_assembled_preview.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xmidhk_00.tsj": {
+            "scaleInDock": 1
+        },
+        "C:/androidProject/lastchance/DukeSoundboard/app/src/main/assets/maps/backdrops/level1/xtinhk_00.tsj": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "level1/t2_hideout.tmj": {
+            "expandedGroupLayers": [
+                26,
+                25
+            ],
+            "scale": 0.5,
+            "selectedLayer": 9,
+            "viewCenter": {
+                "x": 512,
+                "y": 86
+            }
+        },
+        "level1/t2_hideout.tmj#level2_decor": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "level1/t2_hideout.tmj.bak.tmj": {
+            "expandedGroupLayers": [
+                26,
+                25
+            ],
+            "scale": 0.5,
+            "selectedLayer": 9,
+            "viewCenter": {
+                "x": 512,
+                "y": 86
+            }
+        },
+        "level1/t2_hideout.tmj.bak.tmj#level2_decor": {
+            "scaleInDock": 0.75
+        },
+        "level1/t2_stage3.tmj": {
+            "scale": 1.954427083333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 191.87208527648238,
+                "y": 86.98201199200535
+            }
+        },
+        "level1/t2_stage3.tmj#level3_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_starter_blank.tmj": {
+            "scale": 2,
+            "selectedLayer": 11,
+            "viewCenter": {
+                "x": 2816,
+                "y": 87
+            }
+        },
+        "level1/t2_starter_canvas.tmj": {
+            "scale": 0.09903564453125,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2049.7670405522003,
+                "y": 90.87637125600895
+            }
+        },
+        "level1/t2_starter_canvas.tmj#level4_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_testchamber.tmj": {
+            "scale": 0.9772135416666665,
+            "selectedLayer": 10,
+            "viewCenter": {
+                "x": 383.74417055296476,
+                "y": 86.98201199200537
+            }
+        },
+        "level1/t2_testchamber.tmj#level1_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_testchamber.tmj#level4_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_testchamber.tmj#testchamber_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xfback2.tmj": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 896,
+                "y": 88
+            }
+        },
+        "level1/t2_xfback2.tmj#level7_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xfback2bbb.tmj": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 1730,
+                "y": 239.99999999999997
+            }
+        },
+        "level1/t2_xfback2bbb.tmj#level7_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck.tmj": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 2816,
+                "y": 86.66666666666666
+            }
+        },
+        "level1/t2_xl1bck.tmj#level1_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck1.tmj": {
+            "expandedObjectLayers": [
+                2,
+                9
+            ],
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2816,
+                "y": 86
+            }
+        },
+        "level1/t2_xl1bck1.tmj#level1_decor": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck1_REALWALL.tmj": {
+            "scale": 0.13325639204545453,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 2814.123917388408,
+                "y": 90.05196535642926
+            }
+        },
+        "level1/t2_xl1bck1_REALWALL.tmj#level1_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck1_REALWALL.tmj#xbighk": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck1_REALWALL.tmj#xfrdfhk_composite_demo": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck1_REALWALL.tmj#xl1ghk_assembled_preview": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck1_REALWALL.tmj#xmidhk_00": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xl1bck1_REALWALL.tmj#xtinhk_00": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xl4skynt1.tmj": {
+            "expandedGroupLayers": [
+                18
+            ],
+            "expandedObjectLayers": [
+                15
+            ],
+            "scale": 2,
+            "selectedLayer": 12,
+            "viewCenter": {
+                "x": 3936.5,
+                "y": 160.5
+            }
+        },
+        "level1/t2_xl4skynt1.tmj#level1_decor": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "level1/t2_xl4skynt1.tmj#level4_decor": {
+            "dynamicWrapping": true,
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "level1/t2_xroad.tmj": {
+            "scale": 0.24430338541666663,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1534.976682211859,
+                "y": 85.95869420386407
+            }
+        },
+        "level1/t2_xroad.tmj#xroad_decor": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/maps/backdrops/level1",
+    "last.externalTilesetPath": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj",
+    "last.imagePath": "C:/androidProject/lastchance/t2_extracted/T2_sprites_truePalette/objets/xskynt2",
+    "last.objectTemplatePath": "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/templates",
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "json",
+    "openFiles": [
+        "level1/t2_xl1bck1.tmj",
+        "level1/t2_xroad.tmj",
+        "level1/t2_xl4skynt1.tmj",
+        "level1/t2_xl1bck.tmj",
+        "level1/t2_xfback2.tmj",
+        "level1/t2_testchamber.tmj",
+        "level1/t2_starter_canvas.tmj",
+        "level1/t2_starter_blank.tmj",
+        "level1/t2_stage3.tmj",
+        "level1/t2_hideout.tmj.bak.tmj",
+        "level1/t2_hideout.tmj",
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/level1_decor.tsj"
+    ],
+    "project": "levels.godot.tiled-project",
+    "recentFiles": [
+        "level1/t2_xl1bck1.tmj",
+        "level1/t2_xroad.tmj",
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/level1_decor.tsj",
+        "level1/t2_hideout.tmj",
+        "level1/t2_hideout.tmj.bak.tmj",
+        "level1/t2_stage3.tmj",
+        "level1/t2_starter_blank.tmj",
+        "level1/t2_starter_canvas.tmj",
+        "level1/t2_testchamber.tmj",
+        "level1/t2_xfback2.tmj",
+        "level1/t2_xl1bck.tmj",
+        "level1/t2_xl4skynt1.tmj"
+    ],
+    "tileset.lastUsedFormat": "json",
+    "tileset.type": 1
+}

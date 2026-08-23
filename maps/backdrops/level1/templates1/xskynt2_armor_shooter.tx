@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<template>
+  <tileset firstgid="1" source="../../tilesets/objets/xskynt2/xskynt2_05.tsj" />
+  <object name="xskynt2_armor_shooter" type="enemy" gid="1" width="32.0" height="32.0">
+    <properties>
+      <property name="hp" type="int" value="10" />
+      <property name="pattern" type="string" value="walk" propertytype="PatternType" />
+      <property name="scale" type="float" value="1.0" />
+      <property name="vitesse_zoom" type="float" value="0.0" />
+      <property name="passes" type="int" value="1" />
+      <property name="speed" type="float" value="0.0" />
+      <property name="selfheal" type="bool" value="false" />
+      <property name="destructible" type="bool" value="true" />
+      <property name="stop" type="string" value="" />
+      <property name="enabled" type="bool" value="false" />
+      <property name="shots" type="int" value="5" />
+      <property name="spawn_type" type="string" value="xmissile" propertytype="SpawnType" />
+      <property name="trigger_target" type="string" value="xskynt2_door" />
+      <property name="initial_delay" type="float" value="1.0" />
+    </properties>
+  </object>
+</template>

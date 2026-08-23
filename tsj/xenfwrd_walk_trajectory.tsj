@@ -1,0 +1,74 @@
+{
+  "columns": 13,
+  "image": "xenfwrd_walk_trajectory.png",
+  "imageheight": 88,
+  "imagewidth": 884,
+  "margin": 0,
+  "name": "xenfwrd_walk_trajectory",
+  "spacing": 0,
+  "tilecount": 13,
+  "tiledversion": "1.10",
+  "tileheight": 88,
+  "tilewidth": 68,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "id": 0,
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        },
+        {
+          "duration": 100,
+          "tileid": 8
+        },
+        {
+          "duration": 100,
+          "tileid": 9
+        },
+        {
+          "duration": 100,
+          "tileid": 10
+        },
+        {
+          "duration": 100,
+          "tileid": 11
+        },
+        {
+          "duration": 100,
+          "tileid": 12
+        }
+      ]
+    }
+  ]
+}

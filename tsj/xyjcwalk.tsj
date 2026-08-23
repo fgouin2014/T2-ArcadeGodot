@@ -1,0 +1,54 @@
+{
+  "columns": 40,
+  "image": "xyjcwalk.png",
+  "imageheight": 83,
+  "imagewidth": 1260,
+  "margin": 0,
+  "name": "xyjcwalk",
+  "spacing": 0,
+  "tilecount": 40,
+  "tiledversion": "1.10.2",
+  "tileheight": 64,
+  "tilewidth": 31,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

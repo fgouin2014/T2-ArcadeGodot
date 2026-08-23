@@ -1,0 +1,30 @@
+{
+  "columns": 40,
+  "image": "xyjcscan.png",
+  "imageheight": 83,
+  "imagewidth": 1260,
+  "margin": 0,
+  "name": "xyjcscan",
+  "spacing": 0,
+  "tilecount": 40,
+  "tiledversion": "1.10.2",
+  "tileheight": 64,
+  "tilewidth": 31,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

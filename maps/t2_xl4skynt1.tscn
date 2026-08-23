@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b1vxqyb77plba"]
+
+[ext_resource type="PackedScene" uid="uid://cvc30hms177uu" path="res://maps/backdrops/level1/t2_xl4skynt1.tmj" id="1_m2n35"]
+
+[node name="t2_xl4skynt1" unique_id=572954950 instance=ExtResource("1_m2n35")]
+
+[node name="Spawners" type="Node2D" parent="." index="0" unique_id=1389642708]
+
+[node name="Spawner_xt100big_1" type="Marker2D" parent="Spawners" index="0" unique_id=716194708]
+position = Vector2(600, 100)
+gizmo_extents = 0.0
+metadata/type_ennemi = "xt100big"
+
+[node name="Spawner_xtech_1" type="Marker2D" parent="Spawners" index="1" unique_id=1711303689]
+position = Vector2(1100, 100)
+gizmo_extents = 0.0
+metadata/type_ennemi = "xtech"
+
+[node name="xl4skyn_pods_placeholder" parent="t2_xl4skynt1 (PBG)/pod_4 (PL)/pod_4" parent_id_path=PackedInt32Array(413470744) index="0" unique_id=1187410610]
+position = Vector2(2116, 107)

@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xsarah_sabotage_nobarrel.png",
+  "imageheight": 80,
+  "imagewidth": 1920,
+  "margin": 0,
+  "name": "xsarah_sabotage_nobarrel",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 80,
+  "tilewidth": 1920,
+  "type": "tileset",
+  "version": "1.10"
+}

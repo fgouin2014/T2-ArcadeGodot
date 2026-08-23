@@ -1,0 +1,38 @@
+{
+  "columns": 7,
+  "image": "xt100sms_smash.png",
+  "imageheight": 126,
+  "imagewidth": 276,
+  "margin": 0,
+  "name": "xt100sms_smash",
+  "spacing": 0,
+  "tilecount": 7,
+  "tiledversion": "1.10.2",
+  "tileheight": 85,
+  "tilewidth": 37,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

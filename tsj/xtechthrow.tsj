@@ -1,0 +1,42 @@
+{
+  "columns": 21,
+  "image": "xtechthrow.png",
+  "imageheight": 72,
+  "imagewidth": 936,
+  "margin": 0,
+  "name": "xtechthrow",
+  "spacing": 0,
+  "tilecount": 21,
+  "tiledversion": "1.10.2",
+  "tileheight": 59,
+  "tilewidth": 44,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

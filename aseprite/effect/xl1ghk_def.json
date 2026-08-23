@@ -1,0 +1,52 @@
+{
+  "base_idle": {
+    "name": "xl1ghk_base_idle",
+    "offset_x": -102.643,
+    "offset_y": -62.0
+  },
+  "base_missile": {
+    "name": "xl1ghk_base_missile",
+    "offset_x": -102.643,
+    "offset_y": -62.0
+  },
+  "base_destroy": {
+    "name": "xl1ghk_base_destroy",
+    "offset_x": -102.643,
+    "offset_y": -62.0
+  },
+  "tete_idle": {
+    "name": "xl1ghk_tete_idle",
+    "offset_x": -62.643,
+    "offset_y": -123.0
+  },
+  "tete_damaged": {
+    "name": "xl1ghk_tete_damaged",
+    "offset_x": -62.643,
+    "offset_y": -123.0
+  },
+  "torse_idle": {
+    "name": "xl1ghk_torse_idle",
+    "offset_x": -96.643,
+    "offset_y": -100.0
+  },
+  "bras_g_idle": {
+    "name": "xl1ghk_bras_g_idle",
+    "offset_x": -115.643,
+    "offset_y": -88.0
+  },
+  "bras_g_damaged": {
+    "name": "xl1ghk_bras_g_damaged",
+    "offset_x": -102.643,
+    "offset_y": -107.0
+  },
+  "bras_d_idle": {
+    "name": "xl1ghk_bras_d_idle",
+    "offset_x": 5.356999999999999,
+    "offset_y": -88.0
+  },
+  "bras_d_damaged": {
+    "name": "xl1ghk_bras_d_damaged",
+    "offset_x": 7.356999999999999,
+    "offset_y": -107.0
+  }
+}

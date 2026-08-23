@@ -1,0 +1,54 @@
+{
+  "columns": 8,
+  "image": "xmedend_walk_nohead_wide.png",
+  "imageheight": 68,
+  "imagewidth": 928,
+  "margin": 0,
+  "name": "xmedend_walk_nohead_wide",
+  "spacing": 0,
+  "tilecount": 8,
+  "tiledversion": "1.10.2",
+  "tileheight": 68,
+  "tilewidth": 116,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        }
+      ],
+      "id": 0
+    }
+  ]
+}

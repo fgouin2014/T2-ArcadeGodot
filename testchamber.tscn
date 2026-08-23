@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://maps/t2_testchamber.tscn" id="1_backdrop"]
+[ext_resource type="Script" path="res://Script/camera_auto_scroll.gd" id="2_camera"]
+
+[node name="testchamber" type="Node2D"]
+
+[node name="t2_testchamber" parent="." instance=ExtResource("1_backdrop")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 5632
+limit_bottom = 175
+script = ExtResource("2_camera")
+
+[node name="EnnemisPlaces" type="Node2D" parent="."]

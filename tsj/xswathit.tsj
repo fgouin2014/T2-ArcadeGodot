@@ -1,0 +1,15 @@
+{
+  "columns": 96,
+  "image": "xswathit.png",
+  "imageheight": 80,
+  "imagewidth": 2880,
+  "margin": 0,
+  "name": "xswathit",
+  "spacing": 0,
+  "tilecount": 96,
+  "tiledversion": "1.10.2",
+  "tileheight": 72,
+  "tilewidth": 30,
+  "type": "tileset",
+  "version": "1.10"
+}

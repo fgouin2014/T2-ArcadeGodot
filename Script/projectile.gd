@@ -1,0 +1,240 @@
+extends Node2D
+
+@export var est_missile_alternatif: bool = false
+@export var degats: int = 1
+@export var vitesse_lerp: float = 9.0 # ~0.11 seconde de vol (6-7 frames)
+
+var start_pos: Vector2 = Vector2.ZERO
+var target_pos: Vector2 = Vector2.ZERO
+var t: float = 0.0
+var sprite_projectile: Sprite2D = null
+
+# --- PRÉCHARGEMENT DES TEXTURES XWEPGRA ---
+var textures_tir_principal: Array[Texture2D] = [
+	preload("res://tsj/xwepgra_16.png"),
+	preload("res://tsj/xwepgra_17.png"),
+	preload("res://tsj/xwepgra_18.png"),
+	preload("res://tsj/xwepgra_19.png"),
+	preload("res://tsj/xwepgra_20.png"),
+	preload("res://tsj/xwepgra_21.png")
+]
+
+var textures_missile: Array[Texture2D] = [
+	preload("res://tsj/xwepgra_01.png"),
+	preload("res://tsj/xwepgra_02.png"),
+	preload("res://tsj/xwepgra_03.png"),
+	preload("res://tsj/xwepgra_04.png"),
+	preload("res://tsj/xwepgra_05.png"),
+	preload("res://tsj/xwepgra_06.png")
+]
+
+var textures_fumee_missile: Array[Texture2D] = [
+	preload("res://tsj/xwepgra_15.png"),
+	preload("res://tsj/xwepgra_14.png"),
+	preload("res://tsj/xwepgra_13.png"),
+	preload("res://tsj/xwepgra_12.png"),
+	preload("res://tsj/xwepgra_11.png"),
+	preload("res://tsj/xwepgra_10.png")
+]
+
+var textures_impact: Array[Texture2D] = [
+	preload("res://tsj/xwepgra_07.png"),
+	preload("res://tsj/xwepgra_08.png"),
+	preload("res://tsj/xwepgra_09.png")
+]
+
+func _ready() -> void:
+	sprite_projectile = Sprite2D.new()
+	sprite_projectile.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	add_child(sprite_projectile)
+
+func initialiser_tir(depart: Vector2, cible: Vector2, mode_missile: bool = false) -> void:
+	start_pos = depart
+	target_pos = cible
+	position = start_pos
+	t = 0.0
+	est_missile_alternatif = mode_missile
+
+func _physics_process(delta: float) -> void:
+	if t >= 1.0:
+		return
+
+	t += delta * vitesse_lerp
+	var t_clamped = clamp(t, 0.0, 1.0)
+	
+	# Interpolation 2.5D du bas vers la cible en profondeur
+	position = start_pos.lerp(target_pos, t_clamped)
+	
+	# Orientation du sprite selon la trajectoire
+	var direction = (target_pos - start_pos).normalized()
+	rotation = direction.angle() + (PI / 2.0)
+	
+	# Choix de la texture selon l'avancement du vol (du plus gros au plus petit)
+	var liste_tex = textures_missile if est_missile_alternatif else textures_tir_principal
+	var index_tex = int(t_clamped * (liste_tex.size() - 1))
+	if sprite_projectile and index_tex < liste_tex.size():
+		sprite_projectile.texture = liste_tex[index_tex]
+		
+	# Émission de cercles de fumée le long de la trajectoire pour le missile
+	if est_missile_alternatif and randf() < 0.4:
+		_emettre_cercle_fumee(position, direction, t_clamped)
+
+	if t >= 1.0:
+		_verifier_impact_cible()
+		queue_free()
+
+func _emettre_cercle_fumee(pos_fumee: Vector2, dir_vol: Vector2, ratio_vol: float) -> void:
+	var spr_fumee = Sprite2D.new()
+	spr_fumee.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	var index_fumee = int(ratio_vol * (textures_fumee_missile.size() - 1))
+	if index_fumee < textures_fumee_missile.size():
+		spr_fumee.texture = textures_fumee_missile[index_fumee]
+	
+	# Positionnée légèrement derrière le missile
+	spr_fumee.global_position = pos_fumee - (dir_vol * 6.0)
+	spr_fumee.rotation = dir_vol.angle() + (PI / 2.0)
+	get_parent().add_child(spr_fumee)
+	
+	# Animation de disparition rapide de la fumée (0.2s)
+	var tween = spr_fumee.create_tween()
+	tween.tween_property(spr_fumee, "modulate:a", 0.0, 0.20)
+	tween.tween_callback(spr_fumee.queue_free)
+
+func _creer_impact_explosion(pos_impact: Vector2) -> void:
+	var parent_node = get_parent()
+	if parent_node == null or not is_inside_tree():
+		return
+		
+	var spr_impact = Sprite2D.new()
+	spr_impact.name = "ImpactExplosion"
+	spr_impact.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	spr_impact.global_position = pos_impact
+	spr_impact.texture = textures_impact[0]
+	spr_impact.z_index = 2000
+	parent_node.add_child(spr_impact)
+	
+	# Sequencage de frames d'explosion securise via SceneTreeTimer
+	var tree = get_tree()
+	if tree:
+		tree.create_timer(0.04, false).timeout.connect(func():
+			if is_instance_valid(spr_impact):
+				spr_impact.texture = textures_impact[1]
+		)
+		tree.create_timer(0.08, false).timeout.connect(func():
+			if is_instance_valid(spr_impact):
+				spr_impact.texture = textures_impact[2]
+		)
+		tree.create_timer(0.12, false).timeout.connect(func():
+			if is_instance_valid(spr_impact):
+				spr_impact.queue_free()
+		)
+
+func _verifier_impact_cible() -> void:
+	# Toujours générer l'effet d'impact à la position ciblée
+	_creer_impact_explosion(target_pos)
+
+	# 1. Vérification par Physique 2D (Masque 0xFFFFFFFF couvrant les 32 calques de collision)
+	var space_state = get_world_2d().direct_space_state
+	if space_state:
+		var query = PhysicsShapeQueryParameters2D.new()
+		var circle = CircleShape2D.new()
+		circle.radius = 18.0 # Zone de tolérance de 18px autour du tir
+		query.shape = circle
+		query.transform = Transform2D(0.0, target_pos)
+		query.collision_mask = 0xFFFFFFFF # Intercepte tous les calques
+		query.collide_with_bodies = true
+		query.collide_with_areas = true
+		
+		var results = space_state.intersect_shape(query)
+		
+		# PASSE 1 : Priorité absolue aux Area2D Hitspots (Boss multi-hitspots comme xl1ghk) - triés par proximité exacte
+		var hitspots_candidats = []
+		for res in results:
+			var collider = res.collider
+			if collider is Area2D:
+				var dist = target_pos.distance_to(collider.global_position)
+				hitspots_candidats.append({"collider": collider, "dist": dist})
+				
+		hitspots_candidats.sort_custom(func(a, b): return a.dist < b.dist)
+		
+		for item in hitspots_candidats:
+			var collider = item.collider
+			# Remonter l'arborescence pour trouver le contrôleur parent (Boss ou Ennemi)
+			var parent_actor: Node = collider.get_parent()
+			while parent_actor and not parent_actor.has_method("subir_degats_partie") and not parent_actor.has_method("subir_degats"):
+				parent_actor = parent_actor.get_parent()
+			
+			if parent_actor and parent_actor.has_method("subir_degats_partie"):
+				var nom_partie = collider.name.to_lower().replace("hitspot_", "").replace("hitspot", "").replace("base", "chassis")
+				if nom_partie == "hitarea" and collider.get_parent():
+					nom_partie = collider.get_parent().name.to_lower()
+				parent_actor.subir_degats_partie(nom_partie, degats, target_pos)
+				print("[T2 ARCADE] Impact Hitspot Réussi sur : ", collider.name, " (", nom_partie, ") de ", parent_actor.name)
+				return
+			elif collider.has_method("subir_degats"):
+				collider.subir_degats(degats)
+				print("[T2 ARCADE] Impact direct sur Area2D : ", collider.name)
+				return
+			elif parent_actor and parent_actor.has_method("subir_degats"):
+				parent_actor.subir_degats(degats)
+				print("[T2 ARCADE] Impact réussi sur parent d'Area2D : ", parent_actor.name)
+				return
+
+		# PASSE 2 : Corps physiques standards (CharacterBody2D / ActorBase) - TRIÉS PAR DISTANCE EXACTE
+		var acteurs_candidats = []
+		for res in results:
+			var collider = res.collider
+			if collider and not (collider is Area2D):
+				var target_actor = collider if collider.has_method("subir_degats") else (collider.get_parent() if collider.get_parent() and collider.get_parent().has_method("subir_degats") else null)
+				if target_actor and target_actor.has_method("subir_degats"):
+					var dist = target_pos.distance_to(collider.global_position)
+					acteurs_candidats.append({"actor": target_actor, "dist": dist})
+		
+		# TRI CRUCIAL PAR PROXIMITÉ AU RETICULE DE TIR
+		acteurs_candidats.sort_custom(func(a, b): return a.dist < b.dist)
+		
+		for item in acteurs_candidats:
+			var target_actor = item.actor
+			target_actor.subir_degats(degats)
+			print("[T2 ARCADE] Impact réussi (Physique Trié) sur : ", target_actor.name, " (dist: ", str(round(item.dist)), "px)")
+			return
+
+	# 2. Vérification Directe par Boîte Englobante (Fallback - Trié par proximité)
+	var parent_scene = get_parent()
+	if parent_scene:
+		var conteneur_ennemis = parent_scene.get_node_or_null("EnnemisPlaces")
+		var liste = conteneur_ennemis.get_children() if conteneur_ennemis else parent_scene.get_children()
+		
+		var candidats_fallback = []
+		for node in liste:
+			if node != self and node.has_method("subir_degats"):
+				# Si c'est un boss avec des Hitspots enfants, vérifier les Area2D d'abord
+				if node.has_method("subir_degats_partie"):
+					for child in node.get_children():
+						if child is Area2D:
+							var col = child.get_node_or_null("CollisionShape2D") as CollisionShape2D
+							if col and col.shape:
+								var shape_rect = col.shape.get_rect()
+								var r = Rect2(col.global_position + shape_rect.position, shape_rect.size)
+								if r.has_point(target_pos):
+									var nom_p = child.name.to_lower().replace("hitspot_", "").replace("hitspot", "").replace("base", "chassis")
+									node.subir_degats_partie(nom_p, degats, target_pos)
+									print("[T2 ARCADE] Impact Fallback Hitspot sur : ", child.name)
+									return
+									
+				var rect_bounds = Rect2(node.global_position - Vector2(20, 35), Vector2(40, 70))
+				var col_shape = node.get_node_or_null("CollisionShape2D") as CollisionShape2D
+				if col_shape and col_shape.shape:
+					var shape_rect = col_shape.shape.get_rect()
+					rect_bounds = Rect2(col_shape.global_position + shape_rect.position, shape_rect.size)
+				
+				if rect_bounds.has_point(target_pos):
+					var dist = target_pos.distance_to(node.global_position)
+					candidats_fallback.append({"node": node, "dist": dist})
+		
+		candidats_fallback.sort_custom(func(a, b): return a.dist < b.dist)
+		if candidats_fallback.size() > 0:
+			var best_node = candidats_fallback[0].node
+			best_node.subir_degats(degats)
+			print("[T2 ARCADE] Impact réussi (Fallback Trié) sur : ", best_node.name)
+			return

@@ -1,0 +1,15 @@
+{
+  "columns": 1,
+  "image": "xhumwall_soldier_shoot_def.png",
+  "imageheight": 50,
+  "imagewidth": 288,
+  "margin": 0,
+  "name": "xhumwall_soldier_shoot_def",
+  "spacing": 0,
+  "tilecount": 1,
+  "tiledversion": "1.10.2",
+  "tileheight": 50,
+  "tilewidth": 288,
+  "type": "tileset",
+  "version": "1.10"
+}

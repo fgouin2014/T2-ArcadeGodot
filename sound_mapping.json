@@ -1,0 +1,38 @@
+{
+    "pent_sweet04a": {
+        "animation": "penthous_3585_3590",
+        "isLooping": true
+    },
+    "pent_sweet05a": {
+        "animation": "penthous_3591_3596",
+        "isLooping": true
+    },
+    "pent_sweet16a": {
+        "animation": "penthous_3630_3637",
+        "isLooping": true
+    },
+    "pent_sbell1a": {
+        "animation": "penthous_3640_3647",
+        "isLooping": false
+    },
+    "pent_vacatn01": {
+        "animation": "penthous_3650_3659",
+        "isLooping": true
+    },
+    "pent_wave1a": {
+        "animation": "penthous_3670_3677",
+        "isLooping": true
+    },
+    "pent_needle1": {
+        "animation": "penthous_3660_3665",
+        "isLooping": false
+    },
+    "pent_needle2": {
+        "animation": "penthous_3660_3665",
+        "isLooping": false
+    },
+    "s_072": {
+        "animation": "explosion_2",
+        "isLooping": false
+    }
+}

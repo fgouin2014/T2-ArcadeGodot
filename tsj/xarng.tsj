@@ -1,0 +1,15 @@
+{
+  "columns": 5,
+  "image": "xarng.png",
+  "imageheight": 558,
+  "imagewidth": 455,
+  "margin": 0,
+  "name": "xarng",
+  "spacing": 0,
+  "tilecount": 20,
+  "tiledversion": "1.10.2",
+  "tileheight": 124,
+  "tilewidth": 91,
+  "type": "tileset",
+  "version": "1.10"
+}

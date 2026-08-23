@@ -1,0 +1,472 @@
+{
+  "compressionlevel": -1,
+  "height": 1,
+  "infinite": false,
+  "layers": [
+    {
+      "draworder": "topdown",
+      "id": 2,
+      "name": "sol_0",
+      "objects": [
+        {
+          "gid": 5,
+          "height": 24,
+          "id": 20001,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 0,
+          "y": 174
+        },
+        {
+          "gid": 5,
+          "height": 24,
+          "id": 20002,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 128,
+          "y": 174
+        },
+        {
+          "gid": 5,
+          "height": 24,
+          "id": 20003,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 256,
+          "y": 174
+        }
+      ],
+      "opacity": 1,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 3,
+      "name": "sol_1",
+      "objects": [
+        {
+          "gid": 6,
+          "height": 24,
+          "id": 30001,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 0,
+          "y": 150
+        },
+        {
+          "gid": 6,
+          "height": 24,
+          "id": 30002,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 128,
+          "y": 150
+        },
+        {
+          "gid": 6,
+          "height": 24,
+          "id": 30003,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 256,
+          "y": 150
+        }
+      ],
+      "opacity": 1,
+      "parallaxx": 0.8,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 4,
+      "name": "sol_2",
+      "objects": [
+        {
+          "gid": 7,
+          "height": 16,
+          "id": 40001,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 0,
+          "y": 126
+        },
+        {
+          "gid": 7,
+          "height": 16,
+          "id": 40002,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 128,
+          "y": 126
+        },
+        {
+          "gid": 7,
+          "height": 16,
+          "id": 40003,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 256,
+          "y": 126
+        }
+      ],
+      "opacity": 1,
+      "parallaxx": 0.6,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 5,
+      "name": "sol_3",
+      "objects": [
+        {
+          "gid": 8,
+          "height": 8,
+          "id": 50001,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 0,
+          "y": 110
+        },
+        {
+          "gid": 9,
+          "height": 8,
+          "id": 50002,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 128,
+          "y": 110
+        },
+        {
+          "gid": 8,
+          "height": 8,
+          "id": 50003,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 256,
+          "y": 110
+        }
+      ],
+      "opacity": 1,
+      "parallaxx": 0.4,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 6,
+      "name": "skyline_0",
+      "objects": [
+        {
+          "gid": 10,
+          "height": 8,
+          "id": 60001,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 0,
+          "y": 102
+        },
+        {
+          "gid": 11,
+          "height": 8,
+          "id": 60002,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 128,
+          "y": 102
+        },
+        {
+          "gid": 12,
+          "height": 8,
+          "id": 60003,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 256,
+          "y": 102
+        }
+      ],
+      "opacity": 1,
+      "parallaxx": 0.2,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 7,
+      "name": "sky_0",
+      "objects": [
+        {
+          "gid": 1,
+          "height": 24,
+          "id": 70001,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 0,
+          "y": 94
+        },
+        {
+          "gid": 3,
+          "height": 24,
+          "id": 70002,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 128,
+          "y": 94
+        },
+        {
+          "gid": 4,
+          "height": 24,
+          "id": 70003,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 128,
+          "x": 256,
+          "y": 94
+        }
+      ],
+      "opacity": 1,
+      "parallaxx": 0.1,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 8,
+      "name": "skyblack_",
+      "objects": [
+        {
+          "gid": 2,
+          "height": 70,
+          "id": 80001,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 256,
+          "x": 0,
+          "y": 70
+        },
+        {
+          "gid": 2,
+          "height": 70,
+          "id": 80002,
+          "name": "",
+          "opacity": 1,
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 256,
+          "x": 128,
+          "y": 70
+        }
+      ],
+      "opacity": 1,
+      "parallaxx": 0.05,
+      "parallaxy": 0,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "nextlayerid": 11,
+  "nextobjectid": 81007,
+  "orientation": "orthogonal",
+  "properties": [
+    {
+      "name": "horizonTiled",
+      "type": "float",
+      "value": 150
+    },
+    {
+      "name": "uniformScale",
+      "type": "bool",
+      "value": true
+    }
+  ],
+  "renderorder": "right-down",
+  "tiledversion": "1.12.2",
+  "tileheight": 174,
+  "tilesets": [
+    {
+      "columns": 0,
+      "firstgid": 1,
+      "margin": 0,
+      "name": "level3_decor",
+      "spacing": 0,
+      "tilecount": 12,
+      "tileheight": 78,
+      "tiles": [
+        {
+          "id": 0,
+          "image": "xl1bck1_00.png",
+          "imageheight": 24,
+          "imagewidth": 128
+        },
+        {
+          "id": 1,
+          "image": "xl1bck1_000.png",
+          "imageheight": 78,
+          "imagewidth": 256
+        },
+        {
+          "id": 2,
+          "image": "xl1bck1_01.png",
+          "imageheight": 24,
+          "imagewidth": 128
+        },
+        {
+          "id": 3,
+          "image": "xl1bck1_02.png",
+          "imageheight": 24,
+          "imagewidth": 128
+        },
+        {
+          "id": 4,
+          "image": "xl1bck1_03.png",
+          "imageheight": 24,
+          "imagewidth": 128
+        },
+        {
+          "id": 5,
+          "image": "xl1bck1_09.png",
+          "imageheight": 24,
+          "imagewidth": 128
+        },
+        {
+          "id": 6,
+          "image": "xl1bck2_02.png",
+          "imageheight": 16,
+          "imagewidth": 128
+        },
+        {
+          "id": 7,
+          "image": "xl1bck3_00.png",
+          "imageheight": 8,
+          "imagewidth": 128
+        },
+        {
+          "id": 8,
+          "image": "xl1bck3_01.png",
+          "imageheight": 8,
+          "imagewidth": 128
+        },
+        {
+          "id": 9,
+          "image": "xl1bck3_04.png",
+          "imageheight": 8,
+          "imagewidth": 128
+        },
+        {
+          "id": 10,
+          "image": "xl1bck3_05.png",
+          "imageheight": 8,
+          "imagewidth": 128
+        },
+        {
+          "id": 11,
+          "image": "xl1bck3_06.png",
+          "imageheight": 8,
+          "imagewidth": 128
+        }
+      ],
+      "tilewidth": 256
+    }
+  ],
+  "tilewidth": 128,
+  "type": "map",
+  "version": "1.10",
+  "width": 3
+}

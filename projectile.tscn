@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d3yq8u7b4vw3x"]
+
+[ext_resource type="Script" uid="uid://dnb2kw7hnfg7w" path="res://Script/projectile.gd" id="1_proj"]
+
+[node name="Projectile" type="Node2D" unique_id=596988418]
+script = ExtResource("1_proj")
+
+[node name="BalleVisuelle" type="ColorRect" parent="." unique_id=1098068556]
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+color = Color(1, 0.95, 0.4, 0.9)

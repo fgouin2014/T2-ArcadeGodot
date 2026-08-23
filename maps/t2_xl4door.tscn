@@ -1,0 +1,513 @@
+[gd_scene format=3 uid="uid://cfu4tlpr0gtg"]
+
+[ext_resource type="Texture2D" uid="uid://bgyetkfp126yk" path="res://maps/backdrops/level1/xskynt1_placeholder.png" id="1_kh8d8"]
+[ext_resource type="Texture2D" uid="uid://dj4p3sb6qacjr" path="res://maps/backdrops/level1/xskydoor_left_placeholder.png" id="2_knsxy"]
+[ext_resource type="Texture2D" uid="uid://dyp3lxta2j233" path="res://maps/backdrops/level1/xskydoor_right_placeholder.png" id="3_4sl38"]
+[ext_resource type="Texture2D" uid="uid://df5ilbiv3w80n" path="res://maps/backdrops/level1/xskynt1_03.png" id="4_u0un0"]
+[ext_resource type="Texture2D" uid="uid://rj0aagprcbi7" path="res://maps/backdrops/level1/xskynt3_00.png" id="5_cfn1t"]
+[ext_resource type="Texture2D" uid="uid://cltrhemink676" path="res://maps/backdrops/level1/xskynt2_06.png" id="5_vha7t"]
+[ext_resource type="Texture2D" uid="uid://dvnfwqi8vjs2g" path="res://maps/backdrops/level1/xskynt2_07.png" id="6_cfn1t"]
+[ext_resource type="Texture2D" uid="uid://defucj4t5jp6i" path="res://maps/backdrops/level1/xskynt2_08.png" id="7_4duo7"]
+[ext_resource type="Texture2D" uid="uid://cbun4kstoygdq" path="res://maps/backdrops/level1/xskynt2_09.png" id="8_74551"]
+[ext_resource type="Texture2D" uid="uid://c6c1a70sx8m82" path="res://maps/backdrops/level1/xskynt2_10.png" id="9_n0apy"]
+[ext_resource type="Texture2D" uid="uid://c1l856ibml63x" path="res://maps/backdrops/level1/xskynt2_12.png" id="10_orxmv"]
+[ext_resource type="Texture2D" uid="uid://bkre6vrba4ylr" path="res://maps/backdrops/level1/xskynt2_14.png" id="11_ygslu"]
+[ext_resource type="Texture2D" uid="uid://bbkjgca0d5jtj" path="res://maps/backdrops/level1/xskynt2_15.png" id="12_t5qqf"]
+[ext_resource type="Texture2D" uid="uid://wrrwre5cfuy0" path="res://maps/backdrops/level1/xskynt2_16.png" id="13_pxcuk"]
+[ext_resource type="Texture2D" uid="uid://c3lbc0gox2qel" path="res://maps/backdrops/level1/xskynt2_17.png" id="14_a8xei"]
+[ext_resource type="Texture2D" uid="uid://cm1rpiktr3kf2" path="res://maps/backdrops/level1/xskynt2_02.png" id="15_trp13"]
+[ext_resource type="Texture2D" uid="uid://idcy7ar2vrqm" path="res://maps/backdrops/level1/xskynt2_03.png" id="16_a2vwi"]
+[ext_resource type="Texture2D" uid="uid://7ybfphyp8kli" path="res://maps/backdrops/level1/xskynt2_04.png" id="17_sepco"]
+[ext_resource type="Texture2D" uid="uid://cp3a5sfhvfd06" path="res://maps/backdrops/level1/xskynt2_11.png" id="18_5vyqt"]
+[ext_resource type="Texture2D" uid="uid://4v8kil4pecom" path="res://maps/backdrops/level1/xskynt2_05.png" id="19_g43e3"]
+[ext_resource type="Texture2D" uid="uid://dfctddq6q77r6" path="res://maps/backdrops/level1/xskynt2_13.png" id="20_yrd4m"]
+[ext_resource type="Texture2D" uid="uid://buvvmwy82x33a" path="res://maps/backdrops/level1/xskynt2_00.png" id="22_door00"]
+[ext_resource type="Texture2D" uid="uid://bkfmp0pckogsu" path="res://maps/backdrops/level1/xskynt2_01.png" id="23_door01"]
+[ext_resource type="Script" uid="uid://dxkphgu1s2j6n" path="res://Script/xl4door_boss.gd" id="24_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_1"]
+size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_2"]
+size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_3"]
+size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_4"]
+size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_5"]
+size = Vector2(24, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_6"]
+size = Vector2(24, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_7"]
+size = Vector2(24, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_8"]
+size = Vector2(48, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_9"]
+size = Vector2(24, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_10"]
+size = Vector2(33, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_11"]
+size = Vector2(24, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_12"]
+size = Vector2(24, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_13"]
+size = Vector2(24, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_14"]
+size = Vector2(48, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_15"]
+size = Vector2(24, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_16"]
+size = Vector2(29, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_17"]
+size = Vector2(33, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_18"]
+size = Vector2(29, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_19"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_child_20"]
+size = Vector2(32, 32)
+
+[node name="lobby (PL)" type="Node2D" unique_id=1981944617]
+script = ExtResource("24_script")
+
+[node name="lobby" type="Node2D" parent="." unique_id=1797914892]
+
+[node name="xskynt2_doors" type="Sprite2D" parent="lobby" unique_id=1327223956]
+z_index = 1
+position = Vector2(160, 104.04001)
+texture = ExtResource("23_door01")
+offset = Vector2(44, -52)
+metadata/door_side = "right"
+metadata/enabled = false
+metadata/slide_distance = 88.0
+metadata/target_spawn = "the_timemachine"
+
+[node name="xskynt2_doors2" type="Sprite2D" parent="lobby" unique_id=1313769480]
+z_index = 1
+position = Vector2(72, 104.04001)
+texture = ExtResource("22_door00")
+offset = Vector2(44, -52)
+metadata/door_side = "left"
+metadata/enabled = false
+metadata/slide_distance = 88.0
+metadata/target_spawn = "the_timemachine"
+
+[node name="xskynt1_bg" type="Sprite2D" parent="lobby" unique_id=117237871]
+z_index = 4
+position = Vector2(0, 107.04001)
+texture = ExtResource("1_kh8d8")
+offset = Vector2(160, -53.5)
+
+[node name="the_timemachine" type="Sprite2D" parent="lobby" unique_id=1533191647]
+z_index = 0
+position = Vector2(72, 104.04001)
+texture = ExtResource("5_cfn1t")
+offset = Vector2(88, -52)
+metadata/enabled = false
+metadata/xelec_count = 10
+metadata/xelec_interval_frames = 30
+
+[node name="generator_top_left" type="Sprite2D" parent="lobby" unique_id=80327375]
+z_index = 5
+position = Vector2(16, 27.040009)
+texture = ExtResource("4_u0un0")
+offset = Vector2(16, -8)
+metadata/hp = 5
+metadata/trigger_target = "xskynt1_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/generator_top_left" unique_id=1523955200]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/generator_top_left/HitArea" unique_id=1264898271]
+position = Vector2(16, -8)
+shape = SubResource("RectangleShape2D_child_1")
+
+[node name="generator_bottom_left" type="Sprite2D" parent="lobby" unique_id=1904878787]
+z_index = 5
+position = Vector2(16, 91.04001)
+texture = ExtResource("4_u0un0")
+offset = Vector2(16, -8)
+metadata/hp = 5
+metadata/trigger_target = "xskynt1_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/generator_bottom_left" unique_id=466499289]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/generator_bottom_left/HitArea" unique_id=1206027745]
+position = Vector2(16, -8)
+shape = SubResource("RectangleShape2D_child_2")
+
+[node name="generator_top_right" type="Sprite2D" parent="lobby" unique_id=1722793878]
+z_index = 5
+position = Vector2(272, 27.040009)
+texture = ExtResource("4_u0un0")
+offset = Vector2(16, -8)
+metadata/hp = 5
+metadata/trigger_target = "xskynt1_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/generator_top_right" unique_id=510743149]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/generator_top_right/HitArea" unique_id=229236292]
+position = Vector2(16, -8)
+shape = SubResource("RectangleShape2D_child_3")
+
+[node name="generator_bottom_right" type="Sprite2D" parent="lobby" unique_id=476470218]
+z_index = 5
+position = Vector2(272, 91.04001)
+texture = ExtResource("4_u0un0")
+offset = Vector2(16, -8)
+metadata/hp = 5
+metadata/trigger_target = "xskynt1_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/generator_bottom_right" unique_id=1642740429]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/generator_bottom_right/HitArea" unique_id=1922626920]
+position = Vector2(16, -8)
+shape = SubResource("RectangleShape2D_child_4")
+
+[node name="xskynt2_armor_06" type="Sprite2D" parent="lobby" unique_id=1661268887]
+z_index = 2
+position = Vector2(72, 99.04001)
+texture = ExtResource("5_vha7t")
+offset = Vector2(12, -17.5)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_06" unique_id=1954290722]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_06/HitArea" unique_id=766094723]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_5")
+
+[node name="xskynt2_armor_07" type="Sprite2D" parent="lobby" unique_id=1123632366]
+z_index = 2
+position = Vector2(96, 88.04001)
+texture = ExtResource("6_cfn1t")
+offset = Vector2(12, -8)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_07" unique_id=1121711953]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_07/HitArea" unique_id=996436302]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_6")
+
+[node name="xskynt2_armor_08" type="Sprite2D" parent="lobby" unique_id=1553474735]
+z_index = 2
+position = Vector2(120, 88.04001)
+texture = ExtResource("7_4duo7")
+offset = Vector2(12, -8)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_08" unique_id=104399579]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_08/HitArea" unique_id=307594319]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_7")
+
+[node name="xskynt2_armor_09" type="Sprite2D" parent="lobby" unique_id=1102391051]
+z_index = 2
+position = Vector2(95, 104.04001)
+texture = ExtResource("8_74551")
+offset = Vector2(24, -8)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_09" unique_id=1455134229]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_09/HitArea" unique_id=791707740]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_8")
+
+[node name="xskynt2_armor_10" type="Sprite2D" parent="lobby" unique_id=623823553]
+z_index = 2
+position = Vector2(217, 31.040009)
+texture = ExtResource("9_n0apy")
+offset = Vector2(12, -11)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_10" unique_id=2109886294]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_10/HitArea" unique_id=488361732]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_9")
+
+[node name="xskynt2_armor_12" type="Sprite2D" parent="lobby" unique_id=1411727252]
+z_index = 2
+position = Vector2(215, 64.04001)
+texture = ExtResource("10_orxmv")
+offset = Vector2(16.5, -12)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_12" unique_id=1538260418]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_12/HitArea" unique_id=2014245823]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_10")
+
+[node name="xskynt2_armor_14" type="Sprite2D" parent="lobby" unique_id=1244865374]
+z_index = 2
+position = Vector2(224, 99.04001)
+texture = ExtResource("11_ygslu")
+offset = Vector2(12, -17.5)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_14" unique_id=1461661951]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_14/HitArea" unique_id=1849672445]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_11")
+
+[node name="xskynt2_armor_15" type="Sprite2D" parent="lobby" unique_id=1135660269]
+z_index = 2
+position = Vector2(176, 88.04001)
+texture = ExtResource("12_t5qqf")
+offset = Vector2(12, -8)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_15" unique_id=1007167278]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_15/HitArea" unique_id=133219534]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_12")
+
+[node name="xskynt2_armor_16" type="Sprite2D" parent="lobby" unique_id=597921130]
+z_index = 2
+position = Vector2(200, 88.04001)
+texture = ExtResource("13_pxcuk")
+offset = Vector2(12, -8)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_16" unique_id=1504696264]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_16/HitArea" unique_id=529728610]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_13")
+
+[node name="xskynt2_armor_17" type="Sprite2D" parent="lobby" unique_id=899677755]
+z_index = 2
+position = Vector2(177, 104.04001)
+texture = ExtResource("14_a8xei")
+offset = Vector2(24, -8)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_17" unique_id=1699253819]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_17/HitArea" unique_id=1233173381]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_14")
+
+[node name="xskynt2_armor_02" type="Sprite2D" parent="lobby" unique_id=1946522133]
+z_index = 2
+position = Vector2(79, 31.040009)
+texture = ExtResource("15_trp13")
+offset = Vector2(12, -11)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_02" unique_id=695389450]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_02/HitArea" unique_id=1166384154]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_15")
+
+[node name="xskynt2_armor_03" type="Sprite2D" parent="lobby" unique_id=428896148]
+z_index = 2
+position = Vector2(108, 23.040009)
+texture = ExtResource("16_a2vwi")
+offset = Vector2(14.5, -5.5)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_03" unique_id=97514107]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_03/HitArea" unique_id=2068254074]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_16")
+
+[node name="xskynt2_armor_04" type="Sprite2D" parent="lobby" unique_id=957797641]
+z_index = 2
+position = Vector2(72, 64.04001)
+texture = ExtResource("17_sepco")
+offset = Vector2(16.5, -12)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_04" unique_id=320652592]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_04/HitArea" unique_id=1007092999]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_17")
+
+[node name="xskynt2_armor_11" type="Sprite2D" parent="lobby" unique_id=739713949]
+z_index = 2
+position = Vector2(183, 23.040009)
+texture = ExtResource("18_5vyqt")
+offset = Vector2(14.5, -5.5)
+metadata/enabled = false
+metadata/hp = 3
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_11" unique_id=1361769347]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_11/HitArea" unique_id=1834177995]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_18")
+
+[node name="xskynt2_armor_shooter_left" type="Sprite2D" parent="lobby" unique_id=172670695]
+z_index = 2
+position = Vector2(104, 72.04001)
+texture = ExtResource("19_g43e3")
+offset = Vector2(16, -16)
+metadata/enabled = false
+metadata/fire_rate_frames = 30
+metadata/hp = 3
+metadata/projectile = "xmissile"
+metadata/salvo_count = 5
+metadata/shooter = true
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_shooter_left" unique_id=689031414]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_shooter_left/HitArea" unique_id=1766686365]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_19")
+
+[node name="xskynt2_armor_shooter_right" type="Sprite2D" parent="lobby" unique_id=194368632]
+z_index = 2
+position = Vector2(184, 72.04001)
+texture = ExtResource("20_yrd4m")
+offset = Vector2(16, -16)
+metadata/enabled = false
+metadata/fire_rate_frames = 30
+metadata/hp = 3
+metadata/projectile = "xmissile"
+metadata/salvo_count = 5
+metadata/shooter = true
+metadata/trigger_target = "xskynt2_doors"
+
+[node name="HitArea" type="Area2D" parent="lobby/xskynt2_armor_shooter_right" unique_id=1424379787]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lobby/xskynt2_armor_shooter_right/HitArea" unique_id=1494979221]
+position = Vector2(13, -12)
+shape = SubResource("RectangleShape2D_child_20")
+
+[node name="xskynt1_doors" type="Sprite2D" parent="lobby" unique_id=454428445]
+z_index = 3
+position = Vector2(72, 107.04001)
+texture = ExtResource("2_knsxy")
+offset = Vector2(46.5, -52)
+metadata/door_side = "left"
+metadata/slide_distance = 93.0
+metadata/target_spawn = "xskynt2_setup"
+
+[node name="xskynt1_doors2" type="Sprite2D" parent="lobby" unique_id=591331951]
+z_index = 3
+position = Vector2(156, 107.04001)
+texture = ExtResource("3_4sl38")
+offset = Vector2(46, -52)
+metadata/door_side = "right"
+metadata/slide_distance = 93.0
+metadata/target_spawn = "xskynt2_setup"
+
+[node name="SpawnGeneratorTopLeft" type="Marker2D" parent="lobby" unique_id=1895911886]
+position = Vector2(16, 27.040009)
+
+[node name="SpawnGeneratorBottomLeft" type="Marker2D" parent="lobby" unique_id=1389980281]
+position = Vector2(16, 91.04001)
+
+[node name="SpawnGeneratorTopRight" type="Marker2D" parent="lobby" unique_id=299934399]
+position = Vector2(272, 27.040009)
+
+[node name="SpawnGeneratorBottomRight" type="Marker2D" parent="lobby" unique_id=236309962]
+position = Vector2(272, 91.04001)
+
+[node name="SpawnShooterLeft" type="Marker2D" parent="lobby" unique_id=1356914283]
+position = Vector2(117, 60.04001)
+
+[node name="SpawnShooterRight" type="Marker2D" parent="lobby" unique_id=849412998]
+position = Vector2(197, 60.04001)
+
+[node name="SpawnTimeMachine" type="Marker2D" parent="lobby" unique_id=131941150]
+position = Vector2(116, 104.04001)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=832564676]
+position = Vector2(158, 44)
+rect = Rect2(-160, -45, 320, 108)

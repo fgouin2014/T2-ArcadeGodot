@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://kmq3iisxcbjg"]
+
+[ext_resource type="PackedScene" uid="uid://hfubnbuml6y" path="res://maps/backdrops/level1/t2_xfback2.tmj" id="1_ovbgd"]
+[ext_resource type="PackedScene" uid="uid://3ov0eu3g3a6e" path="res://aseprite/effect/foundry_idle.tscn" id="2_foundry"]
+
+[node name="t2_xfback2" unique_id=1939727774 instance=ExtResource("1_ovbgd")]
+
+[node name="Spawners" type="Node2D" parent="." index="0" unique_id=1719641895]
+
+[node name="foundry_idle" parent="sol_0 (PL)" parent_id_path=PackedInt32Array(205894163) index="0" unique_id=556472148 instance=ExtResource("2_foundry")]
+z_index = 10
+position = Vector2(2193, 51)

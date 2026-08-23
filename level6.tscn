@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b42ehabxbhnoh"]
+
+[ext_resource type="PackedScene" uid="uid://cmsl4f1av8878" path="res://maps/t2_xroad.tscn" id="1_backdrop"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="2_camera"]
+
+[node name="level6" type="Node2D" unique_id=980453410]
+
+[node name="t2_xroad" parent="." unique_id=778215619 instance=ExtResource("1_backdrop")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1498353519]
+limit_left = 0
+limit_top = 0
+limit_right = 3072
+limit_bottom = 175
+script = ExtResource("2_camera")
+
+[node name="EnnemisPlaces" type="Node2D" parent="." unique_id=1361356217]
+
+[editable path="t2_xroad"]

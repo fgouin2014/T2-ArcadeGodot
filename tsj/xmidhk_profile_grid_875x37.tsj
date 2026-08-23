@@ -1,0 +1,15 @@
+{
+  "columns": 2,
+  "image": "xmidhk_profile_grid_875x37_combined.png",
+  "imageheight": 37,
+  "imagewidth": 1750,
+  "margin": 0,
+  "name": "xmidhk_profile_grid_875x37",
+  "spacing": 0,
+  "tilecount": 2,
+  "tiledversion": "1.10.2",
+  "tileheight": 37,
+  "tilewidth": 875,
+  "type": "tileset",
+  "version": "1.10"
+}

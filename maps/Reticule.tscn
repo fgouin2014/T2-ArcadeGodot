@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://clf3k4jm3rpll"]
+
+[ext_resource type="Script" uid="uid://dncw5xk7h0lv1" path="res://Script/reticule.gd" id="1_ixfb8"]
+[ext_resource type="Texture2D" uid="uid://cmsyn2gvdm2vw" path="res://tsj/xmisc_01.png" id="1_ks2w6"]
+
+[node name="Reticule" type="Node2D" unique_id=332804887]
+script = ExtResource("1_ixfb8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1558192510]
+texture = ExtResource("1_ks2w6")

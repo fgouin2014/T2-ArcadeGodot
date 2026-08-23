@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+  <tileset firstgid="1" source="xhumwall.tsj"/>
+  <object name="xhumwall_breakable_09" type="obstacle" gid="4" width="65" height="40">
+    <properties>
+      <property name="destructible" type="bool" value="true"/>
+      <property name="hp" type="int" value="3"/>
+      <property name="enabled" type="bool" value="true"/>
+    </properties>
+  </object>
+</template>

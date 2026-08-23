@@ -1,0 +1,58 @@
+{
+  "columns": 9,
+  "image": "xbighk_spritesheet.png",
+  "imageheight": 49,
+  "imagewidth": 1656,
+  "margin": 0,
+  "name": "xbighk",
+  "spacing": 0,
+  "tilecount": 9,
+  "tiledversion": "1.10.2",
+  "tileheight": 49,
+  "tilewidth": 184,
+  "type": "tileset",
+  "version": "1.10",
+  "tiles": [
+    {
+      "animation": [
+        {
+          "duration": 100,
+          "tileid": 0
+        },
+        {
+          "duration": 100,
+          "tileid": 1
+        },
+        {
+          "duration": 100,
+          "tileid": 2
+        },
+        {
+          "duration": 100,
+          "tileid": 3
+        },
+        {
+          "duration": 100,
+          "tileid": 4
+        },
+        {
+          "duration": 100,
+          "tileid": 5
+        },
+        {
+          "duration": 100,
+          "tileid": 6
+        },
+        {
+          "duration": 100,
+          "tileid": 7
+        },
+        {
+          "duration": 100,
+          "tileid": 8
+        }
+      ],
+      "id": 0
+    }
+  ]
+}
