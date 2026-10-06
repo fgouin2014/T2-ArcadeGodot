@@ -1,25 +1,25 @@
-[gd_scene format=3 uid="uid://3ov0eu3g3a6e"]
+[gd_scene format=3 uid="uid://3sirdm8yp3w3"]
 
-[ext_resource type="Texture2D" uid="uid://cs3rd67erj6w" path="res://aseprite/effect/foundry_idle.png" id="2_texture"]
+[ext_resource type="Texture2D" uid="uid://cs3rd67erj6w" path="res://aseprite/effect/foundry_idle.png" id="1_2qn7a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1"]
-atlas = ExtResource("2_texture")
+atlas = ExtResource("1_2qn7a")
 region = Rect2(0, 0, 160, 136)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2"]
-atlas = ExtResource("2_texture")
+atlas = ExtResource("1_2qn7a")
 region = Rect2(160, 0, 160, 136)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3"]
-atlas = ExtResource("2_texture")
+atlas = ExtResource("1_2qn7a")
 region = Rect2(320, 0, 160, 136)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4"]
-atlas = ExtResource("2_texture")
+atlas = ExtResource("1_2qn7a")
 region = Rect2(480, 0, 160, 136)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5"]
-atlas = ExtResource("2_texture")
+atlas = ExtResource("1_2qn7a")
 region = Rect2(640, 0, 160, 136)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tp5ot"]

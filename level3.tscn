@@ -1,19 +1,413 @@
 [gd_scene format=3 uid="uid://k3r4u1qa8f4j"]
 
-[ext_resource type="PackedScene" uid="uid://ctm02wb8uwrsc" path="res://maps/t2_stage3.tscn" id="1_backdrop"]
 [ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="2_camera"]
+[ext_resource type="Texture2D" uid="uid://cuxosl8xnwog" path="res://maps/backdrops/level1/xl1bck1_03.png" id="3_i6w5t"]
+[ext_resource type="Texture2D" uid="uid://0rlb7a830o66" path="res://maps/backdrops/level1/xl1bck1_09.png" id="4_l2pgs"]
+[ext_resource type="Texture2D" uid="uid://co1t84wk3fnjg" path="res://maps/backdrops/level1/xl1bck2_02.png" id="5_2272n"]
+[ext_resource type="Texture2D" uid="uid://b62bkael3m8hg" path="res://maps/backdrops/level1/xl1bck3_00.png" id="6_bs5pn"]
+[ext_resource type="Texture2D" uid="uid://cvuptdvi67why" path="res://maps/backdrops/level1/xl1bck3_01.png" id="7_utqry"]
+[ext_resource type="Texture2D" uid="uid://drbnk018hpc7e" path="res://maps/backdrops/level1/xl1bck3_04.png" id="8_gaofk"]
+[ext_resource type="Texture2D" uid="uid://bhyh7syoh8sml" path="res://maps/backdrops/level1/xl1bck3_05.png" id="9_itrrf"]
+[ext_resource type="Texture2D" uid="uid://cahwpdhtu8wud" path="res://maps/backdrops/level1/xl1bck3_06.png" id="10_mr4ff"]
+[ext_resource type="Texture2D" uid="uid://d2asvp6d845ej" path="res://maps/backdrops/level1/xl1bck1_00.png" id="11_0bsag"]
+[ext_resource type="Texture2D" uid="uid://dyb6cllw6m5g8" path="res://maps/backdrops/level1/xl1bck1_01.png" id="12_s3sn0"]
+[ext_resource type="Texture2D" uid="uid://q8o65m2oe1v5" path="res://maps/backdrops/level1/xl1bck1_02.png" id="13_7s766"]
+[ext_resource type="Texture2D" uid="uid://bofu0v2b61px5" path="res://maps/backdrops/level1/xl1bck1_000.png" id="14_dev55"]
+[ext_resource type="Script" uid="uid://d4bjll7e4lna3" path="res://Script/vehicle_chase_controller.gd" id="15_chase"]
+[ext_resource type="PackedScene" uid="uid://bxefcghj2lfeo" path="res://aseprite/xmedfwrd.tscn" id="16_2272n"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/xammocrate.tscn" id="16_i6w5t"]
+[ext_resource type="PackedScene" uid="uid://cdbypxypgaysu" path="res://aseprite/xfrdfhk.tscn" id="17_i6w5t"]
+[ext_resource type="Script" uid="uid://v18o8mwi32ej" path="res://Script/stop_marker.gd" id="18_l2pgs"]
+[ext_resource type="PackedScene" uid="uid://dqemtqj0ylkql" path="res://aseprite/vehicules/xtruck.tscn" id="19_2272n"]
 
 [node name="level3" type="Node2D" unique_id=764447222]
 
-[node name="t2_stage3" parent="." unique_id=803020812 instance=ExtResource("1_backdrop")]
+[node name="t2_stage3" type="ParallaxBackground" parent="." unique_id=803020812]
+metadata/horizonTiled = 150.0
+metadata/uniformScale = true
+
+[node name="sol_0 (PL)" type="ParallaxLayer" parent="t2_stage3" unique_id=1632052453]
+motion_scale = Vector2(1.0, 0)
+
+[node name="sol_0" type="Node2D" parent="t2_stage3/sol_0 (PL)" unique_id=965849337]
+texture_filter = 1
+
+[node name="xl1bck1_03" type="Sprite2D" parent="t2_stage3/sol_0 (PL)/sol_0" unique_id=1225587105]
+position = Vector2(0, 174)
+texture = ExtResource("3_i6w5t")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_04" type="Sprite2D" parent="t2_stage3/sol_0 (PL)/sol_0" unique_id=409786690]
+position = Vector2(128, 174)
+texture = ExtResource("3_i6w5t")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_05" type="Sprite2D" parent="t2_stage3/sol_0 (PL)/sol_0" unique_id=1687550706]
+position = Vector2(256, 174)
+texture = ExtResource("3_i6w5t")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_06" type="Sprite2D" parent="t2_stage3/sol_0 (PL)/sol_0" unique_id=1754431204]
+position = Vector2(384, 174)
+texture = ExtResource("3_i6w5t")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_07" type="Sprite2D" parent="t2_stage3/sol_0 (PL)/sol_0" unique_id=513489095]
+position = Vector2(512, 174)
+texture = ExtResource("3_i6w5t")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_08" type="Sprite2D" parent="t2_stage3/sol_0 (PL)/sol_0" unique_id=981982004]
+position = Vector2(640, 174)
+texture = ExtResource("3_i6w5t")
+offset = Vector2(64, -12)
+
+[node name="sol_1 (PL)" type="ParallaxLayer" parent="t2_stage3" unique_id=1584763705]
+motion_scale = Vector2(0.75, 0)
+
+[node name="sol_1" type="Node2D" parent="t2_stage3/sol_1 (PL)" unique_id=1485500245]
+texture_filter = 1
+
+[node name="xl1bck1_09" type="Sprite2D" parent="t2_stage3/sol_1 (PL)/sol_1" unique_id=521714509]
+position = Vector2(0, 150)
+texture = ExtResource("4_l2pgs")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_10" type="Sprite2D" parent="t2_stage3/sol_1 (PL)/sol_1" unique_id=283435673]
+position = Vector2(128, 150)
+texture = ExtResource("4_l2pgs")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_11" type="Sprite2D" parent="t2_stage3/sol_1 (PL)/sol_1" unique_id=1187178233]
+position = Vector2(256, 150)
+texture = ExtResource("4_l2pgs")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_12" type="Sprite2D" parent="t2_stage3/sol_1 (PL)/sol_1" unique_id=352758895]
+position = Vector2(384, 150)
+texture = ExtResource("4_l2pgs")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_13" type="Sprite2D" parent="t2_stage3/sol_1 (PL)/sol_1" unique_id=453561220]
+position = Vector2(512, 150)
+texture = ExtResource("4_l2pgs")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_14" type="Sprite2D" parent="t2_stage3/sol_1 (PL)/sol_1" unique_id=1416750855]
+position = Vector2(640, 150)
+texture = ExtResource("4_l2pgs")
+offset = Vector2(64, -12)
+
+[node name="sol_2 (PL)" type="ParallaxLayer" parent="t2_stage3" unique_id=302020455]
+motion_scale = Vector2(0.5, 0)
+
+[node name="sol_2" type="Node2D" parent="t2_stage3/sol_2 (PL)" unique_id=1730825782]
+texture_filter = 1
+
+[node name="xl1bck2_02" type="Sprite2D" parent="t2_stage3/sol_2 (PL)/sol_2" unique_id=1967140461]
+position = Vector2(0, 126)
+texture = ExtResource("5_2272n")
+offset = Vector2(64, -8)
+
+[node name="xl1bck2_03" type="Sprite2D" parent="t2_stage3/sol_2 (PL)/sol_2" unique_id=2085032225]
+position = Vector2(128, 126)
+texture = ExtResource("5_2272n")
+offset = Vector2(64, -8)
+
+[node name="xl1bck2_04" type="Sprite2D" parent="t2_stage3/sol_2 (PL)/sol_2" unique_id=952083180]
+position = Vector2(256, 126)
+texture = ExtResource("5_2272n")
+offset = Vector2(64, -8)
+
+[node name="xl1bck2_05" type="Sprite2D" parent="t2_stage3/sol_2 (PL)/sol_2" unique_id=1001189815]
+position = Vector2(384, 126)
+texture = ExtResource("5_2272n")
+offset = Vector2(64, -8)
+
+[node name="xl1bck2_06" type="Sprite2D" parent="t2_stage3/sol_2 (PL)/sol_2" unique_id=1562505163]
+position = Vector2(512, 126)
+texture = ExtResource("5_2272n")
+offset = Vector2(64, -8)
+
+[node name="xl1bck2_07" type="Sprite2D" parent="t2_stage3/sol_2 (PL)/sol_2" unique_id=810054298]
+position = Vector2(640, 126)
+texture = ExtResource("5_2272n")
+offset = Vector2(64, -8)
+
+[node name="sol_3 (PL)" type="ParallaxLayer" parent="t2_stage3" unique_id=1201187600]
+motion_scale = Vector2(0.25, 0)
+
+[node name="sol_3" type="Node2D" parent="t2_stage3/sol_3 (PL)" unique_id=105145677]
+texture_filter = 1
+
+[node name="xl1bck3_00" type="Sprite2D" parent="t2_stage3/sol_3 (PL)/sol_3" unique_id=712138794]
+position = Vector2(0, 110)
+texture = ExtResource("6_bs5pn")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_01" type="Sprite2D" parent="t2_stage3/sol_3 (PL)/sol_3" unique_id=312403456]
+position = Vector2(128, 110)
+texture = ExtResource("7_utqry")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_02" type="Sprite2D" parent="t2_stage3/sol_3 (PL)/sol_3" unique_id=1968341735]
+position = Vector2(256, 110)
+texture = ExtResource("6_bs5pn")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_03" type="Sprite2D" parent="t2_stage3/sol_3 (PL)/sol_3" unique_id=409240602]
+position = Vector2(384, 110)
+texture = ExtResource("6_bs5pn")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_04" type="Sprite2D" parent="t2_stage3/sol_3 (PL)/sol_3" unique_id=1768364907]
+position = Vector2(512, 110)
+texture = ExtResource("7_utqry")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_05" type="Sprite2D" parent="t2_stage3/sol_3 (PL)/sol_3" unique_id=2059477744]
+position = Vector2(640, 110)
+texture = ExtResource("6_bs5pn")
+offset = Vector2(64, -4)
+
+[node name="skyline_0 (PL)" type="ParallaxLayer" parent="t2_stage3" unique_id=394064377]
+motion_scale = Vector2(0.125, 0)
+
+[node name="skyline_0" type="Node2D" parent="t2_stage3/skyline_0 (PL)" unique_id=1253598946]
+texture_filter = 1
+
+[node name="xl1bck3_04" type="Sprite2D" parent="t2_stage3/skyline_0 (PL)/skyline_0" unique_id=2099408983]
+position = Vector2(0, 102)
+texture = ExtResource("8_gaofk")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_05" type="Sprite2D" parent="t2_stage3/skyline_0 (PL)/skyline_0" unique_id=923369020]
+position = Vector2(128, 102)
+texture = ExtResource("9_itrrf")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_06" type="Sprite2D" parent="t2_stage3/skyline_0 (PL)/skyline_0" unique_id=78918209]
+position = Vector2(256, 102)
+texture = ExtResource("10_mr4ff")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_07" type="Sprite2D" parent="t2_stage3/skyline_0 (PL)/skyline_0" unique_id=554444823]
+position = Vector2(384, 102)
+texture = ExtResource("8_gaofk")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_08" type="Sprite2D" parent="t2_stage3/skyline_0 (PL)/skyline_0" unique_id=358206356]
+position = Vector2(512, 102)
+texture = ExtResource("9_itrrf")
+offset = Vector2(64, -4)
+
+[node name="xl1bck3_09" type="Sprite2D" parent="t2_stage3/skyline_0 (PL)/skyline_0" unique_id=261232550]
+position = Vector2(640, 102)
+texture = ExtResource("10_mr4ff")
+offset = Vector2(64, -4)
+
+[node name="sky_0 (PL)" type="ParallaxLayer" parent="t2_stage3" unique_id=1643782393]
+motion_scale = Vector2(0.0625, 0)
+
+[node name="sky_0" type="Node2D" parent="t2_stage3/sky_0 (PL)" unique_id=1503504667]
+texture_filter = 1
+
+[node name="xl1bck1_00" type="Sprite2D" parent="t2_stage3/sky_0 (PL)/sky_0" unique_id=1007668503]
+position = Vector2(0, 94)
+texture = ExtResource("11_0bsag")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_01" type="Sprite2D" parent="t2_stage3/sky_0 (PL)/sky_0" unique_id=1203414030]
+position = Vector2(128, 94)
+texture = ExtResource("12_s3sn0")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_02" type="Sprite2D" parent="t2_stage3/sky_0 (PL)/sky_0" unique_id=1666039371]
+position = Vector2(256, 94)
+texture = ExtResource("13_7s766")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_03" type="Sprite2D" parent="t2_stage3/sky_0 (PL)/sky_0" unique_id=1054856376]
+position = Vector2(384, 94)
+texture = ExtResource("11_0bsag")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_04" type="Sprite2D" parent="t2_stage3/sky_0 (PL)/sky_0" unique_id=964838853]
+position = Vector2(512, 94)
+texture = ExtResource("12_s3sn0")
+offset = Vector2(64, -12)
+
+[node name="xl1bck1_05" type="Sprite2D" parent="t2_stage3/sky_0 (PL)/sky_0" unique_id=1750882338]
+position = Vector2(640, 94)
+texture = ExtResource("13_7s766")
+offset = Vector2(64, -12)
+
+[node name="skyblack_ (PL)" type="ParallaxLayer" parent="t2_stage3" unique_id=909309339]
+motion_scale = Vector2(0.03125, 0)
+
+[node name="skyblack_" type="Node2D" parent="t2_stage3/skyblack_ (PL)" unique_id=1561567206]
+texture_filter = 1
+
+[node name="xl1bck1_000" type="Sprite2D" parent="t2_stage3/skyblack_ (PL)/skyblack_" unique_id=1051101601]
+position = Vector2(0, 70)
+scale = Vector2(1.5, 0.8974359)
+texture = ExtResource("14_dev55")
+offset = Vector2(128, -39)
+
+[node name="xl1bck1_001" type="Sprite2D" parent="t2_stage3/skyblack_ (PL)/skyblack_" unique_id=647066135]
+position = Vector2(384.00003, 70)
+scale = Vector2(1.5, 0.8974359)
+texture = ExtResource("14_dev55")
+offset = Vector2(128, -39)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=483545312]
+position = Vector2(0, -1)
 limit_left = 0
 limit_top = 0
-limit_right = 5632
+limit_right = 2048
 limit_bottom = 175
 script = ExtResource("2_camera")
+vitesse_auto = 75.0
+delai_intro_secondes = 0.0
+mode_perpetuel = true
+largeur_boucle_parallax = 768.0
+
+[node name="VehicleChaseController" type="Node2D" parent="." unique_id=141872138]
+script = ExtResource("15_chase")
+is_level3 = true
 
 [node name="EnnemisPlaces" type="Node2D" parent="." unique_id=903733690]
 
-[editable path="t2_stage3"]
+[node name="xmedfwrd_1" parent="EnnemisPlaces" unique_id=1285969016 instance=ExtResource("16_2272n")]
+position = Vector2(65, 95)
+delai_activation_sec = 1.5
+direction_deplacement = "gauche_vers_droite"
+repeter_spawn = true
+
+[node name="xmedfwrd_4" parent="EnnemisPlaces" unique_id=1092003876 instance=ExtResource("16_2272n")]
+position = Vector2(126, 93)
+delai_activation_sec = 7.5
+repeter_spawn = true
+intervalle_repetition = 2.0
+nombre_max_spawns = 3
+stopper_spawn_a_la_mort = false
+
+[node name="xfrdfhk" parent="EnnemisPlaces" unique_id=920504631 instance=ExtResource("17_i6w5t")]
+position = Vector2(63, 32)
+delai_activation_sec = 4.0
+direction_deplacement = "immobile"
+declencheur_stop = NodePath("../../Stop")
+delai_spawn = 3.0
+repeter_spawn = true
+intervalle_repetition = 2.0
+nombre_max_spawns = 2
+stopper_spawn_a_la_mort = false
+
+[node name="xfrdfhk2" parent="EnnemisPlaces" unique_id=800257734 instance=ExtResource("17_i6w5t")]
+position = Vector2(230, 30)
+delai_activation_sec = 4.0
+direction_deplacement = "immobile"
+delai_spawn = 3.0
+repeter_spawn = true
+stopper_spawn_a_la_mort = false
+
+[node name="xammocrate" parent="EnnemisPlaces" unique_id=240847718 instance=ExtResource("16_i6w5t")]
+position = Vector2(481, 163)
+offset_apparition = Vector2(0, 0)
+temps_ouverture_secondes = -1.0
+
+[node name="xammocrate2" parent="EnnemisPlaces" unique_id=1606980994 instance=ExtResource("16_i6w5t")]
+position = Vector2(505, 163)
+offset_apparition = Vector2(0, 0)
+temps_ouverture_secondes = -1.0
+
+[node name="xfrdfhk3" parent="EnnemisPlaces" unique_id=1380572641 instance=ExtResource("17_i6w5t")]
+position = Vector2(145, 30)
+delai_activation_sec = 8.0
+direction_deplacement = "immobile"
+delai_spawn = 4.0
+stopper_spawn_a_la_mort = false
+
+[node name="xammocrate3" parent="EnnemisPlaces" unique_id=389646230 instance=ExtResource("16_i6w5t")]
+z_index = 10
+position = Vector2(529, 163)
+offset_apparition = Vector2(0, 0)
+usage_unique = true
+temps_ouverture_secondes = -1.0
+chute_du_ciel = true
+declencheur_stop = NodePath("../../Stop2")
+
+[node name="xammocrate4" parent="EnnemisPlaces" unique_id=323761223 instance=ExtResource("16_i6w5t")]
+position = Vector2(552, 163)
+offset_apparition = Vector2(0, 0)
+temps_ouverture_secondes = -1.0
+
+[node name="xammocrate5" parent="EnnemisPlaces" unique_id=599126142 instance=ExtResource("16_i6w5t")]
+position = Vector2(576, 163)
+offset_apparition = Vector2(0, 0)
+temps_ouverture_secondes = -1.0
+
+[node name="xammocrate6" parent="EnnemisPlaces" unique_id=1119392524 instance=ExtResource("16_i6w5t")]
+position = Vector2(66, 162)
+offset_apparition = Vector2(0, 0)
+temps_ouverture_secondes = -1.0
+chute_du_ciel = true
+y_depart_chute = 73.0
+vitesse_chute = 200.0
+declencheur_stop = NodePath("../../Stop")
+
+[node name="xammocrate7" parent="EnnemisPlaces" unique_id=1929181437 instance=ExtResource("16_i6w5t")]
+z_index = 10
+position = Vector2(106, 162)
+offset_apparition = Vector2(0, 0)
+usage_unique = true
+temps_ouverture_secondes = -1.0
+chute_du_ciel = true
+y_depart_chute = 73.0
+vitesse_chute = 200.0
+declencheur_stop = NodePath("../../Stop")
+delai_activation_sec = 2.0
+
+[node name="xammocrate8" parent="EnnemisPlaces" unique_id=14089593 instance=ExtResource("16_i6w5t")]
+position = Vector2(223, 162)
+offset_apparition = Vector2(0, 0)
+temps_ouverture_secondes = -1.0
+chute_du_ciel = true
+y_depart_chute = 73.0
+vitesse_chute = 200.0
+declencheur_stop = NodePath("../../Stop")
+delai_activation_sec = 1.5
+
+[node name="xammocrate9" parent="EnnemisPlaces" unique_id=445428981 instance=ExtResource("16_i6w5t")]
+position = Vector2(263, 162)
+offset_apparition = Vector2(0, 0)
+temps_ouverture_secondes = -1.0
+chute_du_ciel = true
+y_depart_chute = 73.0
+vitesse_chute = 200.0
+declencheur_stop = NodePath("../../Stop")
+delai_activation_sec = 2.5
+
+[node name="XTruck" parent="EnnemisPlaces" unique_id=1291370268 instance=ExtResource("19_2272n")]
+position = Vector2(468, 52)
+declencheur_stop = NodePath("../../Stop2")
+
+[node name="Stop" type="Marker2D" parent="." unique_id=1394918365]
+position = Vector2(155, 173)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+script = ExtResource("18_l2pgs")
+alignement = "Centre_Viseur"
+temps_pause = 10.0
+
+[node name="Stop2" type="Marker2D" parent="." unique_id=1940772068]
+position = Vector2(591, 174)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+script = ExtResource("18_l2pgs")
+alignement = "Centre_Viseur"
+temps_pause = 5.0
+modifier_motion_scale = true
+nom_parallax_layer = "sol_0 (PL)"
+nouveau_motion_scale = Vector2(1.5, 1)
+duree_transition_sec = 3.0

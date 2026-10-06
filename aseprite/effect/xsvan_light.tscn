@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cihwuh0mlkkid"]
+
+[ext_resource type="Script" uid="uid://cw8bo4m3lycvr" path="res://Script/breakable_prop.gd" id="1_sj64m"]
+[ext_resource type="Texture2D" uid="uid://beqgw6eioqxxj" path="res://maps/backdrops/level1/xsvan_08.png" id="2_mnk5x"]
+[ext_resource type="Texture2D" uid="uid://cfj077qex74b5" path="res://maps/backdrops/level1/xsvan_04.png" id="3_mlkyp"]
+[ext_resource type="Texture2D" uid="uid://drssyaamojnvu" path="res://maps/backdrops/level1/xsvan_05.png" id="4_5gbp3"]
+[ext_resource type="Texture2D" uid="uid://b8gs1c8ejpet5" path="res://maps/backdrops/level1/xsvan_06.png" id="5_fw2tg"]
+[ext_resource type="Texture2D" uid="uid://i3ggjsc4cddh" path="res://maps/backdrops/level1/xsvan_07.png" id="6_6xyoq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cvfbk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mnk5x")
+}],
+"loop": 1,
+"name": &"broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mlkyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5gbp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fw2tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6xyoq")
+}],
+"loop": 1,
+"name": &"loop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mnk5x")
+}],
+"loop": 1,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mlkyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5gbp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fw2tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6xyoq")
+}],
+"loop": 1,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pf3d"]
+size = Vector2(38.940254, 37.6833)
+
+[node name="xsvan_light" type="Node2D" unique_id=387680292]
+script = ExtResource("1_sj64m")
+
+[node name="Light" type="AnimatedSprite2D" parent="." unique_id=566947419]
+position = Vector2(12, 11)
+sprite_frames = SubResource("SpriteFrames_cvfbk")
+animation = &"loop"
+autoplay = "loop"
+metadata/destructible = true
+metadata/hp = 1
+metadata/damaged_texture = null
+
+[node name="HitArea" type="Area2D" parent="Light" unique_id=671401971]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Light/HitArea" unique_id=1038315207]
+position = Vector2(9.536743e-07, 0)
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_2pf3d")

@@ -1,7 +1,716 @@
 [gd_scene format=3 uid="uid://byf40iifvfds6"]
 
-[ext_resource type="PackedScene" uid="uid://ccduvos20i2m2" path="res://maps/backdrops/level1/t2_hideout.tmj" id="1_u7uvo"]
+[ext_resource type="Texture2D" uid="uid://dojj54c8bpiug" path="res://maps/backdrops/level1/xhidtb_00.png" id="1_ll4br"]
+[ext_resource type="Texture2D" uid="uid://d4cygjhqiffu5" path="res://maps/backdrops/level1/xhidm2_04.png" id="2_366pw"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="2_oe7p8"]
+[ext_resource type="Texture2D" uid="uid://gcoa377bcaod" path="res://maps/backdrops/level1/xhidm2_00.png" id="3_sghua"]
+[ext_resource type="Texture2D" uid="uid://dmo052pbad1tq" path="res://maps/backdrops/level1/xhidm2_01.png" id="4_0yg3d"]
+[ext_resource type="Texture2D" uid="uid://dvtng4fjtwhlj" path="res://maps/backdrops/level1/xhidm2_02.png" id="5_31t0i"]
+[ext_resource type="Texture2D" uid="uid://dpca21rcfxgmv" path="res://maps/backdrops/level1/xhidm2_03.png" id="6_oxppo"]
+[ext_resource type="Texture2D" uid="uid://ex2japtx4l25" path="res://maps/backdrops/level1/xhidm1_02.png" id="7_is47o"]
+[ext_resource type="Texture2D" uid="uid://bly77udruo3hy" path="res://maps/backdrops/level1/xhidm1_03.png" id="8_h70wc"]
+[ext_resource type="Texture2D" uid="uid://1x31v60g8a6f" path="res://maps/backdrops/level1/xhidm1_00.png" id="9_ruyki"]
+[ext_resource type="Texture2D" uid="uid://b0gjw3t8w7put" path="res://maps/backdrops/level1/xhidm1_01.png" id="10_h88ue"]
+[ext_resource type="Texture2D" uid="uid://ct271no2j5n2k" path="res://maps/backdrops/level1/xhidtb_01.png" id="11_ppjn0"]
+[ext_resource type="Texture2D" uid="uid://duqqpd5pt0vqs" path="res://maps/backdrops/level1/xhidebit_12.png" id="12_e851q"]
+[ext_resource type="Texture2D" uid="uid://b7043pqfmecb6" path="res://maps/backdrops/level1/xhidebit_14.png" id="13_oiykm"]
+[ext_resource type="Texture2D" uid="uid://clndmn1ccr076" path="res://maps/backdrops/level1/xhidfg_00.png" id="14_24sec"]
+[ext_resource type="Texture2D" uid="uid://sj2viqxo2gum" path="res://maps/backdrops/level1/xhidfg_01.png" id="15_5xfpd"]
+[ext_resource type="Texture2D" uid="uid://w0vd6baao0bs" path="res://maps/backdrops/level1/xhidfg_02.png" id="16_k3bht"]
+[ext_resource type="Texture2D" uid="uid://dify2bm4ic6rw" path="res://maps/backdrops/level1/xhidebit_22.png" id="17_xvn3w"]
+[ext_resource type="Texture2D" uid="uid://eo5q7dv7o20h" path="res://maps/backdrops/level1/xhidbt_00.png" id="18_b26gd"]
+[ext_resource type="Texture2D" uid="uid://cxxdkiobcqt8l" path="res://maps/backdrops/level1/xhidbt_01.png" id="19_bisdr"]
+[ext_resource type="Texture2D" uid="uid://c7sa5bk62846h" path="res://maps/backdrops/level1/xhidbt_02.png" id="20_fc22d"]
+[ext_resource type="Texture2D" uid="uid://cp4n2ht8pqrqk" path="res://maps/backdrops/level1/xhidbt_03.png" id="21_t0vxh"]
+[ext_resource type="Texture2D" uid="uid://bddr7i7xpjx33" path="res://maps/backdrops/level1/xhidebit_17.png" id="22_uieey"]
+[ext_resource type="Texture2D" uid="uid://dmarneef8tyro" path="res://maps/backdrops/level1/xhidbt_07.png" id="23_lkyqx"]
+[ext_resource type="Texture2D" uid="uid://cb141rvl7y6wv" path="res://maps/backdrops/level1/xhidebit_20.png" id="24_wvi3j"]
+[ext_resource type="Texture2D" uid="uid://co7ql0ntyb247" path="res://maps/backdrops/level1/xhidebit_04.png" id="25_crujs"]
+[ext_resource type="Texture2D" uid="uid://cuj5bipjisol1" path="res://maps/backdrops/level1/xhidebit_05.png" id="26_xxcoo"]
+[ext_resource type="Texture2D" uid="uid://bn5syl2t8cttr" path="res://maps/backdrops/level1/xhidebit_06.png" id="27_lxj76"]
+[ext_resource type="Texture2D" uid="uid://cixtc24dwyaud" path="res://maps/backdrops/level1/xhidebit_07.png" id="28_hhlr3"]
+[ext_resource type="Texture2D" uid="uid://dg2inlda2uvm4" path="res://maps/backdrops/level1/xhidebit_11.png" id="29_dj47i"]
+[ext_resource type="Texture2D" uid="uid://c2turlet4lqw2" path="res://maps/backdrops/level1/xhidebit_09.png" id="30_h8hf6"]
 
-[node name="t2_hideout" unique_id=1935883330 instance=ExtResource("1_u7uvo")]
+[node name="t2_hideout" type="Node2D" unique_id=1935883330]
+metadata/horizonTiled = 150.0
+metadata/uniformScale = true
 
-[node name="EnnemisPlaces" type="Node2D" parent="." index="0" unique_id=1605715933]
+[node name="EnnemisPlaces" type="Node2D" parent="." unique_id=1605715933]
+
+[node name="t2_hideout (PBG)" type="ParallaxBackground" parent="." unique_id=1741974120]
+
+[node name="parallax_top (PL)" type="ParallaxLayer" parent="t2_hideout (PBG)" unique_id=2086396305]
+motion_scale = Vector2(0.1, 0)
+
+[node name="parallax_top" type="Node2D" parent="t2_hideout (PBG)/parallax_top (PL)" unique_id=1746752325]
+texture_filter = 1
+
+[node name="xhidtb_00" type="Sprite2D" parent="t2_hideout (PBG)/parallax_top (PL)/parallax_top" unique_id=1694944326]
+position = Vector2(1280.0001, 56.000004)
+texture = ExtResource("1_ll4br")
+offset = Vector2(128, -28)
+
+[node name="xhidtb_01" type="Sprite2D" parent="t2_hideout (PBG)/parallax_top (PL)/parallax_top" unique_id=953034161]
+position = Vector2(1024, 56)
+texture = ExtResource("1_ll4br")
+offset = Vector2(128, -28)
+
+[node name="xhidtb_02" type="Sprite2D" parent="t2_hideout (PBG)/parallax_top (PL)/parallax_top" unique_id=936990962]
+position = Vector2(768, 56)
+texture = ExtResource("1_ll4br")
+offset = Vector2(128, -28)
+
+[node name="xhidtb_03" type="Sprite2D" parent="t2_hideout (PBG)/parallax_top (PL)/parallax_top" unique_id=884211062]
+position = Vector2(512, 56)
+texture = ExtResource("1_ll4br")
+offset = Vector2(128, -28)
+
+[node name="xhidtb_04" type="Sprite2D" parent="t2_hideout (PBG)/parallax_top (PL)/parallax_top" unique_id=2145181868]
+position = Vector2(256, 56)
+texture = ExtResource("1_ll4br")
+offset = Vector2(128, -28)
+
+[node name="xhidtb_05" type="Sprite2D" parent="t2_hideout (PBG)/parallax_top (PL)/parallax_top" unique_id=940617131]
+position = Vector2(5e-06, 56)
+texture = ExtResource("1_ll4br")
+offset = Vector2(128, -28)
+
+[node name="palalax_centre (PL)" type="ParallaxLayer" parent="t2_hideout (PBG)" unique_id=1896408651]
+motion_scale = Vector2(0.6, 0)
+
+[node name="palalax_centre" type="Node2D" parent="t2_hideout (PBG)/palalax_centre (PL)" unique_id=801555991]
+texture_filter = 1
+
+[node name="xhidm2_04" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1163648803]
+position = Vector2(512, 144)
+texture = ExtResource("2_366pw")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_00" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1959859805]
+position = Vector2(256, 144)
+texture = ExtResource("3_sghua")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_01" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=867231770]
+position = Vector2(320, 144)
+texture = ExtResource("4_0yg3d")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_02" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=2049901776]
+position = Vector2(384, 144)
+texture = ExtResource("5_31t0i")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_03" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1362308589]
+position = Vector2(448, 144)
+texture = ExtResource("6_oxppo")
+offset = Vector2(32, -44)
+
+[node name="xhidm1_02" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1806197578]
+position = Vector2(128, 144)
+texture = ExtResource("7_is47o")
+offset = Vector2(32, -44)
+
+[node name="xhidm1_03" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=97288686]
+position = Vector2(192, 144)
+texture = ExtResource("8_h70wc")
+offset = Vector2(32, -44)
+
+[node name="xhidm1_00" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=987953564]
+position = Vector2(4.9160158e-06, 144)
+texture = ExtResource("9_ruyki")
+offset = Vector2(32, -44)
+
+[node name="xhidm1_01" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=453566030]
+position = Vector2(64.00001, 144)
+texture = ExtResource("10_h88ue")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_05" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=986189831]
+position = Vector2(832, 144)
+texture = ExtResource("2_366pw")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_06" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=578322393]
+position = Vector2(576, 144)
+texture = ExtResource("3_sghua")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_07" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1169017956]
+position = Vector2(640, 144)
+texture = ExtResource("4_0yg3d")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_08" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=521415487]
+position = Vector2(704, 144)
+texture = ExtResource("5_31t0i")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_09" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=39306458]
+position = Vector2(768, 144)
+texture = ExtResource("6_oxppo")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_10" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1532773583]
+position = Vector2(1152, 144.00009)
+texture = ExtResource("2_366pw")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_11" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=821656112]
+position = Vector2(896, 144.00009)
+texture = ExtResource("3_sghua")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_12" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1565969588]
+position = Vector2(960, 144.00009)
+texture = ExtResource("4_0yg3d")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_13" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=232117330]
+position = Vector2(1024, 144.00009)
+texture = ExtResource("5_31t0i")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_14" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=182382735]
+position = Vector2(1088, 144.00009)
+texture = ExtResource("6_oxppo")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_15" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1428078286]
+position = Vector2(1472, 144)
+texture = ExtResource("2_366pw")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_16" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=802910283]
+position = Vector2(1216, 144)
+texture = ExtResource("3_sghua")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_17" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1770821016]
+position = Vector2(1280, 144)
+texture = ExtResource("4_0yg3d")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_18" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1660964303]
+position = Vector2(1344, 144)
+texture = ExtResource("5_31t0i")
+offset = Vector2(32, -44)
+
+[node name="xhidm2_19" type="Sprite2D" parent="t2_hideout (PBG)/palalax_centre (PL)/palalax_centre" unique_id=1681167928]
+position = Vector2(1408, 144)
+texture = ExtResource("6_oxppo")
+offset = Vector2(32, -44)
+
+[node name="parallx_bas (PL)" type="ParallaxLayer" parent="t2_hideout (PBG)" unique_id=101106907]
+motion_scale = Vector2(0.8, 0)
+
+[node name="parallx_bas" type="Node2D" parent="t2_hideout (PBG)/parallx_bas (PL)" unique_id=781147851]
+texture_filter = 1
+
+[node name="xhidtb_01" type="Sprite2D" parent="t2_hideout (PBG)/parallx_bas (PL)/parallx_bas" unique_id=1565716623]
+position = Vector2(0, 174.00009)
+texture = ExtResource("11_ppjn0")
+offset = Vector2(128, -15)
+
+[node name="xhidtb_02" type="Sprite2D" parent="t2_hideout (PBG)/parallx_bas (PL)/parallx_bas" unique_id=663159624]
+position = Vector2(256, 174.00009)
+texture = ExtResource("11_ppjn0")
+offset = Vector2(128, -15)
+
+[node name="xhidtb_03" type="Sprite2D" parent="t2_hideout (PBG)/parallx_bas (PL)/parallx_bas" unique_id=2104086972]
+position = Vector2(512, 174.00009)
+texture = ExtResource("11_ppjn0")
+offset = Vector2(128, -15)
+
+[node name="xhidtb_04" type="Sprite2D" parent="t2_hideout (PBG)/parallx_bas (PL)/parallx_bas" unique_id=1808958435]
+position = Vector2(768, 174.00009)
+texture = ExtResource("11_ppjn0")
+offset = Vector2(128, -15)
+
+[node name="xhidtb_05" type="Sprite2D" parent="t2_hideout (PBG)/parallx_bas (PL)/parallx_bas" unique_id=1250842016]
+position = Vector2(1024, 174.00009)
+texture = ExtResource("11_ppjn0")
+offset = Vector2(128, -15)
+
+[node name="xhidtb_06" type="Sprite2D" parent="t2_hideout (PBG)/parallx_bas (PL)/parallx_bas" unique_id=1903498249]
+position = Vector2(1280, 174.00009)
+texture = ExtResource("11_ppjn0")
+offset = Vector2(128, -15)
+
+[node name="box (PL)" type="ParallaxLayer" parent="t2_hideout (PBG)" unique_id=157021561]
+motion_scale = Vector2(0.8, 0)
+
+[node name="box" type="Node2D" parent="t2_hideout (PBG)/box (PL)" unique_id=68845401]
+texture_filter = 1
+
+[node name="xhidebit_12" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=1836408556]
+position = Vector2(487.2703, 161.63963)
+texture = ExtResource("12_e851q")
+offset = Vector2(12, -12)
+
+[node name="xhidebit_13" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=1043602800]
+position = Vector2(459.2703, 161.63963)
+texture = ExtResource("12_e851q")
+offset = Vector2(12, -12)
+
+[node name="xhidebit_14" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=964056741]
+position = Vector2(473.2703, 137.63963)
+texture = ExtResource("12_e851q")
+offset = Vector2(12, -12)
+
+[node name="xhidebit_15" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=546970114]
+position = Vector2(698.1352, 160.99098)
+texture = ExtResource("12_e851q")
+offset = Vector2(12, -12)
+
+[node name="xhidebit_16" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=2042561877]
+position = Vector2(728.1352, 156.99098)
+texture = ExtResource("12_e851q")
+offset = Vector2(12, -12)
+
+[node name="xhidebit_17" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=1956610978]
+position = Vector2(404.00003, 144)
+texture = ExtResource("13_oiykm")
+offset = Vector2(8, -8)
+
+[node name="xhidebit_18" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=1648082997]
+position = Vector2(424.00003, 144)
+texture = ExtResource("13_oiykm")
+offset = Vector2(8, -8)
+
+[node name="xhidebit_19" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=166148741]
+position = Vector2(414.00003, 128)
+texture = ExtResource("13_oiykm")
+offset = Vector2(8, -8)
+
+[node name="xhidebit_20" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=1604438908]
+position = Vector2(394.00003, 128)
+texture = ExtResource("13_oiykm")
+offset = Vector2(8, -8)
+
+[node name="xhidebit_21" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=890735216]
+position = Vector2(404.00003, 112)
+texture = ExtResource("13_oiykm")
+offset = Vector2(8, -8)
+
+[node name="xhidebit_22" type="Sprite2D" parent="t2_hideout (PBG)/box (PL)/box" unique_id=20409063]
+position = Vector2(384.00003, 144)
+texture = ExtResource("13_oiykm")
+offset = Vector2(8, -8)
+
+[node name="foreground" type="Node2D" parent="." unique_id=1135322599]
+texture_filter = 1
+
+[node name="xhidfg_00" type="Sprite2D" parent="foreground" unique_id=785146730]
+position = Vector2(1472, 174)
+texture = ExtResource("14_24sec")
+offset = Vector2(32, -87)
+flip_h = true
+
+[node name="xhidfg_01" type="Sprite2D" parent="foreground" unique_id=2124278106]
+position = Vector2(1152.892, 167.00009)
+texture = ExtResource("15_5xfpd")
+offset = Vector2(8, -80)
+
+[node name="xhidfg_02" type="Sprite2D" parent="foreground" unique_id=1340932885]
+position = Vector2(768, 166.00018)
+texture = ExtResource("15_5xfpd")
+offset = Vector2(8, -80)
+
+[node name="xhidfg_03" type="Sprite2D" parent="foreground" unique_id=1336361500]
+position = Vector2(305.39642, 166)
+texture = ExtResource("16_k3bht")
+offset = Vector2(28, -80)
+
+[node name="xhidfg_04" type="Sprite2D" parent="foreground" unique_id=233483971]
+position = Vector2(-7.9580786e-13, 174)
+texture = ExtResource("14_24sec")
+offset = Vector2(32, -87)
+
+[node name="forground_object" type="Node2D" parent="." unique_id=1287206396]
+texture_filter = 1
+
+[node name="xhidebit_22" type="Sprite2D" parent="forground_object" unique_id=208400644]
+position = Vector2(1494, 124)
+texture = ExtResource("17_xvn3w")
+offset = Vector2(9, -21.5)
+
+[node name="xhidbt_00" type="Sprite2D" parent="forground_object" unique_id=1474286951]
+position = Vector2(256, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_01" type="Sprite2D" parent="forground_object" unique_id=1158861709]
+position = Vector2(320, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_02" type="Sprite2D" parent="forground_object" unique_id=244784828]
+position = Vector2(64.00001, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_03" type="Sprite2D" parent="forground_object" unique_id=343323647]
+position = Vector2(384, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_04" type="Sprite2D" parent="forground_object" unique_id=405286509]
+position = Vector2(448, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_05" type="Sprite2D" parent="forground_object" unique_id=1883574770]
+position = Vector2(512, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_06" type="Sprite2D" parent="forground_object" unique_id=422360373]
+position = Vector2(576, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_07" type="Sprite2D" parent="forground_object" unique_id=228172398]
+position = Vector2(640, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_08" type="Sprite2D" parent="forground_object" unique_id=952644642]
+position = Vector2(704, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_09" type="Sprite2D" parent="forground_object" unique_id=625932356]
+position = Vector2(768, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_10" type="Sprite2D" parent="forground_object" unique_id=669335742]
+position = Vector2(832, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_11" type="Sprite2D" parent="forground_object" unique_id=1395535398]
+position = Vector2(896.00006, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_12" type="Sprite2D" parent="forground_object" unique_id=2088573772]
+position = Vector2(960.00006, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_13" type="Sprite2D" parent="forground_object" unique_id=651892476]
+position = Vector2(1024, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_14" type="Sprite2D" parent="forground_object" unique_id=264001310]
+position = Vector2(1088, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_15" type="Sprite2D" parent="forground_object" unique_id=428053865]
+position = Vector2(128.00002, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_16" type="Sprite2D" parent="forground_object" unique_id=1970447200]
+position = Vector2(192.00002, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_17" type="Sprite2D" parent="forground_object" unique_id=1117282476]
+position = Vector2(1280, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_18" type="Sprite2D" parent="forground_object" unique_id=1800375891]
+position = Vector2(1344, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_19" type="Sprite2D" parent="forground_object" unique_id=2019798919]
+position = Vector2(1408, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_20" type="Sprite2D" parent="forground_object" unique_id=1979976717]
+position = Vector2(1472, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_21" type="Sprite2D" parent="forground_object" unique_id=854541013]
+position = Vector2(1152, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_22" type="Sprite2D" parent="forground_object" unique_id=1799589624]
+position = Vector2(1216, 5.0000014)
+texture = ExtResource("19_bisdr")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_23" type="Sprite2D" parent="forground_object" unique_id=1191474367]
+position = Vector2(1e-05, 5.0000014)
+texture = ExtResource("18_b26gd")
+offset = Vector2(32, -2.5)
+
+[node name="xhidbt_24" type="Sprite2D" parent="forground_object" unique_id=539449126]
+position = Vector2(0, 174.00009)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_25" type="Sprite2D" parent="forground_object" unique_id=535113225]
+position = Vector2(64, 174.00009)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_26" type="Sprite2D" parent="forground_object" unique_id=2058315008]
+position = Vector2(128.00002, 174.00009)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_27" type="Sprite2D" parent="forground_object" unique_id=1037251679]
+position = Vector2(192.00002, 174.00009)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_28" type="Sprite2D" parent="forground_object" unique_id=929930717]
+position = Vector2(256.00003, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_29" type="Sprite2D" parent="forground_object" unique_id=1770808294]
+position = Vector2(320.00003, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_30" type="Sprite2D" parent="forground_object" unique_id=1444313163]
+position = Vector2(384.00003, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_31" type="Sprite2D" parent="forground_object" unique_id=546428520]
+position = Vector2(448.00003, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_32" type="Sprite2D" parent="forground_object" unique_id=706443624]
+position = Vector2(512, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_33" type="Sprite2D" parent="forground_object" unique_id=1879726855]
+position = Vector2(576, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_34" type="Sprite2D" parent="forground_object" unique_id=1191763766]
+position = Vector2(640, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_35" type="Sprite2D" parent="forground_object" unique_id=1538124363]
+position = Vector2(704, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_36" type="Sprite2D" parent="forground_object" unique_id=484144518]
+position = Vector2(768, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_37" type="Sprite2D" parent="forground_object" unique_id=412904995]
+position = Vector2(832, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_38" type="Sprite2D" parent="forground_object" unique_id=2072923837]
+position = Vector2(896.00006, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_39" type="Sprite2D" parent="forground_object" unique_id=1426020014]
+position = Vector2(960.00006, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_40" type="Sprite2D" parent="forground_object" unique_id=1171806198]
+position = Vector2(1024, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_41" type="Sprite2D" parent="forground_object" unique_id=479426005]
+position = Vector2(1088, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_42" type="Sprite2D" parent="forground_object" unique_id=996554701]
+position = Vector2(1152, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_43" type="Sprite2D" parent="forground_object" unique_id=1794436602]
+position = Vector2(1216, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_44" type="Sprite2D" parent="forground_object" unique_id=879646856]
+position = Vector2(1280, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_45" type="Sprite2D" parent="forground_object" unique_id=1582279397]
+position = Vector2(1344, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_46" type="Sprite2D" parent="forground_object" unique_id=2077610571]
+position = Vector2(1408, 174.00018)
+texture = ExtResource("20_fc22d")
+offset = Vector2(32, -3.5)
+
+[node name="xhidbt_47" type="Sprite2D" parent="forground_object" unique_id=431746072]
+position = Vector2(1472, 174.00018)
+texture = ExtResource("21_t0vxh")
+offset = Vector2(32, -3.5)
+
+[node name="xhidebit_17" type="Sprite2D" parent="forground_object" unique_id=751385658]
+position = Vector2(806, 165)
+texture = ExtResource("22_uieey")
+offset = Vector2(17.5, -22.5)
+
+[node name="xhidbt_48" type="Sprite2D" parent="forground_object" unique_id=946069504]
+position = Vector2(303, 174)
+texture = ExtResource("23_lkyqx")
+offset = Vector2(32, -4)
+
+[node name="xhidbt_49" type="Sprite2D" parent="forground_object" unique_id=283746987]
+position = Vector2(1128, 174)
+texture = ExtResource("23_lkyqx")
+offset = Vector2(32, -4)
+
+[node name="xhidbt_50" type="Sprite2D" parent="forground_object" unique_id=326067283]
+position = Vector2(744, 174)
+texture = ExtResource("23_lkyqx")
+offset = Vector2(32, -4)
+
+[node name="Props" type="Node2D" parent="." unique_id=1010735470]
+
+[node name="hostage" type="Node2D" parent="Props" unique_id=1861142757]
+texture_filter = 1
+
+[node name="xhidebit_17" type="Sprite2D" parent="Props/hostage" unique_id=588282562]
+position = Vector2(225.93692, 167.00009)
+texture = ExtResource("22_uieey")
+offset = Vector2(17.5, -22.5)
+
+[node name="xhidebit_20" type="Sprite2D" parent="Props/hostage" unique_id=192285713]
+position = Vector2(264.93692, 167.00009)
+texture = ExtResource("24_wvi3j")
+offset = Vector2(11, -28.5)
+
+[node name="Breakablewall" type="Node2D" parent="Props" unique_id=125709797]
+texture_filter = 1
+
+[node name="xhidebit_04" type="Sprite2D" parent="Props/Breakablewall" unique_id=749130347]
+position = Vector2(545.27026, 161.63963)
+texture = ExtResource("25_crujs")
+offset = Vector2(12, -16)
+metadata/destructible = true
+metadata/hp = 2
+
+[node name="xhidebit_05" type="Sprite2D" parent="Props/Breakablewall" unique_id=72633250]
+position = Vector2(545.27026, 129.63963)
+texture = ExtResource("25_crujs")
+offset = Vector2(12, -16)
+metadata/destructible = true
+metadata/hp = 2
+
+[node name="xhidebit_06" type="Sprite2D" parent="Props/Breakablewall" unique_id=593418768]
+position = Vector2(545.27026, 97.63964)
+texture = ExtResource("25_crujs")
+offset = Vector2(12, -16)
+metadata/destructible = true
+metadata/hp = 2
+
+[node name="xhidebit_07" type="Sprite2D" parent="Props/Breakablewall" unique_id=1896228714]
+position = Vector2(560.37836, 161.63963)
+texture = ExtResource("26_xxcoo")
+offset = Vector2(16, -16)
+metadata/destructible = true
+metadata/hp = 2
+
+[node name="xhidebit_08" type="Sprite2D" parent="Props/Breakablewall" unique_id=101478757]
+position = Vector2(560.37836, 129.63963)
+texture = ExtResource("26_xxcoo")
+offset = Vector2(16, -16)
+metadata/destructible = true
+metadata/hp = 2
+
+[node name="xhidebit_09" type="Sprite2D" parent="Props/Breakablewall" unique_id=1134246488]
+position = Vector2(560.37836, 97.63964)
+texture = ExtResource("26_xxcoo")
+offset = Vector2(16, -16)
+metadata/destructible = true
+metadata/hp = 2
+
+[node name="xhidebit_10" type="Sprite2D" parent="Props/Breakablewall" unique_id=1525593416]
+position = Vector2(583.4865, 161.63963)
+texture = ExtResource("27_lxj76")
+offset = Vector2(12, -16)
+metadata/destructible = true
+metadata/hp = 2
+
+[node name="xhidebit_11" type="Sprite2D" parent="Props/Breakablewall" unique_id=949394508]
+position = Vector2(583.4865, 129.63963)
+texture = ExtResource("25_crujs")
+offset = Vector2(12, -16)
+flip_h = true
+metadata/destructible = true
+metadata/hp = 2
+
+[node name="xhidebit_12" type="Sprite2D" parent="Props/Breakablewall" unique_id=1051985452]
+position = Vector2(583.4865, 97.63964)
+texture = ExtResource("25_crujs")
+offset = Vector2(12, -16)
+flip_h = true
+metadata/destructible = true
+metadata/hp = 2
+
+[node name="lamp" type="Node2D" parent="Props" unique_id=472211265]
+texture_filter = 1
+
+[node name="xhidebit_07" type="Sprite2D" parent="Props/lamp" unique_id=73691582]
+position = Vector2(367.14642, 25)
+texture = ExtResource("28_hhlr3")
+offset = Vector2(20, -12.5)
+
+[node name="xhidebit_11" type="Sprite2D" parent="Props/lamp" unique_id=682640435]
+position = Vector2(175.69626, 29.000008)
+texture = ExtResource("29_dj47i")
+offset = Vector2(12, -13)
+
+[node name="xhidebit_09" type="Sprite2D" parent="Props/lamp" unique_id=101239863]
+position = Vector2(177.69626, 39.00527)
+texture = ExtResource("30_h8hf6")
+offset = Vector2(10, -5)
+
+[node name="xhidebit_12" type="Sprite2D" parent="Props/lamp" unique_id=623355108]
+position = Vector2(211.69626, 29.000008)
+texture = ExtResource("29_dj47i")
+offset = Vector2(12, -13)
+
+[node name="xhidebit_10" type="Sprite2D" parent="Props/lamp" unique_id=239326724]
+position = Vector2(213.69626, 39.00527)
+texture = ExtResource("30_h8hf6")
+offset = Vector2(10, -5)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=946587206]
+position = Vector2(0, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 1536
+limit_bottom = 175
+script = ExtResource("2_oe7p8")

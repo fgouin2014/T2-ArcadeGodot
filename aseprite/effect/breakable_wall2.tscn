@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://d3wlxlfqhcsf5"]
+
+[ext_resource type="Texture2D" uid="uid://b6q2gmovjx5n8" path="res://maps/backdrops/level1/xl4bits2_06.png" id="1_fpphw"]
+[ext_resource type="Script" uid="uid://cecgou7wrgo6u" path="res://Script/BreakableWall.gd" id="1_rs1f8"]
+[ext_resource type="Texture2D" uid="uid://d7qc7pqogp2" path="res://maps/backdrops/level1/xl4bits2_00.png" id="2_jiuq6"]
+[ext_resource type="Texture2D" uid="uid://35psl4wvrg5j" path="res://maps/backdrops/level1/xl4bits2_05.png" id="3_r3rko"]
+
+[node name="BreakableWall" type="Node2D" unique_id=1697281650]
+texture_filter = 1
+script = ExtResource("1_rs1f8")
+
+[node name="MainWall" type="StaticBody2D" parent="." unique_id=2041407836]
+collision_layer = 0
+collision_mask = 0
+metadata/destructible = true
+metadata/hp = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="MainWall" unique_id=124200757]
+texture = ExtResource("1_fpphw")
+offset = Vector2(60, -47)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MainWall" unique_id=1156667057]
+position = Vector2(56, -41)
+polygon = PackedVector2Array(-56, 41, -52, 18, -42, 13, -20, -24, -12, -46, -9, -43, 4, -53, 4, -40, 19, -19, 62, 27, 64, 41)
+
+[node name="LeftPiece" type="StaticBody2D" parent="." unique_id=1732588850]
+collision_layer = 8
+collision_mask = 0
+metadata/destructible = true
+metadata/hp = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftPiece" unique_id=686458665]
+texture = ExtResource("2_jiuq6")
+offset = Vector2(30, -48)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftPiece" unique_id=458530833]
+polygon = PackedVector2Array(21, -96, 0, 0, 59, 0, 59, -96)
+
+[node name="RightPiece" type="StaticBody2D" parent="." unique_id=522257997]
+position = Vector2(60, 0)
+collision_layer = 8
+collision_mask = 0
+metadata/destructible = true
+metadata/hp = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="RightPiece" unique_id=1610903352]
+texture = ExtResource("3_r3rko")
+offset = Vector2(30, -48)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RightPiece" unique_id=981767842]
+position = Vector2(-60, 0)
+polygon = PackedVector2Array(59, -96, 59, 0, 120, 0, 99, -96)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1689795437]
+rect = Rect2(0, -101, 120, 101)

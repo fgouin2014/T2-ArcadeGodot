@@ -26,8 +26,6 @@ func _ready() -> void:
 	vitesse_initiale = vitesse_deplacement # Sauvegarde de la vitesse de base d'actor_base
 	_initialiser_projectile_par_defaut()
 	_ajuster_orientation_john_connor()
-	if anim_sprite and not anim_sprite.frame_changed.is_connected(_on_frame_changed):
-		anim_sprite.frame_changed.connect(_on_frame_changed)
 
 func _ajuster_orientation_john_connor() -> void:
 	var nom_minuscule = name.to_lower()
@@ -91,6 +89,9 @@ func activer_acteur() -> void:
 
 	if option_comportement in ["marche_stop_idle_shoot", "marche_idle_tir_face"]:
 		_sequence_marche_stop_idle_shoot()
+		return
+	elif option_comportement == "drop_tir_face_puis_marche_stop_shoot":
+		_sequence_drop_tir_face_puis_marche_stop_shoot()
 		return
 	elif option_comportement == "lancer_grenade_1x_puis_marche" or possede_animation("xendrop"):
 		_sequence_drop_puis_walk()
@@ -202,6 +203,49 @@ func _sequence_drop_puis_walk() -> void:
 			_demarrer_deplacement(anim_marche)
 			_boucle_alternance_tir(anim_marche, anim_tir)
 
+func _sequence_drop_tir_face_puis_marche_stop_shoot() -> void:
+	# 1. Chute (drop exécuté 1 seule fois au début)
+	_arreter_deplacement()
+	var anim_drop = "drop" if possede_animation("drop") else ("xendrop" if possede_animation("xendrop") else "")
+	if anim_drop != "":
+		jouer_animation(anim_drop)
+		await _attendre_fin_animation_ou_timer(0.8)
+	if not est_actif(): return
+
+	# 2. Une fois dropé : salve initiale de tirs de face (nombre_de_tirs)
+	if possede_animation("shoot"):
+		a_lance_projectile_ce_cycle = false
+		jouer_animation("shoot")
+		for i in range(nombre_de_tirs):
+			if not est_actif(): break
+			_lancer_ou_dropper_objet()
+			await attendre(0.18)
+		if not est_actif(): return
+		await _attendre_fin_animation_ou_timer(0.3)
+
+	# 3. Boucle continue : walk -> stop -> shoot de face (nombre_de_tirs) -> walk ...
+	while est_actif():
+		# Phase Marche
+		var anim_marche = "walk" if possede_animation("walk") else "walk_fwrd"
+		_demarrer_deplacement(anim_marche)
+		await attendre(temps_entre_tirs)
+		if not est_actif(): break
+
+		# Phase Stop & Shoot de face
+		_arreter_deplacement()
+		if possede_animation("shoot"):
+			a_lance_projectile_ce_cycle = false
+			jouer_animation("shoot")
+			for i in range(nombre_de_tirs):
+				if not est_actif(): break
+				_lancer_ou_dropper_objet()
+				await attendre(0.18)
+			if not est_actif(): break
+			await _attendre_fin_animation_ou_timer(0.3)
+
+		if not est_actif(): break
+		await attendre(0.1)
+
 func _sequence_allie_cinematique() -> void:
 	if possede_animation("walk"):
 		_demarrer_deplacement("walk")
@@ -237,10 +281,12 @@ func _dropper_pickup_allie() -> void:
 	if objet_a_dropper == "aucun":
 		return
 
-	var path_pickup = "res://tsj/" + objet_a_dropper + ".png"
+	var path_pickup = "res://images/items/" + objet_a_dropper + ".png"
 	if not ResourceLoader.exists(path_pickup):
-		print("[ALLIÉ DROP] Texture introuvable : ", path_pickup)
-		return
+		path_pickup = "res://tsj/" + objet_a_dropper + ".png"
+		if not ResourceLoader.exists(path_pickup):
+			print("[ALLIÉ DROP] Texture introuvable : ", path_pickup)
+			return
 
 	var noeud_pickup = Area2D.new()
 	noeud_pickup.name = "Pickup_" + objet_a_dropper
@@ -262,6 +308,11 @@ func _dropper_pickup_allie() -> void:
 			noeud_pickup.queue_free()
 	)
 	noeud_pickup.add_child(notifier_pickup)
+	noeud_pickup.set_script(load("res://Script/pickup_item.gd"))
+	if objet_a_dropper == "xpickup_14":
+		noeud_pickup.type_pickup = "Missiles (xpickup_14)"
+	else:
+		noeud_pickup.type_pickup = "Chargeurs (xpickup_01)"
 
 	noeud_pickup.global_position = global_position + Vector2(0, 20.0)
 	get_parent().add_child(noeud_pickup)
@@ -296,12 +347,29 @@ func _sequence_fwrd_face() -> void:
 	# 1. Animation de marche de face progressive (exécutée 1 passe complète selon la variante d'acteur)
 	_arreter_deplacement()
 	var anim_entree = "walk_fwrd" if possede_animation("walk_fwrd") else "walk_front"
+	var position_depart_x = global_position.x
+	var duree_entree = _obtenir_duree_animation(anim_entree, 2.0)
 	print("[%s] Séquence entrée FWRD -> Animation: '%s'" % [name, anim_entree])
 	jouer_animation(anim_entree)
 	
 	# Attente exacte de la durée complète de la passe (5.0s pour xbigend [40 frames], 4.75s pour xmedend [38 frames])
-	await _attendre_fin_passation_animation(anim_entree, 2.0)
+	await _avancer_vers_camera_en_perspective(position_depart_x, duree_entree)
+	
+	# Arrêter AnimationPlayer tout en maintenant la position Y finale de premier plan atteinte pour éviter tout saut vers le haut
+	var pos_finale_y = anim_sprite.position.y if anim_sprite else 32.0
+	var player_anim_node = get_node_or_null("AnimationPlayer") as AnimationPlayer
+	if is_instance_valid(player_anim_node):
+		player_anim_node.stop()
+	if anim_sprite:
+		# Conserve la position finale réelle de premier plan (41px pour xenfwrd / Sol 1, 32px pour xmedfwrd / Sol 2)
+		anim_sprite.position = Vector2(0, pos_finale_y)
+
+
+
+
+		
 	print("[%s] Fin entrée FWRD -> Transition vers comportement: '%s'" % [name, option_comportement])
+
 	
 	# 2. Une fois arrivé à destination sur son sol (Sol 1 ou Sol 2), passer à l'action/marche d'option
 	match option_comportement:
@@ -343,8 +411,10 @@ func _sequence_fwrd_face() -> void:
 		"marche_tir_face", "marche_idle_tir_face":
 			while est_actif():
 				var anim_pas_face = "walk_fwrd" if possede_animation("walk_fwrd") else "walk_front"
+				var position_depart_face_x = global_position.x
+				var duree_face = _obtenir_duree_animation(anim_pas_face, 2.0)
 				jouer_animation(anim_pas_face)
-				await _attendre_fin_passation_animation(anim_pas_face, 2.0)
+				await _avancer_vers_camera_en_perspective(position_depart_face_x, duree_face)
 				if not est_actif(): break
 				
 				_arreter_deplacement()
@@ -384,6 +454,7 @@ func _boucle_tir_stationnaire() -> void:
 		if not est_actif(): break
 		a_lance_projectile_ce_cycle = false
 		jouer_animation(anim_tir)
+		_lancer_ou_dropper_objet()
 		await _attendre_fin_animation_ou_timer(1.2)
 
 func _on_frame_changed() -> void:
@@ -419,7 +490,7 @@ func _lancer_projectile() -> void:
 			var nom_minuscule = name.to_lower()
 			if "ethrow" in nom_minuscule or option_comportement == "stationnaire_lanceur":
 				var cible_centre_y = Vector2(pos_spawn.x + (dir_proj.x * 120.0), 87.5)
-				proj.initialiser_lancer(pos_spawn, cible_centre_y)
+				proj.initialiser_lancer(pos_spawn, (cible_centre_y - pos_spawn).normalized())
 			else:
 				proj.initialiser_lancer(pos_spawn, dir_proj)
 		elif proj.has_method("initialiser_tir"):
@@ -436,6 +507,10 @@ func _lancer_projectile() -> void:
 				proj.initialiser_tir(pos_spawn, cible_joueur, false)
 		else:
 			proj.global_position = pos_spawn
+	else:
+		# Les tirs d'armes à feu sont instantanés et ne partent que d'un acteur visible.
+		if notifier == null or notifier.is_on_screen():
+			GlobalSettings.infliger_degats_joueur(1)
 
 func _boucle_alternance_tir(anim_walk: String, anim_attack: String) -> void:
 	var est_tir_continu = (option_comportement == "marche_et_tir_en_marchant")
@@ -470,14 +545,43 @@ func _boucle_alternance_tir(anim_walk: String, anim_attack: String) -> void:
 			_demarrer_deplacement(anim_active)
 
 func _attendre_fin_passation_animation(nom_anim: String, duree_fallback: float = 1.0) -> void:
+	await attendre(_obtenir_duree_animation(nom_anim, duree_fallback))
+
+func _obtenir_duree_animation(nom_anim: String, duree_fallback: float = 1.0) -> float:
 	if anim_sprite and anim_sprite.sprite_frames and anim_sprite.sprite_frames.has_animation(nom_anim):
 		var count = anim_sprite.sprite_frames.get_frame_count(nom_anim)
 		var speed = anim_sprite.sprite_frames.get_animation_speed(nom_anim)
 		if count > 0 and speed > 0.0:
-			var duree_passe = float(count) / speed
-			await attendre(duree_passe)
-			return
-	await attendre(duree_fallback)
+			return float(count) / speed
+	return duree_fallback
+
+func _avancer_vers_camera_en_perspective(position_depart_x: float, duree: float) -> void:
+	var temps_passe := 0.0
+	while temps_passe < duree and is_inside_tree() and not est_elimine:
+		var delta = get_process_delta_time()
+		temps_passe += delta
+		var progression = clamp(temps_passe / max(duree, 0.001), 0.0, 1.0)
+		var camera = get_viewport().get_camera_2d() if get_viewport() else null
+		if camera:
+			var ecart_centre = position_depart_x - camera.get_screen_center_position().x
+			# Trajectoire en perspective : l'écart latéral s'ouvre depuis l'axe caméra.
+			var position_x = camera.get_screen_center_position().x + (ecart_centre * (1.0 + (0.75 * progression)))
+			global_position.x = _limiter_position_x_lucarne(camera, position_x)
+		await attendre(0.0)
+
+	var camera_finale = get_viewport().get_camera_2d() if get_viewport() else null
+	if camera_finale and is_inside_tree() and not est_elimine:
+		var ecart_final = position_depart_x - camera_finale.get_screen_center_position().x
+		var position_x_finale = camera_finale.get_screen_center_position().x + (ecart_final * 1.75)
+		global_position.x = _limiter_position_x_lucarne(camera_finale, position_x_finale)
+
+func _limiter_position_x_lucarne(camera: Camera2D, position_x: float) -> float:
+	var largeur = 288.0
+	if "largeur_lucarne" in camera:
+		largeur = float(camera.largeur_lucarne)
+	var marge = 20.0
+	var demi_lucarne = largeur * 0.5
+	return clamp(position_x, camera.get_screen_center_position().x - demi_lucarne + marge, camera.get_screen_center_position().x + demi_lucarne - marge)
 
 func _attendre_fin_animation_ou_timer(duree_fallback: float) -> void:
 	if anim_sprite and anim_sprite.sprite_frames:

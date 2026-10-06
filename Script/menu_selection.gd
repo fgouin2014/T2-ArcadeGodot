@@ -2,80 +2,34 @@ extends Control
 
 ## Script refactorisé pour le Menu Principal Arcade (Terminator 2).
 
-const DICO_NIVEAUX: Array[Dictionary] = [
-	{
-		"fichier": "level1.tscn",
-		"code": "MISSION 01",
-		"titre": "LA GUERRE DU FUTUR (2029)",
-		"desc": "Combattez les Endosquelettes et Hunter-Killers dans les ruines de L.A.",
-		"actif": true
-	},
-	{
-		"fichier": "level2.tscn",
-		"code": "MISSION 02",
-		"titre": "LA PLANQUE",
-		"desc": "Protégez John et Sarah Connor contre les assauts ennemie.",
-		"actif": true
-	},
-	{
-		"fichier": "level3.tscn",
-		"code": "MISSION 03",
-		"titre": "LA POURSUITE",
-		"desc": "Escortez le véhicule des civils en fuite.",
-		"actif": true
-	},
-	{
-		"fichier": "level4.tscn",
-		"code": "MISSION 04",
-		"titre": "LE CŒUR DE SKYNET",
-		"desc": "Affrontez les défenses automatisées du noyau Skynet.",
-		"actif": true
-	},
-	{
-		"fichier": "",
-		"code": "MISSION 05",
-		"titre": "LE COFFRE CYBERDYNE",
-		"desc": "Infiltration du complexe Cyberdyne (N/A pour le moment).",
-		"actif": false
-	},
-	{
-		"fichier": "level6.tscn",
-		"code": "MISSION 06",
-		"titre": "POURSUITE DE L'AUTOROUTE",
-		"desc": "Course poursuite à grande vitesse en camion-citerne.",
-		"actif": true
-	},
-	{
-		"fichier": "level7.tscn",
-		"code": "MISSION 07",
-		"titre": "LA FONDERIE D'ACIER",
-		"desc": "Le duel final contre le T-1000 dans le métal en fusion.",
-		"actif": true
-	},
-	{
-		"fichier": "testchamber.tscn",
-		"code": "LABORATOIRE",
-		"titre": "CHAMBRE DE TEST & DEBUG",
-		"desc": "Zone d'essai pour tous les acteurs, armes et effets.",
-		"actif": true
-	},
-	{
-		"fichier": "level1_0.tscn",
-		"code": "level1_0",
-		"titre": "level1_0",
-		"desc": "level1_0.",
-		"actif": true
-	}
-]
+signal niveau_selectionne(chemin_niveau: String)
+signal retour_menu_principal()
+
+# Référence centralisée vers la liste des niveaux
+var DICO_NIVEAUX: Array[Dictionary]:
+	get: return GlobalSettings.DICO_NIVEAUX
 
 @onready var liste_niveaux: VBoxContainer = find_child("ListeNiveaux", true, false) as VBoxContainer
 var canvas_viseur: CanvasLayer = null
 var sprite_viseur_rouge: Sprite2D = null
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	_initialiser_viseur_rouge()
 	_construire_menu_principal()
+	_connecter_bouton_retour()
+
+func _connecter_bouton_retour() -> void:
+	var btn_retour = find_child("BoutonRetour", true, false)
+	if btn_retour and not btn_retour.pressed.is_connected(_on_bouton_retour_pressed):
+		btn_retour.pressed.connect(_on_bouton_retour_pressed)
+
+func _on_bouton_retour_pressed() -> void:
+	if retour_menu_principal.get_connections().size() > 0:
+		emit_signal("retour_menu_principal")
+	else:
+		get_tree().change_scene_to_file("res://maps/Main.tscn")
 
 func _initialiser_viseur_rouge() -> void:
 	canvas_viseur = CanvasLayer.new()
@@ -165,6 +119,11 @@ func _creer_carte_niveau(data: Dictionary) -> void:
 	liste_niveaux.add_child(conteneur_btn)
 
 func _lancer_mission(nom_fichier: String) -> void:
-	GlobalSettings.carte_selectionnee = "res://" + nom_fichier
-	print("[MENU PRINCIPAL] Lancement de la mission : ", GlobalSettings.carte_selectionnee)
-	get_tree().call_deferred("change_scene_to_file", "res://maps/Main.tscn")
+	var chemin_complet = "res://" + nom_fichier
+	GlobalSettings.carte_selectionnee = chemin_complet
+	print("[MENU PRINCIPAL] Lancement de la mission : ", chemin_complet)
+	
+	if niveau_selectionne.get_connections().size() > 0:
+		emit_signal("niveau_selectionne", chemin_complet)
+	else:
+		get_tree().change_scene_to_file("res://maps/Main.tscn")

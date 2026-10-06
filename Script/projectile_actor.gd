@@ -26,6 +26,7 @@ var position_origine: Vector2 = Vector2.ZERO
 var est_initialise: bool = false
 var en_glissade: bool = false
 var est_neutralise: bool = false # Abattu par le joueur : n'infligera aucun dégât
+var degats_deja_infliges: bool = false
 
 func _ready() -> void:
 	z_index = 500 # Au-dessus des popups (z=100) et sous la vitre (z=900)
@@ -100,6 +101,7 @@ func _physics_process(delta: float) -> void:
 	if est_sticky_glissant and temps_vol >= duree_vol_arc:
 		if not en_glissade:
 			en_glissade = true
+			_infliger_degats_si_dans_la_lucarne()
 			if anim_sprite and anim_sprite.sprite_frames:
 				var anim_courante = anim_sprite.animation
 				if anim_sprite.sprite_frames.has_animation(anim_courante):
@@ -185,3 +187,15 @@ func _declencher_explosion_impact() -> void:
 		particles.emitting = true
 		get_tree().create_timer(0.7, false).timeout.connect(particles.queue_free)
 	queue_free()
+
+func _infliger_degats_si_dans_la_lucarne() -> void:
+	if degats_deja_infliges or est_neutralise or not peut_blesser_joueur or not is_inside_tree():
+		return
+	var camera = get_viewport().get_camera_2d() if get_viewport() else null
+	if camera == null:
+		return
+	var taille_lucarne = Vector2(get_viewport().get_visible_rect().size)
+	var rect_lucarne = Rect2(camera.get_screen_center_position() - taille_lucarne / 2.0, taille_lucarne)
+	if rect_lucarne.has_point(global_position):
+		degats_deja_infliges = true
+		GlobalSettings.infliger_degats_joueur(degats_joueur)

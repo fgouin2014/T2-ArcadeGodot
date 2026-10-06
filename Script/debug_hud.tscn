@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b8yak4l2m1n3o"]
+
+[ext_resource type="Script" path="res://Script/debug_hud.gd" id="1_debug_hud"]
+
+[node name="DebugHUD" type="CanvasLayer"]
+script = ExtResource("1_debug_hud")
+
+[node name="LabelJug" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 410.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 14
+text = "[JUG] Aucune donnée"
+
+[node name="LabelCopter" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 14
+text = "[COPTER] Aucune donnée"
+
+[node name="LabelVan" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = -250.0
+offset_right = -10.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 14
+text = "[VAN] Aucune donnée"
+
+[node name="LabelHealth" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -250.0
+offset_right = 410.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 14
+text = "[HEALTH] Aucune donnée"

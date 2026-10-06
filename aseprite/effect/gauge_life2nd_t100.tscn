@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bdctqj6qbplup"]
+
+[ext_resource type="Script" path="res://Script/gauge_life2nd_t100.gd" id="1_gauge2nd_script"]
+[ext_resource type="Texture2D" uid="uid://d3xnbt23le7y5" path="res://maps/backdrops/level1/xt100_gauge.png" id="1_6wmim"]
+
+[node name="GaugeLife2ndT1000" type="Node2D" unique_id=713733633]
+script = ExtResource("1_gauge2nd_script")
+
+[node name="SpriteGauge" type="Sprite2D" parent="." unique_id=1276788437]
+position = Vector2(92, 4)
+texture = ExtResource("1_6wmim")
+
+[node name="GaugeLife2ndT100" type="ColorRect" parent="SpriteGauge" unique_id=9113890]
+offset_left = -60.666656
+offset_top = -2.9999993
+offset_right = 67.33334
+offset_bottom = 4.000001
+color = Color(0.34509805, 0.31764707, 0.52156866, 0.7921569)
+metadata/_edit_use_anchors_ = true

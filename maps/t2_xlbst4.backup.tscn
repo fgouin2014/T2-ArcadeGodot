@@ -1,0 +1,376 @@
+[gd_scene format=3 uid="uid://c36hq4hyngst1"]
+
+[ext_resource type="Texture2D" uid="uid://c4w0k53wef7hl" path="res://maps/backdrops/level1/xlbstr3_04.png" id="1_8y77e"]
+[ext_resource type="Texture2D" uid="uid://dks5tnxtpj05l" path="res://maps/backdrops/level1/xlbstr1_00.png" id="2_ymcem"]
+[ext_resource type="Texture2D" uid="uid://n2vc5fw3dht8" path="res://maps/backdrops/level1/xlbstr1_01.png" id="3_8e6jk"]
+[ext_resource type="Texture2D" uid="uid://droqkh6arkp3w" path="res://maps/backdrops/level1/xlbstr1_02.png" id="4_ldra3"]
+[ext_resource type="Texture2D" uid="uid://sr1vry01cato" path="res://maps/backdrops/level1/xlbstr1_03.png" id="5_e7oam"]
+[ext_resource type="Texture2D" uid="uid://h5k6bqjg4per" path="res://maps/backdrops/level1/xlbstr1_04.png" id="6_jvrbt"]
+[ext_resource type="Texture2D" uid="uid://v58jlcbh6u5u" path="res://maps/backdrops/level1/xlbstr2_00.png" id="7_f87b7"]
+[ext_resource type="Texture2D" uid="uid://cfccysxliyw4b" path="res://maps/backdrops/level1/xlbstr2_01.png" id="8_w4850"]
+[ext_resource type="Texture2D" uid="uid://dr0iu4aonqifx" path="res://maps/backdrops/level1/xlbstr2_02.png" id="9_0wp0u"]
+[ext_resource type="Texture2D" uid="uid://c6u7veps6yws2" path="res://maps/backdrops/level1/xlbstr2_03.png" id="10_fv8i5"]
+[ext_resource type="Texture2D" uid="uid://b426muiterodi" path="res://maps/backdrops/level1/xlbstr2_04.png" id="11_dadao"]
+[ext_resource type="Texture2D" uid="uid://bp4iadxphtjx" path="res://maps/backdrops/level1/xlbstr3_00.png" id="12_otgnu"]
+[ext_resource type="Texture2D" uid="uid://ee54dmypqb7m" path="res://maps/backdrops/level1/xlbstr3_01.png" id="13_f6wft"]
+[ext_resource type="Texture2D" uid="uid://bm6xm4bpwh2hp" path="res://maps/backdrops/level1/xlbstr3_02.png" id="14_nvuar"]
+[ext_resource type="Texture2D" uid="uid://c31g584acbcd3" path="res://maps/backdrops/level1/xlbstr3_03.png" id="15_cwi3k"]
+[ext_resource type="Texture2D" uid="uid://ct1wfgpxxf2y1" path="res://maps/backdrops/level1/xlbstr4_00.png" id="16_nmb1o"]
+[ext_resource type="Texture2D" uid="uid://2xqty7i7hbao" path="res://maps/backdrops/level1/xlbstr4_01.png" id="17_8c5sx"]
+[ext_resource type="Texture2D" uid="uid://d22u4gakf5rgu" path="res://maps/backdrops/level1/xlbstr4_02.png" id="18_kjqrc"]
+[ext_resource type="Texture2D" uid="uid://dfo8xkop3aw2y" path="res://maps/backdrops/level1/xlbstr4_03.png" id="19_jar3w"]
+[ext_resource type="Texture2D" uid="uid://cdk6heh318kpj" path="res://maps/backdrops/level1/xlbstr4_04.png" id="20_41q3o"]
+[ext_resource type="Texture2D" uid="uid://br3vctkw4qs0r" path="res://maps/backdrops/level1/xlbstr4_05.png" id="21_k2kkq"]
+[ext_resource type="PackedScene" uid="uid://c25i5cepive6w" path="res://aseprite/effect/cluster_lab1.tscn" id="22_0aoan"]
+[ext_resource type="PackedScene" uid="uid://10jhw384s2l3" path="res://aseprite/effect/cluster_lab2.tscn" id="23_gftdb"]
+[ext_resource type="PackedScene" uid="uid://dffkd8h1dh47x" path="res://aseprite/effect/cluster_lab3.tscn" id="24_8hva1"]
+[ext_resource type="PackedScene" uid="uid://chpuognsognrm" path="res://aseprite/effect/cluster_lab4.tscn" id="25_37140"]
+[ext_resource type="PackedScene" uid="uid://b7pgbo2vo1lwj" path="res://aseprite/effect/cluster_lab5.tscn" id="26_eli5x"]
+[ext_resource type="PackedScene" uid="uid://disn1jnp2dpqq" path="res://aseprite/effect/cluster_lab6.tscn" id="27_tguf1"]
+[ext_resource type="Texture2D" uid="uid://ctjr2tjv17avc" path="res://maps/backdrops/level1/xcybstr1_06.png" id="28_yliju"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/frontdesk_lab_table.tscn" id="29_kfsk1"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/frontdesk_lab_counter.tscn" id="30_4ch3f"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="31_wg711"]
+
+[node name="t2_xlbst4" type="Node2D" unique_id=1190888409]
+metadata/horizonTiled = 150.0
+metadata/uniformScale = true
+
+[node name="t2_xlbst4 (PBG)" type="ParallaxBackground" parent="." unique_id=1642448600]
+
+[node name="background (PL)" type="ParallaxLayer" parent="t2_xlbst4 (PBG)" unique_id=591167376]
+motion_scale = Vector2(1, 0)
+
+[node name="Windows_Props" type="Node2D" parent="t2_xlbst4 (PBG)/background (PL)" unique_id=483401715]
+
+[node name="bck_0" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1521980893]
+texture = ExtResource("1_8y77e")
+centered = false
+
+[node name="bck_1" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1328988356]
+position = Vector2(64, 0)
+texture = ExtResource("1_8y77e")
+centered = false
+
+[node name="bck_2" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1457117969]
+position = Vector2(128, 0)
+texture = ExtResource("1_8y77e")
+centered = false
+
+[node name="bck_3" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=326041464]
+position = Vector2(192, 0)
+texture = ExtResource("2_ymcem")
+centered = false
+
+[node name="bck_4" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=789939960]
+position = Vector2(256, 0)
+texture = ExtResource("3_8e6jk")
+centered = false
+
+[node name="bck_5" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1045403213]
+position = Vector2(256, 0)
+texture = ExtResource("3_8e6jk")
+centered = false
+
+[node name="bck_6" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1649422593]
+position = Vector2(320, 0)
+texture = ExtResource("4_ldra3")
+centered = false
+
+[node name="bck_7" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=519206122]
+position = Vector2(384, 0)
+texture = ExtResource("5_e7oam")
+centered = false
+
+[node name="bck_8" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=609030493]
+position = Vector2(448, 0)
+texture = ExtResource("6_jvrbt")
+centered = false
+
+[node name="bck_9" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1454086556]
+position = Vector2(512, 0)
+texture = ExtResource("1_8y77e")
+centered = false
+
+[node name="bck_10" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=735588895]
+position = Vector2(576, 0)
+texture = ExtResource("7_f87b7")
+centered = false
+
+[node name="bck_11" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1471674582]
+position = Vector2(640, 0)
+texture = ExtResource("8_w4850")
+centered = false
+
+[node name="bck_12" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1919172311]
+position = Vector2(704, 0)
+texture = ExtResource("9_0wp0u")
+centered = false
+
+[node name="bck_13" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=919749217]
+position = Vector2(768, 0)
+texture = ExtResource("10_fv8i5")
+centered = false
+
+[node name="bck_14" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=809646725]
+position = Vector2(832, 0)
+texture = ExtResource("7_f87b7")
+centered = false
+
+[node name="bck_15" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1800349828]
+position = Vector2(896, 0)
+texture = ExtResource("8_w4850")
+centered = false
+
+[node name="bck_16" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1856736263]
+position = Vector2(960, 0)
+texture = ExtResource("1_8y77e")
+centered = false
+
+[node name="bck_17" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=884985302]
+position = Vector2(1024, 0)
+texture = ExtResource("11_dadao")
+centered = false
+
+[node name="bck_18" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1452072138]
+position = Vector2(1088, 0)
+texture = ExtResource("9_0wp0u")
+centered = false
+
+[node name="bck_19" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1238284831]
+position = Vector2(1152, 0)
+texture = ExtResource("11_dadao")
+centered = false
+
+[node name="bck_20" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=289608123]
+position = Vector2(1216, 0)
+texture = ExtResource("12_otgnu")
+centered = false
+
+[node name="bck_21" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=720786755]
+position = Vector2(1280, 0)
+texture = ExtResource("13_f6wft")
+centered = false
+
+[node name="bck_22" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=917188400]
+position = Vector2(1344, 0)
+texture = ExtResource("14_nvuar")
+centered = false
+
+[node name="bck_23" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1439871297]
+position = Vector2(1408, 0)
+texture = ExtResource("15_cwi3k")
+centered = false
+
+[node name="bck_24" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=2017170101]
+position = Vector2(1470.3, 0)
+texture = ExtResource("1_8y77e")
+centered = false
+
+[node name="bck_25" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=161796870]
+position = Vector2(1534.3, 0)
+texture = ExtResource("12_otgnu")
+centered = false
+
+[node name="bck_26" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1223397586]
+position = Vector2(1598.3, 0)
+texture = ExtResource("13_f6wft")
+centered = false
+
+[node name="bck_27" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=69167243]
+position = Vector2(1662.3, 0)
+texture = ExtResource("14_nvuar")
+centered = false
+
+[node name="bck_28" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1121004186]
+position = Vector2(1726.3, 0)
+texture = ExtResource("15_cwi3k")
+centered = false
+
+[node name="bck_29" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1069153464]
+position = Vector2(1790.3, 0)
+texture = ExtResource("1_8y77e")
+centered = false
+
+[node name="bck_30" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=567189316]
+position = Vector2(1854.3, 0)
+texture = ExtResource("16_nmb1o")
+centered = false
+
+[node name="bck_31" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=140466997]
+position = Vector2(1918.3, 0)
+texture = ExtResource("17_8c5sx")
+centered = false
+
+[node name="bck_32" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=609010895]
+position = Vector2(1982.3, 0)
+texture = ExtResource("18_kjqrc")
+centered = false
+
+[node name="bck_33" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=467579244]
+position = Vector2(2046.3, 0)
+texture = ExtResource("19_jar3w")
+centered = false
+
+[node name="bck_34" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1393505415]
+position = Vector2(2110.3, 0)
+texture = ExtResource("20_41q3o")
+centered = false
+
+[node name="bck_35" type="Sprite2D" parent="t2_xlbst4 (PBG)/background (PL)/Windows_Props" unique_id=1151963541]
+position = Vector2(2174.3, 0)
+texture = ExtResource("21_k2kkq")
+centered = false
+
+[node name="props_node (PL)" type="ParallaxLayer" parent="t2_xlbst4 (PBG)" unique_id=135640873]
+motion_scale = Vector2(1, 0)
+
+[node name="Lab_Props" type="Node2D" parent="t2_xlbst4 (PBG)/props_node (PL)" unique_id=1699099186]
+z_index = 10
+
+[node name="cluster_lab1_g0" parent="t2_xlbst4 (PBG)/props_node (PL)/Lab_Props" unique_id=793989105 instance=ExtResource("22_0aoan")]
+position = Vector2(256, 0)
+
+[node name="cluster_lab2_g1" parent="t2_xlbst4 (PBG)/props_node (PL)/Lab_Props" unique_id=1568537109 instance=ExtResource("23_gftdb")]
+position = Vector2(576, 0)
+
+[node name="cluster_lab3_g2" parent="t2_xlbst4 (PBG)/props_node (PL)/Lab_Props" unique_id=519276176 instance=ExtResource("24_8hva1")]
+position = Vector2(1024, 0)
+
+[node name="cluster_lab4_g3" parent="t2_xlbst4 (PBG)/props_node (PL)/Lab_Props" unique_id=1830215216 instance=ExtResource("25_37140")]
+position = Vector2(1216, 0)
+
+[node name="cluster_lab5_g4" parent="t2_xlbst4 (PBG)/props_node (PL)/Lab_Props" unique_id=641078096 instance=ExtResource("26_eli5x")]
+position = Vector2(1534.3, 0)
+
+[node name="cluster_lab6_g5" parent="t2_xlbst4 (PBG)/props_node (PL)/Lab_Props" unique_id=964905827 instance=ExtResource("27_tguf1")]
+position = Vector2(1918.3, 0)
+
+[node name="floorground (PL)" type="ParallaxLayer" parent="t2_xlbst4 (PBG)" unique_id=403629528]
+motion_scale = Vector2(1, 0)
+
+[node name="floor" type="Node2D" parent="t2_xlbst4 (PBG)/floorground (PL)" unique_id=1778804347]
+texture_filter = 1
+
+[node name="floor_0" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=2032284646]
+position = Vector2(0, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_1" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=751015332]
+position = Vector2(128, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_2" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=25693782]
+position = Vector2(256, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_3" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=1136393508]
+position = Vector2(384, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_4" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=2096591275]
+position = Vector2(512, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_5" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=1401695386]
+position = Vector2(640, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_6" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=2040344302]
+position = Vector2(768, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_7" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=451590217]
+position = Vector2(896, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_8" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=1375411095]
+position = Vector2(1024, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_9" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=606160347]
+position = Vector2(1152, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_10" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=1443833258]
+position = Vector2(1280, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_11" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=1000302947]
+position = Vector2(1408, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_12" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=364891661]
+position = Vector2(1536, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_13" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=302166924]
+position = Vector2(1664, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_14" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=1472679783]
+position = Vector2(1792, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_15" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=968494845]
+position = Vector2(1920, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_16" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=508592465]
+position = Vector2(2048, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="floor_17" type="Sprite2D" parent="t2_xlbst4 (PBG)/floorground (PL)/floor" unique_id=1302271147]
+position = Vector2(2176, 121)
+texture = ExtResource("28_yliju")
+centered = false
+
+[node name="foreground (PL)" type="ParallaxLayer" parent="t2_xlbst4 (PBG)" unique_id=404408952]
+motion_scale = Vector2(1.5, 0)
+
+[node name="Foreground_Props" type="Node2D" parent="t2_xlbst4 (PBG)/foreground (PL)" unique_id=17951719]
+z_index = 20
+
+[node name="table_0" parent="t2_xlbst4 (PBG)/foreground (PL)/Foreground_Props" unique_id=2065844151 instance=ExtResource("29_kfsk1")]
+position = Vector2(279.7, 141.6)
+
+[node name="counter_1" parent="t2_xlbst4 (PBG)/foreground (PL)/Foreground_Props" unique_id=970732595 instance=ExtResource("30_4ch3f")]
+position = Vector2(497.6, 110.4)
+
+[node name="table_2" parent="t2_xlbst4 (PBG)/foreground (PL)/Foreground_Props" unique_id=1591872629 instance=ExtResource("29_kfsk1")]
+position = Vector2(873.5, 141.6)
+
+[node name="counter_3" parent="t2_xlbst4 (PBG)/foreground (PL)/Foreground_Props" unique_id=444610006 instance=ExtResource("30_4ch3f")]
+position = Vector2(1091.4, 110.4)
+
+[node name="table_4" parent="t2_xlbst4 (PBG)/foreground (PL)/Foreground_Props" unique_id=1523149487 instance=ExtResource("29_kfsk1")]
+position = Vector2(1467.2, 141.6)
+
+[node name="counter_5" parent="t2_xlbst4 (PBG)/foreground (PL)/Foreground_Props" unique_id=179029476 instance=ExtResource("30_4ch3f")]
+position = Vector2(1685.2, 110.4)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=59584913]
+limit_left = 0
+limit_top = 0
+limit_right = 2304
+limit_bottom = 175
+script = ExtResource("31_wg711")
+vitesse_auto = 20.0
+delai_intro_secondes = 0.1

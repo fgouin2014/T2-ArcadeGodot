@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://m6pqoa8c1y5n"]
+
+[ext_resource type="Texture2D" uid="uid://c4a5mkgupgqat" path="res://maps/backdrops/level1/xl4bits2_tank_placeholder.png" id="1_6tvax"]
+[ext_resource type="Script" uid="uid://baloyvvlfvc1l" path="res://Script/BreakableReservoir.gd" id="2_script_res"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kufsv"]
+size = Vector2(80, 103)
+
+[node name="breakable_reservoir" type="Node2D" unique_id=1387102078]
+script = ExtResource("2_script_res")
+pv_max = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=123456789]
+texture = ExtResource("1_6tvax")
+
+[node name="HitArea" type="Area2D" parent="." unique_id=1654999565]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" unique_id=1783375303]
+shape = SubResource("RectangleShape2D_kufsv")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=869348844]
+rect = Rect2(-40, -52, 80, 103)

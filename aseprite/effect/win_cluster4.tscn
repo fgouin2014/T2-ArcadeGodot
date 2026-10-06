@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://Script/breakable_window.gd" id="1"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xcybstr1_02.png" id="2"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xcybstr2_02.png" id="3"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xcybstr1_04.png" id="4"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xcybstr2_04.png" id="5"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xcybstr1_00.png" id="6"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xcybstr2_00.png" id="7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(128, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2"]
+size = Vector2(128, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3"]
+size = Vector2(128, 32)
+
+[node name="win_cluster4" type="Node2D"]
+script = ExtResource("1")
+
+[node name="g43" type="Sprite2D" parent="."]
+position = Vector2(64.0, 52.0)
+texture = ExtResource("2")
+metadata/damaged_texture = ExtResource("3")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="g43"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g43/HitArea"]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="g42" type="Sprite2D" parent="."]
+position = Vector2(64.0, 92.0)
+texture = ExtResource("4")
+metadata/damaged_texture = ExtResource("5")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="g42"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g42/HitArea"]
+shape = SubResource("RectangleShape2D_2")
+
+[node name="g44" type="Sprite2D" parent="."]
+position = Vector2(64.0, 16.0)
+texture = ExtResource("6")
+metadata/damaged_texture = ExtResource("7")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="g44"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="g44/HitArea"]
+shape = SubResource("RectangleShape2D_3")

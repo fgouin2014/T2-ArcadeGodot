@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://s8hilirn5x63"]
+
+[ext_resource type="Script" uid="uid://bfitee5ek3oiq" path="res://aseprite/vehicules/xcopter.gd" id="1_yp53h"]
+[ext_resource type="Texture2D" uid="uid://cpwodmufknra1" path="res://maps/backdrops/level1/xcopter_00.png" id="2_rdyt7"]
+[ext_resource type="Texture2D" uid="uid://clt5rsa3f562d" path="res://maps/backdrops/level1/xcopter_01.png" id="3_6k1x0"]
+[ext_resource type="Texture2D" uid="uid://cqvr0b4272l4y" path="res://maps/backdrops/level1/xcopter_02.png" id="4_fuxbi"]
+[ext_resource type="Texture2D" uid="uid://4frnov2s3qsh" path="res://maps/backdrops/level1/xcopter_03.png" id="5_plgsk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcopter_box"]
+size = Vector2(191, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khm7j"]
+size = Vector2(19.267038, 20.73508)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xcopter_rotors"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rdyt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6k1x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fuxbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_plgsk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="XCopterBoss" type="CharacterBody2D" unique_id=1273735476]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_yp53h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1149936577]
+position = Vector2(95.5, 20)
+shape = SubResource("RectangleShape2D_xcopter_box")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=757205394]
+position = Vector2(137.37912, 54.51356)
+scale = Vector2(5.644783, 1.3972882)
+shape = SubResource("RectangleShape2D_khm7j")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=2045989698]
+rect = Rect2(0, 0, 192, 70)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=552001979]
+sprite_frames = SubResource("SpriteFrames_xcopter_rotors")
+autoplay = "default"
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=587515353]
+position = Vector2(136, 53)
+texture = ExtResource("5_plgsk")

@@ -1,19 +1,205 @@
 [gd_scene format=3 uid="uid://cm6uvtf5h3x4k"]
 
 [ext_resource type="PackedScene" uid="uid://uaqwj23rl6yn" path="res://maps/backdrops/level1/t2_xl1bck1.tmj" id="1_1p3gf"]
+[ext_resource type="Script" uid="uid://v18o8mwi32ej" path="res://Script/stop_marker.gd" id="2_y41sw"]
+[ext_resource type="PackedScene" path="res://aseprite/xarnb.tscn" id="3_hkjt0"]
+[ext_resource type="PackedScene" path="res://aseprite/xarnm.tscn" id="4_dp0rg"]
+[ext_resource type="PackedScene" path="res://aseprite/xarns.tscn" id="5_3i48f"]
+[ext_resource type="PackedScene" uid="uid://bp616wun8gab5" path="res://aseprite/xmedend.tscn" id="6_ci61n"]
+[ext_resource type="PackedScene" uid="uid://c61g3a4bigend" path="res://aseprite/xbigend.tscn" id="7_ct6wg"]
+[ext_resource type="PackedScene" path="res://aseprite/xendrop.tscn" id="8_jmidp"]
+[ext_resource type="PackedScene" path="res://aseprite/xtech.tscn" id="9_tl665"]
+[ext_resource type="PackedScene" uid="uid://cdbypxypgaysu" path="res://aseprite/xfrdfhk.tscn" id="10_dhk2t"]
+[ext_resource type="PackedScene" path="res://aseprite/xgigend.tscn" id="11_crqpf"]
+[ext_resource type="PackedScene" path="res://aseprite/xethrow.tscn" id="12_ha5fe"]
+[ext_resource type="PackedScene" path="res://aseprite/xojc.tscn" id="13_q4j05"]
+[ext_resource type="PackedScene" path="res://aseprite/xyjc.tscn" id="14_rdkn4"]
+[ext_resource type="PackedScene" path="res://aseprite/xt100.tscn" id="15_wnq0i"]
+[ext_resource type="PackedScene" path="res://aseprite/xarng.tscn" id="16_xs237"]
+[ext_resource type="PackedScene" path="res://aseprite/xsarah.tscn" id="17_g5u5v"]
+[ext_resource type="PackedScene" path="res://aseprite/xswat.tscn" id="18_4d37j"]
+[ext_resource type="PackedScene" path="res://aseprite/xt100big.tscn" id="19_adf6n"]
+[ext_resource type="PackedScene" path="res://aseprite/xbighk.tscn" id="20_2nfld"]
+[ext_resource type="PackedScene" uid="uid://bpjtcyerx3bgp" path="res://aseprite/xl1ghk.tscn" id="21_o4cbf"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="22_hkjt0"]
+[ext_resource type="PackedScene" uid="uid://bxefcghj2lfeo" path="res://aseprite/xmedfwrd.tscn" id="23_3i48f"]
+[ext_resource type="PackedScene" path="res://aseprite/xpickup_14_missile.tscn" id="24_ci61n"]
 
 [node name="t2_xl1bck1" unique_id=936620757 instance=ExtResource("1_1p3gf")]
 
-[node name="sol_0 (PL)" parent="." index="1" unique_id=581239224]
+[node name="sol_0 (PL)" parent="." index="1" unique_id=349364029]
 motion_scale = Vector2(1, 0)
 
-[node name="sol_1 (PL)" parent="." index="2" unique_id=442073876]
-motion_scale = Vector2(0.8, 0)
-
-[node name="breakable_walls (PL)" parent="." index="7" unique_id=1179943918]
+[node name="breakable_walls (PL)" parent="." index="7" unique_id=858360264]
 position = Vector2(-15, 0)
 motion_scale = Vector2(0.8, 0)
 
-[node name="barricade_walls (PL)" parent="." index="8" unique_id=2058116347]
+[node name="barricade_walls (PL)" parent="." index="8" unique_id=235097465]
 position = Vector2(-15, 0)
 motion_scale = Vector2(0.8, 0)
+
+[node name="EnnemisPlaces" type="Node2D" parent="." index="9" unique_id=1096458074]
+
+[node name="Stop" type="Marker2D" parent="EnnemisPlaces" index="0" unique_id=371354940]
+position = Vector2(836, 174)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+script = ExtResource("2_y41sw")
+temps_pause = 5.0
+
+[node name="StartLevel" type="Marker2D" parent="EnnemisPlaces" index="1" unique_id=769011094]
+position = Vector2(150, 174)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+script = ExtResource("2_y41sw")
+temps_pause = 5.0
+
+[node name="Stop2" type="Marker2D" parent="EnnemisPlaces" index="2" unique_id=418039106]
+position = Vector2(3314, 174)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+script = ExtResource("2_y41sw")
+alignement = "Bord_Gauche"
+
+[node name="Stop3" type="Marker2D" parent="EnnemisPlaces" index="3" unique_id=90286657]
+position = Vector2(3959, 174)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+script = ExtResource("2_y41sw")
+
+[node name="Stop4" type="Marker2D" parent="EnnemisPlaces" index="4" unique_id=1402427113]
+position = Vector2(5469, 174)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+script = ExtResource("2_y41sw")
+alignement = "Bord_Gauche"
+
+[node name="Take" type="Marker2D" parent="EnnemisPlaces" index="5" unique_id=903966237]
+position = Vector2(3200, 113)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+
+[node name="xarnb" parent="EnnemisPlaces" index="6" unique_id=1245477697 instance=ExtResource("3_hkjt0")]
+position = Vector2(2703, 116)
+
+[node name="xarnm" parent="EnnemisPlaces" index="7" unique_id=184065558 instance=ExtResource("4_dp0rg")]
+position = Vector2(3441, 119)
+
+[node name="xarns" parent="EnnemisPlaces" index="8" unique_id=1771328895 instance=ExtResource("5_3i48f")]
+position = Vector2(3365, 125)
+
+[node name="xmedend" parent="EnnemisPlaces" index="9" unique_id=506116651 instance=ExtResource("6_ci61n")]
+position = Vector2(360, 89)
+direction_deplacement = "gauche_vers_droite"
+vitesse_deplacement = 0.0
+
+[node name="xbigend" parent="EnnemisPlaces" index="10" unique_id=1421257982 instance=ExtResource("7_ct6wg")]
+position = Vector2(468, 113)
+direction_deplacement = "gauche_vers_droite"
+
+[node name="xendrop" parent="EnnemisPlaces" index="11" unique_id=1031238359 instance=ExtResource("8_jmidp")]
+position = Vector2(2823, 92)
+
+[node name="xtech" parent="EnnemisPlaces" index="12" unique_id=927876339 instance=ExtResource("9_tl665")]
+position = Vector2(548, 124)
+
+[node name="xfrdfhk" parent="EnnemisPlaces" index="13" unique_id=920504631 instance=ExtResource("10_dhk2t")]
+position = Vector2(150, 30)
+motion_mode = 1
+slide_on_ceiling = false
+vitesse_deplacement = 0.0
+
+[node name="xgigend" parent="EnnemisPlaces" index="14" unique_id=1603122878 instance=ExtResource("11_crqpf")]
+position = Vector2(638, 109)
+pv_max = 15
+
+[node name="xethrow" parent="EnnemisPlaces" index="15" unique_id=842568880 instance=ExtResource("12_ha5fe")]
+position = Vector2(266, 92)
+slide_on_ceiling = false
+inverser_visuel = false
+
+[node name="xojc" parent="EnnemisPlaces" index="16" unique_id=137805907 instance=ExtResource("13_q4j05")]
+position = Vector2(2895, 117)
+direction_deplacement = "gauche_vers_droite"
+
+[node name="xyjc" parent="EnnemisPlaces" index="17" unique_id=467067511 instance=ExtResource("14_rdkn4")]
+position = Vector2(3002, 113)
+drop_aleatoire = false
+inverser_visuel = false
+
+[node name="xt100" parent="EnnemisPlaces" index="18" unique_id=558473594 instance=ExtResource("15_wnq0i")]
+position = Vector2(915, 87)
+direction_deplacement = "gauche_vers_droite"
+
+[node name="xarng" parent="EnnemisPlaces" index="19" unique_id=707583404 instance=ExtResource("16_xs237")]
+position = Vector2(1058, 113)
+pv_max = 15
+
+[node name="xsarah" parent="EnnemisPlaces" index="20" unique_id=1428126751 instance=ExtResource("17_g5u5v")]
+position = Vector2(300, 102)
+
+[node name="xswat" parent="EnnemisPlaces" index="21" unique_id=1800680634 instance=ExtResource("18_4d37j")]
+position = Vector2(1469, 109)
+
+[node name="xt100big" parent="EnnemisPlaces" index="22" unique_id=535106262 instance=ExtResource("19_adf6n")]
+position = Vector2(1730, 110)
+pv_max = 15
+
+[node name="xbighk" parent="EnnemisPlaces" index="23" unique_id=1397513630 instance=ExtResource("20_2nfld")]
+position = Vector2(2301, 39)
+
+[node name="xl1ghk" parent="EnnemisPlaces" index="24" unique_id=1636552812 instance=ExtResource("21_o4cbf")]
+position = Vector2(5520, 117)
+
+[node name="Camera2D" type="Camera2D" parent="." index="10" unique_id=941536997]
+limit_left = 0
+limit_top = 0
+limit_right = 5632
+limit_bottom = 175
+script = ExtResource("22_hkjt0")
+delai_intro_secondes = 20.0
+alignement_stop = "Centre_Viseur"
+verrouillee = false
+cadencement_tir_cooldown = 0.05
+
+[node name="realennemies" type="Node2D" parent="." index="11" unique_id=1882870390]
+
+[node name="xmedfwrd_1" parent="realennemies" index="0" unique_id=1285969016 instance=ExtResource("23_3i48f")]
+position = Vector2(105, 76)
+delai_activation_sec = 1.5
+direction_deplacement = "gauche_vers_droite"
+
+[node name="xmedfwrd_2" parent="realennemies" index="1" unique_id=910669795 instance=ExtResource("23_3i48f")]
+position = Vector2(166, 77)
+delai_activation_sec = 2.0
+
+[node name="xmedfwrd_4" parent="realennemies" index="2" unique_id=255013599 instance=ExtResource("23_3i48f")]
+position = Vector2(117, 77)
+delai_activation_sec = 7.5
+repeter_spawn = true
+intervalle_repetition = 2.0
+nombre_max_spawns = 3
+stopper_spawn_a_la_mort = false
+
+[node name="xmedfwrd_5" parent="realennemies" index="3" unique_id=1830886336 instance=ExtResource("23_3i48f")]
+position = Vector2(336, 87)
+delai_activation_sec = 1.0
+repeter_spawn = true
+intervalle_repetition = 2.0
+nombre_max_spawns = 3
+stopper_spawn_a_la_mort = false
+
+[node name="xmedfwrd_6" parent="realennemies" index="4" unique_id=968911943 instance=ExtResource("23_3i48f")]
+position = Vector2(377, 88)
+delai_activation_sec = 1.0
+repeter_spawn = true
+intervalle_repetition = 2.0
+nombre_max_spawns = 3
+stopper_spawn_a_la_mort = false
+
+[node name="xmedfwrd_3" parent="realennemies" index="5" unique_id=985629735 instance=ExtResource("23_3i48f")]
+position = Vector2(217, 77)
+delai_activation_sec = 3.0
+
+[node name="xpickup_14_missile" parent="realennemies" index="6" unique_id=743417474 instance=ExtResource("24_ci61n")]
+position = Vector2(51, 133)

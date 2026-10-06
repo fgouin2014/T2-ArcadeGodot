@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://uiot2ul0cujl"]
+
+[ext_resource type="Script" uid="uid://cw8bo4m3lycvr" path="res://Script/breakable_prop.gd" id="1_kgty0"]
+[ext_resource type="Texture2D" uid="uid://bhcru14dfryud" path="res://maps/backdrops/level1/xl4lamp_05.png" id="2_xdkhy"]
+[ext_resource type="Texture2D" uid="uid://cb78yc7vcts7c" path="res://maps/backdrops/level1/xl4lamp_00.png" id="3_ua5sr"]
+[ext_resource type="Texture2D" uid="uid://c1uy3ollc5fw5" path="res://maps/backdrops/level1/xl4lamp_01.png" id="4_niuyr"]
+[ext_resource type="Texture2D" uid="uid://cwhu06jxlhkp6" path="res://maps/backdrops/level1/xl4lamp_02.png" id="5_oher8"]
+[ext_resource type="Texture2D" uid="uid://0jou0an4opv4" path="res://maps/backdrops/level1/xl4lamp_03.png" id="6_ddgki"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y170w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xdkhy")
+}],
+"loop": 1,
+"name": &"broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xdkhy")
+}],
+"loop": 1,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ua5sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_niuyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oher8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ddgki")
+}],
+"loop": 1,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(25.960167, 48.674263)
+
+[node name="xl4fen_light" type="Node2D" unique_id=387680292]
+script = ExtResource("1_kgty0")
+
+[node name="light" type="AnimatedSprite2D" parent="." unique_id=1979647287]
+position = Vector2(12, 16)
+sprite_frames = SubResource("SpriteFrames_y170w")
+animation = &"on"
+autoplay = "on"
+frame_progress = 0.6316351
+metadata/destructible = true
+metadata/hp = 1
+metadata/damaged_texture = ExtResource("2_xdkhy")
+
+[node name="HitArea" type="Area2D" parent="light" unique_id=347971770]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="light/HitArea" unique_id=417508383]
+position = Vector2(0, -0.5)
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")

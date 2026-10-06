@@ -38,6 +38,7 @@ extends Node2D
 var apercu_sprite: Sprite2D = null
 var compte_spawns: int = 0
 var deja_demarre: bool = false
+var _camera_stop_declencheur: CameraStopDeclencheur = null
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -57,31 +58,26 @@ func _enter_tree() -> void:
 	if Engine.is_editor_hint():
 		mettre_a_jour_apercu_visuel()
 
+func _stop_declencheur_ignore_camera() -> bool:
+	return deja_demarre
+
 func _connecter_declencheur_stop() -> void:
-	if declencheur_stop != null and not declencheur_stop.is_empty():
-		var node = get_node_or_null(declencheur_stop)
-		if node:
-			if node.has_signal("stop_enclenche"):
-				if not node.stop_enclenche.is_connected(_on_stop_declenche):
-					node.stop_enclenche.connect(_on_stop_declenche)
-				return
+	if _camera_stop_declencheur == null:
+		_camera_stop_declencheur = CameraStopDeclencheur.new()
+		_camera_stop_declencheur.configure(
+			self,
+			declencheur_stop,
+			nom_stop_declencheur,
+			"activer_quand_atteint",
+			_on_stop_declenche,
+			_stop_declencheur_ignore_camera
+		)
+	_camera_stop_declencheur.connect_signals()
 
-	var camera = get_viewport().get_camera_2d() if get_viewport() else null
-	if camera and camera.has_signal("camera_stop_atteint"):
-		if not camera.camera_stop_atteint.is_connected(_on_camera_stop_atteint):
-			camera.camera_stop_atteint.connect(_on_camera_stop_atteint)
-
-func _on_camera_stop_atteint(node_stop: Node2D, nom_stop: String) -> void:
-	if deja_demarre:
-		return
-	if nom_stop_declencheur != "" and (nom_stop == nom_stop_declencheur or (node_stop and node_stop.name == nom_stop_declencheur)):
-		_on_stop_declenche()
-	elif declencheur_stop != null and not declencheur_stop.is_empty():
-		var target_node = get_node_or_null(declencheur_stop)
-		if target_node == node_stop:
-			_on_stop_declenche()
-	elif nom_stop_declencheur == "" and (declencheur_stop == null or declencheur_stop.is_empty()):
-		_on_stop_declenche()
+func _exit_tree() -> void:
+	if _camera_stop_declencheur:
+		_camera_stop_declencheur.deconnecter()
+		_camera_stop_declencheur = null
 
 func _on_stop_declenche() -> void:
 	if not deja_demarre:
@@ -153,7 +149,6 @@ func generer_ennemi() -> void:
 		var scene = load(chemin_scene) as PackedScene
 		if scene:
 			var ennemi = scene.instantiate() as Node2D
-			ennemi.global_position = global_position
 			
 			# Configuration de xbigend (le seul qui s'arrête pour tirer : walk -> stop -> idle -> shoot -> walk)
 			if type_ennemi == "xbigend":
@@ -203,8 +198,9 @@ func generer_ennemi() -> void:
 				ennemi.delai_activation_sec = delai_activation_ennemi
 				
 			get_parent().add_child(ennemi)
+			ennemi.position = position
 			compte_spawns += 1
-			print("[SPAWNER] Ennemi généré (#", compte_spawns, ") : ", type_ennemi, " (Dir: ", direction_deplacement, ", Flip: ", inverser_visuel, ", Vitesse: ", vitesse_deplacement, ") à : ", global_position)
+			print("[SPAWNER] Ennemi généré (#", compte_spawns, ") : ", type_ennemi, " (Dir: ", direction_deplacement, ", Flip: ", inverser_visuel, ", Vitesse: ", vitesse_deplacement, ") à : ", position)
 	
 	# Gestion de la répétition / vagues d'ennemis
 	if repeter_spawn and (nombre_max_spawns <= 0 or compte_spawns < nombre_max_spawns):

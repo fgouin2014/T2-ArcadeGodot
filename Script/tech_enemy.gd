@@ -20,6 +20,7 @@ func _sequence_drop_puis_walk() -> void:
 	a_lance_projectile_ce_cycle = false
 	if possede_animation("throw"):
 		jouer_animation("throw")
+		_lancer_projectile()
 		await _attendre_fin_animation_ou_timer(0.8)
 	
 	if not est_actif(): return

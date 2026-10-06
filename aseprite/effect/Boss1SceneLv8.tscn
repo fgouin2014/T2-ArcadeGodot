@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://co7bpbhnqp6xe"]
+
+[ext_resource type="Texture2D" uid="uid://f1ilhyhxppfp" path="res://maps/backdrops/level1/xfback_02.png" id="1_japm2"]
+[ext_resource type="Texture2D" uid="uid://dhvdtlem2csln" path="res://maps/backdrops/level1/xfback_03.png" id="2_vwh8n"]
+[ext_resource type="Texture2D" uid="uid://bpxflyxncxhs7" path="res://maps/backdrops/level1/xjug_placeholder.png" id="3_vwh8n"]
+[ext_resource type="Script" uid="uid://d22ctu2bfb8u5" path="res://Script/boss_tank_target.gd" id="4_tank_script"]
+[ext_resource type="PackedScene" uid="uid://dv31du47xsg3p" path="res://aseprite/xt100.tscn" id="6_uhds8"]
+[ext_resource type="Script" uid="uid://v18o8mwi32ej" path="res://Script/stop_marker.gd" id="7_7xp78"]
+[ext_resource type="PackedScene" uid="uid://c74d4qhk2bau2" path="res://aseprite/effect/gauge_life_t100.tscn" id="7_l4n8k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vlvm"]
+size = Vector2(334, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kufsv"]
+size = Vector2(40, 63)
+
+[node name="Boss1SceneLv8" type="Node2D" unique_id=1139805669]
+script = ExtResource("4_tank_script")
+
+[node name="sol" type="Node2D" parent="." unique_id=992759184]
+
+[node name="xfback_02" type="Sprite2D" parent="sol" unique_id=1200266176]
+position = Vector2(-0.98999023, 168)
+texture = ExtResource("1_japm2")
+offset = Vector2(128, -12)
+
+[node name="xfback_06" type="Sprite2D" parent="sol" unique_id=342043610]
+z_index = 2
+position = Vector2(-0.98999023, 180)
+texture = ExtResource("2_vwh8n")
+offset = Vector2(128, -12)
+
+[node name="xfback_03" type="Sprite2D" parent="sol" unique_id=950464436]
+position = Vector2(255, 168)
+texture = ExtResource("1_japm2")
+offset = Vector2(128, -12)
+
+[node name="xfback_07" type="Sprite2D" parent="sol" unique_id=920048783]
+z_index = 2
+position = Vector2(255, 180)
+texture = ExtResource("2_vwh8n")
+offset = Vector2(128, -12)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=96041058]
+position = Vector2(-1.4700012, 161.08)
+texture = ExtResource("3_vwh8n")
+offset = Vector2(243, -77.5)
+
+[node name="HitAreaTank" type="Area2D" parent="Sprite2D" unique_id=852917960]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HitAreaTank" unique_id=1302257883]
+position = Vector2(225.47, -83.08)
+shape = SubResource("RectangleShape2D_6vlvm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/HitAreaTank" unique_id=555052077]
+position = Vector2(38.47, -91.58)
+shape = SubResource("RectangleShape2D_kufsv")
+
+[node name="GaugeLifeT1000" parent="." unique_id=713733633 instance=ExtResource("7_l4n8k")]
+position = Vector2(94, 5)
+vitesse_drainage = 1.0
+vitesse_recharge = 0.5
+degats_gauge_par_tir_principale = 2.0
+degats_gauge_par_tir_secondaire = 8.0
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1442229875]
+
+[node name="xt100" parent="Node2D" unique_id=1719824673 instance=ExtResource("6_uhds8")]
+position = Vector2(280.59998, 168)
+collision_mask = 9
+jouer_form_a_l_activation = true
+tomber_du_ciel = false
+declencheur_stop = NodePath("../Stop1stFight")
+nom_stop_declencheur = "Stop1stFight"
+
+[node name="Stop1stFight" type="Marker2D" parent="Node2D" unique_id=692935400]
+position = Vector2(42.599976, 174)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+script = ExtResource("7_7xp78")
+temps_pause = 3.0
+locked = true

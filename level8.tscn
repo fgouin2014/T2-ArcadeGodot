@@ -1,0 +1,539 @@
+[gd_scene format=3 uid="uid://be6tc6ch7ahdu"]
+
+[ext_resource type="Texture2D" uid="uid://c4lpgjvdoyebm" path="res://maps/backdrops/level1/xfback_00.png" id="1_kb82b"]
+[ext_resource type="PackedScene" uid="uid://3ov0eu3g3a6e" path="res://aseprite/effect/foundry_fight.tscn" id="2_bjcmt"]
+[ext_resource type="Texture2D" uid="uid://clkudolrtls7i" path="res://maps/backdrops/level1/xfgird_00.png" id="3_v1sto"]
+[ext_resource type="Texture2D" uid="uid://ceurfaif7wtxo" path="res://maps/backdrops/level1/xfgird_01.png" id="4_50po6"]
+[ext_resource type="Texture2D" uid="uid://dcssu6tjg0ab3" path="res://maps/backdrops/level1/xfgird_02.png" id="5_vqq8x"]
+[ext_resource type="Texture2D" uid="uid://glwvfyl7pcpx" path="res://maps/backdrops/level1/xfgird_03.png" id="6_add58"]
+[ext_resource type="PackedScene" uid="uid://hu54csq2gli0" path="res://aseprite/xyjc.tscn" id="11_bjcmt"]
+[ext_resource type="Texture2D" uid="uid://bab3b0s7jtww4" path="res://maps/backdrops/level1/xfback_01.png" id="11_s0shk"]
+[ext_resource type="PackedScene" uid="uid://co7bpbhnqp6xe" path="res://aseprite/effect/Boss1SceneLv8.tscn" id="12_c4goh"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="13_bojca"]
+[ext_resource type="Script" uid="uid://bc7rub1q5vnpd" path="res://Script/actor_trigger_marker.gd" id="14_add58"]
+[ext_resource type="Script" uid="uid://v18o8mwi32ej" path="res://Script/stop_marker.gd" id="15_v1sto"]
+[ext_resource type="Script" uid="uid://b4xuo8cuwssx4" path="res://Script/text_trigger_marker.gd" id="17_text"]
+[ext_resource type="Script" uid="uid://b2nps00517wjj" path="res://Script/ballistic_trigger_marker.gd" id="18_ballistic"]
+[ext_resource type="PackedScene" uid="uid://cja6i7ffukf4q" path="res://aseprite/xpickup_12_shotgun_shell.tscn" id="19_xpick12"]
+
+[sub_resource type="Animation" id="Animation_vqq8x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1536, 175)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../xfback_08:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1536, 343)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../xfback_08:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../xfback_09:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1536, 511)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../xfback_09:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_add58"]
+resource_name = "xfback_move_up"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1536, 175), Vector2(1536, -161)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../xfback_08:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1536, 343), Vector2(1536, 7)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../xfback_08:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../xfback_09:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1536, 511), Vector2(1536, 175)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../xfback_09:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_add58"]
+_data = {
+&"RESET": SubResource("Animation_vqq8x"),
+&"xfback_move_up": SubResource("Animation_add58")
+}
+
+[sub_resource type="Animation" id="Animation_v1sto"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(1258, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(175, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_50po6"]
+resource_name = "down"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1259, 0, 0, 0.5, 0.16666667, 1259, -0.5, 0, 0, 0),
+"times": PackedFloat32Array(0, 3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(175, 0, 0, 0.5, 4, 199, -0.5, -4, 0, 0),
+"times": PackedFloat32Array(0, 3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.5, 0, 0, -0.5, 0, 0, 0),
+"times": PackedFloat32Array(0, 3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vqq8x"]
+_data = {
+&"RESET": SubResource("Animation_v1sto"),
+&"down": SubResource("Animation_50po6")
+}
+
+[node name="level8" type="Node2D" unique_id=1204636722]
+
+[node name="t2_xfback2" type="ParallaxBackground" parent="." unique_id=167531171]
+metadata/horizonTiled = 150.0
+metadata/shouldWrap = false
+metadata/uniformScale = true
+
+[node name="Spawners" type="Node2D" parent="t2_xfback2" unique_id=1719641895]
+
+[node name="skyblack_ (PL)" type="ParallaxLayer" parent="t2_xfback2" unique_id=2119964338]
+z_index = -1
+motion_scale = Vector2(0.4, 0)
+
+[node name="skyblack_" type="Node2D" parent="t2_xfback2/skyblack_ (PL)" unique_id=920550912]
+texture_filter = 1
+
+[node name="xfback_00" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_" unique_id=1293663164]
+position = Vector2(0.01, 175)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="xfback_01" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_" unique_id=1127848931]
+position = Vector2(256.01, 175)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="xfback_02" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_" unique_id=1546376069]
+position = Vector2(512.01, 175)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="xfback_03" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_" unique_id=474733688]
+position = Vector2(768.01, 175)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="xfback_04" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_" unique_id=333259422]
+position = Vector2(1024.01, 175)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="xfback_05" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_" unique_id=1750127950]
+position = Vector2(1280.01, 175)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="xfback_06" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_" unique_id=1690378155]
+position = Vector2(1280.01, 175)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="BackgroundAnimationPlayer" type="AnimationPlayer" parent="t2_xfback2/skyblack_ (PL)/skyblack_" unique_id=511767699]
+root_node = NodePath("xfback_07")
+libraries/ = SubResource("AnimationLibrary_add58")
+
+[node name="xfback_07" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_/BackgroundAnimationPlayer" unique_id=475539277]
+position = Vector2(1536, 175)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="xfback_08" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_/BackgroundAnimationPlayer" unique_id=463819796]
+z_index = -1
+position = Vector2(1536, 343)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="xfback_09" type="Sprite2D" parent="t2_xfback2/skyblack_ (PL)/skyblack_/BackgroundAnimationPlayer" unique_id=490947203]
+z_index = -1
+position = Vector2(1536, 511)
+texture = ExtResource("1_kb82b")
+offset = Vector2(128, -87.5)
+
+[node name="sol_0 (PL)" type="ParallaxLayer" parent="t2_xfback2" unique_id=205894163]
+motion_scale = Vector2(1, 0)
+
+[node name="foundry_idle" parent="t2_xfback2/sol_0 (PL)" unique_id=556472148 instance=ExtResource("2_bjcmt")]
+z_index = 10
+position = Vector2(2487.0002, 0)
+
+[node name="sol_0" type="Node2D" parent="t2_xfback2/sol_0 (PL)" unique_id=1459891223]
+z_index = 100
+texture_filter = 1
+
+[node name="xfgird_00" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=446352839]
+position = Vector2(1612, 175)
+texture = ExtResource("3_v1sto")
+offset = Vector2(40.5, -56)
+
+[node name="xfgird_01" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=1877823057]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1693, 175.33333)
+texture = ExtResource("4_50po6")
+offset = Vector2(48, -56)
+
+[node name="xfgird_02" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=707499542]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1789, 175.33333)
+texture = ExtResource("4_50po6")
+offset = Vector2(48, -56)
+
+[node name="xfgird_03" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=1268164845]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1861.95, 175.33333)
+texture = ExtResource("5_vqq8x")
+offset = Vector2(14, -100)
+
+[node name="xfgird_04" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=2092060648]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1885, 175.33333)
+texture = ExtResource("4_50po6")
+offset = Vector2(48, -56)
+
+[node name="xfgird_05" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=655147960]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(1981, 175.33333)
+texture = ExtResource("4_50po6")
+offset = Vector2(48, -56)
+
+[node name="xfgird_06" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=1323680165]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2062.29, 175.33333)
+texture = ExtResource("5_vqq8x")
+offset = Vector2(14, -100)
+
+[node name="xfgird_07" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=785133648]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2086, 175.33333)
+texture = ExtResource("4_50po6")
+offset = Vector2(48, -56)
+
+[node name="xfgird_08" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=25559743]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2182, 175.33333)
+texture = ExtResource("4_50po6")
+offset = Vector2(48, -56)
+
+[node name="xfgird_09" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=1489939827]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2278, 175.33333)
+texture = ExtResource("4_50po6")
+offset = Vector2(48, -56)
+
+[node name="xfgird_10" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=990450115]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2374, 175.33333)
+texture = ExtResource("3_v1sto")
+offset = Vector2(40.5, -56)
+flip_h = true
+
+[node name="xfgird_11" type="Sprite2D" parent="t2_xfback2/sol_0 (PL)/sol_0" unique_id=1087863866]
+position = Vector2(2480.0002, 175.33333)
+texture = ExtResource("6_add58")
+offset = Vector2(11.5, -23)
+
+[node name="floor (PL)" type="ParallaxLayer" parent="t2_xfback2" unique_id=990939085]
+motion_scale = Vector2(1, 0)
+
+[node name="floor" type="Node2D" parent="t2_xfback2/floor (PL)" unique_id=892170551]
+texture_filter = 1
+
+[node name="xfback_01" type="Sprite2D" parent="t2_xfback2/floor (PL)/floor" unique_id=33438738]
+position = Vector2(0.01, 175)
+texture = ExtResource("11_s0shk")
+offset = Vector2(128, -12)
+
+[node name="xfback_02" type="Sprite2D" parent="t2_xfback2/floor (PL)/floor" unique_id=820461830]
+position = Vector2(256.01, 175)
+texture = ExtResource("11_s0shk")
+offset = Vector2(128, -12)
+
+[node name="xfback_04" type="Sprite2D" parent="t2_xfback2/floor (PL)/floor" unique_id=1717888141]
+position = Vector2(1258, 175)
+texture = ExtResource("11_s0shk")
+offset = Vector2(128, -12)
+
+[node name="Bridge" type="AnimationPlayer" parent="t2_xfback2/floor (PL)/floor/xfback_04" unique_id=742056792]
+libraries/ = SubResource("AnimationLibrary_vqq8x")
+
+[node name="xfback_03" type="Sprite2D" parent="t2_xfback2/floor (PL)/floor/xfback_04" unique_id=1336157546]
+position = Vector2(-256, 0)
+texture = ExtResource("11_s0shk")
+offset = Vector2(128, -12)
+
+[node name="Node2D" type="Node2D" parent="t2_xfback2/floor (PL)/floor" unique_id=1453166737]
+
+[node name="StopMarkerBalisticStart" type="Marker2D" parent="." unique_id=1895245281]
+position = Vector2(157, 170)
+script = ExtResource("15_v1sto")
+continuer_sans_arret = true
+controler_pluie_balistique = true
+ballistic_marker_path = NodePath("../Camera2D/BallisticTriggerMarker")
+cadence_balistique_sec = 1.0
+metadata/_custom_type_script = "uid://v18o8mwi32ej"
+
+[node name="EnnemisPlaces" type="Node2D" parent="." unique_id=73430952]
+
+[node name="Boss1Lv8Scene" parent="EnnemisPlaces" unique_id=1139805669 instance=ExtResource("12_c4goh")]
+z_index = -100
+position = Vector2(492, 0)
+
+[node name="StopStartJohn" type="Marker2D" parent="EnnemisPlaces" unique_id=523878522]
+position = Vector2(1457.0001, 175)
+scale = Vector2(2, 2)
+gizmo_extents = 5.3
+script = ExtResource("15_v1sto")
+temps_pause = 3.0
+continuer_sans_arret = true
+
+[node name="xyjc" parent="EnnemisPlaces" unique_id=1988188502 instance=ExtResource("11_bjcmt")]
+z_index = -4
+position = Vector2(1783, 54)
+comportement_civil = "marche_libre"
+objet_a_dropper = "xpickup_05"
+drop_aleatoire = false
+delai_deplacement_sec = 0.0
+moment_inversion_sec = 4.8
+delai_activation_sec = 1.0
+vitesse_deplacement = 30.0
+inverser_visuel = false
+declencheur_stop = NodePath("../StopStartJohn")
+
+[node name="PauseJohn" type="Marker2D" parent="EnnemisPlaces" unique_id=526035146]
+position = Vector2(2277.418, 94.62808)
+scale = Vector2(2, 2)
+script = ExtResource("14_add58")
+acteur_cible = NodePath("../xyjc")
+action = "pause_nette"
+rayon_declenchement_px = 24.0
+metadata/_custom_type_script = "uid://bc7rub1q5vnpd"
+
+[node name="StopStartBridge" type="Marker2D" parent="EnnemisPlaces" unique_id=98190178]
+position = Vector2(1330.1383, 171.08401)
+scale = Vector2(2, 2)
+script = ExtResource("15_v1sto")
+alignement = "Centre_Viseur"
+continuer_sans_arret = true
+deplacer_noeud_simple = true
+noeud_a_deplacer_path = NodePath("../../t2_xfback2/floor (PL)/floor/xfback_04")
+decalage_y = 24.0
+
+[node name="StopMarkerDebug" type="Marker2D" parent="EnnemisPlaces" unique_id=1365344284]
+position = Vector2(2464.371, 174.54054)
+script = ExtResource("15_v1sto")
+continuer_sans_arret = true
+metadata/_custom_type_script = "uid://v18o8mwi32ej"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=425149390]
+scale = Vector2(1.0885941, 1.4068196)
+limit_left = 0
+limit_top = 0
+limit_right = 2795
+limit_bottom = 175
+script = ExtResource("13_bojca")
+delai_intro_secondes = 1.0
+
+[node name="TextTriggerMarkerIntro" type="Marker2D" parent="Camera2D" unique_id=40834319]
+script = ExtResource("17_text")
+duree_par_texte_sec = 5.0
+delai_initial_sec = 2.0
+dossier_police = "xfonts_white"
+couleur_texte = Color(0, 0.6939548, 0.16463497, 1)
+echelle_pixel = 0.6
+espacement_lignes_px = 10.0
+afficher_boite_fond = false
+opacite_fond = 0.7
+
+[node name="BallisticTriggerMarker" type="Marker2D" parent="Camera2D" unique_id=1895245280]
+script = ExtResource("18_ballistic")
+scenes_items = Array[PackedScene]([ExtResource("19_xpick12")])
+poids_items = Array[float]([1.0])
+quantite_item = 3
+gravite = 50.0
+rebond_au_sol = true
+premier_point_depart = "Droite (3)"
+probabilite_drop_special = 0.5

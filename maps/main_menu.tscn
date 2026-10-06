@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://btb2v3p5rhia1"]
+
+[ext_resource type="Texture2D" uid="uid://c1k6ocs0734vc" path="res://images/t2panel.png" id="2_bg"]
+
+[node name="MainMenu" type="Control" unique_id=684439339]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondMenu" type="TextureRect" parent="." unique_id=1823569736]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+
+[node name="OmbreOverlay" type="ColorRect" parent="." unique_id=78851667]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="ConteneurPrincipal" type="VBoxContainer" parent="." unique_id=1595803898]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="TitrePrincipal" type="Label" parent="ConteneurPrincipal" unique_id=2042726268]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 36
+text = "TERMINATOR 2"
+horizontal_alignment = 1
+
+[node name="SousTitre" type="Label" parent="ConteneurPrincipal" unique_id=1105664810]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.85, 1)
+theme_override_font_sizes/font_size = 20
+text = "ARCADE"
+horizontal_alignment = 1
+
+[node name="BoutonJouer" type="Button" parent="ConteneurPrincipal" unique_id=1341156860]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "▶ JOUER"
+
+[node name="BoutonOptions" type="Button" parent="ConteneurPrincipal" unique_id=1398700192]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+disabled = true
+text = "⚙ OPTIONS"
+
+[node name="BoutonQuitter" type="Button" parent="ConteneurPrincipal" unique_id=551009506]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "✕ QUITTER"

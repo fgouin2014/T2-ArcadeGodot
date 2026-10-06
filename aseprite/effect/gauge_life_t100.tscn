@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c74d4qhk2bau2"]
+
+[ext_resource type="Texture2D" uid="uid://3l1fkyjchocl" path="res://tsj/xjug5_04.png" id="1_ymlif"]
+[ext_resource type="Script" path="res://Script/gauge_life_t100.gd" id="2_gauge_script"]
+
+[node name="GaugeLifeT1000" type="Node2D" unique_id=713733633]
+script = ExtResource("2_gauge_script")
+declencheur_stop = NodePath("../Node2D/Stop1stFight")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1276788437]
+position = Vector2(92, 4)
+texture = ExtResource("1_ymlif")
+
+[node name="GaugeLifeT100" type="ColorRect" parent="Sprite2D2" unique_id=9113890]
+offset_left = -60.666656
+offset_top = -2.9999993
+offset_right = 67.33334
+offset_bottom = 4.000001
+color = Color(0.34509805, 0.31764707, 0.52156866, 0.7921569)
+metadata/_edit_use_anchors_ = true

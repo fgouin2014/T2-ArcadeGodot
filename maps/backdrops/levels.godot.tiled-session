@@ -1,11 +1,12 @@
 {
-    "activeFile": "level1/t2_xl4skynt1.tmj",
+    "activeFile": "level1/t2_xcybst.tmj",
     "expandedProjectPaths": [
+        ".",
         "level1",
         "level1/exported",
-        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj",
-        "."
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj"
     ],
+    "file.lastUsedOpenFilter": "Tiled Projects (*.tiled-project)",
     "fileStates": {
         "": {
             "scaleInDock": 1
@@ -93,8 +94,8 @@
         },
         "level1/t2_hideout.tmj": {
             "expandedGroupLayers": [
-                26,
-                25
+                25,
+                26
             ],
             "scale": 0.5,
             "selectedLayer": 9,
@@ -110,8 +111,8 @@
         },
         "level1/t2_hideout.tmj.bak.tmj": {
             "expandedGroupLayers": [
-                26,
-                25
+                25,
+                26
             ],
             "scale": 0.5,
             "selectedLayer": 9,
@@ -168,6 +169,17 @@
             "scaleInDock": 1
         },
         "level1/t2_testchamber.tmj#testchamber_decor": {
+            "scaleInDock": 1
+        },
+        "level1/t2_xcybst.tmj": {
+            "scale": 2,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": -150.5,
+                "y": 75.5
+            }
+        },
+        "level1/t2_xcybst.tmj#xcybst_decor": {
             "scaleInDock": 1
         },
         "level1/t2_xfback2.tmj": {
@@ -258,8 +270,8 @@
             "scale": 2,
             "selectedLayer": 12,
             "viewCenter": {
-                "x": 3936.5,
-                "y": 160.5
+                "x": 1920,
+                "y": 87
             }
         },
         "level1/t2_xl4skynt1.tmj#level1_decor": {
@@ -301,22 +313,23 @@
         "level1/t2_stage3.tmj",
         "level1/t2_hideout.tmj.bak.tmj",
         "level1/t2_hideout.tmj",
-        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/level1_decor.tsj"
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/level1_decor.tsj",
+        "level1/t2_xcybst.tmj"
     ],
     "project": "levels.godot.tiled-project",
     "recentFiles": [
         "level1/t2_xl1bck1.tmj",
         "level1/t2_xroad.tmj",
-        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/level1_decor.tsj",
-        "level1/t2_hideout.tmj",
-        "level1/t2_hideout.tmj.bak.tmj",
-        "level1/t2_stage3.tmj",
-        "level1/t2_starter_blank.tmj",
-        "level1/t2_starter_canvas.tmj",
-        "level1/t2_testchamber.tmj",
-        "level1/t2_xfback2.tmj",
+        "level1/t2_xl4skynt1.tmj",
         "level1/t2_xl1bck.tmj",
-        "level1/t2_xl4skynt1.tmj"
+        "level1/t2_xfback2.tmj",
+        "level1/t2_testchamber.tmj",
+        "level1/t2_starter_canvas.tmj",
+        "level1/t2_starter_blank.tmj",
+        "level1/t2_stage3.tmj",
+        "level1/t2_hideout.tmj.bak.tmj",
+        "level1/t2_hideout.tmj",
+        "C:/androidProject/lastchance/DukeSoundboard/T2-ArcadeGodot/tsj/level1_decor.tsj"
     ],
     "tileset.lastUsedFormat": "json",
     "tileset.type": 1

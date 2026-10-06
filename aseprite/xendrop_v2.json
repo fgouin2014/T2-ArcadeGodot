@@ -1,0 +1,443 @@
+{ "frames": [
+   {
+    "filename": "xendrop_v2 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 1.ase",
+    "frame": { "x": 92, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 2.ase",
+    "frame": { "x": 184, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 3.ase",
+    "frame": { "x": 276, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 4.ase",
+    "frame": { "x": 368, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 5.ase",
+    "frame": { "x": 460, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 6.ase",
+    "frame": { "x": 552, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 7.ase",
+    "frame": { "x": 644, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 8.ase",
+    "frame": { "x": 736, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 9.ase",
+    "frame": { "x": 828, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 10.ase",
+    "frame": { "x": 920, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 11.ase",
+    "frame": { "x": 1012, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 12.ase",
+    "frame": { "x": 1104, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 13.ase",
+    "frame": { "x": 1196, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 14.ase",
+    "frame": { "x": 1288, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 15.ase",
+    "frame": { "x": 1380, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 16.ase",
+    "frame": { "x": 1472, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 17.ase",
+    "frame": { "x": 1564, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 18.ase",
+    "frame": { "x": 1656, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 19.ase",
+    "frame": { "x": 1748, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 20.ase",
+    "frame": { "x": 1840, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 21.ase",
+    "frame": { "x": 1932, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 22.ase",
+    "frame": { "x": 2024, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 23.ase",
+    "frame": { "x": 2116, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 24.ase",
+    "frame": { "x": 2208, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 25.ase",
+    "frame": { "x": 2300, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 26.ase",
+    "frame": { "x": 2392, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 27.ase",
+    "frame": { "x": 2484, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 28.ase",
+    "frame": { "x": 2576, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 29.ase",
+    "frame": { "x": 2668, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 30.ase",
+    "frame": { "x": 2760, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 31.ase",
+    "frame": { "x": 2852, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 32.ase",
+    "frame": { "x": 2944, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 33.ase",
+    "frame": { "x": 3036, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 34.ase",
+    "frame": { "x": 3128, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 35.ase",
+    "frame": { "x": 3220, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 36.ase",
+    "frame": { "x": 3312, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 37.ase",
+    "frame": { "x": 3404, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 38.ase",
+    "frame": { "x": 3496, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 39.ase",
+    "frame": { "x": 3588, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 40.ase",
+    "frame": { "x": 3680, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 41.ase",
+    "frame": { "x": 3772, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 42.ase",
+    "frame": { "x": 3864, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 43.ase",
+    "frame": { "x": 3956, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 44.ase",
+    "frame": { "x": 4048, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 45.ase",
+    "frame": { "x": 4140, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 46.ase",
+    "frame": { "x": 4232, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   },
+   {
+    "filename": "xendrop_v2 47.ase",
+    "frame": { "x": 4324, "y": 0, "w": 92, "h": 144 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 92, "h": 144 },
+    "sourceSize": { "w": 92, "h": 144 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "xendrop_v2.png",
+  "format": "RGBA8888",
+  "size": { "w": 4416, "h": 144 },
+  "scale": "1"
+ }
+}

@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://cmsl4f1av8878"]
 
 [ext_resource type="PackedScene" uid="uid://di5iyogeq545w" path="res://maps/backdrops/level1/t2_xroad.tmj" id="1_tl6ux"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="2_dw32v"]
 
 [node name="t2_xroad" unique_id=714779455 instance=ExtResource("1_tl6ux")]
 
 [node name="Spawners" type="Node2D" parent="." index="0" unique_id=1103234114]
+
+[node name="Camera2D" type="Camera2D" parent="." index="8" unique_id=976986025]
+limit_left = 0
+limit_top = 0
+limit_right = 3072
+limit_bottom = 175
+script = ExtResource("2_dw32v")

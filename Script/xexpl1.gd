@@ -1,0 +1,2 @@
+class_name XExpl1
+extends AutoAnimatedExplosion

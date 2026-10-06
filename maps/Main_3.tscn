@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://mi8rjl42l1od" path="res://Script/main.gd" id="1_fdpka"]
 [ext_resource type="Texture2D" uid="uid://c1k6ocs0734vc" path="res://images/t2panel.png" id="2_r0du0"]
 [ext_resource type="Script" uid="uid://kimiuytbfp66" path="res://addons/virtual_joystick_DX/vjdx_core_script.gd" id="3_fdpka"]
+[ext_resource type="Script" path="res://Script/multi_touch_button.gd" id="4_multitouch"]
 
 [node name="Main" type="Control" unique_id=1648757161]
 layout_mode = 3
@@ -136,6 +137,37 @@ layout_mode = 2
 focus_mode = 0
 text = "🚪 QUITTER LE JEU"
 
+[node name="BoutonDebug" type="Button" parent="MenuPauseOverlay/CentreContainer/BoiteV" unique_id=999888777]
+layout_mode = 2
+focus_mode = 0
+text = "🔧 DEBUG HUD"
+
+[node name="DebugOptionsContainer" type="Control" parent="MenuPauseOverlay/CentreContainer/BoiteV" unique_id=999888778]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 0)
+visible = false
+
+[node name="LabelDebugTitle" type="Label" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888779]
+layout_mode = 2
+text = "--- LOGS DEBUG ---"
+horizontal_alignment = 1
+
+[node name="CheckJug" type="CheckBox" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888780]
+layout_mode = 2
+text = "Log XJUG (haut-gauche)"
+
+[node name="CheckCopter" type="CheckBox" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888781]
+layout_mode = 2
+text = "Log XCOPTER (haut-droit)"
+
+[node name="CheckVan" type="CheckBox" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888782]
+layout_mode = 2
+text = "Log XSVAN (bas-droit)"
+
+[node name="CheckHealth" type="CheckBox" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888783]
+layout_mode = 2
+text = "Log Gauge Vie (bas-gauche)"
+
 [node name="VirtualJoystickUI" type="Control" parent="." unique_id=2081920831]
 layout_mode = 1
 anchors_preset = 15
@@ -153,6 +185,7 @@ offset_top = 362.0
 offset_right = 865.0
 offset_bottom = 427.0
 text = "🚀 MISSILE"
+script = ExtResource("4_multitouch")
 
 [node name="BoutonTirPrincipalUI" type="Button" parent="VirtualJoystickUI" unique_id=987123910]
 z_index = 50
@@ -162,6 +195,7 @@ offset_top = 442.0
 offset_right = 735.0
 offset_bottom = 507.0
 text = "🔥 TIR"
+script = ExtResource("4_multitouch")
 
 [node name="VirtualJoystickDX" type="Control" parent="VirtualJoystickUI" unique_id=1703718393]
 custom_minimum_size = Vector2(160, 160)

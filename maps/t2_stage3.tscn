@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b3ab43f6m5esu" path="res://maps/backdrops/level1/t2_stage3.tmj" id="1_6uwgb"]
 [ext_resource type="PackedScene" path="res://aseprite/xt100big.tscn" id="3_xt100big"]
-[ext_resource type="PackedScene" path="res://aseprite/xbigend.tscn" id="4_xbigend"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="4_vi24m"]
+[ext_resource type="PackedScene" uid="uid://c61g3a4bigend" path="res://aseprite/xbigend.tscn" id="4_xbigend"]
 
 [node name="t2_stage3" unique_id=161592327 instance=ExtResource("1_6uwgb")]
 
@@ -13,3 +14,10 @@ position = Vector2(400, 100)
 
 [node name="xbigend_1" parent="EnnemisPlaces" index="1" unique_id=2115840002 instance=ExtResource("4_xbigend")]
 position = Vector2(800, 100)
+
+[node name="Camera2D" type="Camera2D" parent="." index="8" unique_id=1905448325]
+limit_left = 0
+limit_top = 0
+limit_right = 5632
+limit_bottom = 175
+script = ExtResource("4_vi24m")

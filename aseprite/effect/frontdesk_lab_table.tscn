@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dxvcjwc3lesdp"]
+
+[ext_resource type="Script" uid="uid://cw8bo4m3lycvr" path="res://Script/breakable_prop.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b371acblu3unw" path="res://maps/backdrops/level1/xlbstr9_04.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ii7wb3cyrjrh" path="res://maps/backdrops/level1/xlbstr9_05.png" id="3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(64, 40)
+
+[node name="frontdesk_lab_table" type="Node2D" unique_id=387680292]
+script = ExtResource("1")
+
+[node name="table" type="Sprite2D" parent="." unique_id=309569609]
+position = Vector2(32, 20)
+texture = ExtResource("2")
+metadata/damaged_texture = ExtResource("3")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="table" unique_id=347971770]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table/HitArea" unique_id=417508383]
+shape = SubResource("RectangleShape2D_1")

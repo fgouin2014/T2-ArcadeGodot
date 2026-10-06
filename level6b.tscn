@@ -1,0 +1,793 @@
+[gd_scene format=3 uid="uid://xjcih4cj8dh5"]
+
+[ext_resource type="Texture2D" uid="uid://dm04ed1i641t2" path="res://maps/backdrops/level1/xsroad_06.png" id="1_uxf56"]
+[ext_resource type="Texture2D" uid="uid://bp7776it41iy" path="res://maps/backdrops/level1/xsroad_05.png" id="2_xcq5q"]
+[ext_resource type="Texture2D" uid="uid://k2kskekt4m4f" path="res://maps/backdrops/level1/xsroad_04.png" id="3_m5ukq"]
+[ext_resource type="Texture2D" uid="uid://dvk035ntlopkm" path="res://maps/backdrops/level1/xsroad_03.png" id="4_w5fra"]
+[ext_resource type="Texture2D" uid="uid://ddfanwbmttit8" path="res://maps/backdrops/level1/xsroad_02.png" id="5_ic0eu"]
+[ext_resource type="Texture2D" uid="uid://c7gcm7xpjdlaw" path="res://maps/backdrops/level1/xsroad_01.png" id="6_j4uf4"]
+[ext_resource type="Texture2D" uid="uid://d4h05n2qb40je" path="res://maps/backdrops/level1/xsroad_00.png" id="7_gbr2p"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="8_sdyjs"]
+[ext_resource type="Script" uid="uid://v18o8mwi32ej" path="res://Script/stop_marker.gd" id="10_6855o"]
+[ext_resource type="PackedScene" uid="uid://b1n6tflbiahhe" path="res://aseprite/vehicules/xsvan.tscn" id="10_uxf56"]
+[ext_resource type="PackedScene" uid="uid://dhsdgx25pk36r" path="res://aseprite/vehicules/xcopter.tscn" id="11_xcq5q"]
+[ext_resource type="PackedScene" uid="uid://re5a8vbsohm0" path="res://aseprite/vehicules/xjug.tscn" id="12_m5ukq"]
+
+[node name="level6" type="Node2D" unique_id=980453410]
+
+[node name="t2_xroad" type="ParallaxBackground" parent="." unique_id=506421876]
+metadata/horizonTiled = 150.0
+metadata/uniformScale = true
+
+[node name="Spawners" type="Node2D" parent="t2_xroad" unique_id=73111054]
+
+[node name="sol_0 (PL)" type="ParallaxLayer" parent="t2_xroad" unique_id=447664168]
+motion_scale = Vector2(1, 0)
+
+[node name="sol_0" type="Node2D" parent="t2_xroad/sol_0 (PL)" unique_id=931793892]
+texture_filter = 1
+
+[node name="xsroad_06" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=682396389]
+position = Vector2(0, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_07" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=498271224]
+position = Vector2(256, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_08" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=141952378]
+position = Vector2(512, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_09" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=1664131170]
+position = Vector2(769, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_10" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=1863754539]
+position = Vector2(1025, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_11" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=1401869907]
+position = Vector2(1281, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_12" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=1497620376]
+position = Vector2(1537, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_13" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=566177463]
+position = Vector2(1793, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_14" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=743026931]
+position = Vector2(2049, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_15" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=1283419999]
+position = Vector2(2305, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_16" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=682080109]
+position = Vector2(2561, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="xsroad_17" type="Sprite2D" parent="t2_xroad/sol_0 (PL)/sol_0" unique_id=1152299504]
+position = Vector2(2817, 174)
+texture = ExtResource("1_uxf56")
+offset = Vector2(128, -3)
+
+[node name="sol_1 (PL)" type="ParallaxLayer" parent="t2_xroad" unique_id=924745899]
+motion_scale = Vector2(0.75, 0)
+
+[node name="sol_1" type="Node2D" parent="t2_xroad/sol_1 (PL)" unique_id=1957959000]
+texture_filter = 1
+
+[node name="xsroad_05" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=1620743513]
+position = Vector2(0, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_06" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=1692217918]
+position = Vector2(256, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_07" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=1675487853]
+position = Vector2(512, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_08" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=39869367]
+position = Vector2(769, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_09" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=305561173]
+position = Vector2(1025, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_10" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=1684039172]
+position = Vector2(1281, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_11" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=102197571]
+position = Vector2(1537, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_12" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=512848933]
+position = Vector2(1793, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_13" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=1021279600]
+position = Vector2(2049, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_14" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=609842543]
+position = Vector2(2305, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_15" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=1676893764]
+position = Vector2(2561, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="xsroad_16" type="Sprite2D" parent="t2_xroad/sol_1 (PL)/sol_1" unique_id=50289608]
+position = Vector2(2817, 168)
+texture = ExtResource("2_xcq5q")
+offset = Vector2(128, -5)
+
+[node name="sol_2 (PL)" type="ParallaxLayer" parent="t2_xroad" unique_id=1124519014]
+motion_scale = Vector2(0.5, 0)
+
+[node name="sol_2" type="Node2D" parent="t2_xroad/sol_2 (PL)" unique_id=1852659598]
+texture_filter = 1
+
+[node name="xsroad_04" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=974152612]
+position = Vector2(0, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_05" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=1311510607]
+position = Vector2(256, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_06" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=522712153]
+position = Vector2(512, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_07" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=730408299]
+position = Vector2(769, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_08" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=596052735]
+position = Vector2(1025, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_09" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=4818264]
+position = Vector2(1281, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_10" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=6206059]
+position = Vector2(1537, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_11" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=1292936067]
+position = Vector2(1793, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_12" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=1141971773]
+position = Vector2(2049, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_13" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=1023814795]
+position = Vector2(2305, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_14" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=739935062]
+position = Vector2(2561, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="xsroad_15" type="Sprite2D" parent="t2_xroad/sol_2 (PL)/sol_2" unique_id=1665892238]
+position = Vector2(2817, 158)
+texture = ExtResource("3_m5ukq")
+offset = Vector2(128, -6)
+
+[node name="sol_3 (PL)" type="ParallaxLayer" parent="t2_xroad" unique_id=1213743297]
+motion_scale = Vector2(0.25, 0)
+
+[node name="sol_3" type="Node2D" parent="t2_xroad/sol_3 (PL)" unique_id=554147053]
+texture_filter = 1
+
+[node name="xsroad_03" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1606166425]
+position = Vector2(0, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_04" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1049141058]
+position = Vector2(256, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_05" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1055591910]
+position = Vector2(512, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_06" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1156403803]
+position = Vector2(769, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_07" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=2056701656]
+position = Vector2(1025, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_08" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1923831979]
+position = Vector2(1281, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_09" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1984097128]
+position = Vector2(1537, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_10" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1345870729]
+position = Vector2(1793, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_11" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1591541691]
+position = Vector2(2049, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_12" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1372999300]
+position = Vector2(2305, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_13" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=107616260]
+position = Vector2(2561, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="xsroad_14" type="Sprite2D" parent="t2_xroad/sol_3 (PL)/sol_3" unique_id=1177690542]
+position = Vector2(2817, 146)
+texture = ExtResource("4_w5fra")
+offset = Vector2(128, -8)
+
+[node name="layer5 (PL)" type="ParallaxLayer" parent="t2_xroad" unique_id=418289081]
+motion_scale = Vector2(0.125, 0)
+
+[node name="layer5" type="Node2D" parent="t2_xroad/layer5 (PL)" unique_id=67347302]
+texture_filter = 1
+
+[node name="xsroad_02" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=182167313]
+position = Vector2(0, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_03" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=188636338]
+position = Vector2(256, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_04" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=690740186]
+position = Vector2(512, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_05" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=1976313626]
+position = Vector2(769, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_06" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=380489855]
+position = Vector2(1025, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_07" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=915357026]
+position = Vector2(1281, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_08" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=447118906]
+position = Vector2(1537, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_09" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=243939937]
+position = Vector2(1793, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_10" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=180370542]
+position = Vector2(2049, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_11" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=1843969757]
+position = Vector2(2305, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_12" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=153933441]
+position = Vector2(2561, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="xsroad_13" type="Sprite2D" parent="t2_xroad/layer5 (PL)/layer5" unique_id=1935573459]
+position = Vector2(2817, 130)
+texture = ExtResource("5_ic0eu")
+offset = Vector2(128, -16)
+
+[node name="skyline_0 (PL)" type="ParallaxLayer" parent="t2_xroad" unique_id=1638806288]
+motion_scale = Vector2(0.0625, 0)
+
+[node name="skyline_0" type="Node2D" parent="t2_xroad/skyline_0 (PL)" unique_id=456151480]
+texture_filter = 1
+
+[node name="xsroad_01" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=122568277]
+position = Vector2(0, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_02" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=1583936826]
+position = Vector2(256, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_03" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=860266737]
+position = Vector2(512, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_04" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=761825406]
+position = Vector2(769, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_05" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=1659416265]
+position = Vector2(1025, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_06" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=396936431]
+position = Vector2(1281, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_07" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=339124836]
+position = Vector2(1537, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_08" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=1679370107]
+position = Vector2(1793, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_09" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=1026447679]
+position = Vector2(2049, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_10" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=2067847786]
+position = Vector2(2305, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_11" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=1618050117]
+position = Vector2(2561, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="xsroad_12" type="Sprite2D" parent="t2_xroad/skyline_0 (PL)/skyline_0" unique_id=1838482799]
+position = Vector2(2817, 98)
+texture = ExtResource("6_j4uf4")
+offset = Vector2(128, -26)
+
+[node name="sky_0 (PL)" type="ParallaxLayer" parent="t2_xroad" unique_id=2048479584]
+motion_scale = Vector2(0.125, 0)
+
+[node name="sky_0" type="Node2D" parent="t2_xroad/sky_0 (PL)" unique_id=1928049851]
+texture_filter = 1
+
+[node name="xsroad_00" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=1291629919]
+position = Vector2(0, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_01" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=1652097455]
+position = Vector2(256, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_02" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=701450004]
+position = Vector2(512, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_03" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=370742917]
+position = Vector2(769, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_04" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=1737745744]
+position = Vector2(1025, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_05" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=996110039]
+position = Vector2(1281, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_06" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=376708824]
+position = Vector2(1537, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_07" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=1723936539]
+position = Vector2(1793, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_08" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=1532769908]
+position = Vector2(2049, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_09" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=816471951]
+position = Vector2(2305, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_10" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=768378842]
+position = Vector2(2561, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="xsroad_11" type="Sprite2D" parent="t2_xroad/sky_0 (PL)/sky_0" unique_id=815013760]
+position = Vector2(2817, 46)
+texture = ExtResource("7_gbr2p")
+offset = Vector2(128, -23)
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+},
+"slice_section": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1498353519]
+limit_left = 0
+limit_top = 0
+limit_right = 5859
+limit_bottom = 175
+script = ExtResource("8_sdyjs")
+vitesse_auto = 60.0
+alignement_stop = "Centre_Viseur"
+mode_perpetuel = true
+largeur_boucle_parallax = 768.0
+
+[node name="EnnemisPlaces" type="Node2D" parent="." unique_id=1361356217]
+
+[node name="StopMarker" type="Marker2D" parent="EnnemisPlaces" unique_id=2008742776]
+position = Vector2(250.77194, 171.03973)
+script = ExtResource("10_6855o")
+temps_pause = 0.0
+continuer_sans_arret = true
+metadata/_custom_type_script = "uid://v18o8mwi32ej"
+
+[node name="XSVan" parent="." unique_id=603140038 instance=ExtResource("10_uxf56")]
+position = Vector2(-197, 34)
+position_x_ratio = 0.025
+position_y_adjustment = 11.19
+suivre_camera_automatiquement = true
+declencheur_stop = NodePath("../EnnemisPlaces/StopMarker")
+
+[node name="XCopter" parent="." unique_id=2029509807 instance=ExtResource("11_xcq5q")]
+position = Vector2(-196, -36)
+
+[node name="XJug" parent="." unique_id=475464586 instance=ExtResource("12_m5ukq")]
+position = Vector2(-490, 10)

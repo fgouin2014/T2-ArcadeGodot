@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://5lnrgqex1rn7"]
+
+[ext_resource type="PackedScene" uid="uid://b1n6tflbiahhe" path="res://aseprite/vehicules/xsvan.tscn" id="2_van"]
+[ext_resource type="PackedScene" uid="uid://re5a8vbsohm0" path="res://aseprite/vehicules/xjug.tscn" id="3_jug"]
+[ext_resource type="PackedScene" uid="uid://dhsdgx25pk36r" path="res://aseprite/vehicules/xcopter.tscn" id="4_copter"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="5_2c5vs"]
+
+
+[node name="TestVehicles" type="Node2D" unique_id=559630488]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=552814064]
+limit_left = 0
+limit_top = 0
+limit_right = 256
+limit_bottom = 175
+script = ExtResource("5_2c5vs")
+vitesse_auto = 60.0
+alignement_stop = "Centre_Viseur"
+mode_perpetuel = true
+largeur_boucle_parallax = 768.0
+
+[node name="XSVan" parent="." unique_id=828549049 instance=ExtResource("2_van")]
+position = Vector2(-195, 40)
+suivre_camera_automatiquement = true
+
+[node name="XJug" parent="." unique_id=241839319 instance=ExtResource("3_jug")]
+position = Vector2(404, 3)
+
+[node name="XCopter" parent="." unique_id=2054955970 instance=ExtResource("4_copter")]
+position = Vector2(-45, -28)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=687788486]
+

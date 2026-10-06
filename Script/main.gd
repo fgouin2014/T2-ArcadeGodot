@@ -7,14 +7,35 @@ extends Control
 @onready var bouton_pause: Button = $BoutonPause
 @onready var btn_reprendre: Button = $MenuPauseOverlay/CentreContainer/BoiteV/BoutonReprendre
 @onready var btn_recommencer: Button = $MenuPauseOverlay/CentreContainer/BoiteV/BoutonRecommencer
-@onready var btn_menu_principal: Button = $MenuPauseOverlay/CentreContainer/BoiteV/BoutonMenuPrincipal
+@onready var btn_menu_principal: Button = $MenuPauseOverlay/CentreContainer/BoiteV/BoutonLevelSelect
 @onready var btn_quitter: Button = $MenuPauseOverlay/CentreContainer/BoiteV/BoutonQuitter
+@onready var btn_level_select_pause: Button = $MenuPauseOverlay/CentreContainer/BoiteV/BoutonLevelSelect
+@onready var btn_debug: Button = $MenuPauseOverlay/CentreContainer/BoiteV/BoutonDebug
+@onready var debug_options_container: Control = $MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer
+@onready var check_jug: CheckBox = $MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer/CheckJug
+@onready var check_copter: CheckBox = $MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer/CheckCopter
+@onready var check_van: CheckBox = $MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer/CheckVan
+@onready var check_health: CheckBox = $MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer/CheckHealth
+
+# --- RÉFÉRENCES MENU PRINCIPAL ---
+@onready var main_menu: Control = $MainMenu
+@onready var btn_level_select_main: Button = $MainMenu/ConteneurPrincipal/BoutonLevelSelect
+@onready var btn_reprendre_main: Button = $MainMenu/ConteneurPrincipal/BoutonReprendre
+@onready var btn_quitter_main: Button = $MainMenu/ConteneurPrincipal/BoutonQuitter
+@onready var menu_select_overlay: Control = $MenuSelectLevelOverlay
+@onready var btn_retour_select: Button = $MenuSelectLevelOverlay/ConteneurPrincipal/BoutonRetour
+
+# --- DEBUG HUD ---
+var debug_hud: CanvasLayer = null
 
 # --- RÉFÉRENCES DES GAUGES DE LA BORNE D'ARCADE ---
 @onready var gauge_vie_p1: ColorRect = get_node_or_null("GaugeVieP1") as ColorRect
 @onready var gauge_vie_p2: ColorRect = get_node_or_null("GaugeVieP2") as ColorRect
 @onready var gauge_gunpower_1: ColorRect = get_node_or_null("GaugeGunPower1") as ColorRect
 @onready var gauge_gunpower_2: ColorRect = get_node_or_null("GaugeGunPower2") as ColorRect
+@onready var label_score: BitmapText = get_node_or_null("ScoreBitmap") as BitmapText
+@onready var label_credits: BitmapText = get_node_or_null("CreditsBitmap") as BitmapText
+@onready var label_missiles: BitmapText = get_node_or_null("MissilesBitmap") as BitmapText
 
 # --- CONSTANTES VISUELLES ET HUD ---
 const LARGEUR_MAX_GUNPOWER: float = 190.0
@@ -31,13 +52,37 @@ const INTERVALLE_VAGUE_SEC: float = 2.0 # Cadence de déclenchement des spawners
 const CHEMINS_ENNEMIS: Dictionary = {
 	"xgigend": "res://aseprite/xgigend.tscn",
 	"xbigend": "res://aseprite/xbigend.tscn",
+	"xbigend2": "res://aseprite/xbigend.tscn",
+	"xbigend3": "res://aseprite/xbigend.tscn",
 	"xmedend": "res://aseprite/xmedend.tscn",
+	"xmedend2": "res://aseprite/xmedend.tscn",
+	"xmedend3": "res://aseprite/xmedend.tscn",
 	"xswat": "res://aseprite/xswat.tscn",
 	"xt100": "res://aseprite/xt100.tscn",
 	"xtech": "res://aseprite/xtech.tscn",
+	"xarnb": "res://aseprite/xarnb.tscn",
 	"xarng": "res://aseprite/xarng.tscn",
+	"xarnm": "res://aseprite/xarnm.tscn",
+	"xarns": "res://aseprite/xarns.tscn",
+	"xbighk": "res://aseprite/xbighk.tscn",
+	"xendrop": "res://aseprite/xendrop.tscn",
+	"xendrop2": "res://aseprite/xendrop.tscn",
+	"xendrop3": "res://aseprite/xendrop.tscn",
+	"xenfwrd": "res://aseprite/xenfwrd.tscn",
+	"xenfwrd2": "res://aseprite/xenfwrd.tscn",
+	"xenfwrd3": "res://aseprite/xenfwrd.tscn",
+	"xenjump": "res://aseprite/xenjump.tscn",
+	"xenjump2": "res://aseprite/xenjump.tscn",
+	"xenjump3": "res://aseprite/xenjump.tscn",
+	"xethrow": "res://aseprite/xethrow.tscn",
+	"xfrdfhk": "res://aseprite/xfrdfhk.tscn",
+	"xmedfwrd": "res://aseprite/xmedfwrd.tscn",
+	"xmedfwrd2": "res://aseprite/xmedfwrd.tscn",
+	"xmedfwrd3": "res://aseprite/xmedfwrd.tscn",
 	"xt100big": "res://aseprite/xt100big.tscn",
-	"xsarah": "res://aseprite/xsarah.tscn"
+	"xsarah": "res://aseprite/xsarah.tscn",
+	"xojc": "res://aseprite/xojc.tscn",
+	"xyjc": "res://aseprite/xyjc.tscn"
 }
 
 # --- VARIABLES D'ÉTAT ---
@@ -50,13 +95,17 @@ var btn_toggle_mode_controle: Button = null
 var ui_joystick_container: Control = null
 var mode_joystick_actif: bool = false
 
-var label_score: Label = null
-var label_credits: Label = null
 var overlay_game_over: Control = null
 var camera_jeu: Camera2D = null
+var _en_transition_niveau: bool = false
+var _overlay_fondu: ColorRect = null
 
 # Géométrie des jauges de vie verticales (lues sur la scène au démarrage)
 var _geometrie_gauges_vie: Dictionary = {}
+
+# Échelles de base initiales des labels HUD (pour éviter le cumul/glitch de scale lors des pulses)
+var _echelles_base_hud: Dictionary = {}
+var _tweens_pulse_hud: Dictionary = {}
 
 
 # ==============================================================================
@@ -85,26 +134,123 @@ func _ready() -> void:
 	
 	GlobalSettings.reinitialiser_partie()
 
+	_initialiser_fondu_transition()
 	_initialiser_viseur_pause_ui()
 	_initialiser_hud_partie()
 	_connecter_signaux_ui()
 	_initialiser_bouton_mode_controle()
 	_creer_ui_joystick_et_boutons()
+	_initialiser_debug_hud()
 
-	definir_pause(false)
+	if not GlobalSettings.demande_changement_niveau.is_connected(_on_demande_changement_niveau):
+		GlobalSettings.demande_changement_niveau.connect(_on_demande_changement_niveau)
+
+	# Connecter les signaux du menu de sélection de niveau
+	if menu_select_overlay and menu_select_overlay.has_signal("niveau_selectionne"):
+		if not menu_select_overlay.niveau_selectionne.is_connected(_on_niveau_selectionne):
+			menu_select_overlay.niveau_selectionne.connect(_on_niveau_selectionne)
+	if menu_select_overlay and menu_select_overlay.has_signal("retour_menu_principal"):
+		if not menu_select_overlay.retour_menu_principal.is_connected(retourner_main_menu):
+			menu_select_overlay.retour_menu_principal.connect(retourner_main_menu)
+
+	# Configuration initiale des menus
+	if main_menu:
+		main_menu.visible = true
+	if menu_select_overlay:
+		menu_select_overlay.visible = false
+	if menu_pause_overlay:
+		menu_pause_overlay.visible = false
 	
-	# Chargement de la carte de jeu
-	var chemin_carte = GlobalSettings.carte_selectionnee
-	if chemin_carte.is_empty():
-		chemin_carte = "res://level2.tscn"
-		
-	var scene_carte = load(chemin_carte) as PackedScene
+	# Mettre le jeu en pause au démarrage jusqu'à ce qu'une partie commence
+	get_tree().paused = true
+	
+	# NE PAS charger la carte automatiquement au démarrage
+	# La carte sera chargée uniquement quand l'utilisateur sélectionne un niveau
+
+
+func _initialiser_fondu_transition() -> void:
+	var canvas_fondu = CanvasLayer.new()
+	canvas_fondu.name = "CanvasFonduTransition"
+	canvas_fondu.layer = 150
+	canvas_fondu.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(canvas_fondu)
+	
+	_overlay_fondu = ColorRect.new()
+	_overlay_fondu.name = "OverlayNoirFondu"
+	_overlay_fondu.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_overlay_fondu.color = Color(0, 0, 0, 0)
+	_overlay_fondu.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	canvas_fondu.add_child(_overlay_fondu)
+
+
+func _on_demande_changement_niveau(prochain_niveau: String) -> void:
+	if _en_transition_niveau:
+		return
+	_charger_prochain_tableau(prochain_niveau)
+
+
+func _charger_prochain_tableau(prochain_niveau: String) -> void:
+	_en_transition_niveau = true
+	print("[Main] Transition de niveau enclenchée vers : ", prochain_niveau)
+	
+	# Arrêter les tirs en cours
+	if camera_jeu:
+		camera_jeu.tir_maintenu = false
+	
+	# Arrêter le timer de spawn actuel
+	if timer_spawn and is_instance_valid(timer_spawn):
+		timer_spawn.stop()
+	
+	# Fondu au noir (0.4s)
+	if _overlay_fondu:
+		var tw_out = create_tween()
+		tw_out.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		tw_out.tween_property(_overlay_fondu, "color:a", 1.0, 0.4)
+		await tw_out.finished
+	
+	# Si c'est le menu ou une scène globale hors vue jeu
+	if "menu" in prochain_niveau.to_lower():
+		revenir_au_menu()
+		_en_transition_niveau = false
+		return
+	
+	# Réinitialiser la partie pour un nouveau niveau
+	GlobalSettings.reinitialiser_partie()
+	
+	# Déchargement propre de l'ancienne carte
+	if carte_actuelle and is_instance_valid(carte_actuelle):
+		carte_actuelle.queue_free()
+		carte_actuelle = null
+		camera_jeu = null
+	
+	# Laisser le temps à Godot de libérer l'arbre
+	await get_tree().process_frame
+	await get_tree().process_frame
+	
+	# Chargement et instanciation du nouveau niveau
+	GlobalSettings.carte_selectionnee = prochain_niveau
+	var scene_carte = load(prochain_niveau) as PackedScene
 	if scene_carte:
 		carte_actuelle = scene_carte.instantiate()
 		vue_jeu.add_child(carte_actuelle)
 		camera_jeu = carte_actuelle.get_node_or_null("Camera2D") as Camera2D
 		configurer_le_spawn_automatique()
 		_connecter_boss_places_dans_la_carte()
+		print("[Main] Niveau '", prochain_niveau, "' instancié et démarré avec succès !")
+	else:
+		push_error("[Main] Impossible de charger la scène du niveau : " + str(prochain_niveau))
+	
+	# Fondu d'ouverture (0.4s)
+	if _overlay_fondu:
+		var tw_in = create_tween()
+		tw_in.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		tw_in.tween_property(_overlay_fondu, "color:a", 0.0, 0.4)
+		await tw_in.finished
+	
+	# Reprendre le jeu après le chargement du niveau
+	definir_pause(false)
+	_en_transition_niveau = false
+
 
 
 func _initialiser_viseur_pause_ui() -> void:
@@ -122,22 +268,25 @@ func _initialiser_viseur_pause_ui() -> void:
 	canvas_viseur_pause.add_child(sprite_viseur_pause)
 
 
+func _initialiser_debug_hud() -> void:
+	var debug_scene = load("res://Script/debug_hud.tscn")
+	if debug_scene:
+		debug_hud = debug_scene.instantiate()
+		debug_hud.name = "DebugHUD"
+		debug_hud.layer = 200  # Au-dessus de tout
+		add_child(debug_hud)
+		print("[Main] DebugHUD créé avec succès")
+
+
 func _initialiser_hud_partie() -> void:
 	for gauge in [gauge_vie_p1, gauge_vie_p2]:
 		if gauge:
 			_geometrie_gauges_vie[gauge] = {"haut": gauge.offset_top, "bas": gauge.offset_bottom}
 
-	label_score = Label.new()
-	label_score.name = "LabelScore"
-	label_score.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	label_score.position = Vector2(48.0, 12.0)
-	add_child(label_score)
-
-	label_credits = Label.new()
-	label_credits.name = "LabelCredits"
-	label_credits.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	label_credits.position = Vector2(720.0, 12.0)
-	add_child(label_credits)
+	# Mémoriser les échelles de base originales des textes HUD
+	for lbl in [label_score, label_credits, label_missiles]:
+		if lbl:
+			_echelles_base_hud[lbl] = lbl.scale
 
 	if not GlobalSettings.score_modifie.is_connected(_on_score_modifie):
 		GlobalSettings.score_modifie.connect(_on_score_modifie)
@@ -145,22 +294,106 @@ func _initialiser_hud_partie() -> void:
 		GlobalSettings.vie_modifiee.connect(_on_vie_modifiee)
 	if not GlobalSettings.credits_modifies.is_connected(_on_credits_modifies):
 		GlobalSettings.credits_modifies.connect(_on_credits_modifies)
+	if not GlobalSettings.missiles_modifies.is_connected(_on_missiles_modifies):
+		GlobalSettings.missiles_modifies.connect(_on_missiles_modifies)
 	if not GlobalSettings.partie_terminee.is_connected(_on_partie_terminee):
 		GlobalSettings.partie_terminee.connect(_on_partie_terminee)
+	if not GlobalSettings.pickup_collecte_anime.is_connected(_on_pickup_collecte_anime):
+		GlobalSettings.pickup_collecte_anime.connect(_on_pickup_collecte_anime)
 
 	_on_score_modifie(GlobalSettings.score)
 	_on_credits_modifies(GlobalSettings.credits_restants)
+	_on_missiles_modifies(GlobalSettings.missiles_restants)
 	_on_vie_modifiee(GlobalSettings.vie_actuelle, GlobalSettings.vie_max)
+
+
+func _animer_pulse_hud(cible_hud: Control) -> void:
+	if cible_hud == null or not is_instance_valid(cible_hud):
+		return
+	var scale_base: Vector2 = _echelles_base_hud.get(cible_hud, cible_hud.scale)
+	
+	# Si un tween tournait déjà sur cet élément, le stopper proprement
+	if _tweens_pulse_hud.has(cible_hud):
+		var ancien_tw: Tween = _tweens_pulse_hud[cible_hud]
+		if is_instance_valid(ancien_tw) and ancien_tw.is_running():
+			ancien_tw.kill()
+
+	# Réinitialiser immédiatement à l'échelle de base avant le pulse
+	cible_hud.scale = scale_base
+
+	var tw_pulse = create_tween()
+	tw_pulse.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	_tweens_pulse_hud[cible_hud] = tw_pulse
+	tw_pulse.tween_property(cible_hud, "scale", scale_base * 1.3, 0.08)
+	tw_pulse.tween_property(cible_hud, "scale", scale_base, 0.12)
+
+
+func _on_pickup_collecte_anime(texture_pickup: Texture2D, pos_ecran_depart: Vector2, type_pickup: String) -> void:
+	# Déterminer la cible HUD selon le type de pickup :
+	# - Missiles -> haut-gauche (MissilesBitmap)
+	# - Crédits -> haut-centre (CreditsBitmap)
+	# - Reste (Score, etc.) -> entre les missiles et les crédits (ScoreBitmap)
+	var cible_hud: Control = label_score
+	var nom_type = type_pickup.to_lower()
+	if "missile" in nom_type or "14" in nom_type:
+		cible_hud = label_missiles if label_missiles else label_score
+	elif "credit" in nom_type or "21" in nom_type:
+		cible_hud = label_credits if label_credits else label_score
+	else:
+		cible_hud = label_score
+
+	if cible_hud == null:
+		return
+
+	# Si texture_pickup est null, c'est le signal d'impact/arrivée à destination pour faire pulser le texte HUD
+	if texture_pickup == null:
+		_animer_pulse_hud(cible_hud)
+		return
+
+	# Fallback si une texture est fournie depuis un autre composant
+	var sprite_volant := Sprite2D.new()
+	sprite_volant.texture = texture_pickup
+	sprite_volant.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	sprite_volant.scale = Vector2(3.0, 3.0)
+	sprite_volant.z_index = 0
+	sprite_volant.global_position = pos_ecran_depart
+	
+	if has_node("ImageHUD"):
+		add_child(sprite_volant)
+		move_child(sprite_volant, get_node("ImageHUD").get_index())
+	else:
+		add_child(sprite_volant)
+
+	var scale_courante = _echelles_base_hud.get(cible_hud, cible_hud.scale)
+	var pos_cible = cible_hud.global_position + (cible_hud.size * scale_courante * 0.5)
+
+	var tw = create_tween()
+	tw.set_parallel(true)
+	tw.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tw.tween_property(sprite_volant, "global_position", pos_cible, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(sprite_volant, "scale", Vector2(1.2, 1.2), 0.4)
+	tw.chain().tween_property(sprite_volant, "modulate:a", 0.0, 0.1)
+
+	tw.finished.connect(func():
+		if is_instance_valid(sprite_volant):
+			sprite_volant.queue_free()
+		if is_instance_valid(cible_hud):
+			_animer_pulse_hud(cible_hud)
+	)
 
 
 func _on_score_modifie(score: int) -> void:
 	if label_score:
-		label_score.text = "SCORE %08d" % score
+		label_score.set_text("%08d" % score)
 
 
 func _on_credits_modifies(credits_restants: int) -> void:
 	if label_credits:
-		label_credits.text = "CREDITS %d" % credits_restants
+		label_credits.set_text("%02d" % credits_restants)
+
+func _on_missiles_modifies(missiles_restants: int) -> void:
+	if label_missiles:
+		label_missiles.set_text("%04d" % missiles_restants)
 
 
 func _on_vie_modifiee(vie_actuelle: int, vie_max: int) -> void:
@@ -245,6 +478,30 @@ func _connecter_signaux_ui() -> void:
 		btn_menu_principal.pressed.connect(revenir_au_menu)
 	if btn_quitter and not btn_quitter.pressed.is_connected(quitter_jeu):
 		btn_quitter.pressed.connect(quitter_jeu)
+	if btn_debug and not btn_debug.pressed.is_connected(_basculer_debug_menu):
+		btn_debug.pressed.connect(_basculer_debug_menu)
+	if check_jug and not check_jug.toggled.is_connected(_on_check_jug_toggled):
+		check_jug.toggled.connect(_on_check_jug_toggled)
+	if check_copter and not check_copter.toggled.is_connected(_on_check_copter_toggled):
+		check_copter.toggled.connect(_on_check_copter_toggled)
+	if check_van and not check_van.toggled.is_connected(_on_check_van_toggled):
+		check_van.toggled.connect(_on_check_van_toggled)
+	if check_health and not check_health.toggled.is_connected(_on_check_health_toggled):
+		check_health.toggled.connect(_on_check_health_toggled)
+	
+	# Signaux du menu principal
+	if btn_level_select_main and not btn_level_select_main.pressed.is_connected(afficher_menu_selection):
+		btn_level_select_main.pressed.connect(afficher_menu_selection)
+	if btn_reprendre_main and not btn_reprendre_main.pressed.is_connected(reprendre_jeu_depuis_menu):
+		btn_reprendre_main.pressed.connect(reprendre_jeu_depuis_menu)
+	if btn_quitter_main and not btn_quitter_main.pressed.is_connected(quitter_jeu):
+		btn_quitter_main.pressed.connect(quitter_jeu)
+	if btn_retour_select and not btn_retour_select.pressed.is_connected(retourner_main_menu):
+		btn_retour_select.pressed.connect(retourner_main_menu)
+	
+	# Signaux du menu pause
+	if btn_level_select_pause and not btn_level_select_pause.pressed.is_connected(afficher_menu_selection):
+		btn_level_select_pause.pressed.connect(afficher_menu_selection)
 
 
 # ==============================================================================
@@ -253,6 +510,7 @@ func _connecter_signaux_ui() -> void:
 func _process(_delta: float) -> void:
 	_mettre_a_jour_viseur_ui()
 	_mettre_a_jour_jauges_gunpower()
+	_update_health_debug_log()
 
 
 func _mettre_a_jour_viseur_ui() -> void:
@@ -420,7 +678,7 @@ func _initialiser_bouton_mode_controle() -> void:
 		if boite_v and btn_toggle_mode_controle == null:
 			btn_toggle_mode_controle = Button.new()
 			btn_toggle_mode_controle.name = "BoutonToggleModeControle"
-			btn_toggle_mode_controle.text = "🕹️ MODE CONTRÔLE : SOURIS / TACTILE DIRECT"
+			btn_toggle_mode_controle.text = "🕹️ MODE CONTRÔLE : MANETTE"
 			btn_toggle_mode_controle.custom_minimum_size = Vector2(250, 40)
 			if not btn_toggle_mode_controle.pressed.is_connected(_basculer_mode_controle): btn_toggle_mode_controle.pressed.connect(_basculer_mode_controle)
 			boite_v.add_child(btn_toggle_mode_controle)
@@ -429,7 +687,7 @@ func _initialiser_bouton_mode_controle() -> void:
 func _basculer_mode_controle() -> void:
 	mode_joystick_actif = not mode_joystick_actif
 	if btn_toggle_mode_controle:
-		btn_toggle_mode_controle.text = "🕹️ MODE CONTRÔLE : JOYSTICK VIRTUEL & GAMEPAD" if mode_joystick_actif else "🎯 MODE CONTRÔLE : SOURIS / TACTILE DIRECT"
+		btn_toggle_mode_controle.text = "🕹️ MODE CONTRÔLE : MANETTE" if mode_joystick_actif else "🎯 MODE CONTRÔLE : SOURIS / TACTILE"
 	if ui_joystick_container:
 		ui_joystick_container.visible = mode_joystick_actif
 		
@@ -444,16 +702,25 @@ func _creer_ui_joystick_et_boutons() -> void:
 	if ui_joystick_container:
 		ui_joystick_container.visible = mode_joystick_actif
 		
-		var btn_tir = ui_joystick_container.get_node_or_null("BoutonTirPrincipalUI") as Button
+		var btn_tir = ui_joystick_container.get_node_or_null("BoutonTirPrincipalUI")
 		if btn_tir:
-			if not btn_tir.button_down.is_connected(_on_btn_tir_down):
-				btn_tir.button_down.connect(_on_btn_tir_down)
-				btn_tir.button_up.connect(_on_btn_tir_up)
+			if btn_tir.has_signal("touched_down"):
+				if not btn_tir.touched_down.is_connected(_on_btn_tir_down):
+					btn_tir.touched_down.connect(_on_btn_tir_down)
+					btn_tir.touched_up.connect(_on_btn_tir_up)
+			elif btn_tir is Button:
+				if not btn_tir.button_down.is_connected(_on_btn_tir_down):
+					btn_tir.button_down.connect(_on_btn_tir_down)
+					btn_tir.button_up.connect(_on_btn_tir_up)
 				
-		var btn_missile = ui_joystick_container.get_node_or_null("BoutonTirMissileUI") as Button
+		var btn_missile = ui_joystick_container.get_node_or_null("BoutonTirMissileUI")
 		if btn_missile:
-			if not btn_missile.pressed.is_connected(_on_btn_missile_pressed):
-				btn_missile.pressed.connect(_on_btn_missile_pressed)
+			if btn_missile.has_signal("touched_down"):
+				if not btn_missile.touched_down.is_connected(_on_btn_missile_pressed):
+					btn_missile.touched_down.connect(_on_btn_missile_pressed)
+			elif btn_missile is Button:
+				if not btn_missile.pressed.is_connected(_on_btn_missile_pressed):
+					btn_missile.pressed.connect(_on_btn_missile_pressed)
 
 
 func _on_btn_tir_down() -> void:
@@ -477,20 +744,108 @@ func _actionner_tir_ui(est_presse: bool, est_missile: bool) -> void:
 
 
 # ==============================================================================
+# DEBUG HUD
+# ==============================================================================
+func _basculer_debug_menu() -> void:
+	if debug_options_container:
+		debug_options_container.visible = not debug_options_container.visible
+	if debug_hud:
+		debug_hud.toggle_debug_hud(debug_options_container.visible)
+
+func _on_check_jug_toggled(pressed: bool) -> void:
+	if debug_hud:
+		debug_hud.toggle_jug_log(pressed)
+
+func _on_check_copter_toggled(pressed: bool) -> void:
+	if debug_hud:
+		debug_hud.toggle_copter_log(pressed)
+
+func _on_check_van_toggled(pressed: bool) -> void:
+	if debug_hud:
+		debug_hud.toggle_van_log(pressed)
+
+func _on_check_health_toggled(pressed: bool) -> void:
+	if debug_hud:
+		debug_hud.toggle_health_log(pressed)
+
+func _update_health_debug_log() -> void:
+	if not debug_hud:
+		return
+
+	if not carte_actuelle:
+		return
+
+	var health_text = ""
+	var actor_count = 0
+
+	# Scanner tous les acteurs avec des PV
+	for actor in carte_actuelle.find_children("*", "Node2D", true, false):
+		if actor.has_method("get_pv_actuels") and actor.has_method("get_pv_max"):
+			var pv_actuels = actor.get_pv_actuels() if actor.has_method("get_pv_actuels") else 0
+			var pv_max = actor.get_pv_max() if actor.has_method("get_pv_max") else 1
+			var ratio = float(pv_actuels) / float(max(pv_max, 1)) * 100.0
+
+			var actor_name = actor.name
+			if "jug" in actor_name.to_lower():
+				actor_name = "JUG"
+			elif "copter" in actor_name.to_lower():
+				actor_name = "COPTER"
+			elif "van" in actor_name.to_lower():
+				actor_name = "VAN"
+
+			health_text += "%s: %d/%d (%.0f%%)\n" % [actor_name, pv_actuels, pv_max, ratio]
+			actor_count += 1
+
+	if actor_count == 0:
+		health_text = "Aucun acteur détecté"
+
+	if debug_hud and debug_hud.has_method("set_health_log"):
+		debug_hud.set_health_log(health_text)
+
+
+# ==============================================================================
 # MENU PAUSE & NAVIGATION
 # ==============================================================================
 func basculer_pause() -> void:
 	if GlobalSettings.partie_perdue:
 		return
-	definir_pause(not get_tree().paused)
+	
+	# Si un menu est affiché, ne pas afficher le menu pause
+	var menu_actif = (main_menu and main_menu.visible) or (menu_select_overlay and menu_select_overlay.visible)
+	
+	if menu_actif:
+		definir_pause(true)  # Garder la pause mais ne pas afficher le menu pause
+	else:
+		definir_pause(not get_tree().paused)
 
 
 func definir_pause(etat_pause: bool) -> void:
 	get_tree().paused = etat_pause
+	
+	# N'afficher le menu pause que si on n'est pas dans les menus principaux
+	var menu_actif = (main_menu and main_menu.visible) or (menu_select_overlay and menu_select_overlay.visible)
+	
 	if menu_pause_overlay:
-		menu_pause_overlay.visible = etat_pause
-		if etat_pause:
-			menu_pause_overlay.move_to_front()
+		if menu_actif:
+			# Si un menu principal est actif, cacher le menu pause
+			menu_pause_overlay.visible = false
+		else:
+			# Sinon, afficher le menu pause normalement
+			menu_pause_overlay.visible = etat_pause
+			if etat_pause:
+				menu_pause_overlay.move_to_front()
+	
+	# Arrêter/reprendre la caméra quand le menu pause est affiché/caché
+	if camera_jeu and is_instance_valid(camera_jeu):
+		if menu_pause_overlay and menu_pause_overlay.visible:
+			# Arrêter la caméra quand le menu pause est visible
+			if camera_jeu.has_method("arreter_camera"):
+				camera_jeu.arreter_camera()
+		else:
+			# Reprendre la caméra quand le menu pause est caché
+			if camera_jeu.has_method("reprendre_camera"):
+				camera_jeu.reprendre_camera()
+	
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if etat_pause else Input.MOUSE_MODE_HIDDEN
 
 
@@ -499,26 +854,125 @@ func reprendre_jeu() -> void:
 	definir_pause(false)
 
 func recommencer_niveau() -> void:
+	if overlay_game_over and is_instance_valid(overlay_game_over):
+		overlay_game_over.hide()
 	definir_pause(false)
 	GlobalSettings.reinitialiser_partie()
-	get_tree().reload_current_scene()
+	
+	# Recharger uniquement le niveau actuel sans recharger toute l'interface
+	if carte_actuelle and is_instance_valid(carte_actuelle):
+		var chemin_carte_actuelle = GlobalSettings.carte_selectionnee
+		if chemin_carte_actuelle.is_empty():
+			chemin_carte_actuelle = "res://level2.tscn"
+		
+		# Décharger l'ancienne carte
+		carte_actuelle.queue_free()
+		carte_actuelle = null
+		camera_jeu = null
+		
+		# Attendre que Godot libère la mémoire
+		await get_tree().process_frame
+		await get_tree().process_frame
+		
+		# Recharger la même carte
+		var scene_carte = load(chemin_carte_actuelle) as PackedScene
+		if scene_carte:
+			carte_actuelle = scene_carte.instantiate()
+			vue_jeu.add_child(carte_actuelle)
+			camera_jeu = carte_actuelle.get_node_or_null("Camera2D") as Camera2D
+			configurer_le_spawn_automatique()
+			_connecter_boss_places_dans_la_carte()
+			print("[Main] Niveau réinitialisé : ", chemin_carte_actuelle)
+		else:
+			push_error("[Main] Impossible de recharger le niveau : " + str(chemin_carte_actuelle))
+	else:
+		# Fallback : recharger toute la scène si aucune carte n'est chargée
+		get_tree().reload_current_scene()
 
 func quitter_jeu() -> void:
 	definir_pause(false)
 	get_tree().quit()
 
 func revenir_au_menu() -> void:
+	if overlay_game_over and is_instance_valid(overlay_game_over):
+		overlay_game_over.hide()
 	definir_pause(false)
 	GlobalSettings.reinitialiser_partie()
 	if timer_spawn and is_instance_valid(timer_spawn):
 		timer_spawn.stop()
 		timer_spawn.queue_free()
+		timer_spawn = null
 		
 	if vue_jeu:
 		for enfant in vue_jeu.get_children():
 			enfant.queue_free()
-			
-	get_tree().change_scene_to_file("res://maps/menu_selection.tscn")
+	carte_actuelle = null
+	camera_jeu = null
+	
+	# Afficher le menu principal au lieu de changer de scène
+	afficher_main_menu()
+
+func afficher_main_menu() -> void:
+	if overlay_game_over and is_instance_valid(overlay_game_over):
+		overlay_game_over.hide()
+	if main_menu:
+		main_menu.visible = true
+		main_menu.move_to_front()
+	if menu_select_overlay:
+		menu_select_overlay.visible = false
+	if menu_pause_overlay:
+		menu_pause_overlay.visible = false
+	definir_pause(true)
+
+func afficher_menu_selection() -> void:
+	if overlay_game_over and is_instance_valid(overlay_game_over):
+		overlay_game_over.hide()
+	if main_menu:
+		main_menu.visible = false
+	if menu_select_overlay:
+		menu_select_overlay.visible = true
+		menu_select_overlay.move_to_front()
+	if menu_pause_overlay:
+		menu_pause_overlay.visible = false
+	definir_pause(true)
+
+func reprendre_jeu_depuis_menu() -> void:
+	if overlay_game_over and is_instance_valid(overlay_game_over):
+		overlay_game_over.hide()
+	if main_menu:
+		main_menu.visible = false
+	if menu_select_overlay:
+		menu_select_overlay.visible = false
+	if menu_pause_overlay:
+		menu_pause_overlay.visible = false
+	definir_pause(false)
+
+func retourner_main_menu() -> void:
+	if menu_select_overlay:
+		menu_select_overlay.visible = false
+	if main_menu:
+		main_menu.visible = true
+		main_menu.move_to_front()
+	if menu_pause_overlay:
+		menu_pause_overlay.visible = false
+	definir_pause(true)
+
+func _on_niveau_selectionne(chemin_niveau: String) -> void:
+	GlobalSettings.carte_selectionnee = chemin_niveau
+	print("[Main] Niveau sélectionné : ", chemin_niveau)
+	
+	# Cacher tous les menus et l'overlay game over
+	if overlay_game_over and is_instance_valid(overlay_game_over):
+		overlay_game_over.hide()
+	if main_menu:
+		main_menu.visible = false
+	if menu_select_overlay:
+		menu_select_overlay.visible = false
+	if menu_pause_overlay:
+		menu_pause_overlay.visible = false
+	
+	# Recharger la scène avec le nouveau niveau
+	_charger_prochain_tableau(chemin_niveau)
 
 # ==============================================================================
 # GESTION DES ENTRÉES (SOURIS, CLAVIER, BOUTON RETOUR ANDROID)

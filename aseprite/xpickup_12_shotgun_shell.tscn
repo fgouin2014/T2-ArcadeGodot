@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cja6i7ffukf4q"]
+
+[ext_resource type="Script" uid="uid://c4rd4vkmog4i0" path="res://Script/pickup_item.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dkkrlc0w4vdvt" path="res://images/items/xpickup_12.png" id="2_texture"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kufsv"]
+size = Vector2(11, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pickup"]
+size = Vector2(8, 24)
+
+[node name="xpickup_12_shotgun_shell" type="Area2D" unique_id=2061975800]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_script")
+type_pickup = "Shotgun Shell (xpickup_12)"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1327889699]
+texture_filter = 1
+texture = ExtResource("2_texture")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=1774319666]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=2124526767]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_kufsv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=714154230]
+shape = SubResource("RectangleShape2D_pickup")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1848981991]
+rect = Rect2(-4, -12, 8, 24)

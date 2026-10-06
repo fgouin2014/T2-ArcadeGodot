@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://b1n6tflbiahhe"]
+
+[ext_resource type="Script" uid="uid://dwhv5h435kdal" path="res://aseprite/vehicules/xsvan.gd" id="1_xsvan"]
+[ext_resource type="Script" uid="uid://cw8bo4m3lycvr" path="res://Script/breakable_prop.gd" id="5_n2ne2"]
+[ext_resource type="Texture2D" uid="uid://dp4eonvbtdiuh" path="res://maps/backdrops/level1/xsvan_21.png" id="6_rbnsg"]
+[ext_resource type="Texture2D" uid="uid://ctaytneck1w6i" path="res://maps/backdrops/level1/xsvan_01.png" id="8_6kx7s"]
+[ext_resource type="Texture2D" uid="uid://beqgw6eioqxxj" path="res://maps/backdrops/level1/xsvan_08.png" id="9_eayq2"]
+[ext_resource type="Texture2D" uid="uid://dmnsaparkbjrm" path="res://maps/backdrops/level1/xsvan_02.png" id="9_rrv7y"]
+[ext_resource type="Texture2D" uid="uid://b68003ia1p87t" path="res://maps/backdrops/level1/xsvan_00.png" id="10_eayq2"]
+[ext_resource type="Texture2D" uid="uid://cfj077qex74b5" path="res://maps/backdrops/level1/xsvan_04.png" id="10_un6g0"]
+[ext_resource type="Texture2D" uid="uid://8phqo4gfns2g" path="res://maps/backdrops/level1/xsvan_09.png" id="10_w0_f0"]
+[ext_resource type="Texture2D" uid="uid://drssyaamojnvu" path="res://maps/backdrops/level1/xsvan_05.png" id="11_ps3hh"]
+[ext_resource type="Texture2D" uid="uid://cpwlfvlhbqixt" path="res://maps/backdrops/level1/xsvan_10.png" id="11_w0_f1"]
+[ext_resource type="Texture2D" uid="uid://b8gs1c8ejpet5" path="res://maps/backdrops/level1/xsvan_06.png" id="12_5q0jf"]
+[ext_resource type="Texture2D" uid="uid://boqasiwci64f5" path="res://maps/backdrops/level1/xsvan_11.png" id="12_w1_f0"]
+[ext_resource type="Texture2D" uid="uid://i3ggjsc4cddh" path="res://maps/backdrops/level1/xsvan_07.png" id="13_txltm"]
+[ext_resource type="Texture2D" uid="uid://gb4i0o02fu0v" path="res://maps/backdrops/level1/xsvan_12.png" id="13_w1_f1"]
+
+[sub_resource type="Animation" id="Animation_anticipation"]
+resource_name = "anticipation"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_entree"]
+resource_name = "entree"
+length = 2.0
+
+[sub_resource type="Animation" id="Animation_recul"]
+resource_name = "recul"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyNode:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, -3, 2, -2, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_stationnaire"]
+resource_name = "stationnaire"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyNode:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 2, 0, -2, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rbnsg"]
+_data = {
+&"anticipation": SubResource("Animation_anticipation"),
+&"entree": SubResource("Animation_entree"),
+&"recul": SubResource("Animation_recul"),
+&"stationnaire": SubResource("Animation_stationnaire")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsvan"]
+size = Vector2(194, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khm7j"]
+size = Vector2(194, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kufsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_6kx7s")
+}],
+"loop": 1,
+"name": &"damaged",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_eayq2")
+}],
+"loop": 1,
+"name": &"defaullt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_rrv7y")
+}],
+"loop": 1,
+"name": &"destroyed",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kufsv"]
+size = Vector2(33, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_khm7j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_eayq2")
+}],
+"loop": 1,
+"name": &"broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_un6g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ps3hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5q0jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_txltm")
+}],
+"loop": 1,
+"name": &"loop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_eayq2")
+}],
+"loop": 1,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_un6g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ps3hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5q0jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_txltm")
+}],
+"loop": 1,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(38.940254, 37.6833)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wheel_rear"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_w0_f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_w0_f1")
+}],
+"loop": 1,
+"name": &"roll",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wheel_front"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_w1_f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_w1_f1")
+}],
+"loop": 1,
+"name": &"roll",
+"speed": 10.0
+}]
+
+[node name="XSVan" type="CharacterBody2D" unique_id=603140038]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_xsvan")
+suivre_camera_automatiquement = false
+offset_lucarne_ratio_x = 0.3
+pv_max = 20
+direction_deplacement = "gauche_vers_droite"
+boucle_avec_camera = true
+effet_mort = 1
+explosion_pattern = 2
+
+[node name="VanAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1419294378]
+libraries/ = SubResource("AnimationLibrary_rbnsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1919962687]
+position = Vector2(97, 72)
+shape = SubResource("RectangleShape2D_xsvan")
+
+[node name="BodyNode" type="Node2D" parent="." unique_id=875630654]
+
+[node name="Body" type="Sprite2D" parent="BodyNode" unique_id=541759488]
+texture_filter = 1
+position = Vector2(0, 19)
+texture = ExtResource("6_rbnsg")
+centered = false
+
+[node name="HitArea" type="Area2D" parent="BodyNode/Body" unique_id=1302569115]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyNode/Body/HitArea" unique_id=1523630760]
+position = Vector2(97, 54)
+shape = SubResource("RectangleShape2D_khm7j")
+
+[node name="DomageablePart" type="AnimatedSprite2D" parent="BodyNode" unique_id=283067770]
+texture_filter = 1
+position = Vector2(0, 19)
+sprite_frames = SubResource("SpriteFrames_kufsv")
+animation = &"defaullt"
+centered = false
+script = ExtResource("5_n2ne2")
+
+[node name="HitRoof" type="Marker2D" parent="BodyNode/DomageablePart" unique_id=521215934]
+position = Vector2(6.568653, 6.3596745)
+
+[node name="HitRear" type="Marker2D" parent="BodyNode/DomageablePart" unique_id=104303228]
+position = Vector2(5.309639, 54.381958)
+
+[node name="HitArea" type="Area2D" parent="BodyNode/DomageablePart" unique_id=1573977551]
+position = Vector2(14, 11)
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyNode/DomageablePart/HitArea" unique_id=950023339]
+position = Vector2(6.5, 39)
+shape = SubResource("RectangleShape2D_kufsv")
+
+[node name="Lights" type="Node2D" parent="BodyNode" unique_id=387680292]
+position = Vector2(13, 0)
+script = ExtResource("5_n2ne2")
+
+[node name="Light" type="AnimatedSprite2D" parent="BodyNode/Lights" unique_id=427690625]
+position = Vector2(12, 11)
+sprite_frames = SubResource("SpriteFrames_khm7j")
+animation = &"loop"
+autoplay = "loop"
+frame_progress = 0.59205526
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="BodyNode/Lights/Light" unique_id=1380352691]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyNode/Lights/Light/HitArea" unique_id=1336709452]
+position = Vector2(9.536743e-07, 0)
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Light2" type="AnimatedSprite2D" parent="BodyNode/Lights" unique_id=378567857]
+position = Vector2(140, 11)
+sprite_frames = SubResource("SpriteFrames_khm7j")
+animation = &"loop"
+autoplay = "loop"
+frame_progress = 0.3883738
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="BodyNode/Lights/Light2" unique_id=2012649156]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyNode/Lights/Light2/HitArea" unique_id=245272935]
+position = Vector2(9.536743e-07, 0)
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Wheels" type="Node2D" parent="BodyNode" unique_id=1087502437]
+position = Vector2(0, 95)
+
+[node name="WheelRear" type="AnimatedSprite2D" parent="BodyNode/Wheels" unique_id=78095207]
+texture_filter = 1
+position = Vector2(13.5, 0)
+sprite_frames = SubResource("SpriteFrames_wheel_rear")
+animation = &"roll"
+autoplay = "roll"
+centered = false
+
+[node name="WheelFront" type="AnimatedSprite2D" parent="BodyNode/Wheels" unique_id=1297416917]
+texture_filter = 1
+position = Vector2(125.2, 0)
+sprite_frames = SubResource("SpriteFrames_wheel_front")
+animation = &"roll"
+autoplay = "roll"
+centered = false
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1402198321]
+position = Vector2(97, 67)
+rect = Rect2(-97, -44, 194, 97)

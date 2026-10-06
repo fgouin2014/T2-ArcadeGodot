@@ -1,0 +1,271 @@
+[gd_scene format=3 uid="uid://re5a8vbsohm0"]
+
+[ext_resource type="Script" uid="uid://clchjuksigqc7" path="res://aseprite/vehicules/xjug.gd" id="1_xjug"]
+[ext_resource type="Texture2D" uid="uid://brxtdqmd3u18y" path="res://maps/backdrops/level1/xjug_trailer.png" id="2_trailer"]
+[ext_resource type="Texture2D" uid="uid://bbi5n57mlj0h" path="res://maps/backdrops/level1/xjug2_01.png" id="3_cabine"]
+[ext_resource type="Texture2D" uid="uid://tl2888x5m6u2" path="res://maps/backdrops/level1/xjug3_door.png" id="4_3mblu"]
+[ext_resource type="Texture2D" uid="uid://dyu4fjosct2m3" path="res://maps/backdrops/level1/xjug3dmg_00.png" id="4_door0"]
+[ext_resource type="Texture2D" uid="uid://c5ol7iptvuctq" path="res://maps/backdrops/level1/xjug3dmg_02.png" id="5_door2"]
+[ext_resource type="Texture2D" uid="uid://4u4526mqv65l" path="res://maps/backdrops/level1/xjug3dmg_01.png" id="6_eng1"]
+[ext_resource type="Texture2D" uid="uid://bovyx7w4qp71o" path="res://maps/backdrops/level1/xjug3_hood.png" id="7_7372t"]
+[ext_resource type="Texture2D" uid="uid://cy1h22pmtpin5" path="res://maps/backdrops/level1/xjug3dmg_04.png" id="7_eng4"]
+[ext_resource type="Texture2D" uid="uid://be1jl7hsw6esp" path="res://maps/backdrops/level1/xtruck2_00.png" id="8_w7nlq"]
+[ext_resource type="Texture2D" uid="uid://de04ncptbjap3" path="res://maps/backdrops/level1/xtruck2_01.png" id="9_q4o6w"]
+[ext_resource type="Texture2D" uid="uid://bnajeryjru5s5" path="res://maps/backdrops/level1/xtruck2_02.png" id="10_3mblu"]
+[ext_resource type="Texture2D" uid="uid://cpr5kaqe4a45v" path="res://maps/backdrops/level1/xtruck2_03.png" id="11_7372t"]
+
+[sub_resource type="Animation" id="Animation_anticipation"]
+resource_name = "anticipation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyNode:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 3, 0, -3, 0]
+}
+
+[sub_resource type="Animation" id="Animation_chase"]
+resource_name = "chase"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyNode:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 0, -1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_lunge"]
+resource_name = "lunge"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyNode:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 2, -2, 2, 0]
+}
+
+[sub_resource type="Animation" id="Animation_retreat"]
+resource_name = "retreat"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyNode:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 0, -1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sqesy"]
+_data = {
+&"anticipation": SubResource("Animation_anticipation"),
+&"chase": SubResource("Animation_chase"),
+&"lunge": SubResource("Animation_lunge"),
+&"retreat": SubResource("Animation_retreat"),
+&"stationnaire": SubResource("Animation_chase")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjug"]
+size = Vector2(368, 107)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_khm7j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_door0")
+}],
+"loop": 1,
+"name": &"damaged",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_3mblu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_door2")
+}],
+"loop": 1,
+"name": &"disabled",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37tv0"]
+size = Vector2(33, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0yg3d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_eng1")
+}],
+"loop": 1,
+"name": &"damaged",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_7372t")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_eng4")
+}],
+"loop": 1,
+"name": &"disabled",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqesy"]
+size = Vector2(31, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kufsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_w7nlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q4o6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3mblu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7372t")
+}],
+"loop": 1,
+"name": &"spinning",
+"speed": 5.0
+}]
+
+[node name="XJug" type="CharacterBody2D" unique_id=475464586]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_xjug")
+pv_max = 10
+boucle_avec_camera = true
+effet_mort = 1
+explosion_pattern = 2
+
+[node name="JugAnimationPlayer" type="AnimationPlayer" parent="." unique_id=268165402]
+libraries/ = SubResource("AnimationLibrary_sqesy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1169776775]
+position = Vector2(302, 82.5)
+shape = SubResource("RectangleShape2D_xjug")
+
+[node name="BodyNode" type="Node2D" parent="." unique_id=2112059742]
+
+[node name="Trailer" type="Sprite2D" parent="BodyNode" unique_id=1991962775]
+texture_filter = 1
+position = Vector2(0, 32)
+texture = ExtResource("2_trailer")
+centered = false
+
+[node name="Cabine" type="Sprite2D" parent="BodyNode" unique_id=988868898]
+texture_filter = 1
+position = Vector2(396, 0)
+texture = ExtResource("3_cabine")
+centered = false
+
+[node name="DoorDmg" type="AnimatedSprite2D" parent="BodyNode/Cabine" unique_id=1966403242]
+position = Vector2(26, 84)
+sprite_frames = SubResource("SpriteFrames_khm7j")
+
+[node name="HitArea" type="Area2D" parent="BodyNode/Cabine/DoorDmg" unique_id=1650718156]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+metadata/hp = 25
+metadata/destructible = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyNode/Cabine/DoorDmg/HitArea" unique_id=1145971145]
+position = Vector2(0.5, -14)
+shape = SubResource("RectangleShape2D_37tv0")
+
+[node name="EngineDmg" type="AnimatedSprite2D" parent="BodyNode/Cabine" unique_id=1038479981]
+position = Vector2(66, 84)
+sprite_frames = SubResource("SpriteFrames_0yg3d")
+
+[node name="HitArea" type="Area2D" parent="BodyNode/Cabine/EngineDmg" unique_id=161389105]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+metadata/hp = 25
+metadata/destructible = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyNode/Cabine/EngineDmg/HitArea" unique_id=2076000716]
+position = Vector2(-0.5, 4.5)
+shape = SubResource("RectangleShape2D_sqesy")
+
+[node name="nose" type="Marker2D" parent="BodyNode/Cabine" unique_id=2081467422]
+position = Vector2(86, 73.38196)
+
+[node name="Wheels" type="Node2D" parent="BodyNode" unique_id=1359874624]
+position = Vector2(0, 116)
+
+[node name="Wheel0" type="AnimatedSprite2D" parent="BodyNode/Wheels" unique_id=371686290]
+position = Vector2(87, 19)
+sprite_frames = SubResource("SpriteFrames_kufsv")
+animation = &"spinning"
+autoplay = "spinning"
+
+[node name="Wheel1" type="AnimatedSprite2D" parent="BodyNode/Wheels" unique_id=189262377]
+position = Vector2(140, 19)
+sprite_frames = SubResource("SpriteFrames_kufsv")
+animation = &"spinning"
+autoplay = "spinning"
+
+[node name="Wheel2" type="AnimatedSprite2D" parent="BodyNode/Wheels" unique_id=78927915]
+position = Vector2(287, 19)
+sprite_frames = SubResource("SpriteFrames_kufsv")
+animation = &"spinning"
+autoplay = "spinning"
+
+[node name="Wheel3" type="AnimatedSprite2D" parent="BodyNode/Wheels" unique_id=1854016872]
+position = Vector2(339, 19)
+sprite_frames = SubResource("SpriteFrames_kufsv")
+animation = &"spinning"
+autoplay = "spinning"
+
+[node name="Wheel4" type="AnimatedSprite2D" parent="BodyNode/Wheels" unique_id=1524706546]
+position = Vector2(455, 19)
+sprite_frames = SubResource("SpriteFrames_kufsv")
+animation = &"spinning"
+autoplay = "spinning"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="BodyNode" unique_id=867405655]
+position = Vector2(251, 92)
+rect = Rect2(-243, -77.5, 486, 155)

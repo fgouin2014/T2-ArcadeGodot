@@ -1,0 +1,103 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://aseprite/vehicules/xjug.gd" id="1_xjug"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xjug_trailer.png" id="2_trailer"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xjug2_01.png" id="3_cabine"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xjug3dmg_00.png" id="4_door0"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xjug3dmg_02.png" id="5_door2"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xjug3dmg_01.png" id="6_eng1"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xjug3dmg_04.png" id="7_eng4"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xsvan_09.png" id="8_wheel0"]
+[ext_resource type="Texture2D" path="res://maps/backdrops/level1/xsvan_11.png" id="9_wheel1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjug_box"]
+size = Vector2(486, 155.178)
+
+[node name="XJugBoss" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_xjug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(243, 77.589)
+shape = SubResource("RectangleShape2D_xjug_box")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(0, 0, 486, 155.178)
+
+[node name="BodyNode" type="Node2D" parent="."]
+
+[node name="Trailer" type="Sprite2D" parent="BodyNode"]
+position = Vector2(0, 32)
+texture_filter = 1
+texture = ExtResource("2_trailer")
+centered = false
+
+[node name="Cabine" type="Sprite2D" parent="BodyNode"]
+position = Vector2(396, 0)
+texture_filter = 1
+texture = ExtResource("3_cabine")
+centered = false
+
+[node name="DamagedGroup0" type="Node2D" parent="BodyNode"]
+position = Vector2(400, 64)
+
+[node name="DoorDmgLvl1" type="Sprite2D" parent="BodyNode/DamagedGroup0"]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_door0")
+centered = false
+
+[node name="DoorDmgLvl2" type="Sprite2D" parent="BodyNode/DamagedGroup0"]
+visible = false
+texture_filter = 1
+texture = ExtResource("5_door2")
+centered = false
+
+[node name="DamagedGroup1" type="Node2D" parent="BodyNode"]
+position = Vector2(445, 64)
+
+[node name="EngineDmgLvl1" type="Sprite2D" parent="BodyNode/DamagedGroup1"]
+visible = false
+texture_filter = 1
+texture = ExtResource("6_eng1")
+centered = false
+
+[node name="EngineDmgLvl2" type="Sprite2D" parent="BodyNode/DamagedGroup1"]
+visible = false
+texture_filter = 1
+texture = ExtResource("7_eng4")
+centered = false
+
+[node name="Wheels" type="Node2D" parent="BodyNode"]
+position = Vector2(0, 116)
+
+[node name="Wheel0" type="Sprite2D" parent="BodyNode/Wheels"]
+position = Vector2(66.9, 0)
+texture_filter = 1
+texture = ExtResource("8_wheel0")
+centered = false
+
+[node name="Wheel1" type="Sprite2D" parent="BodyNode/Wheels"]
+position = Vector2(118.9, 0)
+texture_filter = 1
+texture = ExtResource("9_wheel1")
+centered = false
+
+[node name="Wheel2" type="Sprite2D" parent="BodyNode/Wheels"]
+position = Vector2(266.9, 0)
+texture_filter = 1
+texture = ExtResource("8_wheel0")
+centered = false
+
+[node name="Wheel3" type="Sprite2D" parent="BodyNode/Wheels"]
+position = Vector2(318.9, 0)
+texture_filter = 1
+texture = ExtResource("9_wheel1")
+centered = false
+
+[node name="Wheel4" type="Sprite2D" parent="BodyNode/Wheels"]
+position = Vector2(434.9, 0)
+texture_filter = 1
+texture = ExtResource("8_wheel0")
+centered = false

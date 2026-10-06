@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://df3jw3n3ie1w"]
+
+[ext_resource type="Script" uid="uid://cw8bo4m3lycvr" path="res://Script/breakable_prop.gd" id="1_y170w"]
+[ext_resource type="SpriteFrames" uid="uid://fukea5wc5o1r" path="res://aseprite/effect/xl4fen_00.ase" id="2_d3ebt"]
+[ext_resource type="Texture2D" uid="uid://dcqmo0lkqamnr" path="res://maps/backdrops/level1/xl4fen_08.png" id="3_lpfen"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(25.960167, 48.674263)
+
+[node name="xl4fen_isolator" type="Node2D" unique_id=387680292]
+script = ExtResource("1_y170w")
+
+[node name="isolator" type="AnimatedSprite2D" parent="." unique_id=1979647287]
+position = Vector2(8, 16)
+sprite_frames = ExtResource("2_d3ebt")
+animation = &"on"
+autoplay = "on"
+metadata/destructible = true
+metadata/hp = 1
+metadata/damaged_texture = ExtResource("3_lpfen")
+
+[node name="HitArea" type="Area2D" parent="isolator" unique_id=347971770]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="isolator/HitArea" unique_id=417508383]
+position = Vector2(0, -0.5)
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")

@@ -1,6 +1,7 @@
 # Project Rules: T2-ArcadeGodot (Godot 4 Engine)
 
 ## Architecture & Code Structure
+
 - **Character & Actor Scenes**: Centralized in `res://aseprite/`. Every actor `.tscn` inherits a modular script class from `res://Script/`.
 - **Modular Scripts (`res://Script/`)**:
   - `ActorBase` (`actor_base.gd`): Core class for screen detection (`VisibleOnScreenNotifier2D`), activation delay (`delai_activation_sec`), health (`pv_max`), shot impacts, bidirectional movement (`direction_deplacement`), and `inverser_visuel` Flip H toggle.
@@ -11,6 +12,7 @@
   - `ProjectileActor` (`projectile_actor.gd`): Projectiles balistiques (`xflask`, `xengren`, `xmissile`).
 
 ## Tiled & Map Asset Organization
+
 - Tiled Project: `res://maps/backdrops/levels.godot.tiled-project`.
 - Gameplay Maps & Backdrop Scenes: Stored cleanly in `res://maps/` or subdirectories.
 - Scene Naming Convention:
@@ -18,12 +20,17 @@
   - Master Gameplay Scenes: `level1.tscn`, `level2.tscn`, `level3.tscn`, `level4.tscn`, `level6.tscn`, `level7.tscn`, `testchamber.tscn`.
 
 ## Camera Scroll Speed Formula
+
 For constant scroll speed on level rails:
+
 - Distance in columns: D_cols = D_px / Tile_Width
 - Target speed: Speed_target = D_cols / (T * 60)
 - If map height = 1 tile: scroll_speed = Speed_target / 0.008
 - If map height > 1 tile: scroll_speed = Speed_target / 0.04
 
 ## Engine Executable Path
+
 - **Godot 4.7 Executable**: `E:\Godot_v4.7.1-stable\Godot_v4.7.1-stable_win64.exe`
+- **Godot 4.7 Executable**: `E:\Godot_v4.7.1-stable\godot.exe`
+- **Aseprite Executable Path** : `C:\androidProject\aseprite\build\bin\aseprite.exe`
 

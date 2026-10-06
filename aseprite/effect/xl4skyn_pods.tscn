@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://vhfvobef4pnh"]
+
+[ext_resource type="Script" uid="uid://btx1nwsfbqq0y" path="res://Script/PodsManager.gd" id="1_manager"]
+[ext_resource type="Texture2D" uid="uid://mrlc773xa80u" path="res://maps/backdrops/level1/xl4skyn_pods_placeholder.png" id="2_bg"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/xl4htc_a.tscn" id="3_hatch_a"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/xl4htc_b.tscn" id="4_hatch_b"]
+
+[node name="xl4skyn_pods" type="Node2D" unique_id=2006597724]
+script = ExtResource("1_manager")
+
+[node name="pod_0" type="Node2D" parent="." unique_id=1212052347]
+
+[node name="Sprite2D" type="Sprite2D" parent="pod_0" unique_id=864375507]
+texture_filter = 1
+texture = ExtResource("2_bg")
+centered = false
+
+[node name="xl4htc_a" parent="pod_0" unique_id=1879390935 instance=ExtResource("3_hatch_a")]
+position = Vector2(29.5, 30)
+
+[node name="xl4htc_b" parent="pod_0" unique_id=1190789294 instance=ExtResource("4_hatch_b")]
+position = Vector2(29.5, 78)
+
+[node name="pod_1" type="Node2D" parent="." unique_id=849675099]
+position = Vector2(59, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="pod_1" unique_id=1441549371]
+texture_filter = 1
+texture = ExtResource("2_bg")
+centered = false
+
+[node name="xl4htc_a" parent="pod_1" unique_id=1918206796 instance=ExtResource("3_hatch_a")]
+position = Vector2(29.5, 30)
+
+[node name="xl4htc_b" parent="pod_1" unique_id=454776388 instance=ExtResource("4_hatch_b")]
+position = Vector2(29.5, 78)
+
+[node name="pod_2" type="Node2D" parent="." unique_id=1551089421]
+position = Vector2(118, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="pod_2" unique_id=403427838]
+texture_filter = 1
+texture = ExtResource("2_bg")
+centered = false
+
+[node name="xl4htc_a" parent="pod_2" unique_id=1788818033 instance=ExtResource("3_hatch_a")]
+position = Vector2(29.5, 30)
+
+[node name="xl4htc_b" parent="pod_2" unique_id=800838702 instance=ExtResource("4_hatch_b")]
+position = Vector2(29.5, 78)
+
+[node name="pod_3" type="Node2D" parent="." unique_id=1784782311]
+position = Vector2(177, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="pod_3" unique_id=1745689546]
+texture_filter = 1
+texture = ExtResource("2_bg")
+centered = false
+
+[node name="xl4htc_a" parent="pod_3" unique_id=1866467481 instance=ExtResource("3_hatch_a")]
+position = Vector2(29.5, 30)
+
+[node name="xl4htc_b" parent="pod_3" unique_id=1649451689 instance=ExtResource("4_hatch_b")]
+position = Vector2(29.5, 78)
+
+[node name="pod_4" type="Node2D" parent="." unique_id=1871557621]
+position = Vector2(236, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="pod_4" unique_id=1908404612]
+texture_filter = 1
+texture = ExtResource("2_bg")
+centered = false
+
+[node name="xl4htc_a" parent="pod_4" unique_id=774642604 instance=ExtResource("3_hatch_a")]
+position = Vector2(29.5, 30)
+
+[node name="xl4htc_b" parent="pod_4" unique_id=480026609 instance=ExtResource("4_hatch_b")]
+position = Vector2(29.5, 78)

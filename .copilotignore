@@ -1,0 +1,23 @@
+# Configuration des agents externes (Antigravity, etc.)
+.agents/
+
+# Cache et données d'importation de Godot
+.godot/
+*.import
+*.uid
+
+# Fichiers de configuration des IDEs (JetBrains & VS Code)
+.idea/
+.vscode/
+
+# Fichiers de métadonnées d'importation de Godot (À ignorer !)
+*.import
+
+# Fichiers de build ou temporaires Android
+build/
+*.apk
+
+*.zip
+*.rar
+
+*.py

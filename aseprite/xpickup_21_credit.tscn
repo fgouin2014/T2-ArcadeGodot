@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Script/pickup_item.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://tsj/xpickup_21.png" id="2_texture"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pickup"]
+size = Vector2(19, 19)
+
+[node name="xpickup_21_credit" type="Area2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_script")
+type_pickup = "Credit (xpickup_21)"
+quantite = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_texture")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pickup")

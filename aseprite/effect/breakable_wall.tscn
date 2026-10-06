@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cvo11vyjcgcxi"]
+
+[ext_resource type="Texture2D" uid="uid://b6q2gmovjx5n8" path="res://maps/backdrops/level1/xl4bits2_06.png" id="1_fpphw"]
+[ext_resource type="Texture2D" uid="uid://d7qc7pqogp2" path="res://maps/backdrops/level1/xl4bits2_00.png" id="2_jiuq6"]
+[ext_resource type="Texture2D" uid="uid://35psl4wvrg5j" path="res://maps/backdrops/level1/xl4bits2_05.png" id="3_r3rko"]
+
+[node name="breakable_wall" type="Node2D" unique_id=738499657]
+texture_filter = 1
+
+[node name="wall" type="Sprite2D" parent="." unique_id=553427797]
+texture = ExtResource("1_fpphw")
+offset = Vector2(60, -47)
+metadata/destructible = true
+metadata/hp = 3
+
+[node name="HitArea" type="Area2D" parent="wall" unique_id=1555229683]
+position = Vector2(100, -68)
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wall/HitArea" unique_id=462350055]
+position = Vector2(-44, 27)
+polygon = PackedVector2Array(-56, 41, -52, 18, -42, 13, -20, -24, -12, -46, -9, -43, 4, -53, 4, -40, 19, -19, 62, 27, 64, 41)
+
+[node name="breakable_left" type="Sprite2D" parent="." unique_id=1172296895]
+texture = ExtResource("2_jiuq6")
+offset = Vector2(30, -48)
+metadata/destructible = true
+metadata/hp = 3
+
+[node name="HitArea" type="Area2D" parent="breakable_left" unique_id=1653986527]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="breakable_left/HitArea" unique_id=203105668]
+polygon = PackedVector2Array(21, -96, 0, 0, 59, 0, 59, -96)
+
+[node name="breakable_right" type="Sprite2D" parent="." unique_id=276119576]
+position = Vector2(60, 0)
+texture = ExtResource("3_r3rko")
+offset = Vector2(30, -48)
+metadata/destructible = true
+metadata/hp = 3
+
+[node name="HitArea" type="Area2D" parent="breakable_right" unique_id=1163315783]
+position = Vector2(40, -68)
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="breakable_right/HitArea" unique_id=258003817]
+position = Vector2(-100, 68)
+polygon = PackedVector2Array(59, -96, 59, 0, 120, 0, 99, -96)

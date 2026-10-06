@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://bxcybst00001"]
+
+[ext_resource type="PackedScene" uid="uid://d3kyqkl0hudv8" path="res://maps/backdrops/level1/t2_xcybst.tmj" id="1_xcybst"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="2_xcybst"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/backdesk.tscn" id="3_backdesk"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/frontdesk.tscn" id="4_frontdesk"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/cluster1.tscn" id="5_cluster1"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/cluster2.tscn" id="6_cluster2"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/cluster3.tscn" id="7_cluster3"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/win_cluster4.tscn" id="8_win_cluster4"]
+[ext_resource type="PackedScene" path="res://aseprite/effect/win_cluster5.tscn" id="9_win_cluster5"]
+
+[node name="t2_xcybst" unique_id=2138150329 instance=ExtResource("1_xcybst")]
+
+[node name="Spawners" type="Node2D" parent="." index="0" unique_id=1920840885]
+
+[node name="Windows_Props" type="Node2D" parent="." index="1" unique_id=476835992]
+
+[node name="Window_0_win_cluster4" parent="Windows_Props" index="0" unique_id=895563104 instance=ExtResource("8_win_cluster4")]
+
+[node name="Window_1_win_cluster5" parent="Windows_Props" index="1" unique_id=780528991 instance=ExtResource("9_win_cluster5")]
+position = Vector2(128, 0)
+
+[node name="Window_2_win_cluster4" parent="Windows_Props" index="2" unique_id=313987559 instance=ExtResource("8_win_cluster4")]
+position = Vector2(256, 0)
+
+[node name="Window_3_win_cluster5" parent="Windows_Props" index="3" unique_id=1778604872 instance=ExtResource("9_win_cluster5")]
+position = Vector2(384, 0)
+
+[node name="Window_4_win_cluster4" parent="Windows_Props" index="4" unique_id=1655271457 instance=ExtResource("8_win_cluster4")]
+position = Vector2(512, 0)
+
+[node name="Window_5_win_cluster5" parent="Windows_Props" index="5" unique_id=284194769 instance=ExtResource("9_win_cluster5")]
+position = Vector2(640, 0)
+
+[node name="Window_6_win_cluster4" parent="Windows_Props" index="6" unique_id=1159063948 instance=ExtResource("8_win_cluster4")]
+position = Vector2(768, 0)
+
+[node name="Window_7_win_cluster5" parent="Windows_Props" index="7" unique_id=815699528 instance=ExtResource("9_win_cluster5")]
+position = Vector2(896, 0)
+
+[node name="Window_8_win_cluster4" parent="Windows_Props" index="8" unique_id=1200595899 instance=ExtResource("8_win_cluster4")]
+position = Vector2(1024, 0)
+
+[node name="Window_9_win_cluster5" parent="Windows_Props" index="9" unique_id=503846762 instance=ExtResource("9_win_cluster5")]
+position = Vector2(1152, 0)
+
+[node name="Window_10_win_cluster4" parent="Windows_Props" index="10" unique_id=548242262 instance=ExtResource("8_win_cluster4")]
+position = Vector2(1280, 0)
+
+[node name="Window_11_win_cluster5" parent="Windows_Props" index="11" unique_id=515481028 instance=ExtResource("9_win_cluster5")]
+position = Vector2(1408, 0)
+
+[node name="Window_12_win_cluster4" parent="Windows_Props" index="12" unique_id=1878371840 instance=ExtResource("8_win_cluster4")]
+position = Vector2(1536, 0)
+
+[node name="Window_13_win_cluster5" parent="Windows_Props" index="13" unique_id=1533744742 instance=ExtResource("9_win_cluster5")]
+position = Vector2(1664, 0)
+
+[node name="Window_14_win_cluster4" parent="Windows_Props" index="14" unique_id=965128903 instance=ExtResource("8_win_cluster4")]
+position = Vector2(1792, 0)
+
+[node name="Window_15_win_cluster5" parent="Windows_Props" index="15" unique_id=1297521092 instance=ExtResource("9_win_cluster5")]
+position = Vector2(1920, 0)
+
+[node name="Window_16_win_cluster4" parent="Windows_Props" index="16" unique_id=740893236 instance=ExtResource("8_win_cluster4")]
+position = Vector2(2048, 0)
+
+[node name="Window_17_win_cluster5" parent="Windows_Props" index="17" unique_id=1164405580 instance=ExtResource("9_win_cluster5")]
+position = Vector2(2176, 0)
+
+[node name="Window_18_win_cluster4" parent="Windows_Props" index="18" unique_id=1901433521 instance=ExtResource("8_win_cluster4")]
+position = Vector2(2304, 0)
+
+[node name="Window_19_win_cluster5" parent="Windows_Props" index="19" unique_id=1333014051 instance=ExtResource("9_win_cluster5")]
+position = Vector2(2432, 0)
+
+[node name="Window_20_win_cluster4" parent="Windows_Props" index="20" unique_id=1676201282 instance=ExtResource("8_win_cluster4")]
+position = Vector2(2560, 0)
+
+[node name="Window_21_win_cluster5" parent="Windows_Props" index="21" unique_id=352902244 instance=ExtResource("9_win_cluster5")]
+position = Vector2(2688, 0)
+
+[node name="Window_22_win_cluster4" parent="Windows_Props" index="22" unique_id=1083476778 instance=ExtResource("8_win_cluster4")]
+position = Vector2(2816, 0)
+
+[node name="Window_23_win_cluster5" parent="Windows_Props" index="23" unique_id=2010471993 instance=ExtResource("9_win_cluster5")]
+position = Vector2(2944, 0)
+
+[node name="Window_24_win_cluster4" parent="Windows_Props" index="24" unique_id=886070655 instance=ExtResource("8_win_cluster4")]
+position = Vector2(3072, 0)
+
+[node name="Window_25_win_cluster5" parent="Windows_Props" index="25" unique_id=1266618294 instance=ExtResource("9_win_cluster5")]
+position = Vector2(3200, 0)
+
+[node name="Window_26_win_cluster4" parent="Windows_Props" index="26" unique_id=1095427402 instance=ExtResource("8_win_cluster4")]
+position = Vector2(3328, 0)
+
+[node name="Window_27_win_cluster5" parent="Windows_Props" index="27" unique_id=1002535985 instance=ExtResource("9_win_cluster5")]
+position = Vector2(3456, 0)
+
+[node name="Window_28_win_cluster4" parent="Windows_Props" index="28" unique_id=2121803530 instance=ExtResource("8_win_cluster4")]
+position = Vector2(3584, 0)
+
+[node name="Window_29_win_cluster5" parent="Windows_Props" index="29" unique_id=2067172832 instance=ExtResource("9_win_cluster5")]
+position = Vector2(3712, 0)
+
+[node name="Window_30_win_cluster4" parent="Windows_Props" index="30" unique_id=506793667 instance=ExtResource("8_win_cluster4")]
+position = Vector2(3840, 0)
+
+[node name="Window_31_win_cluster5" parent="Windows_Props" index="31" unique_id=2117408313 instance=ExtResource("9_win_cluster5")]
+position = Vector2(3968, 0)
+
+[node name="Window_32_win_cluster4" parent="Windows_Props" index="32" unique_id=1969006990 instance=ExtResource("8_win_cluster4")]
+position = Vector2(4096, 0)
+
+[node name="Equipment_Props" type="Node2D" parent="." index="2" unique_id=2094841464]
+z_index = 10
+
+[node name="backdesk_g533" parent="Equipment_Props" index="0" unique_id=2115125547 instance=ExtResource("3_backdesk")]
+position = Vector2(142.89, 61.64)
+
+[node name="cluster1_g154" parent="Equipment_Props" index="1" unique_id=1063376351 instance=ExtResource("5_cluster1")]
+position = Vector2(376, 32.63)
+
+[node name="backdesk_g547" parent="Equipment_Props" index="2" unique_id=948342592 instance=ExtResource("3_backdesk")]
+position = Vector2(543.33, 61.64)
+
+[node name="backdesk_g561" parent="Equipment_Props" index="3" unique_id=1300389615 instance=ExtResource("3_backdesk")]
+position = Vector2(820.06, 61.64)
+
+[node name="cluster3_g500" parent="Equipment_Props" index="4" unique_id=1545651666 instance=ExtResource("7_cluster3")]
+position = Vector2(1010, 57.63)
+
+[node name="cluster1_g605" parent="Equipment_Props" index="5" unique_id=1486865388 instance=ExtResource("5_cluster1")]
+position = Vector2(1140.95, 32)
+
+[node name="cluster2_g604" parent="Equipment_Props" index="6" unique_id=2010964307 instance=ExtResource("6_cluster2")]
+position = Vector2(1286, 32)
+
+[node name="cluster3_g508" parent="Equipment_Props" index="7" unique_id=296769457 instance=ExtResource("7_cluster3")]
+position = Vector2(1604.93, 57.63)
+
+[node name="cluster2_g641" parent="Equipment_Props" index="8" unique_id=787182069 instance=ExtResource("6_cluster2")]
+position = Vector2(1864, 32)
+
+[node name="cluster3_g516" parent="Equipment_Props" index="9" unique_id=1326766579 instance=ExtResource("7_cluster3")]
+position = Vector2(2174, 57.63)
+
+[node name="backdesk_g575" parent="Equipment_Props" index="10" unique_id=1900773899 instance=ExtResource("3_backdesk")]
+position = Vector2(2269.94, 61.64)
+
+[node name="cluster1_g374" parent="Equipment_Props" index="11" unique_id=381502348 instance=ExtResource("5_cluster1")]
+position = Vector2(2556, 32)
+
+[node name="cluster2_g677" parent="Equipment_Props" index="12" unique_id=1138811358 instance=ExtResource("6_cluster2")]
+position = Vector2(2721.05, 32)
+
+[node name="cluster3_g524" parent="Equipment_Props" index="13" unique_id=160912239 instance=ExtResource("7_cluster3")]
+position = Vector2(3032, 57.63)
+
+[node name="backdesk_g589" parent="Equipment_Props" index="14" unique_id=1637727870 instance=ExtResource("3_backdesk")]
+position = Vector2(3128, 61.64)
+
+[node name="cluster1_g405" parent="Equipment_Props" index="15" unique_id=2067770128 instance=ExtResource("5_cluster1")]
+position = Vector2(3426.95, 32)
+
+[node name="cluster2_g713" parent="Equipment_Props" index="16" unique_id=125337678 instance=ExtResource("6_cluster2")]
+position = Vector2(3593, 32)
+
+[node name="backdesk_g603" parent="Equipment_Props" index="17" unique_id=1797570046 instance=ExtResource("3_backdesk")]
+position = Vector2(3776.06, 61.64)
+
+[node name="cluster3_g532" parent="Equipment_Props" index="18" unique_id=653708799 instance=ExtResource("7_cluster3")]
+position = Vector2(3906, 57.63)
+
+[node name="Frontdesk_Props" type="Node2D" parent="." index="3" unique_id=149282337]
+z_index = 20
+
+[node name="frontdesk_g823" parent="Frontdesk_Props" index="0" unique_id=871586560 instance=ExtResource("4_frontdesk")]
+position = Vector2(122.96, 100)
+
+[node name="frontdesk_g903" parent="Frontdesk_Props" index="1" unique_id=2047467929 instance=ExtResource("4_frontdesk")]
+position = Vector2(562.98, 100)
+
+[node name="frontdesk_g893" parent="Frontdesk_Props" index="2" unique_id=1931274729 instance=ExtResource("4_frontdesk")]
+position = Vector2(1003, 100)
+
+[node name="frontdesk_g883" parent="Frontdesk_Props" index="3" unique_id=593966471 instance=ExtResource("4_frontdesk")]
+position = Vector2(1443.02, 100)
+
+[node name="frontdesk_g873" parent="Frontdesk_Props" index="4" unique_id=1691184753 instance=ExtResource("4_frontdesk")]
+position = Vector2(1883.04, 100)
+
+[node name="frontdesk_g863" parent="Frontdesk_Props" index="5" unique_id=953037710 instance=ExtResource("4_frontdesk")]
+position = Vector2(2323.06, 100)
+
+[node name="frontdesk_g853" parent="Frontdesk_Props" index="6" unique_id=986923617 instance=ExtResource("4_frontdesk")]
+position = Vector2(2763.08, 100)
+
+[node name="frontdesk_g843" parent="Frontdesk_Props" index="7" unique_id=1979442918 instance=ExtResource("4_frontdesk")]
+position = Vector2(3203.09, 100)
+
+[node name="frontdesk_g833" parent="Frontdesk_Props" index="8" unique_id=2145397953 instance=ExtResource("4_frontdesk")]
+position = Vector2(3643.11, 100)
+
+[node name="frontdesk_g733" parent="Frontdesk_Props" index="9" unique_id=468555508 instance=ExtResource("4_frontdesk")]
+position = Vector2(4083.13, 100)
+
+[node name="frontdesk_g813" parent="Frontdesk_Props" index="10" unique_id=640172824 instance=ExtResource("4_frontdesk")]
+position = Vector2(4523.15, 100)
+
+[node name="frontdesk_g803" parent="Frontdesk_Props" index="11" unique_id=1883820450 instance=ExtResource("4_frontdesk")]
+position = Vector2(4963.17, 100)
+
+[node name="frontdesk_g793" parent="Frontdesk_Props" index="12" unique_id=992566114 instance=ExtResource("4_frontdesk")]
+position = Vector2(5403.19, 100)
+
+[node name="frontdesk_g783" parent="Frontdesk_Props" index="13" unique_id=2122062692 instance=ExtResource("4_frontdesk")]
+position = Vector2(5843.21, 100)
+
+[node name="frontdesk_g773" parent="Frontdesk_Props" index="14" unique_id=334063480 instance=ExtResource("4_frontdesk")]
+position = Vector2(6283.23, 100)
+
+[node name="frontdesk_g763" parent="Frontdesk_Props" index="15" unique_id=784845837 instance=ExtResource("4_frontdesk")]
+position = Vector2(6723.25, 100)
+
+[node name="frontdesk_g753" parent="Frontdesk_Props" index="16" unique_id=974244418 instance=ExtResource("4_frontdesk")]
+position = Vector2(7163.27, 100)
+
+[node name="frontdesk_g743" parent="Frontdesk_Props" index="17" unique_id=46897355 instance=ExtResource("4_frontdesk")]
+position = Vector2(7603.28, 100)
+
+[node name="Camera2D" type="Camera2D" parent="." index="6" unique_id=1307824528]
+limit_left = 0
+limit_top = 0
+limit_right = 7680
+limit_bottom = 175
+script = ExtResource("2_xcybst")

@@ -1,0 +1,465 @@
+[gd_scene format=3 uid="uid://dxbl76ebmewev"]
+
+[ext_resource type="Script" uid="uid://mi8rjl42l1od" path="res://Script/main.gd" id="1_6u43x"]
+[ext_resource type="Texture2D" uid="uid://c1k6ocs0734vc" path="res://images/t2panel.png" id="2_y2x2u"]
+[ext_resource type="Script" uid="uid://dxxy6oxhw2l2p" path="res://Script/bitmap_text.gd" id="3_beyf7"]
+[ext_resource type="Script" uid="uid://tubv7xaff73d" path="res://Script/menu_selection.gd" id="4_puguq"]
+[ext_resource type="Script" uid="uid://kimiuytbfp66" path="res://addons/virtual_joystick_DX/vjdx_core_script.gd" id="5_uelv1"]
+[ext_resource type="Script" path="res://Script/multi_touch_button.gd" id="6_multitouch"]
+
+[node name="Main" type="Control" unique_id=1648757161]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6u43x")
+
+[node name="GaugeVieP1" type="ColorRect" parent="." unique_id=66173788]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 78.0
+offset_right = 39.0
+offset_bottom = 372.0
+color = Color(0, 0.6, 1, 1)
+
+[node name="GaugeVieP2" type="ColorRect" parent="." unique_id=202596127]
+layout_mode = 0
+offset_left = 924.0
+offset_top = 78.0
+offset_right = 954.0
+offset_bottom = 372.0
+color = Color(1, 0.1, 0.1, 1)
+
+[node name="GaugeGunPower1" type="ColorRect" parent="." unique_id=475572603]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 582.0
+offset_right = 435.0
+offset_bottom = 597.0
+color = Color(0, 0.8, 0.2, 1)
+
+[node name="GaugeGunPower2" type="ColorRect" parent="." unique_id=802453478]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 582.0
+offset_right = 900.0
+offset_bottom = 597.0
+color = Color(0, 0.8, 0.2, 1)
+
+[node name="EcranJeu" type="SubViewportContainer" parent="." unique_id=1792266329]
+clip_contents = true
+layout_mode = 0
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 912.0
+offset_bottom = 576.0
+stretch = true
+stretch_shrink = 3
+
+[node name="VueJeu" type="SubViewport" parent="EcranJeu" unique_id=1195620041]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(288, 176)
+render_target_update_mode = 4
+
+[node name="ImageHUD" type="TextureRect" parent="." unique_id=84704461]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_y2x2u")
+
+[node name="ScoreBitmap" type="Control" parent="." unique_id=84704462]
+anchors_preset = 0
+offset_left = 215.0
+offset_top = 24.0
+offset_right = 335.0
+offset_bottom = 54.0
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+script = ExtResource("3_beyf7")
+font_folder = "res://images/fonts/xfonts_trueblue"
+glyph_modulate = Color(0, 0, 1, 1)
+
+[node name="CreditsBitmap" type="Control" parent="." unique_id=84704463]
+anchors_preset = 0
+offset_left = 458.0
+offset_top = 24.000002
+offset_right = 498.0
+offset_bottom = 54.0
+scale = Vector2(1.4, 1.4)
+mouse_filter = 2
+script = ExtResource("3_beyf7")
+font_folder = "res://images/fonts/xfonts_red"
+glyph_modulate = Color(1, 0.05, 0.05, 1)
+
+[node name="MissilesBitmap" type="Control" parent="." unique_id=1580657060]
+anchors_preset = 0
+offset_left = 55.00006
+offset_top = 23.999998
+offset_right = 95.00006
+offset_bottom = 53.999996
+scale = Vector2(1.4, 1.4)
+mouse_filter = 2
+script = ExtResource("3_beyf7")
+font_folder = "res://images/fonts/xfonts_trueblue"
+glyph_modulate = Color(0, 0, 1, 1)
+
+[node name="BoutonPause" type="Button" parent="." unique_id=1691071416]
+process_mode = 3
+z_as_relative = false
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -111.0
+offset_top = 48.0
+offset_right = -52.0
+offset_bottom = 79.0
+grow_horizontal = 0
+focus_mode = 0
+text = "PAUSE"
+
+[node name="MenuPauseOverlay" type="ColorRect" parent="." unique_id=1058241947]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.823529)
+
+[node name="CentreContainer" type="CenterContainer" parent="MenuPauseOverlay" unique_id=2118101827]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoiteV" type="VBoxContainer" parent="MenuPauseOverlay/CentreContainer" unique_id=1419775499]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TitrePause" type="Label" parent="MenuPauseOverlay/CentreContainer/BoiteV" unique_id=1023060482]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "=== JEU EN PAUSE ==="
+horizontal_alignment = 1
+
+[node name="BoutonReprendre" type="Button" parent="MenuPauseOverlay/CentreContainer/BoiteV" unique_id=868359379]
+layout_mode = 2
+focus_mode = 0
+text = "▶ REPRENDRE"
+
+[node name="BoutonRecommencer" type="Button" parent="MenuPauseOverlay/CentreContainer/BoiteV" unique_id=1393010680]
+layout_mode = 2
+focus_mode = 0
+text = "🔄 RECOMMENCER"
+
+[node name="BoutonLevelSelect" type="Button" parent="MenuPauseOverlay/CentreContainer/BoiteV" unique_id=102585008]
+layout_mode = 2
+focus_mode = 0
+text = "🏠 LEVEL SELECT"
+
+[node name="BoutonQuitter" type="Button" parent="MenuPauseOverlay/CentreContainer/BoiteV" unique_id=1595728853]
+layout_mode = 2
+focus_mode = 0
+text = "🚪 QUITTER LE JEU"
+
+[node name="BoutonDebug" type="Button" parent="MenuPauseOverlay/CentreContainer/BoiteV" unique_id=999888777]
+layout_mode = 2
+focus_mode = 0
+text = "🔧 DEBUG HUD"
+
+[node name="DebugOptionsContainer" type="VBoxContainer" parent="MenuPauseOverlay/CentreContainer/BoiteV" unique_id=999888778]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="LabelDebugTitle" type="Label" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888779]
+modulate = Color(1, 1, 0.8, 1)
+layout_mode = 2
+text = "--- LOGS DEBUG ---"
+horizontal_alignment = 1
+
+[node name="CheckJug" type="CheckBox" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888780]
+layout_mode = 2
+text = "Log XJUG (haut-gauche)"
+
+[node name="CheckCopter" type="CheckBox" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888781]
+layout_mode = 2
+text = "Log XCOPTER (haut-droit)"
+
+[node name="CheckVan" type="CheckBox" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888782]
+layout_mode = 2
+text = "Log XSVAN (bas-droit)"
+
+[node name="CheckHealth" type="CheckBox" parent="MenuPauseOverlay/CentreContainer/BoiteV/DebugOptionsContainer" unique_id=999888783]
+layout_mode = 2
+text = "Log Gauge Vie (bas-gauche)"
+
+[node name="MenuSelectLevelOverlay" type="ColorRect" parent="." unique_id=511539824]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.75)
+script = ExtResource("4_puguq")
+
+[node name="ConteneurPrincipal" type="VBoxContainer" parent="MenuSelectLevelOverlay" unique_id=214651937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 30.0
+offset_right = -60.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="TitreMenu" type="Label" parent="MenuSelectLevelOverlay/ConteneurPrincipal" unique_id=1382763737]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 28
+text = "=== TERMINATOR 2 : ARCADE ==="
+horizontal_alignment = 1
+
+[node name="BoutonRetour" type="Button" parent="MenuSelectLevelOverlay/ConteneurPrincipal" unique_id=669288622]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "← RETOUR"
+
+[node name="SousTitre" type="Label" parent="MenuSelectLevelOverlay/ConteneurPrincipal" unique_id=1678893840]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.85, 1)
+theme_override_font_sizes/font_size = 15
+text = "CHOISISSEZ VOTRE MISSION D'INFILTRATION"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MenuSelectLevelOverlay/ConteneurPrincipal" unique_id=1566497950]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ListeNiveaux" type="VBoxContainer" parent="MenuSelectLevelOverlay/ConteneurPrincipal/ScrollContainer" unique_id=84816930]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="VirtualJoystickUI" type="Control" parent="." unique_id=2081920831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BoutonTirMissileUI" type="Button" parent="VirtualJoystickUI" unique_id=987123911]
+z_index = 50
+layout_mode = 0
+offset_left = 771.0
+offset_top = 362.0
+offset_right = 865.0
+offset_bottom = 427.0
+text = "🚀 MISSILE"
+script = ExtResource("6_multitouch")
+
+[node name="BoutonTirPrincipalUI" type="Button" parent="VirtualJoystickUI" unique_id=987123910]
+z_index = 50
+layout_mode = 0
+offset_left = 670.0
+offset_top = 442.0
+offset_right = 735.0
+offset_bottom = 507.0
+text = "🔥 TIR"
+script = ExtResource("6_multitouch")
+
+[node name="VirtualJoystickDX" type="Control" parent="VirtualJoystickUI" unique_id=1703718393]
+custom_minimum_size = Vector2(160, 160)
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 250.0
+offset_right = 419.0
+offset_bottom = 543.0
+pivot_offset = Vector2(162.5, 146.5)
+mouse_filter = 2
+script = ExtResource("5_uelv1")
+thumb_radius = 38.0
+joystick_mode = 2
+region_x = 7.0
+region_y = 338.0
+region_w = 430.0
+region_h = 251.0
+"Colors - D-Pad" = null
+"Textures - D-Pad" = null
+Cardinals = null
+Diagonals = null
+metadata/_custom_type_script = "uid://kimiuytbfp66"
+
+[node name="MenuSelection" type="Control" parent="." unique_id=1604076814]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_puguq")
+
+[node name="FondMenu" type="TextureRect" parent="MenuSelection" unique_id=275047105]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_y2x2u")
+expand_mode = 1
+
+[node name="OmbreOverlay" type="ColorRect" parent="MenuSelection" unique_id=287869539]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.75)
+
+[node name="ConteneurPrincipal" type="VBoxContainer" parent="MenuSelection" unique_id=853371855]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 30.0
+offset_right = -60.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="TitreMenu" type="Label" parent="MenuSelection/ConteneurPrincipal" unique_id=2027311437]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 28
+text = "=== TERMINATOR 2 : ARCADE ==="
+horizontal_alignment = 1
+
+[node name="BoutonRetour" type="Button" parent="MenuSelection/ConteneurPrincipal" unique_id=526242130]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "← RETOUR"
+
+[node name="SousTitre" type="Label" parent="MenuSelection/ConteneurPrincipal" unique_id=487312366]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.85, 1)
+theme_override_font_sizes/font_size = 15
+text = "CHOISISSEZ VOTRE MISSION D'INFILTRATION"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MenuSelection/ConteneurPrincipal" unique_id=1822966891]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ListeNiveaux" type="VBoxContainer" parent="MenuSelection/ConteneurPrincipal/ScrollContainer" unique_id=2025460025]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="MainMenu" type="Control" parent="." unique_id=1898981986]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondMenu" type="TextureRect" parent="MainMenu" unique_id=332728733]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_y2x2u")
+expand_mode = 1
+
+[node name="OmbreOverlay" type="ColorRect" parent="MainMenu" unique_id=140072465]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="ConteneurPrincipal" type="VBoxContainer" parent="MainMenu" unique_id=752822675]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="TitrePrincipal" type="Label" parent="MainMenu/ConteneurPrincipal" unique_id=817553974]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 36
+text = "TERMINATOR 2"
+horizontal_alignment = 1
+
+[node name="SousTitre" type="Label" parent="MainMenu/ConteneurPrincipal" unique_id=1766355913]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.85, 1)
+theme_override_font_sizes/font_size = 20
+text = "ARCADE"
+horizontal_alignment = 1
+
+[node name="BoutonReprendre" type="Button" parent="MainMenu/ConteneurPrincipal" unique_id=1884050947]
+layout_mode = 2
+focus_mode = 0
+text = "▶ REPRENDRE"
+
+[node name="BoutonLevelSelect" type="Button" parent="MainMenu/ConteneurPrincipal" unique_id=904873198]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "▶ NEW GAME / LEVEL SELECT"
+
+[node name="BoutonOptions" type="Button" parent="MainMenu/ConteneurPrincipal" unique_id=1469406232]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+disabled = true
+text = "⚙ OPTIONS"
+
+[node name="BoutonQuitter" type="Button" parent="MainMenu/ConteneurPrincipal" unique_id=723595370]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "✕ QUITTER"

@@ -68,6 +68,19 @@ var elec_scene: PackedScene    = null
 @export var cadence_tirs_shooters: float        = 2.0
 @export var cadence_elec_timemachine: float     = 1.8
 
+@export_group("Déclencheur sur Arrêt Caméra")
+@export var declencheur_stop: NodePath ## Sélecteur visuel de StopMarker dans l'Inspecteur Godot
+@export var nom_stop_declencheur: String = "" ## Nom du StopMarker requis pour l'activation (ex: "Stop_BossDoor"). Si vide, s'active dès l'entrée à l'écran.
+@export var deverrouiller_stop_a_la_mort: bool = true ## Si true, déverrouille le stop caméra lié à la défaite du boss
+
+@export_group("Transition de Niveau")
+## Si coché, l'ouverture des portes xskynt2_doors / xskynt2_doors2 déclenche le passage au niveau suivant configuré dans DICO_NIVEAUX.
+@export var changer_niveau_a_l_ouverture_portes: bool = false
+## Délai d'attente avant la transition après l'ouverture des portes (en secondes).
+@export var delai_transition_portes_sec: float = 1.5
+
+
+
 var _chrono_gen_missiles: float = 2.0 # Tir quasi-immédiat dès activation
 var _chrono_shooters: float     = 1.5
 var _chrono_timemachine: float  = 1.0
@@ -157,9 +170,13 @@ func _appliquer_visibilite_initiale() -> void:
 
 
 func _configurer_detecteur_ecran() -> void:
+	var a_declencheur = (declencheur_stop != null and not declencheur_stop.is_empty()) or nom_stop_declencheur != ""
+	if a_declencheur:
+		call_deferred("_connecter_declencheur_stop")
+		return
+
 	var notifier := get_node_or_null("VisibleOnScreenNotifier2D") as VisibleOnScreenNotifier2D
 	if not notifier:
-		# Position et rect identiques à ceux définis dans la scène
 		notifier = VisibleOnScreenNotifier2D.new()
 		notifier.name     = "VisibleOnScreenNotifier2D"
 		notifier.position = Vector2(158, 44)
@@ -168,6 +185,31 @@ func _configurer_detecteur_ecran() -> void:
 
 	if not notifier.screen_entered.is_connected(activer_boss):
 		notifier.screen_entered.connect(activer_boss)
+
+
+func _connecter_declencheur_stop() -> void:
+	## Connexion prioritaire : NodePath → signal direct 'stop_enclenche' du StopMarker.
+	## Fallback : String → signal global 'camera_stop_atteint' de la caméra.
+	if declencheur_stop != null and not declencheur_stop.is_empty():
+		var node = get_node_or_null(declencheur_stop)
+		if node and node.has_signal("stop_enclenche"):
+			if not node.stop_enclenche.is_connected(activer_boss):
+				node.stop_enclenche.connect(activer_boss)
+			return  # NodePath branché : pas besoin de la caméra
+
+	# Fallback : écouter le signal global de la caméra
+	var camera = get_viewport().get_camera_2d() if get_viewport() else null
+	if camera and camera.has_signal("camera_stop_atteint"):
+		if not camera.camera_stop_atteint.is_connected(_on_camera_stop_atteint):
+			camera.camera_stop_atteint.connect(_on_camera_stop_atteint)
+
+
+func _on_camera_stop_atteint(node_stop: Node2D, nom_stop: String) -> void:
+	if deja_active:
+		return
+	if nom_stop_declencheur != "" and (nom_stop == nom_stop_declencheur or (node_stop and node_stop.name == nom_stop_declencheur)):
+		print("[XL4DOOR] Stop caméra '%s' atteint — Activation du Boss !" % nom_stop_declencheur)
+		activer_boss()
 
 
 func _verifier_auto_activation() -> void:
@@ -184,10 +226,11 @@ func _verifier_auto_activation() -> void:
 		activer_boss()
 		return
 
-	var notifier := get_node_or_null("VisibleOnScreenNotifier2D") as VisibleOnScreenNotifier2D
-	if notifier and notifier.is_on_screen():
-		print("[XL4DOOR] Notifier sur écran — Activation immédiate !")
-		activer_boss()
+	if nom_stop_declencheur == "":
+		var notifier := get_node_or_null("VisibleOnScreenNotifier2D") as VisibleOnScreenNotifier2D
+		if notifier and notifier.is_on_screen():
+			print("[XL4DOOR] Notifier sur écran — Activation immédiate !")
+			activer_boss()
 
 
 func activer_boss() -> void:
@@ -314,9 +357,8 @@ func _tirer_salve(marker: Marker2D, fallback: Vector2, cible: Vector2, salvo: in
 		if i == 0:
 			_spawner_missile(marker, fallback, cible)
 		else:
-			get_tree().create_timer(delai * i, false).timeout.connect(
-				func(): _spawner_missile(marker, fallback, cible)
-			)
+			var callback_tir = func(): _spawner_missile(marker, fallback, cible)
+			get_tree().create_timer(delai * i, false).timeout.connect(callback_tir)
 
 
 func _spawner_missile(marker: Marker2D, fallback: Vector2, cible: Vector2) -> void:
@@ -389,7 +431,7 @@ func subir_degats(degats: int = 1) -> void:
 				return
 
 
-func subir_degats_partie(partie: String, degats: int = 1, pos_impact: Vector2 = Vector2.INF) -> void:
+func subir_degats_partie(partie: String, degats: int = 1, pos_impact: Vector2 = Vector2.INF, _est_missile: bool = false) -> void:
 	activer_boss()
 	var nom := partie.to_lower()
 	print("[XL4DOOR] Impact reçu sur : '", nom, "' | Phase actuelle : ", phase_actuelle)
@@ -537,6 +579,26 @@ func _ouvrir_portes_phase2() -> void:
 		time_machine_sprite.visible = true
 	phase_actuelle = PhaseBoss.PHASE3_TIME_MACHINE_ACTIVE
 	print("[XL4DOOR] Portes 2 ouvertes et escamotées ! Phase 3 — Machine Temporelle active.")
+	if deverrouiller_stop_a_la_mort:
+		_deverrouiller_stop_lie()
+	
+	if changer_niveau_a_l_ouverture_portes:
+		if delai_transition_portes_sec <= 0.0:
+			GlobalSettings.declencher_changement_niveau()
+		else:
+			get_tree().create_timer(delai_transition_portes_sec, false).timeout.connect(func():
+				GlobalSettings.declencher_changement_niveau()
+			)
+
+func _deverrouiller_stop_lie() -> void:
+	var camera = get_viewport().get_camera_2d() if get_viewport() else null
+	if camera and camera.has_method("deverrouiller_stop"):
+		var nom_target = nom_stop_declencheur
+		if nom_target == "" and declencheur_stop != null and not declencheur_stop.is_empty():
+			var node = get_node_or_null(declencheur_stop)
+			if node:
+				nom_target = node.name
+		camera.deverrouiller_stop(nom_target)
 
 
 # ============================================================

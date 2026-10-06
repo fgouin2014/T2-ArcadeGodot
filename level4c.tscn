@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cvxfmcdm3d2qy"]
+
+[ext_resource type="PackedScene" uid="uid://cvc30hms177uu" path="res://maps/backdrops/level1/t2_xl4skynt1.tmj" id="1_fsuqn"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="2_eu2us"]
+
+[node name="t2_xl4skynt1" unique_id=572954950 instance=ExtResource("1_fsuqn")]
+
+[node name="xl4skyn_pods_placeholder" parent="t2_xl4skynt1 (PBG)/pod_4 (PL)/pod_4" parent_id_path=PackedInt32Array(509698196) index="0" unique_id=1364150106]
+position = Vector2(2116, 107)
+
+[node name="Camera2D" type="Camera2D" parent="t2_xl4skynt1 (PBG)/pod_4 (PL)/pod_4/xl4skyn_pods_placeholder" index="0" unique_id=1188891279]
+limit_left = 0
+limit_top = 0
+limit_right = 4097
+limit_bottom = 175
+script = ExtResource("2_eu2us")

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bms7i7r25leud"]
+
+[ext_resource type="Script" uid="uid://cw8bo4m3lycvr" path="res://Script/breakable_prop.gd" id="1_bmfm1"]
+[ext_resource type="Texture2D" uid="uid://dayap0wl3mo8q" path="res://tsj/xhidebit_07.png" id="2_o526b"]
+[ext_resource type="Texture2D" uid="uid://bhnxj7qablg4f" path="res://tsj/xhidebit_08.png" id="3_bywxl"]
+[ext_resource type="PackedScene" path="res://aseprite/xpickup_12_shotgun_shell.tscn" id="4_o526b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(64, 45.1222)
+
+[node name="lamp0_hideout" type="Node2D" unique_id=387680292]
+script = ExtResource("1_bmfm1")
+
+[node name="table" type="Sprite2D" parent="." unique_id=309569609]
+position = Vector2(20, 12)
+texture = ExtResource("2_o526b")
+metadata/damaged_texture = ExtResource("3_bywxl")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="table" unique_id=347971770]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table/HitArea" unique_id=417508383]
+position = Vector2(0, 2.6311321)
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="xpickup_12_shotgun_shell" parent="table" unique_id=1087249581 instance=ExtResource("4_o526b")]
+position = Vector2(-1, 3)

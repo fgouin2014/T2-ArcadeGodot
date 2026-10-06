@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://dk3vysf6nia1j"]
+
+[ext_resource type="Script" uid="uid://v67yb2w7b0go" path="res://aseprite/vehicules/xtruck.gd" id="1_xtruck"]
+[ext_resource type="Texture2D" uid="uid://bnsdisu3gwqfu" path="res://maps/backdrops/level1/xtruck1_00.png" id="2_body0"]
+[ext_resource type="Texture2D" uid="uid://ma1538uvrti3" path="res://maps/backdrops/level1/xtruck1_02.png" id="3_cabin0"]
+[ext_resource type="Texture2D" uid="uid://cfqb4uxb51pfc" path="res://maps/backdrops/level1/xtruck1_03.png" id="4_cabin1"]
+[ext_resource type="Texture2D" uid="uid://batbrmho4u4nl" path="res://maps/backdrops/level1/xtruck1_04.png" id="5_bed0"]
+[ext_resource type="Texture2D" uid="uid://ctel5j7aljisx" path="res://maps/backdrops/level1/xtruck1_05.png" id="6_bed1"]
+[ext_resource type="Texture2D" uid="uid://r26qkuvnleaj" path="res://maps/backdrops/level1/xtruck1_06.png" id="7_exhaust"]
+[ext_resource type="Texture2D" uid="uid://b3stywkwcr2id" path="res://maps/backdrops/level1/xtruck2_04.png" id="8_bumper"]
+[ext_resource type="Texture2D" uid="uid://b0nqw8odtsy3n" path="res://maps/backdrops/level1/xtruckdm_00.png" id="9_dm0"]
+[ext_resource type="Texture2D" uid="uid://r4kh6iwcbwdv" path="res://maps/backdrops/level1/xtruckdm_01.png" id="10_dm1"]
+[ext_resource type="Texture2D" uid="uid://4fwldlrwj2m6" path="res://maps/backdrops/level1/xtruckdm_02.png" id="11_dm2"]
+[ext_resource type="Texture2D" uid="uid://b6i6oxl484ku7" path="res://maps/backdrops/level1/xtruckdm_03.png" id="12_dm3"]
+[ext_resource type="Texture2D" uid="uid://jge67h2pili" path="res://maps/backdrops/level1/xtruckdm_04.png" id="13_dm4"]
+[ext_resource type="Texture2D" uid="uid://c32m8vg2eff0" path="res://maps/backdrops/level1/xtruckdm_05.png" id="14_dm5"]
+[ext_resource type="Texture2D" uid="uid://bbjvki1wsmmnl" path="res://maps/backdrops/level1/xtruckdm_06.png" id="15_dm6"]
+[ext_resource type="Texture2D" uid="uid://be1jl7hsw6esp" path="res://maps/backdrops/level1/xtruck2_00.png" id="16_w0_f0"]
+[ext_resource type="Texture2D" uid="uid://bnajeryjru5s5" path="res://maps/backdrops/level1/xtruck2_02.png" id="17_w0_f1"]
+[ext_resource type="Texture2D" uid="uid://de04ncptbjap3" path="res://maps/backdrops/level1/xtruck2_01.png" id="18_w1_f0"]
+[ext_resource type="Texture2D" uid="uid://cpr5kaqe4a45v" path="res://maps/backdrops/level1/xtruck2_03.png" id="19_w1_f1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtruck_box"]
+size = Vector2(242, 106)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wheel_rear"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_w0_f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_w0_f1")
+}],
+"loop": 1,
+"name": &"roll",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wheel_front"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_w1_f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_w1_f1")
+}],
+"loop": 1,
+"name": &"roll",
+"speed": 10.0
+}]
+
+[node name="XTruckPlayer" type="CharacterBody2D" unique_id=460400765]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_xtruck")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2126646236]
+position = Vector2(121, 53)
+shape = SubResource("RectangleShape2D_xtruck_box")
+
+[node name="BodyNode" type="Node2D" parent="." unique_id=136625391]
+
+[node name="SpriteBodyMain" type="Sprite2D" parent="BodyNode" unique_id=1766946190]
+position = Vector2(0, 36)
+texture = ExtResource("2_body0")
+centered = false
+
+[node name="SpriteCabinTopIntact" type="Sprite2D" parent="BodyNode" unique_id=271590781]
+position = Vector2(93.36, 0)
+texture = ExtResource("3_cabin0")
+centered = false
+
+[node name="SpriteCabinTopDamaged" type="Sprite2D" parent="BodyNode" unique_id=1183541469]
+visible = false
+position = Vector2(96.34, 0)
+texture = ExtResource("4_cabin1")
+centered = false
+
+[node name="SpriteBedIntact" type="Sprite2D" parent="BodyNode" unique_id=1143587815]
+position = Vector2(125.12, 3)
+texture = ExtResource("5_bed0")
+centered = false
+
+[node name="SpriteBedDamaged" type="Sprite2D" parent="BodyNode" unique_id=1940372966]
+visible = false
+position = Vector2(125.12, 3)
+texture = ExtResource("6_bed1")
+centered = false
+
+[node name="SpriteExhaust" type="Sprite2D" parent="BodyNode" unique_id=359025806]
+position = Vector2(184.12, 29)
+texture = ExtResource("7_exhaust")
+centered = false
+
+[node name="SpriteBumper" type="Sprite2D" parent="BodyNode" unique_id=1089953879]
+position = Vector2(208.11, 29)
+texture = ExtResource("8_bumper")
+centered = false
+
+[node name="DamageParts" type="Node2D" parent="BodyNode" unique_id=447237328]
+
+[node name="DamageSlice0" type="Sprite2D" parent="BodyNode/DamageParts" unique_id=1994845125]
+visible = false
+position = Vector2(0, 36)
+texture = ExtResource("9_dm0")
+centered = false
+
+[node name="DamageSlice1" type="Sprite2D" parent="BodyNode/DamageParts" unique_id=1110653778]
+visible = false
+position = Vector2(32, 36)
+texture = ExtResource("10_dm1")
+centered = false
+
+[node name="DamageSlice2" type="Sprite2D" parent="BodyNode/DamageParts" unique_id=1146767945]
+visible = false
+position = Vector2(68, 36)
+texture = ExtResource("11_dm2")
+centered = false
+
+[node name="DamageSlice3" type="Sprite2D" parent="BodyNode/DamageParts" unique_id=1556950639]
+visible = false
+position = Vector2(104, 36)
+texture = ExtResource("12_dm3")
+centered = false
+
+[node name="DamageSlice4" type="Sprite2D" parent="BodyNode/DamageParts" unique_id=790050741]
+visible = false
+position = Vector2(136, 36)
+texture = ExtResource("13_dm4")
+centered = false
+
+[node name="DamageSlice5" type="Sprite2D" parent="BodyNode/DamageParts" unique_id=1542087398]
+visible = false
+position = Vector2(170, 36)
+texture = ExtResource("14_dm5")
+centered = false
+
+[node name="DamageSlice6" type="Sprite2D" parent="BodyNode/DamageParts" unique_id=2077895122]
+visible = false
+position = Vector2(203, 36)
+texture = ExtResource("15_dm6")
+centered = false
+
+[node name="WheelsNode" type="Node2D" parent="." unique_id=1050763644]
+
+[node name="WheelRear" type="AnimatedSprite2D" parent="WheelsNode" unique_id=493842493]
+position = Vector2(39.67, 64)
+sprite_frames = SubResource("SpriteFrames_wheel_rear")
+animation = &"roll"
+autoplay = "roll"
+centered = false
+
+[node name="WheelFront" type="AnimatedSprite2D" parent="WheelsNode" unique_id=1454756962]
+position = Vector2(191.67, 64.06)
+sprite_frames = SubResource("SpriteFrames_wheel_front")
+animation = &"roll"
+autoplay = "roll"
+centered = false

@@ -1,11 +1,7 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene format=3 uid="uid://d4f7tt0ncmh1w"]
 
-[ext_resource type="Script" path="res://Script/flying_hk.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://aseprite/xbighk.png" id="2_texture"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1"]
-atlas = ExtResource("2_texture")
-region = Rect2(0, 0, 184, 60)
+[ext_resource type="Script" path="res://Script/bighk_enemy.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cq0cun4vu7b8" path="res://aseprite/xbighk.png" id="2_texture"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2"]
 atlas = ExtResource("2_texture")
@@ -15,17 +11,9 @@ region = Rect2(184, 0, 184, 60)
 atlas = ExtResource("2_texture")
 region = Rect2(368, 0, 184, 60)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4"]
-atlas = ExtResource("2_texture")
-region = Rect2(552, 0, 184, 60)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_5"]
 atlas = ExtResource("2_texture")
 region = Rect2(736, 0, 184, 60)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6"]
-atlas = ExtResource("2_texture")
-region = Rect2(920, 0, 184, 60)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7"]
 atlas = ExtResource("2_texture")
@@ -35,63 +23,87 @@ region = Rect2(1104, 0, 184, 60)
 atlas = ExtResource("2_texture")
 region = Rect2(1288, 0, 184, 60)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1"]
+atlas = ExtResource("2_texture")
+region = Rect2(0, 0, 184, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4"]
+atlas = ExtResource("2_texture")
+region = Rect2(552, 0, 184, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6"]
+atlas = ExtResource("2_texture")
+region = Rect2(920, 0, 184, 60)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_tp5ot"]
 animations = [{
-"frames": [
-{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1")
-},
-{
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2")
-},
-{
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3")
-},
-{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4")
-},
-{
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5")
-},
-{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6")
-},
-{
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7")
-},
-{
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8")
-}
-],
-"loop": true,
+}],
+"loop": 1,
 "name": &"fly",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8")
+}],
+"loop": 1,
+"name": &"shoot",
 "speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_box"]
 size = Vector2(184, 60)
 
-[node name="xbighk" type="CharacterBody2D"]
+[node name="xbighk" type="CharacterBody2D" unique_id=686426597]
 z_index = 5
 script = ExtResource("1_script")
-action_tag = "walk"
 inverser_visuel = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1368665629]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tp5ot")
-animation = &"fly"
+animation = &"shoot"
+frame = 7
+frame_progress = 0.3379226
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1953009953]
 shape = SubResource("RectangleShape2D_box")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=18827928]
 rect = Rect2(-92, -30, 184, 60)

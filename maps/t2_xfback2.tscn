@@ -1,12 +1,35 @@
 [gd_scene format=3 uid="uid://kmq3iisxcbjg"]
 
 [ext_resource type="PackedScene" uid="uid://hfubnbuml6y" path="res://maps/backdrops/level1/t2_xfback2.tmj" id="1_ovbgd"]
-[ext_resource type="PackedScene" uid="uid://3ov0eu3g3a6e" path="res://aseprite/effect/foundry_idle.tscn" id="2_foundry"]
+[ext_resource type="PackedScene" uid="uid://3ov0eu3g3a6e" path="res://aseprite/effect/foundry_fight.tscn" id="2_foundry"]
+[ext_resource type="Texture2D" uid="uid://bab3b0s7jtww4" path="res://maps/backdrops/level1/xfback_01.png" id="3_eeenm"]
+[ext_resource type="Script" uid="uid://h0idv5voyktw" path="res://Script/camera_auto_scroll.gd" id="3_qraod"]
 
 [node name="t2_xfback2" unique_id=1939727774 instance=ExtResource("1_ovbgd")]
 
 [node name="Spawners" type="Node2D" parent="." index="0" unique_id=1719641895]
 
-[node name="foundry_idle" parent="sol_0 (PL)" parent_id_path=PackedInt32Array(205894163) index="0" unique_id=556472148 instance=ExtResource("2_foundry")]
+[node name="sol_0 (PL)" parent="." index="2" unique_id=205894163]
+motion_scale = Vector2(1, 0)
+
+[node name="foundry_idle" parent="sol_0 (PL)" index="0" unique_id=556472148 instance=ExtResource("2_foundry")]
 z_index = 10
 position = Vector2(2193, 51)
+
+[node name="floor (PL)" parent="." index="3" unique_id=990939085]
+motion_scale = Vector2(1.4, 0)
+
+[node name="xfback_05" type="Sprite2D" parent="floor (PL)/floor" parent_id_path=PackedInt32Array(892170551) index="4" unique_id=1129937960]
+position = Vector2(878, 175)
+texture = ExtResource("3_eeenm")
+offset = Vector2(128, -12)
+
+[node name="xjug (PL)" parent="." index="4" unique_id=1468010109]
+motion_scale = Vector2(1, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." index="5" unique_id=901693780]
+limit_left = 0
+limit_top = 0
+limit_right = 2350
+limit_bottom = 175
+script = ExtResource("3_qraod")

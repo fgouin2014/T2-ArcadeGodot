@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b0hu0m8582ftk"]
+
+[ext_resource type="Script" uid="uid://ck8movqnr2psy" path="res://Script/BreakableDoor.gd" id="1_4t1ps"]
+[ext_resource type="Texture2D" uid="uid://dakkpwf1s34d" path="res://maps/backdrops/level1/xl4fen_12.png" id="1_s2iss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2iss"]
+size = Vector2(27, 154.5)
+
+[node name="breakable_xl4fen" type="Node2D"]
+script = ExtResource("1_4t1ps")
+metadata/destructible = true
+metadata/shots = 8
+metadata/stop = "stop_1"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s2iss")
+offset = Vector2(14.5, -77.5)
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+monitorable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(14.5, -76.75)
+shape = SubResource("RectangleShape2D_s2iss")

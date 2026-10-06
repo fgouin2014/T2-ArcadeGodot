@@ -49,6 +49,7 @@ var trappe_ouverte: bool = false     # Vrai pendant l'ouverture/tir de missiles 
 @onready var marker_bras_droit: Marker2D = get_node_or_null("SpawnBrasDroit") as Marker2D
 
 # --- PARAMÈTRES DE DÉPLACEMENT & CENTRAGE CAMÉRA ---
+@export var patrouille_a_l_arret: bool = true # Par défaut à true pour le boss XL1GHK
 @export var vitesse_patrouille: float = 40.0 # Vitesse normale du va-et-vient (px/s)
 @export var vitesse_centrage_camera: float = 60.0 # Vitesse d'alignement au centre de la caméra
 @export var distance_va_et_vient_px: float = 120.0 # Amplitude du va-et-vient en pixels
@@ -136,9 +137,27 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 						
 		subir_degats_partie(hitspot_proche, 1, pos_clic)
 
+func _masquer_visuel() -> void:
+	super._masquer_visuel()
+	if sprite_torse: sprite_torse.hide()
+	if sprite_tete: sprite_tete.hide()
+	if sprite_bras_gauche: sprite_bras_gauche.hide()
+	if sprite_bras_droit: sprite_bras_droit.hide()
+
+func _afficher_visuel() -> void:
+	super._afficher_visuel()
+	if sprite_torse and not torse_detruit and not upper_body_detruit: sprite_torse.show()
+	if sprite_tete and not upper_body_detruit: sprite_tete.show()
+	if sprite_bras_gauche and not upper_body_detruit: sprite_bras_gauche.show()
+	if sprite_bras_droit and not upper_body_detruit: sprite_bras_droit.show()
+
 func activer_acteur() -> void:
 	super.activer_acteur()
-	_pos_origine_x = global_position.x
+	var vp = get_viewport()
+	if vp and vp.get_camera_2d():
+		_pos_origine_x = vp.get_camera_2d().get_screen_center_position().x
+	else:
+		_pos_origine_x = global_position.x
 	_sens_marche = -1.0
 	_jouer_anim_base("base_idle")
 	_mettre_a_jour_visuels_bras()
@@ -170,14 +189,18 @@ func _physics_process(delta: float) -> void:
 	if camera_en_mouvement:
 		global_position.x += delta_camera_x
 		global_position.x = move_toward(global_position.x, centre_cam_x, vitesse_centrage_camera * delta)
-		_pos_origine_x = global_position.x
-	else:
-		global_position.x += _sens_marche * vitesse_patrouille * delta
-		
-		if _sens_marche < 0.0 and global_position.x <= (_pos_origine_x - distance_va_et_vient_px):
-			_sens_marche = 1.0
-		elif _sens_marche > 0.0 and global_position.x >= _pos_origine_x:
-			_sens_marche = -1.0
+		_pos_origine_x = centre_cam_x
+	elif patrouille_a_l_arret:
+		# Se recentre d'abord vers le centre de la caméra s'il en est éloigné
+		if abs(global_position.x - centre_cam_x) > (distance_va_et_vient_px * 0.5):
+			global_position.x = move_toward(global_position.x, centre_cam_x, vitesse_centrage_camera * delta)
+			_pos_origine_x = centre_cam_x
+		else:
+			global_position.x += _sens_marche * vitesse_patrouille * delta
+			if _sens_marche < 0.0 and global_position.x <= (centre_cam_x - distance_va_et_vient_px * 0.5):
+				_sens_marche = 1.0
+			elif _sens_marche > 0.0 and global_position.x >= (centre_cam_x + distance_va_et_vient_px * 0.5):
+				_sens_marche = -1.0
 
 	# --- 2. ATTAQUE MISSILES DEPUIS LA TRAPPE ---
 	var cadence_effective = (cadence_missiles_sec * 0.5) if upper_body_detruit else cadence_missiles_sec
@@ -185,7 +208,7 @@ func _physics_process(delta: float) -> void:
 	if _chrono_missile >= cadence_effective:
 		_lancer_attaque_missiles()
 
-	# --- 3. ATTAQUE ÉLECTRIQUE 'XELEC' DE LA TÊTE (VERROUILLAGE ABSOLU : UNIQUEMENT SI 2 BRAS HS ET TÊTE VIVANTE) ---
+	# --- 3. ATTAQUE ÉLECTRIQUE 'XELEC' DE LA TÊTE (VERROUILLAGE ABSOLU : UNIQUEMENT SI LES 2 BRAS SONT HS ET TÊTE VIVANTE) ---
 	var tete_active = (bras_gauche_hs and bras_droit_hs) and (not tete_detruite) and (pv_tete > 0) and (not upper_body_detruit)
 	if tete_active:
 		_chrono_tir_tete += delta
@@ -218,7 +241,28 @@ func _tirer_electricite_tete() -> void:
 	print("[XL1GHK TÊTE] Arc électrique XELEC tiré vers le haut de la caméra !")
 
 # --- GESTION HIERARCHIQUE DES HITSPOTS ET IMMUNITES ---
-func subir_degats_partie(partie: String, degats: int = 1, pos_impact: Vector2 = Vector2.INF) -> void:
+func subir_degats_missile(degats_recus: int, pos_impact: Vector2 = Vector2.ZERO) -> void:
+	var hitspots_map = {
+		"bras_gauche": get_node_or_null("HitspotBrasGauche"),
+		"bras_droit": get_node_or_null("HitspotBrasDroit"),
+		"tete": get_node_or_null("HitspotTete"),
+		"torse": get_node_or_null("HitspotTorse"),
+		"trappe": get_node_or_null("HitspotBaseTrappe")
+	}
+	var hitspot_proche: String = "trappe"
+	var dist_min: float = 999999.0
+	for partie in hitspots_map.keys():
+		var node_h = hitspots_map[partie]
+		if node_h and node_h is Area2D:
+			var col = node_h.get_node_or_null("CollisionShape2D") as CollisionShape2D
+			if col and not col.disabled:
+				var d = pos_impact.distance_to(node_h.global_position)
+				if d < dist_min:
+					dist_min = d
+					hitspot_proche = partie
+	subir_degats_partie(hitspot_proche, degats_recus, pos_impact, true)
+
+func subir_degats_partie(partie: String, degats: int = 1, pos_impact: Vector2 = Vector2.INF, est_missile: bool = false) -> void:
 	if est_elimine: return
 	
 	var nom = partie.to_lower()
@@ -229,8 +273,11 @@ func subir_degats_partie(partie: String, degats: int = 1, pos_impact: Vector2 = 
 		pv_bras_gauche -= degats
 		_faire_reagir_piece(sprite_bras_gauche)
 		var pt_expl = pos_impact if pos_impact != Vector2.INF else (global_position + Vector2(-64, -53))
-		_jouer_impact_balle_xexpl2(pt_expl)
-		print("[XL1GHK] Impact Bras Gauche (PV : ", max(0, pv_bras_gauche), "/", pv_bras_gauche_max, ")")
+		if est_missile:
+			_jouer_explosion_destruction_xexpl3(pt_expl)
+		else:
+			_jouer_impact_balle_xexpl2(pt_expl)
+		print("[XL1GHK] Impact Bras Gauche (PV : ", max(0, pv_bras_gauche), "/", pv_bras_gauche_max, ", missile=", est_missile, ")")
 		if pv_bras_gauche <= 0:
 			_neutraliser_bras_gauche()
 			
@@ -240,8 +287,11 @@ func subir_degats_partie(partie: String, degats: int = 1, pos_impact: Vector2 = 
 		pv_bras_droit -= degats
 		_faire_reagir_piece(sprite_bras_droit)
 		var pt_expl = pos_impact if pos_impact != Vector2.INF else (global_position + Vector2(64, -53))
-		_jouer_impact_balle_xexpl2(pt_expl)
-		print("[XL1GHK] Impact Bras Droit (PV : ", max(0, pv_bras_droit), "/", pv_bras_droit_max, ")")
+		if est_missile:
+			_jouer_explosion_destruction_xexpl3(pt_expl)
+		else:
+			_jouer_impact_balle_xexpl2(pt_expl)
+		print("[XL1GHK] Impact Bras Droit (PV : ", max(0, pv_bras_droit), "/", pv_bras_droit_max, ", missile=", est_missile, ")")
 		if pv_bras_droit <= 0:
 			_neutraliser_bras_droit()
 			
@@ -250,18 +300,18 @@ func subir_degats_partie(partie: String, degats: int = 1, pos_impact: Vector2 = 
 		if upper_body_detruit or tete_detruite or pv_tete <= 0: return
 		var pt_expl = pos_impact if pos_impact != Vector2.INF else (global_position + Vector2(-24, -80))
 		
-		# REGLE 1 : La tête ne peut être touchée tant qu'au moins UN bras est fonctionnel !
+		# REGLE 1 : La tête est immunisée tant que les DEUX bras ne sont PAS TOUS LES DEUX neutralisés !
 		if not (bras_gauche_hs and bras_droit_hs):
 			print("[XL1GHK] TÊTE IMMUNISÉE ! Neutralisez les 2 bras en premier.")
 			return
 			
 		pv_tete -= degats
 		_faire_reagir_piece(sprite_tete)
-		_jouer_impact_balle_xexpl2(pt_expl)
-		print("[XL1GHK] Impact Tête (PV : ", max(0, pv_tete), "/", pv_tete_max, ")")
-		if pv_tete <= (pv_tete_max / 2) and sprite_tete:
-			if sprite_tete.sprite_frames.has_animation("damaged"):
-				sprite_tete.play("damaged")
+		if est_missile:
+			_jouer_explosion_destruction_xexpl3(pt_expl)
+		else:
+			_jouer_impact_balle_xexpl2(pt_expl)
+		print("[XL1GHK] Impact Tête (PV : ", max(0, pv_tete), "/", pv_tete_max, ", missile=", est_missile, ")")
 		if pv_tete <= 0:
 			_detruire_tete()
 			
@@ -277,8 +327,11 @@ func subir_degats_partie(partie: String, degats: int = 1, pos_impact: Vector2 = 
 			
 		pv_torse -= degats
 		_faire_reagir_piece(sprite_torse)
-		_jouer_impact_balle_xexpl2(pt_expl)
-		print("[XL1GHK] Impact Torse (PV : ", max(0, pv_torse), "/", pv_torse_max, ")")
+		if est_missile:
+			_jouer_explosion_destruction_xexpl3(pt_expl)
+		else:
+			_jouer_impact_balle_xexpl2(pt_expl)
+		print("[XL1GHK] Impact Torse (PV : ", max(0, pv_torse), "/", pv_torse_max, ", missile=", est_missile, ")")
 		if pv_torse <= 0:
 			_detruire_torse()
 			
@@ -286,15 +339,18 @@ func subir_degats_partie(partie: String, degats: int = 1, pos_impact: Vector2 = 
 	elif "trappe" in nom or "hatch" in nom:
 		var pt_expl = pos_impact if pos_impact != Vector2.INF else (global_position + Vector2(0, -25))
 		
-		# RÈGLE : La trappe ne prend des dégâts ET ne déclenche xexpl2 QUE si elle est OUVERTE !
-		var trappe_vulnerable = trappe_ouverte or upper_body_detruit
-		if not trappe_vulnerable:
-			print("[XL1GHK] TRAPPE FERMÉE IMMUNISÉE ! Aucun dégât ni explosion enregistré.")
+		# RÈGLE : La trappe ne prend des dégâts QUE si le haut du corps est détruit ou si elle est ouverte lors d'un tir !
+		if not upper_body_detruit and not trappe_ouverte:
+			print("[XL1GHK] TRAPPE IMMUNISÉE ! Trappe fermée ou haut du corps encore actif.")
 			return
 			
 		_faire_reagir_piece(anim_sprite)
-		_jouer_impact_balle_xexpl2(pt_expl)
+		if est_missile:
+			_jouer_explosion_destruction_xexpl3(pt_expl)
+		else:
+			_jouer_impact_balle_xexpl2(pt_expl)
 		subir_degats(degats)
+
 
 func _faire_reagir_piece(sprite: CanvasItem) -> void:
 	if sprite == null: return
@@ -454,9 +510,9 @@ func _jouer_explosion_destruction_xexpl3(pos: Vector2) -> void:
 		get_tree().create_timer(0.7, false).timeout.connect(exp3.queue_free)
 
 func subir_degats(quantite: int) -> void:
-	var trappe_vulnerable = trappe_ouverte or upper_body_detruit
-	if not trappe_vulnerable:
-		print("[XL1GHK] Trappe fermée immunisée !")
+	# Sécurité absolue : immunité si upper body debout et trappe fermée
+	if not upper_body_detruit and not trappe_ouverte:
+		print("[XL1GHK] Trappe immunisée ! Le haut du corps protège le blindage.")
 		return
 		
 	pv_actuels -= quantite
@@ -464,10 +520,13 @@ func subir_degats(quantite: int) -> void:
 	if pv_actuels <= 0:
 		subir_elimination()
 
+
 func subir_elimination() -> void:
 	if est_elimine: return
 	est_elimine = true
 	print("[XL1GHK] DESTRUCTION TOTALE DU BOSS !")
+	if deverrouiller_stop_a_la_mort:
+		_deverrouiller_stop_lie()
 	_jouer_anim_base("base_destroy")
 	
 	for i in range(5):

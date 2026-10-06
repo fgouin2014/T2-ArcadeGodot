@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://dassodxxfd1hv"]
+
+[ext_resource type="Script" uid="uid://ct68in6oh5drf" path="res://Script/actor_base.gd" id="1_8t67p"]
+[ext_resource type="Texture2D" uid="uid://cmkjia1t24cbk" path="res://maps/backdrops/level1/xsvan.png" id="2_nnmgc"]
+[ext_resource type="Texture2D" uid="uid://cxx1728p2by03" path="res://maps/backdrops/level1/xsvandm_00.png" id="3_855cd"]
+[ext_resource type="Texture2D" uid="uid://b4dsw5sw0bv0r" path="res://maps/backdrops/level1/xsvandm_01.png" id="4_gxepc"]
+[ext_resource type="Texture2D" uid="uid://cfj077qex74b5" path="res://maps/backdrops/level1/xsvan_04.png" id="5_c8wgb"]
+[ext_resource type="Texture2D" uid="uid://drssyaamojnvu" path="res://maps/backdrops/level1/xsvan_05.png" id="6_e4k0d"]
+[ext_resource type="Texture2D" uid="uid://b8gs1c8ejpet5" path="res://maps/backdrops/level1/xsvan_06.png" id="7_2p87k"]
+[ext_resource type="Texture2D" uid="uid://i3ggjsc4cddh" path="res://maps/backdrops/level1/xsvan_07.png" id="8_ulom7"]
+[ext_resource type="Texture2D" uid="uid://beqgw6eioqxxj" path="res://maps/backdrops/level1/xsvan_08.png" id="9_6t5ol"]
+[ext_resource type="Texture2D" uid="uid://8phqo4gfns2g" path="res://maps/backdrops/level1/xsvan_09.png" id="10_myc45"]
+[ext_resource type="Texture2D" uid="uid://cpwlfvlhbqixt" path="res://maps/backdrops/level1/xsvan_10.png" id="11_jxofh"]
+[ext_resource type="Texture2D" uid="uid://boqasiwci64f5" path="res://maps/backdrops/level1/xsvan_11.png" id="12_2g68p"]
+[ext_resource type="Texture2D" uid="uid://gb4i0o02fu0v" path="res://maps/backdrops/level1/xsvan_12.png" id="13_pno5t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsvan"]
+size = Vector2(194, 134)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_light"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_c8wgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_e4k0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2p87k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ulom7")
+}],
+"loop": 1,
+"name": &"running",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wheel_rear"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_myc45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jxofh")
+}],
+"loop": 1,
+"name": &"roll",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wheel_front"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_2g68p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pno5t")
+}],
+"loop": 1,
+"name": &"roll",
+"speed": 10.0
+}]
+
+[node name="Van" type="CharacterBody2D" unique_id=900701606]
+script = ExtResource("1_8t67p")
+direction_deplacement = "gauche_vers_droite"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1919962687]
+position = Vector2(97, 67)
+shape = SubResource("RectangleShape2D_xsvan")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1402198321]
+position = Vector2(97, 67)
+rect = Rect2(-97, -67, 194, 134)
+
+[node name="BodyNode" type="Node2D" parent="." unique_id=875630654]
+
+[node name="BodyIntact" type="Sprite2D" parent="BodyNode" unique_id=1177507081]
+texture_filter = 1
+position = Vector2(0, 19)
+texture = ExtResource("2_nnmgc")
+centered = false
+
+[node name="BodyDm0" type="Sprite2D" parent="BodyNode" unique_id=1995827991]
+visible = false
+texture_filter = 1
+position = Vector2(0, 19)
+texture = ExtResource("3_855cd")
+centered = false
+
+[node name="BodyDm1" type="Sprite2D" parent="BodyNode" unique_id=860081]
+visible = false
+texture_filter = 1
+position = Vector2(0, 19)
+texture = ExtResource("4_gxepc")
+centered = false
+
+[node name="Lights1" type="Node2D" parent="BodyNode" unique_id=1044294349]
+position = Vector2(13, 0)
+
+[node name="Running1" type="AnimatedSprite2D" parent="BodyNode/Lights1" unique_id=2036846442]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_light")
+animation = &"running"
+autoplay = "running"
+centered = false
+
+[node name="Broken1" type="Sprite2D" parent="BodyNode/Lights1" unique_id=851506391]
+visible = false
+texture_filter = 1
+texture = ExtResource("9_6t5ol")
+centered = false
+
+[node name="Lights2" type="Node2D" parent="BodyNode" unique_id=819664336]
+position = Vector2(141, 0)
+
+[node name="Running2" type="AnimatedSprite2D" parent="BodyNode/Lights2" unique_id=1087615787]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_light")
+animation = &"running"
+autoplay = "running"
+centered = false
+
+[node name="Broken2" type="Sprite2D" parent="BodyNode/Lights2" unique_id=1927475771]
+visible = false
+texture_filter = 1
+texture = ExtResource("9_6t5ol")
+centered = false
+
+[node name="Wheels" type="Node2D" parent="BodyNode" unique_id=1087502437]
+position = Vector2(0, 95)
+
+[node name="WheelRear" type="AnimatedSprite2D" parent="BodyNode/Wheels" unique_id=78095207]
+texture_filter = 1
+position = Vector2(13.5, 0)
+sprite_frames = SubResource("SpriteFrames_wheel_rear")
+animation = &"roll"
+autoplay = "roll"
+centered = false
+
+[node name="WheelFront" type="AnimatedSprite2D" parent="BodyNode/Wheels" unique_id=1297416917]
+texture_filter = 1
+position = Vector2(125.2, 0)
+sprite_frames = SubResource("SpriteFrames_wheel_front")
+animation = &"roll"
+autoplay = "roll"
+centered = false
+
+[node name="HitRoof" type="Marker2D" parent="." unique_id=521215934]
+position = Vector2(6.568653, 25.359674)
+
+[node name="HitRear" type="Marker2D" parent="." unique_id=104303228]
+position = Vector2(5.309639, 73.38196)

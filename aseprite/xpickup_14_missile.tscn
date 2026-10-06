@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cktqwfb0h5mpu"]
+
+[ext_resource type="Script" uid="uid://c4rd4vkmog4i0" path="res://Script/pickup_item.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cfludsiwaukcu" path="res://images/items/xpickup_14.png" id="2_texture"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pickup"]
+size = Vector2(8, 8)
+
+[node name="xpickup_14_missile" type="Area2D" unique_id=1895869477]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_script")
+type_pickup = "Missiles (xpickup_14)"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=537271128]
+texture_filter = 1
+texture = ExtResource("2_texture")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1515423790]
+shape = SubResource("RectangleShape2D_pickup")

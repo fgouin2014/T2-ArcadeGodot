@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://dhsdgx25pk36r"]
+
+[ext_resource type="Script" uid="uid://bfitee5ek3oiq" path="res://aseprite/vehicules/xcopter.gd" id="1_xcopter"]
+[ext_resource type="Texture2D" uid="uid://d2s3vaief2nwh" path="res://maps/backdrops/level1/xcopter_04.png" id="2_0sh0k"]
+[ext_resource type="Texture2D" uid="uid://ll3w0wp7ktil" path="res://maps/backdrops/level1/xcopter_05.png" id="3_84p0p"]
+[ext_resource type="Texture2D" uid="uid://cua2nwwy5ki1a" path="res://maps/backdrops/level1/xcopter_06.png" id="4_b8csr"]
+
+[sub_resource type="Animation" id="Animation_entree"]
+resource_name = "entree"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyNode/SpriteCorps:position:y")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-15, 8, 0]
+}
+
+[sub_resource type="Animation" id="Animation_esquive"]
+resource_name = "esquive"
+
+[sub_resource type="Animation" id="Animation_recoil"]
+resource_name = "recul"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyNode/SpriteCorps:position:y")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.25, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, -8, 5, -3, 0]
+}
+
+[sub_resource type="Animation" id="Animation_vol_stationnaire"]
+resource_name = "stationnaire"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BodyNode/SpriteCorps:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 5, 0, -5, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b8csr"]
+_data = {
+&"entree": SubResource("Animation_entree"),
+&"esquive": SubResource("Animation_esquive"),
+&"recoil": SubResource("Animation_recoil"),
+&"recul": SubResource("Animation_recoil"),
+&"stationnaire": SubResource("Animation_vol_stationnaire"),
+&"vol_stationnaire": SubResource("Animation_vol_stationnaire")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcg5v"]
+size = Vector2(192, 70)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kufsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0sh0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_84p0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b8csr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 29.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcopter"]
+size = Vector2(109, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yg3d"]
+size = Vector2(118, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khm7j"]
+size = Vector2(62, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kufsv"]
+size = Vector2(20, 41)
+
+[node name="XCopter" type="CharacterBody2D" unique_id=2029509807]
+z_index = 10
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_xcopter")
+esquive_duration = 2.0
+suivre_camera_automatiquement = false
+offset_lucarne_ratio_x = 0.25
+distance_va_et_vient_px = 10.0
+pv_max = 30
+
+[node name="CopterAnimationPlayer" type="AnimationPlayer" parent="." unique_id=118353375]
+libraries/ = SubResource("AnimationLibrary_b8csr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=953709243]
+position = Vector2(97, 19)
+shape = SubResource("RectangleShape2D_pcg5v")
+
+[node name="BodyNode" type="Node2D" parent="." unique_id=1272719587]
+
+[node name="SpriteCorps" type="AnimatedSprite2D" parent="BodyNode" unique_id=2128867448]
+texture_filter = 1
+position = Vector2(1, -15)
+sprite_frames = SubResource("SpriteFrames_kufsv")
+autoplay = "default"
+centered = false
+
+[node name="HitArea" type="Area2D" parent="BodyNode/SpriteCorps" unique_id=1184838733]
+
+[node name="Body" type="CollisionShape2D" parent="BodyNode/SpriteCorps/HitArea" unique_id=272245859]
+position = Vector2(136.5, 45)
+shape = SubResource("RectangleShape2D_xcopter")
+
+[node name="Rotor" type="CollisionShape2D" parent="BodyNode/SpriteCorps/HitArea" unique_id=1747766969]
+position = Vector2(132, 10)
+shape = SubResource("RectangleShape2D_0yg3d")
+
+[node name="Tail" type="CollisionShape2D" parent="BodyNode/SpriteCorps/HitArea" unique_id=1249188632]
+position = Vector2(51, 28.5)
+shape = SubResource("RectangleShape2D_khm7j")
+
+[node name="Tail2" type="CollisionShape2D" parent="BodyNode/SpriteCorps/HitArea" unique_id=2071177310]
+position = Vector2(9, 21)
+shape = SubResource("RectangleShape2D_kufsv")
+
+[node name="Nose" type="Marker2D" parent="BodyNode/SpriteCorps" unique_id=1849474432]
+position = Vector2(192.11282, -1.2825699)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=61983418]
+position = Vector2(99, 6)
+rect = Rect2(-98, -22, 192, 69)

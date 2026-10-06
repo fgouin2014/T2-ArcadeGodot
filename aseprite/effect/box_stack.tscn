@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://xym5dl5h68st"]
+
+[ext_resource type="Script" uid="uid://cw8bo4m3lycvr" path="res://Script/breakable_prop.gd" id="1_qmwm4"]
+[ext_resource type="Texture2D" uid="uid://duqqpd5pt0vqs" path="res://maps/backdrops/level1/xhidebit_12.png" id="2_qmwm4"]
+[ext_resource type="Texture2D" uid="uid://ct6rnt5ycgw1" path="res://tsj/xhidebit_13.png" id="3_qmwm4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(29.205189, 26.692337)
+
+[node name="box_stack" type="Node2D" unique_id=387680292]
+script = ExtResource("1_qmwm4")
+
+[node name="Box0" type="Sprite2D" parent="." unique_id=309569609]
+position = Vector2(40, 12)
+texture = ExtResource("2_qmwm4")
+metadata/hp = 1
+metadata/destructible = true
+metadata/damaged_texture = ExtResource("3_qmwm4")
+
+[node name="HitArea" type="Area2D" parent="Box0" unique_id=347971770]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box0/HitArea" unique_id=417508383]
+position = Vector2(-1, -0.5)
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Box1" type="Sprite2D" parent="." unique_id=1241762429]
+position = Vector2(26, 36)
+texture = ExtResource("2_qmwm4")
+metadata/damaged_texture = ExtResource("3_qmwm4")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="Box1" unique_id=1722113466]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1/HitArea" unique_id=1771473093]
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Box2" type="Sprite2D" parent="." unique_id=1818501110]
+position = Vector2(54, 36)
+texture = ExtResource("2_qmwm4")
+metadata/damaged_texture = ExtResource("3_qmwm4")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="Box2" unique_id=350185066]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box2/HitArea" unique_id=1171878264]
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Box5" type="Sprite2D" parent="." unique_id=1248744888]
+position = Vector2(12, 60)
+texture = ExtResource("2_qmwm4")
+metadata/damaged_texture = ExtResource("3_qmwm4")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="Box5" unique_id=773087728]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box5/HitArea" unique_id=317802991]
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Box3" type="Sprite2D" parent="." unique_id=637296169]
+position = Vector2(40, 60)
+texture = ExtResource("2_qmwm4")
+metadata/damaged_texture = ExtResource("3_qmwm4")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="Box3" unique_id=1543557676]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box3/HitArea" unique_id=790265424]
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Box4" type="Sprite2D" parent="." unique_id=648684366]
+position = Vector2(68, 60)
+texture = ExtResource("2_qmwm4")
+metadata/damaged_texture = ExtResource("3_qmwm4")
+metadata/destructible = true
+metadata/hp = 1
+
+[node name="HitArea" type="Area2D" parent="Box4" unique_id=797973382]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box4/HitArea" unique_id=1611566476]
+scale = Vector2(0.61632884, 0.63688695)
+shape = SubResource("RectangleShape2D_1")

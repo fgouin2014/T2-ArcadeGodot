@@ -1,13 +1,42 @@
 # Godot 4+ specific ignores
 .godot/
-/android/build/
-.gradle/
-*.apk
-*.aab
-*.aar
-*.zip
+/android/
+
+**/*.import
+**/*.uuid
+
+# Android / Gradle
+**/build/
+**/.gradle/
+**/local.properties
+**/*.apk
+**/*.ap_
+**/*.dex
+**/*.class
+**/bin/
+**/gen/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.DS_Store
+captures/
+Thumbs.db
+desktop.ini
+
+# Temporary / OS
+capture/
+*.log
+*.tmp
+
+# Backups
+/backup/
+*.bak
+*.backup
+*.old
+
+# Archive files
 *.rar
-*.pck
-*.idsig
-export/*.apk
-export/*.pck
+*.zip
+*.7z
